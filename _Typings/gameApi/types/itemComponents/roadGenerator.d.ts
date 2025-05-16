@@ -1,0 +1,123 @@
+declare module "game:type:roadGenerator" {
+    const enum GeneratorAlgorithm {
+        Road = 0,
+        Corner = 1,
+        WoodBoard = 2,
+        Rail = 3,
+        Tube = 4,
+        CustomVertices = 5,
+        CustomScript = 6,
+    }
+
+    type Vertex = {
+        Position: Float2
+        UV: float
+    }
+
+    type VerticesArray = {
+        Vertices: Vertex[]
+    }
+
+    export type RoadGeneratorData = {
+        "GeneratorAlgorithm": GeneratorAlgorithm
+        "Road/Length": float
+        "Road/Width": float
+        "Road/EndWidth": float
+        "Road/Height": float
+        "Road/Offset": float
+        "Road/Thickness": float
+        /**
+         * @range `1 ~ 256`
+         */
+        "Road/Segments": int
+        "Road/Bend": Float3
+        "Road/CreateCap": bool
+        "Road/AccurateUVLength": bool
+        "Road/RotateMainUV": bool
+        "Road/MainUVOffset": Float2
+        "Road/SideUVOffset": float
+        "Road/Concave": float
+        "Road/EndConcave": float
+        "WoodenBoard/Length": float
+        "WoodenBoard/Width": float
+        "WoodenBoard/Height": float
+        "WoodenBoard/Offset": float
+        "WoodenBoard/Thickness": float
+        /**
+         * @range `1 ~ 256`
+         */
+        "WoodenBoard/Segments": int
+        "WoodenBoard/Bend": Float3
+        "WoodenBoard/CreateCap": bool
+        "WoodenBoard/AccurateUVLength": bool
+        "WoodenBoard/RotateMainUV": bool
+        "WoodenBoard/MainUVOffset": Float2
+        "WoodenBoard/SideUVOffset": float
+        "Rail/Length": float
+        "Rail/Offsets": Float2[]
+        "Rail/Height": float
+        "Rail/Offset": float
+        /**
+         * @range `1 ~ 256`
+         */
+        "Rail/Segments": int
+        /**
+         * @range `1 ~ 128`
+         */
+        "Rail/RotationSegments": int
+        "Rail/Bend": Float3
+        "Rail/CreateCap": bool
+        "Rail/AccurateUVLength": bool
+        "Rail/MainUVOffset": Float2
+        "Rail/Radius": float
+        "Tube/Length": float
+        "Tube/Height": float
+        "Tube/Offset": float
+        "Tube/Radius": float
+        "Tube/EndRadius": float
+        "Tube/Slice": Float2
+        "Tube/Thickness": float
+        /**
+         * @range `1 ~ 256`
+         */
+        "Tube/Segments": int
+        /**
+         * @range `1 ~ 128`
+         */
+        "Tube/RotationSegments": int
+        "Tube/Bend": Float3
+        "Tube/CreateCap": bool
+        "Tube/AccurateUVLength": bool
+        "Tube/MainUVOffset": Float2
+        "Corner/Corner/P0": bool
+        "Corner/Corner/P1": bool
+        "Corner/Corner/P2": bool
+        "Corner/Corner/P3": bool
+        "Corner/Corner/L0": bool
+        "Corner/Corner/L1": bool
+        "Corner/Corner/L2": bool
+        "Corner/Corner/L3": bool
+        "Corner/Size": float
+        "Corner/Thickness": float
+        "Corner/CreateCap": bool
+        "Corner/RotateMainUV": bool
+        "Corner/MainUVOffset": Float2
+        "Corner/Concave": float
+        "CustomVertices/VerticesArray": VerticesArray[]
+        "CustomVertices/Length": float
+        "CustomVertices/Height": float
+        /**
+         * @range `1 ~ 256`
+         */
+        "CustomVertices/Segments": int
+        "CustomVertices/Bend": Float3
+        "CustomVertices/AccurateUVLength": bool
+        "CustomVertices/RotateMainUV": bool
+        "CustomVertices/MainUVOffset": Float2
+        "CustomScript/ScriptPath": string
+    }
+
+    export type RoadGeneratorMethod = {
+        [key: string | symbol]: never
+    }
+}

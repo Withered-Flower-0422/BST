@@ -1,0 +1,50 @@
+declare module "editor:type:cloud" {
+    type CloudLayer = {
+        Enabled: bool
+        /**
+         * @range `0 ~ 1`
+         */
+        CloudA: float
+        /**
+         * @range `0 ~ 1`
+         */
+        CloudB: float
+        /**
+         * @range `0 ~ 1`
+         */
+        CloudC: float
+        /**
+         * @range `0 ~ 1`
+         */
+        CloudD: float
+        Altitude: float
+        /**
+         * @range `0 ~ 360`
+         */
+        Rotation: float
+        Tint: ColorRGBA
+        ExposureCompensation: float
+        /**
+         * @range `0 ~ 360`
+         */
+        WindOrientation: float
+        WindSpeed: float
+        /**
+         * @range `2 ~ 32`
+         */
+        RayMarchingSteps: int
+        /**
+         * @range `0 ~ 1`
+         */
+        RayMarchingDensity: float
+        /**
+         * @range `0 ~ 1`
+         */
+        RayMarchingAmbient: float
+    }
+
+    export type Cloud = {
+        CloudLayer1: CloudLayer
+        CloudLayer2: CloudLayer
+    }
+}
