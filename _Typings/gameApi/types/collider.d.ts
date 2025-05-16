@@ -15,4 +15,13 @@ declare module "game:type" {
         Sphere = 1,
         Mesh = 2,
     }
+
+    type CollisionEvent = {
+        eventType: "Enter" | "Exit" | "Stay"
+        itemA: Item
+        itemB: Item
+        impulse: float
+        contactPoint: Float3
+        normal: Float3
+    }
 }
