@@ -1,12 +1,4 @@
-declare module "game:type:physicsObject" {
-    import { CollisionLayer } from "game:type:collisionLayer"
-
-    const enum ColliderType {
-        Box = 0,
-        Sphere = 1,
-        Mesh = 2,
-    }
-
+declare module "game:type" {
     const enum PhysicsBodyType {
         Static = 0,
         Kinematic = 1,
@@ -39,7 +31,7 @@ declare module "game:type:physicsObject" {
         ArithmeticMean = 3,
     }
 
-    export type PhysicsObjectData = {
+    type PhysicsObjectData = {
         "ColliderType": ColliderType
         "BoxColliderParams/Center": Float3
         "BoxColliderParams/Size": Float3
@@ -84,7 +76,7 @@ declare module "game:type:physicsObject" {
         "CollisionExitEvent": bool
     }
 
-    export type PhysicsObjectMethod = {
+    type PhysicsObjectMethod = {
         getLinearVelocity: () => Float3
         getAngularVelocity: () => Float3
         setVelocity: (linear: Float3, angular: Float3) => void

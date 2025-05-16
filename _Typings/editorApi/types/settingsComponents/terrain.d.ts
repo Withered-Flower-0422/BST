@@ -1,5 +1,5 @@
-declare module "editor:type:terrain" {
-    export type Terrain = {
+declare module "editor:type" {
+    type Terrain = {
         [key: string | symbol]: never
     }
 }

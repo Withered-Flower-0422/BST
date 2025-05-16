@@ -1,8 +1,7 @@
-declare module "game:module:tweenManager" {
-    import { EaseType } from "game:type:easeType"
-    import { Tween } from "game:type:tween"
+declare module "game:module" {
+    import { EaseType, Tween } from "game:type"
 
-    export namespace tweenManager {
+    namespace tweenManager {
         const createFloatTween: (
             from: float,
             to: float,

@@ -1,4 +1,4 @@
-declare module "game:type:roadGenerator" {
+declare module "game:type" {
     const enum GeneratorAlgorithm {
         Road = 0,
         Corner = 1,
@@ -18,7 +18,7 @@ declare module "game:type:roadGenerator" {
         Vertices: Vertex[]
     }
 
-    export type RoadGeneratorData = {
+    type RoadGeneratorData = {
         "GeneratorAlgorithm": GeneratorAlgorithm
         "Road/Length": float
         "Road/Width": float
@@ -117,7 +117,7 @@ declare module "game:type:roadGenerator" {
         "CustomScript/ScriptPath": string
     }
 
-    export type RoadGeneratorMethod = {
+    type RoadGeneratorMethod = {
         [key: string | symbol]: never
     }
 }

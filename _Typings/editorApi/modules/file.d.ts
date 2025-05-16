@@ -1,5 +1,5 @@
-declare module "editor:module:file" {
-    export namespace file {
+declare module "editor:module" {
+    namespace file {
         /**
          * @description - the system path to the "BME Pro HDRP.exe"
          * - `readonly`

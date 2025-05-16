@@ -1,4 +1,4 @@
-declare module "editor:type:exportFuncs" {
+declare module "editor:type" {
     global {
         /**
          * @description executed when button is pressed

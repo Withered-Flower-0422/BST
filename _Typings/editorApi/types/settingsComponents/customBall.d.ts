@@ -1,4 +1,4 @@
-declare module "editor:type:customBall" {
+declare module "editor:type" {
     type CustomBallSettings = {
         ItemTemplate: string
         BallName: string
@@ -31,7 +31,7 @@ declare module "editor:type:customBall" {
         SwitcherLightIntensity: float
     }
 
-    export type CustomBall = {
+    type CustomBall = {
         CustomBall: CustomBallSettings[]
     }
 }

@@ -1,5 +1,5 @@
-declare module "game:type:wayPath" {
-    export type WayPathData = {
+declare module "game:type" {
+    type WayPathData = {
         "WayPoints": string[]
         "AutoCollect": bool
         "UseCurve": bool
@@ -12,7 +12,7 @@ declare module "game:type:wayPath" {
         "Targets": string[]
     }
 
-    export type WayPathMethod = {
+    type WayPathMethod = {
         getPointInfo: (point: float) => {
             /**
              * @range "0 ~ 1"

@@ -1,12 +1,12 @@
-declare module "editor:type:executor" {
-    export type ExecutorData = {
+declare module "editor:type" {
+    type ExecutorData = {
         /**
          * @description BME path to the script
          */
         ScriptPath: string
     }
 
-    export type ExecutorMethod = {
+    type ExecutorMethod = {
         [key: string | symbol]: never
     }
 }

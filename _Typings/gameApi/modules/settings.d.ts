@@ -1,16 +1,8 @@
-declare module "game:module:settings" {
-    import { Cloud } from "game:type:cloud"
-    import { Environment } from "game:type:environment"
-    import { Fog } from "game:type:fog"
-    import { Lighting } from "game:type:lighting"
-    import { MapInfo } from "game:type:mapInfo"
-    import { Sky } from "game:type:sky"
-    import { Lens } from "game:type:lens"
-    import { BackgroundMusic } from "game:type:backgroundMusic"
-    import { Terrain } from "game:type:terrain"
-    import { CollectionPrototype } from "game:type:collectionPrototype"
-    import { AssetReference } from "game:type:assetReference"
-    import { CustomBall } from "game:type:customBall"
+declare module "game:module" {
+    import {
+        Cloud, Environment, Fog, Lighting, MapInfo, Sky, Lens, BackgroundMusic,
+        Terrain, CollectionPrototype, AssetReference, CustomBall,
+    } from "game:type"
 
     type ComponentTypeMap = {
         Cloud: Cloud,
@@ -29,7 +21,7 @@ declare module "game:module:settings" {
 
     type ComponentType = keyof ComponentTypeMap
 
-    export namespace settings {
+    namespace settings {
         let viewDistance: float
         let cameraOffset: Float3
         let gravity: Float3

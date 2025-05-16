@@ -1,5 +1,5 @@
-declare module "game:type:easeType" {
-    export type EaseType = (
+declare module "game:type" {
+    type EaseType = (
         "Linear" | "Spring" |
         "EaseInQuad" | "EaseOutQuad" | "EaseInOutQuad" |
         "EaseInCubic" | "EaseOutCubic" | "EaseInOutCubic" |

@@ -1,5 +1,5 @@
-declare module "game:type:environment" {
-    export type Environment = {
+declare module "game:type" {
+    type Environment = {
         "EnvironmentTemp": float
         "AutoRainAvoidance": bool
         "Wind": Float3

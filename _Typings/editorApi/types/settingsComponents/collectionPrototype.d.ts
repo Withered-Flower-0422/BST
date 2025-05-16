@@ -1,4 +1,4 @@
-declare module "editor:type:collectionPrototype" {
+declare module "editor:type" {
     const enum CollectionResetType {
         OnLifeStart = 0,
         OnRestart = 1,
@@ -13,7 +13,7 @@ declare module "editor:type:collectionPrototype" {
         ShowMaxCount: bool
     }
 
-    export type CollectionPrototype = {
+    type CollectionPrototype = {
         Prototypes: CollectionPrototypeData[]
     }
 }

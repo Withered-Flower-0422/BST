@@ -1,4 +1,4 @@
-declare module "game:type:renderer" {
+declare module "game:type" {
     const enum ShadowCastingMode {
         On = 0,
         Off = 1,
@@ -6,7 +6,7 @@ declare module "game:type:renderer" {
         ShadowsOnly = 3,
     }
 
-    export type RendererData = {
+    type RendererData = {
         "Mesh": string
         "Materials": string[]
         "AutoGetMesh": bool
@@ -22,7 +22,7 @@ declare module "game:type:renderer" {
         "NearDissolve": bool
     }
 
-    export type RendererMethod = {
+    type RendererMethod = {
         [key: string | symbol]: never
     }
 }

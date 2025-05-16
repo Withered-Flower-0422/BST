@@ -1,5 +1,5 @@
-declare module "game:type:decal" {
-    export type DecalData = {
+declare module "game:type" {
+    type DecalData = {
         "TransformOffset": Trans
         "MaterialPath": string
         "DrawDistance": float
@@ -8,7 +8,7 @@ declare module "game:type:decal" {
         "RotationSpeed": float
     }
 
-    export type DecalMethod = {
+    type DecalMethod = {
         [key: string | symbol]: never
     }
 }

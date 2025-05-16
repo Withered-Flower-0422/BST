@@ -1,7 +1,5 @@
-declare module "editor:type:trigger" {
-    import { ColliderType, BoxColliderParams, SphereColliderParams, MeshColliderParams } from "editor:type:collider"
-
-    export type TriggerData = {
+declare module "editor:type" {
+    type TriggerData = {
         TriggerPlayerLayer: bool
         TriggerRigidBodyLayer: bool
         TriggerMachineryLayer: bool
@@ -19,7 +17,7 @@ declare module "editor:type:trigger" {
         MeshColliderParams: MeshColliderParams
     }
 
-    export type TriggerMethod = {
+    type TriggerMethod = {
         autoDetectBoxTrigger: () => void
     }
 }

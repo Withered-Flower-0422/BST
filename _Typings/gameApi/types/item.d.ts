@@ -1,8 +1,5 @@
-declare module "game:type:item" {
-    import { EaseType } from "game:type:easeType"
-    import { Component, ComponentTypeMap } from "game:type:component"
-
-    export type Item = {
+declare module "game:type" {
+    type Item = {
         /**
          * `readonly`
          */

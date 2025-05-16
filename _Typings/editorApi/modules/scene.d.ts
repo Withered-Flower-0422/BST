@@ -1,7 +1,7 @@
-declare module "editor:module:scene" {
-    import { SceneObject, SceneObjectType } from "editor:type:sceneObject"
+declare module "editor:module" {
+    import { SceneObject, SceneObjectType } from "editor:type"
 
-    export namespace scene {
+    namespace scene {
         const getAllObjects: () => SceneObject<SceneObjectType>[]
         const getObject: (guid: string) => SceneObject<SceneObjectType>
         const getObjects: (guids: string[]) => SceneObject<SceneObjectType>[]

@@ -1,10 +1,10 @@
-declare module "game:type:sky" {
+declare module "game:type" {
     const enum SkyType {
         PhysicsSky = 0,
         HDRISky = 1,
     }
 
-    export type Sky = {
+    type Sky = {
         "SkyType": SkyType
         "PhysicsSky/PlanetRotation": Float3
         "PhysicsSky/GroundColorTexture": string

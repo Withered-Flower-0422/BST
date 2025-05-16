@@ -1,5 +1,5 @@
-declare module "game:type:lighting" {
-    export type Lighting = {
+declare module "game:type" {
+    type Lighting = {
         "Enabled": bool
         "Rotation": Float3
         /**

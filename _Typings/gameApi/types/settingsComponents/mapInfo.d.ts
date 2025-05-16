@@ -1,4 +1,4 @@
-declare module "game:type:mapInfo" {
+declare module "game:type" {
     type int64 = number
 
     const enum Difficulty {
@@ -36,7 +36,7 @@ declare module "game:type:mapInfo" {
         FreeLook = 1,
     }
 
-    export type MapInfo = {
+    type MapInfo = {
         "AuthorName": string
         "AuthorSteamID": int64
         "MapName": string

@@ -1,5 +1,5 @@
-declare module "editor:module:dialogWindowManager" {
-    export namespace dialogWindowManager {
+declare module "editor:module" {
+    namespace dialogWindowManager {
         const openInputDialog: (
             windowTitle: string,
             contentText: string,

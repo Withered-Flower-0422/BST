@@ -1,4 +1,4 @@
-declare module "game:type:settings" {
+declare module "game:type" {
     const enum HierachyIcon {
         Auto = 0,
         MapInfo = 1,
@@ -32,7 +32,7 @@ declare module "game:type:settings" {
         Empty = 29,
     }
 
-    export type SettingsData = {
+    type SettingsData = {
         "AsTemplete": bool
         "TempleteName": string
         "HierachyIcon": HierachyIcon
@@ -45,7 +45,7 @@ declare module "game:type:settings" {
         "Tags": string[]
     }
 
-    export type SettingsMethod = {
+    type SettingsMethod = {
         [key: string | symbol]: never
     }
 }

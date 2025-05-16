@@ -1,7 +1,4 @@
-declare module "game:type:exportFuncs" {
-    import { Item } from "game:type:item"
-    import { CollisionEvent } from "game:type:collisionEvent"
-
+declare module "game:type" {
     type BallType = (
         "WoodenBall" |
         "StoneBall" |

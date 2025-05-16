@@ -1,5 +1,5 @@
-declare module "editor:type:environment" {
-    export type Environment = {
+declare module "editor:type" {
+    type Environment = {
         EnvironmentTemp: float
         AutoRainAvoidance: bool
         Wind: Float3

@@ -1,5 +1,5 @@
-declare module "game:type:lens" {
-    export type Lens = {
+declare module "game:type" {
+    type Lens = {
         "AutoExposure": bool
         /**
          * @range `-5 ~ 15`

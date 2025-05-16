@@ -1,12 +1,12 @@
-declare module "game:type:executor" {
-    export type ExecutorData = {
+declare module "game:type" {
+    type ExecutorData = {
         /**
          * @description BME path to the script
          */
         "ScriptPath": string
     }
 
-    export type ExecutorMethod = {
+    type ExecutorMethod = {
         execute: GameExecute
     }
 }

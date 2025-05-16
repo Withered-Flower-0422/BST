@@ -1,12 +1,12 @@
-declare module "editor:type:camera" {
-    export type CameraData = {
+declare module "editor:type" {
+    type CameraData = {
         Orthographic: bool
         OrthographicSize: float
         FieldOfView: float
         ClippingPlane: Float2
     }
 
-    export type CameraMethod = {
+    type CameraMethod = {
         [key: string | symbol]: never
     }
 }

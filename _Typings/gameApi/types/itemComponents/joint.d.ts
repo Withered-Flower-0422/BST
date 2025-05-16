@@ -1,4 +1,4 @@
-declare module "game:type:joint" {
+declare module "game:type" {
     const enum JointType {
         BallAndSocket = 0,
         Fixed = 1,
@@ -24,7 +24,7 @@ declare module "game:type:joint" {
         SpringDamping: float
     }
 
-    export type JointData = {
+    type JointData = {
         "PhysicsObjectA": string
         "PhysicsObjectB": string
         "ConnectSelf": bool
@@ -50,7 +50,7 @@ declare module "game:type:joint" {
         "Constraints": JointConstraint[]
     }
 
-    export type JointMethod = {
+    type JointMethod = {
         breakJoint: () => void
     }
 }

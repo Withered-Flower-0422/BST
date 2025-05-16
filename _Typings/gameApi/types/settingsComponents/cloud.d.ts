@@ -1,5 +1,5 @@
-declare module "game:type:cloud" {
-    export type Cloud = {
+declare module "game:type" {
+    type Cloud = {
         "CloudLayer1/Enabled": bool
         /**
          * @range `0 ~ 1`

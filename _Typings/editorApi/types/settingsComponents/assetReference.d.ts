@@ -1,5 +1,5 @@
-declare module "editor:type:assetReference" {
-    export type AssetReference = {
+declare module "editor:type" {
+    type AssetReference = {
         /**
          * @description BME pathes to `Scenes`
          */

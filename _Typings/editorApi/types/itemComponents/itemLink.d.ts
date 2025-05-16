@@ -1,14 +1,14 @@
-declare module "editor:type:itemLink" {
+declare module "editor:type" {
     type ItemLinkSettings = {
         [key: string | symbol]: never
     }
 
-    export type ItemLinkData = {
+    type ItemLinkData = {
         Link: string
         Settings: ItemLinkSettings
     }
 
-    export type ItemLinkMethod = {
+    type ItemLinkMethod = {
         replace: () => void
         saveMesh: () => void
     }

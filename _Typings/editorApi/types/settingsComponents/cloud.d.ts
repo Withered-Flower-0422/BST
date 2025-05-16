@@ -1,4 +1,4 @@
-declare module "editor:type:cloud" {
+declare module "editor:type" {
     type CloudLayer = {
         Enabled: bool
         /**
@@ -43,7 +43,7 @@ declare module "editor:type:cloud" {
         RayMarchingAmbient: float
     }
 
-    export type Cloud = {
+    type Cloud = {
         CloudLayer1: CloudLayer
         CloudLayer2: CloudLayer
     }

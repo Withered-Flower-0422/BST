@@ -1,5 +1,5 @@
-declare module "game:type:tween" {
-    export type Tween = {
+declare module "game:type" {
+    type Tween = {
         next: () => void
         pause: () => void
         resume: () => void

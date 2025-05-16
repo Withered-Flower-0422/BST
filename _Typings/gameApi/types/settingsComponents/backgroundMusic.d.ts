@@ -1,5 +1,5 @@
-declare module "game:type:backgroundMusic" {
-    export type BackgroundMusic = {
+declare module "game:type" {
+    type BackgroundMusic = {
         /**
          * @description BME pathes to the background music
          */

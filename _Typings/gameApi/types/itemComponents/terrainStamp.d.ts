@@ -1,9 +1,9 @@
-declare module "game:type:terrainStamp" {
-    export type TerrainStampData = {
+declare module "game:type" {
+    type TerrainStampData = {
         [key: string | symbol]: never
     }
 
-    export type TerrainStampMethod = {
+    type TerrainStampMethod = {
         [key: string | symbol]: never
     }
 }

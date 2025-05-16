@@ -1,9 +1,9 @@
-declare module "editor:type:terrainStamp" {
-    export type TerrainStampData = {
+declare module "editor:type" {
+    type TerrainStampData = {
         [key: string | symbol]: never
     }
 
-    export type TerrainStampMethod = {
+    type TerrainStampMethod = {
         [key: string | symbol]: never
     }
 }

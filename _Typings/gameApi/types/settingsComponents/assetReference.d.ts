@@ -1,5 +1,5 @@
-declare module "game:type:assetReference" {
-    export type AssetReference = {
+declare module "game:type" {
+    type AssetReference = {
         /**
          * @description BME pathes to `Scenes`
          */

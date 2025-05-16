@@ -1,6 +1,4 @@
-declare module "game:type:player" {
-    import { Component } from "game:type:component"
-
+declare module "game:type" {
     global {
         type Player = {
             ballType: string

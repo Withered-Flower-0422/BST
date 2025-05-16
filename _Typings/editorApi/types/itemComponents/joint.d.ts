@@ -1,4 +1,4 @@
-declare module "editor:type:joint" {
+declare module "editor:type" {
     const enum JointType {
         BallAndSocket = 0,
         Fixed = 1,
@@ -24,7 +24,7 @@ declare module "editor:type:joint" {
         SpringDamping: float
     }
 
-    export type JointData = {
+    type JointData = {
         PhysicsObjectA: string
         PhysicsObjectB: string
         ConnectSelf: bool
@@ -50,7 +50,7 @@ declare module "editor:type:joint" {
         Constraints: JointConstraint[]
     }
 
-    export type JointMethod = {
+    type JointMethod = {
         [key: string | symbol]: never
     }
 }

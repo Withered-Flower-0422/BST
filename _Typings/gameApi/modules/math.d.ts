@@ -1,5 +1,5 @@
-declare module "game:module:math" {
-    export namespace math {
+declare module "game:module" {
+    namespace math {
         const quaternionToFloat3: (value: Quaternion) => Float3
         const float3ToQuaternion: (value: Float3) => Quaternion
         const perlinNoise: (x: float, y: float) => float

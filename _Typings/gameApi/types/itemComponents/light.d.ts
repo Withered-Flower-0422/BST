@@ -1,4 +1,4 @@
-declare module "game:type:light" {
+declare module "game:type" {
     const enum LightType {
         Point = 0,
         Spot = 1,
@@ -13,14 +13,14 @@ declare module "game:type:light" {
         High = 3,
     }
 
-    const enum BlendMode {
+    const enum LightBlendMode {
         Additive = 0,
         Blend = 1,
         PreMultiply = 2,
         Subtractive = 3,
     }
 
-    export type LightData = {
+    type LightData = {
         "TransformOffset": Trans
         "LightType": LightType
         "PointLight/Temperature": float
@@ -72,7 +72,7 @@ declare module "game:type:light" {
         "EnableVolumetricLight": bool
         "VolumetricLight/OnlyVolumetric": bool
         "VolumetricLight/AutoOptimize": bool
-        "VolumetricLight/BlendMode": BlendMode
+        "VolumetricLight/BlendMode": LightBlendMode
         /**
          * @range `1 ~ 256`
          */
@@ -123,7 +123,7 @@ declare module "game:type:light" {
         "VolumetricLight/DustFalloffDistance": float
     }
 
-    export type LightMethod = {
+    type LightMethod = {
         [key: string | symbol]: never
     }
 }

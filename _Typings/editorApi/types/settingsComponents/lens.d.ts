@@ -1,5 +1,5 @@
-declare module "editor:type:lens" {
-    export type Lens = {
+declare module "editor:type" {
+    type Lens = {
         AutoExposure: bool
         /**
          * @range `-5 ~ 15`

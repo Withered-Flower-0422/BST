@@ -1,7 +1,7 @@
-declare module "game:module:uiCanvas" {
-    import { UIElement, ElementTypeMap } from "game:type:uiElement"
+declare module "game:module" {
+    import { UIElement, ElementTypeMap } from "game:type"
 
-    export namespace uiCanvas {
+    namespace uiCanvas {
         const getCanvasSize: () => Float2
         const hideGameUI: () => void
         const showGameUI: () => void

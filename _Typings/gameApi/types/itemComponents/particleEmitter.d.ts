@@ -1,5 +1,5 @@
-declare module "game:type:particleEmitter" {
-    const enum BlendMode {
+declare module "game:type" {
+    const enum ParticleEmitterBlendMode {
         Alpha = 0,
         Additive = 1,
         Premultiply = 2,
@@ -11,7 +11,7 @@ declare module "game:type:particleEmitter" {
         Size: float
     }
 
-    export type ParticleEmitterData = {
+    type ParticleEmitterData = {
         "TransformOffset": Trans
         "AutoStart": bool
         "Loop": bool
@@ -25,7 +25,7 @@ declare module "game:type:particleEmitter" {
         "AngularVelocity": Float2
         "FollowCamera": bool
         "TexturePath": string
-        "BlendMode": BlendMode
+        "BlendMode": ParticleEmitterBlendMode
         "Life": Float2
         "Size": Float2
         "TimeNodes": ParticleEmitterTimeNode[]
@@ -42,7 +42,7 @@ declare module "game:type:particleEmitter" {
         "AnimationTilesY": int
     }
 
-    export type ParticleEmitterMethod = {
+    type ParticleEmitterMethod = {
         play: () => void
         pause: () => void
         stop: () => void

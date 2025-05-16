@@ -1,5 +1,5 @@
-declare module "game:type:collisionLayer" {
-    export const enum CollisionLayer {
+declare module "game:type" {
+    const enum CollisionLayer {
         Player = 0,
         RigidBody = 1,
         Machinery = 2,
@@ -8,5 +8,11 @@ declare module "game:type:collisionLayer" {
         None = 5,
         WithoutPlayer = 6,
         OnlyPlayer = 7,
+    }
+
+    const enum ColliderType {
+        Box = 0,
+        Sphere = 1,
+        Mesh = 2,
     }
 }

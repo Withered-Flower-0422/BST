@@ -1,11 +1,11 @@
-declare module "editor:module:editor" {
+declare module "editor:module" {
     type LanguageType = (
         "English" |
         "Chinese" |
         "Japanese"
     )
 
-    export namespace editor {
+    namespace editor {
         /**
          * `readonly`
          */

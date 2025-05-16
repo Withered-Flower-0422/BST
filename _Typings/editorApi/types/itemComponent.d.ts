@@ -1,22 +1,4 @@
-declare module "editor:type:itemComponent" {
-    import { SettingsData, SettingsMethod } from "editor:type:settings"
-    import { RendererData, RendererMethod } from "editor:type:renderer"
-    import { RoadGeneratorData, RoadGeneratorMethod } from "editor:type:roadGenerator"
-    import { PhysicsObjectData, PhysicsObjectMethod } from "editor:type:physicsObject"
-    import { ItemLinkData, ItemLinkMethod } from "editor:type:itemLink"
-    import { TriggerData, TriggerMethod } from "editor:type:trigger"
-    import { JointData, JointMethod } from "editor:type:joint"
-    import { WayPointData, WayPointMethod } from "editor:type:wayPoint"
-    import { WayPathData, WayPathMethod } from "editor:type:wayPath"
-    import { CollectionData, CollectionMethod } from "editor:type:collection"
-    import { LightData, LightMethod } from "editor:type:light"
-    import { ParticleEmitterData, ParticleEmitterMethod } from "editor:type:particleEmitter"
-    import { AudioPlayerData, AudioPlayerMethod } from "editor:type:audioPlayer"
-    import { DecalData, DecalMethod } from "editor:type:decal"
-    import { TerrainStampData, TerrainStampMethod } from "editor:type:terrainStamp"
-    import { CameraData, CameraMethod } from "editor:type:camera"
-    import { ExecutorData, ExecutorMethod } from "editor:type:executor"
-
+declare module "editor:type" {
     type Common<T extends keyof ItemComponentTypeMap> = {
         /**
          * `readonly`
@@ -41,7 +23,7 @@ declare module "editor:type:itemComponent" {
         pasteData: T extends "Settings" ? never : () => void
     }
 
-    export type ItemComponentTypeMap = {
+    type ItemComponentTypeMap = {
         Settings: { data: SettingsData, method: SettingsMethod }
         Renderer: { data: RendererData, method: RendererMethod }
         RoadGenerator: { data: RoadGeneratorData, method: RoadGeneratorMethod }
@@ -61,5 +43,5 @@ declare module "editor:type:itemComponent" {
         Executor: { data: ExecutorData, method: ExecutorMethod }
     }
 
-    export type ItemComponent<T extends keyof ItemComponentTypeMap> = Common<T> & ItemComponentTypeMap[T]["method"]
+    type ItemComponent<T extends keyof ItemComponentTypeMap> = Common<T> & ItemComponentTypeMap[T]["method"]
 }

@@ -1,10 +1,10 @@
-declare module "editor:type:wayPoint" {
+declare module "editor:type" {
     const enum MoveType {
         Speed = 0,
         Duration = 1,
     }
 
-    export type WayPointData = {
+    type WayPointData = {
         TransformOffset: Trans
         MoveType: MoveType
         MoveSpeed: float
@@ -12,7 +12,7 @@ declare module "editor:type:wayPoint" {
         StayTime: float
     }
 
-    export type WayPointMethod = {
+    type WayPointMethod = {
         [key: string | symbol]: never
     }
 }

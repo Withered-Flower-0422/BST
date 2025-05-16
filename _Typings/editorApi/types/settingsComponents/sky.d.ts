@@ -1,4 +1,4 @@
-declare module "editor:type:sky" {
+declare module "editor:type" {
     const enum SkyType {
         PhysicsSky = 0,
         HDRISky = 1,
@@ -80,7 +80,7 @@ declare module "editor:type:sky" {
         GammaOffset: float
     }
 
-    export type Sky = {
+    type Sky = {
         SkyType: SkyType
         PhysicsSky: PhysicsSky
         HDRISky: HDRISky

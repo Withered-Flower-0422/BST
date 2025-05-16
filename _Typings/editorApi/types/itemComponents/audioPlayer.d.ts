@@ -1,5 +1,5 @@
-declare module "editor:type:audioPlayer" {
-    export type AudioPlayerData = {
+declare module "editor:type" {
+    type AudioPlayerData = {
         TransformOffset: Trans
         AudioPath: string
         Loop: bool
@@ -18,7 +18,7 @@ declare module "editor:type:audioPlayer" {
         MaxDistance: float
     }
 
-    export type AudioPlayerMethod = {
+    type AudioPlayerMethod = {
         [key: string | symbol]: never
     }
 }

@@ -1,5 +1,5 @@
-declare module "game:module:audioManager" {
-    export namespace audioManager {
+declare module "game:module" {
+    namespace audioManager {
         const playBgm: (index: int, volume: float) => void
         const pauseBgm: () => void
         const stopBgm: () => void

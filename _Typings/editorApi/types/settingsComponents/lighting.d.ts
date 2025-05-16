@@ -1,5 +1,5 @@
-declare module "editor:type:lighting" {
-    export type Lighting = {
+declare module "editor:type" {
+    type Lighting = {
         Enabled: bool
         Rotation: Float3
         /**

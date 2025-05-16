@@ -1,5 +1,5 @@
-declare module "game:module:levelManager" {
-    import { Component } from "game:type:component"
+declare module "game:module" {
+    import { Component } from "game:type"
 
     type CancelableEvent = (
         "OnPreRestartLevel" |
@@ -29,7 +29,7 @@ declare module "game:module:levelManager" {
         "Explosion"
     )
 
-    export namespace levelManager {
+    namespace levelManager {
         let timeScale: float
         let score: float
         let spawnPointPosition: Float3

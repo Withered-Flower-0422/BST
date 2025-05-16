@@ -1,9 +1,7 @@
-declare module "game:module:scene" {
-    import { Item } from "game:type:item"
-    import { RaycastResult } from "game:type:raycastResult"
-    import { CollisionLayer } from "game:type:collisionLayer"
+declare module "game:module" {
+    import { Item, RaycastResult, CollisionLayer } from "game:type"
 
-    export namespace scene {
+    namespace scene {
         const getAllItems: () => Item[]
         const getItem: (guid: string) => Item
         const getItems: (guids: string[]) => Item[]

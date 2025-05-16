@@ -1,4 +1,4 @@
-declare module "editor:type:roadGenerator" {
+declare module "editor:type" {
     const enum GeneratorAlgorithm {
         Road = 0,
         Corner = 1,
@@ -138,7 +138,7 @@ declare module "editor:type:roadGenerator" {
         ScriptPath: string
     }
 
-    export type RoadGeneratorData = {
+    type RoadGeneratorData = {
         GeneratorAlgorithm: GeneratorAlgorithm
         Road: Road
         WoodenBoard: WoodenBoard
@@ -149,7 +149,7 @@ declare module "editor:type:roadGenerator" {
         CustomScript: CustomScript
     }
 
-    export type RoadGeneratorMethod = {
+    type RoadGeneratorMethod = {
         clone: () => void
         generate: () => void
         createWayPoint: () => void

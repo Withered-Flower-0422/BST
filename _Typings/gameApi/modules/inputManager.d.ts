@@ -1,4 +1,4 @@
-declare module "game:module:inputManager" {
+declare module "game:module" {
     type KeyboardKey = (
         "Space" | "Enter" | "Tab" | "Backquote" | "Quote" |
         "Semicolon" | "Comma" | "Period" | "Slash" | "Backslash" |
@@ -43,7 +43,7 @@ declare module "game:module:inputManager" {
         "FreeLookLockView" | "FreeLookToggleFirstPersonView"
     )
 
-    export namespace inputManager {
+    namespace inputManager {
         namespace keyboard {
             const checkKeyDown: (key: KeyboardKey) => bool
             const checkKeyUp: (key: KeyboardKey) => bool

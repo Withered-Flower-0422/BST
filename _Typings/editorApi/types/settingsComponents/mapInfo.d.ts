@@ -1,4 +1,4 @@
-declare module "editor:type:mapInfo" {
+declare module "editor:type" {
     const enum Difficulty {
         Easy = 0,
         Normal = 1,
@@ -34,7 +34,7 @@ declare module "editor:type:mapInfo" {
         FreeLook = 1,
     }
 
-    export type MapInfo = {
+    type MapInfo = {
         AuthorName: string
         MapName: string
         MapDescription: string

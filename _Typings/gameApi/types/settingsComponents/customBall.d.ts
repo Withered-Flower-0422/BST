@@ -1,4 +1,4 @@
-declare module "game:type:customBall" {
+declare module "game:type" {
     type CustomBallSettings = {
         ItemTemplate: string
         BallName: string
@@ -31,7 +31,7 @@ declare module "game:type:customBall" {
         SwitcherLightIntensity: float
     }
 
-    export type CustomBall = {
+    type CustomBall = {
         "CustomBall": CustomBallSettings[]
     }
 }

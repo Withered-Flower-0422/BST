@@ -1,4 +1,4 @@
-declare module "editor:type:light" {
+declare module "editor:type" {
     const enum LightType {
         Point = 0,
         Spot = 1,
@@ -13,7 +13,7 @@ declare module "editor:type:light" {
         High = 3,
     }
 
-    const enum BlendMode {
+    const enum LightBlendMode {
         Additive = 0,
         Blend = 1,
         PreMultiply = 2,
@@ -81,7 +81,7 @@ declare module "editor:type:light" {
     type VolumetricLight = {
         OnlyVolumetric: bool
         AutoOptimize: bool
-        BlendMode: BlendMode
+        BlendMode: LightBlendMode
         /**
          * @range `1 ~ 256`
          */
@@ -132,7 +132,7 @@ declare module "editor:type:light" {
         DustFalloffDistance: float
     }
 
-    export type LightData = {
+    type LightData = {
         TransformOffset: Trans
         LightType: LightType
         PointLight: PointLight
@@ -143,7 +143,7 @@ declare module "editor:type:light" {
         VolumetricLight: VolumetricLight
     }
 
-    export type LightMethod = {
+    type LightMethod = {
         [key: string | symbol]: never
     }
 }

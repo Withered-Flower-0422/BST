@@ -1,7 +1,5 @@
-declare module "game:type:raycastResult" {
-    import { Item } from "game:type:item"
-
-    export type RaycastResult = {
+declare module "game:type" {
+    type RaycastResult = {
         /**
          * @description colliding item
          */

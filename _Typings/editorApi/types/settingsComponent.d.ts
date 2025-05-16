@@ -1,18 +1,5 @@
-declare module "editor:type:settingsComponent" {
-    import { Cloud } from "editor:type:cloud"
-    import { Environment } from "editor:type:environment"
-    import { Fog } from "editor:type:fog"
-    import { Lighting } from "editor:type:lighting"
-    import { MapInfo } from "editor:type:mapInfo"
-    import { Sky } from "editor:type:sky"
-    import { Lens } from "editor:type:lens"
-    import { BackgroundMusic } from "editor:type:backgroundMusic"
-    import { Terrain } from "editor:type:terrain"
-    import { CollectionPrototype } from "editor:type:collectionPrototype"
-    import { AssetReference } from "editor:type:assetReference"
-    import { CustomBall } from "editor:type:customBall"
-
-    export type SettingsComponentTypeMap = {
+declare module "editor:type" {
+    type SettingsComponentTypeMap = {
         Cloud: Cloud,
         Environment: Environment,
         Fog: Fog,
@@ -27,7 +14,7 @@ declare module "editor:type:settingsComponent" {
         CustomBall: CustomBall,
     }
 
-    export type SettingsComponent<T extends keyof SettingsComponentTypeMap> = {
+    type SettingsComponent<T extends keyof SettingsComponentTypeMap> = {
         /**
          * `readonly`
          */

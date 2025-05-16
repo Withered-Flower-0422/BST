@@ -1,8 +1,4 @@
-declare module "editor:type:physicsObject" {
-    import {
-        ColliderType, CollisionLayer, BoxColliderParams, SphereColliderParams, MeshColliderParams
-    } from "editor:type:collider"
-
+declare module "editor:type" {
     const enum PhysicsBodyType {
         Static = 0,
         Kinematic = 1,
@@ -64,7 +60,7 @@ declare module "editor:type:physicsObject" {
         Scale: bool
     }
 
-    export type PhysicsObjectData = {
+    type PhysicsObjectData = {
         ColliderType: ColliderType
         BoxColliderParams: BoxColliderParams
         SphereColliderParams: SphereColliderParams
@@ -100,7 +96,7 @@ declare module "editor:type:physicsObject" {
         ShowStatus: ShowStatus
     }
 
-    export type PhysicsObjectMethod = {
+    type PhysicsObjectMethod = {
         autoDetectBoxCollider: () => void
     }
 }

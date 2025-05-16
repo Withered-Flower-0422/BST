@@ -1,5 +1,5 @@
-declare module "editor:type:collider" {
-    export const enum CollisionLayer {
+declare module "editor:type" {
+    const enum CollisionLayer {
         Player = 0,
         RigidBody = 1,
         Machinery = 2,
@@ -10,24 +10,24 @@ declare module "editor:type:collider" {
         OnlyPlayer = 7,
     }
 
-    export const enum ColliderType {
+    const enum ColliderType {
         Box = 0,
         Sphere = 1,
         Mesh = 2,
     }
 
-    export type BoxColliderParams = {
+    type BoxColliderParams = {
         Center: Float3
         Size: Float3
         BevelRadius: float
     }
 
-    export type SphereColliderParams = {
+    type SphereColliderParams = {
         Center: Float3
         Radius: float
     }
 
-    export type MeshColliderParams = {
+    type MeshColliderParams = {
         AutoGetMesh: bool
         Mesh: string
         Convex: bool

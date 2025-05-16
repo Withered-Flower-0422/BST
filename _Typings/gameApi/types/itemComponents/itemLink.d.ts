@@ -1,7 +1,5 @@
-declare module "game:type:itemLink" {
-    import { Item } from "game:type:item"
-
-    export type ItemLinkData = {
+declare module "game:type" {
+    type ItemLinkData = {
         "Link": string
         /**
          * @NOTE only for Volcano ItemLink
@@ -9,7 +7,7 @@ declare module "game:type:itemLink" {
         "Settings/DestroyOnContact": bool
     }
 
-    export type ItemLinkMethod = {
+    type ItemLinkMethod = {
         getInternalItems: () => Item[]
     }
 }

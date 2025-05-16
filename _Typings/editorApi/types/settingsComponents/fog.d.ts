@@ -1,4 +1,4 @@
-declare module "editor:type:fog" {
+declare module "editor:type" {
     const enum FogType {
         Disabled = 0,
         PhysicsFog = 1,
@@ -91,7 +91,7 @@ declare module "editor:type:fog" {
         NoiseRange: float
     }
 
-    export type Fog = {
+    type Fog = {
         FogType: FogType
         PhysicsFog: PhysicsFog
         ArtisticFog: ArtisticFog

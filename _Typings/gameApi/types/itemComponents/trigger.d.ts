@@ -1,11 +1,5 @@
-declare module "game:type:trigger" {
-    const enum ColliderType {
-        Box = 0,
-        Sphere = 1,
-        Mesh = 2,
-    }
-
-    export type TriggerData = {
+declare module "game:type" {
+    type TriggerData = {
         "TriggerPlayerLayer": bool
         "TriggerRigidBodyLayer": bool
         "TriggerMachineryLayer": bool
@@ -28,7 +22,7 @@ declare module "game:type:trigger" {
         "MeshColliderParams/Convex": bool
     }
 
-    export type TriggerMethod = {
+    type TriggerMethod = {
         [key: string | symbol]: never
     }
 }

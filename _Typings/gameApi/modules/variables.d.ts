@@ -1,11 +1,11 @@
-declare module "game:module:variables" {
+declare module "game:module" {
     type builtInCollections = (
         "Score" | "Cure" | "Recover" | "Froze" | "Electric" |
         "Key_Red" | "Key_Blue" | "Key_Green" |
         "Key_Cyan" | "Key_Magenta" | "Key_Yellow"
     )
 
-    export namespace variables {
+    namespace variables {
         /**
          * @param name the name of the variable to get, if starts with `C_` it refers to a `Collection`
          * @builtinCollections Click to see {@link builtInCollections}

@@ -1,4 +1,4 @@
-declare module "game:type:fog" {
+declare module "game:type" {
     const enum FogType {
         Disabled = 0,
         PhysicsFog = 1,
@@ -10,7 +10,7 @@ declare module "game:type:fog" {
         Additive = 1,
     }
 
-    export type Fog = {
+    type Fog = {
         "FogType": FogType
         "PhysicsFog/FalloffDistance": float
         "PhysicsFog/FogHeight": Float2

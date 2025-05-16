@@ -1,5 +1,5 @@
-declare module "editor:type:wayPath" {
-    export type WayPathData = {
+declare module "editor:type" {
+    type WayPathData = {
         WayPoints: string[]
         AutoCollect: bool
         UseCurve: bool
@@ -12,7 +12,7 @@ declare module "editor:type:wayPath" {
         Targets: string[]
     }
 
-    export type WayPathMethod = {
+    type WayPathMethod = {
         [key: string | symbol]: never
     }
 }

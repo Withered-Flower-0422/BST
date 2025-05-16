@@ -1,5 +1,5 @@
-declare module "game:module:console" {
-    export namespace console {
+declare module "game:module" {
+    namespace console {
         /**
          * @description message only shown in `Testmap Mode`
          */

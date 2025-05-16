@@ -1,5 +1,5 @@
-declare module "editor:type:backgroundMusic" {
-    export type BackgroundMusic = {
+declare module "editor:type" {
+    type BackgroundMusic = {
         /**
          * @description BME pathes to the background music
          */

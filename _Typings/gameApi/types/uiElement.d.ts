@@ -1,5 +1,5 @@
-declare module "game:type:uiElement" {
-    type Common<T extends keyof ElementTypeMap> = {
+declare module "game:type" {
+    type UIElementCommon<T extends keyof ElementTypeMap> = {
         /**
          * `readonly`
          */
@@ -163,11 +163,11 @@ declare module "game:type:uiElement" {
         alpha: float
     }
 
-    export type ElementTypeMap = {
+    type ElementTypeMap = {
         Image: Image
         Text: Text
         Panel: Panel
     }
 
-    export type UIElement<T extends keyof ElementTypeMap> = Common<T> & ElementTypeMap[T]
+    type UIElement<T extends keyof ElementTypeMap> = UIElementCommon<T> & ElementTypeMap[T]
 }

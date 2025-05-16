@@ -1,10 +1,7 @@
-declare module "editor:type:sceneObject" {
-    import { ItemComponent, ItemComponentTypeMap } from "editor:type:itemComponent"
-    import { SettingsComponent, SettingsComponentTypeMap } from "editor:type:settingsComponent"
+declare module "editor:type" {
+    type SceneObjectType = "Item" | "Settings" | "Folder"
 
-    export type SceneObjectType = "Item" | "Settings" | "Folder"
-
-    export type SceneObject<T extends SceneObjectType> = {
+    type SceneObject<T extends SceneObjectType> = {
         /**
          * `readonly`
          */

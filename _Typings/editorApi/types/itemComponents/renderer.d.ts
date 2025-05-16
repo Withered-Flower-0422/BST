@@ -1,4 +1,4 @@
-declare module "editor:type:renderer" {
+declare module "editor:type" {
     const enum ShadowCastingMode {
         On = 0,
         Off = 1,
@@ -6,7 +6,7 @@ declare module "editor:type:renderer" {
         ShadowsOnly = 3,
     }
 
-    export type RendererData = {
+    type RendererData = {
         Mesh: string
         Materials: string[]
         AutoGetMesh: bool
@@ -22,7 +22,7 @@ declare module "editor:type:renderer" {
         NearDissolve: bool
     }
 
-    export type RendererMethod = {
+    type RendererMethod = {
         [key: string | symbol]: never
     }
 }
