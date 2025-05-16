@@ -3,7 +3,7 @@ declare module "game:type" {
         /**
          * `readonly`
          */
-        get type(): T
+        readonly type: T
         getData: <K extends keyof ComponentTypeMap[T]["data"]>(path: K) => ComponentTypeMap[T]["data"][K]
         /**
          * @NOTE some properties may not be allowed to be set during game runtime

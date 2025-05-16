@@ -18,7 +18,7 @@ declare module "editor:type" {
         /**
          * `readonly`
          */
-        get type(): T
+        readonly type: T
         /**
          * 
          * @returns The data of the component as a JSON string.

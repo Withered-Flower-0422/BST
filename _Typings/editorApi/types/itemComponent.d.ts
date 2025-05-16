@@ -1,9 +1,9 @@
 declare module "editor:type" {
-    type Common<T extends keyof ItemComponentTypeMap> = {
+    type ItemComponentCommon<T extends keyof ItemComponentTypeMap> = {
         /**
          * `readonly`
          */
-        get type(): T
+        readonly type: T
         /**
          * 
          * @returns The data of the component as a JSON string.
@@ -43,5 +43,5 @@ declare module "editor:type" {
         Executor: { data: ExecutorData, method: ExecutorMethod }
     }
 
-    type ItemComponent<T extends keyof ItemComponentTypeMap> = Common<T> & ItemComponentTypeMap[T]["method"]
+    type ItemComponent<T extends keyof ItemComponentTypeMap> = ItemComponentCommon<T> & ItemComponentTypeMap[T]["method"]
 }

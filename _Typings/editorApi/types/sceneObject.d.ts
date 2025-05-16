@@ -5,12 +5,12 @@ declare module "editor:type" {
         /**
          * `readonly`
          */
-        get guid(): string
+        readonly guid: string
         /**
          * - `Floder` deprecated
          * - `readonly`
          */
-        get type(): T
+        readonly type: T
         name: string
         getNewGuid: () => string
         setTransform: (position: Float3, rotation: Float3, scale: Float3) => void

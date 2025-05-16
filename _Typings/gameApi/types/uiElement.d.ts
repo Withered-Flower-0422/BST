@@ -3,7 +3,7 @@ declare module "game:type" {
         /**
          * `readonly`
          */
-        get elementType(): T
+        readonly elementType: T
         /**
          * @default_value `true`
          */

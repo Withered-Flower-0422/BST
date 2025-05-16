@@ -3,7 +3,7 @@ declare module "game:type" {
         /**
          * `readonly`
          */
-        get guid(): string
+        readonly guid: string
         name: string
         setTransform: (position: Float3, rotation: Float3, scale: Float3) => void
         setPosition: (position: Float3) => void

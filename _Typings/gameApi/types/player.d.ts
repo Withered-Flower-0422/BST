@@ -5,14 +5,14 @@ declare module "game:type" {
             /**
              * `readonly`
              */
-            get guid(): string
+            readonly guid: string
             position: Float3
             rotation: Float3
             rotationQuaternion: Quaternion
             /**
              * `readonly`
              */
-            get physicsObject(): Component<"PhysicsObject">
+            readonly physicsObject: Component<"PhysicsObject">
             durability: float
             temperature: float
             wetness: float
