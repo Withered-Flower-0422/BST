@@ -8,7 +8,7 @@ declare module "editor:type" {
         /**
          * @Register
          * If you need to register the script in the editor menu bar, 
-         * you need to place the script in the `Scripts/_Editor` folder and  the `menuPath` string.
+         * you need to place the script in the `Scripts/_Editor` folder.
          * @Icon
          * If you need to add an icon to a script registered in the menu bar, 
          * you need to first import the image into BME and convert it to tex format, 
