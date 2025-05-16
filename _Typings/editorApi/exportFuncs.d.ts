@@ -3,7 +3,7 @@ declare module "editor:type" {
         /**
          * @description executed when button is pressed
          */
-        type EditorExecute = (...args: any[]) => void
+        type EditorExecute = () => void
 
         /**
          * @Register
