@@ -12,7 +12,7 @@ declare module "game:type" {
         setScale: (scale: Float3) => void
         getTransform: () => Float3[]
         getRotationQuaternion: () => Quaternion
-        getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T>
+        getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
         addComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T>
         removeComponent: (componentType: keyof ComponentTypeMap) => void
         moveTo: (
