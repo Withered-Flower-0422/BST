@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.3 (2025-05-19)
+
+- Added `CustomBall` and `Place` enums to `HierachyIcon`.
+- Renamed the `CustomBall` property in type `CustomBall` to `CustomBalls`.
+- Added `Landscaping` type.
+- Fixed the return type of the method `removeComponent()` (now returns `void`).
+- Optimized some descriptions of methods and properties.
+
 ## v1.0.2 (2025-05-18)
 
 - Added a [`CHANGELOG`](./CHANGELOG.md) file.

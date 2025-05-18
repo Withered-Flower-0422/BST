@@ -25,7 +25,7 @@ declare module "editor:type" {
 
         getComponent: (
             T extends "Item" ?
-            <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> :
+            <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> | null :
             T extends "Settings" ?
             <U extends keyof SettingsComponentTypeMap>(componentType: U) => SettingsComponent<U> :
             never
@@ -39,7 +39,7 @@ declare module "editor:type" {
 
         removeComponent: (
             T extends "Item" ?
-            <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> :
+            <U extends keyof ItemComponentTypeMap>(componentType: U) => void :
             never
         )
 

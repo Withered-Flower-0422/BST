@@ -32,6 +32,6 @@ declare module "editor:type" {
     }
 
     type CustomBall = {
-        CustomBall: CustomBallSettings[]
+        CustomBalls: CustomBallSettings[]
     }
 }

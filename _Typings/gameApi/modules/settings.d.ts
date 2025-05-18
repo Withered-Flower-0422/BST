@@ -1,7 +1,7 @@
 declare module "game:module" {
     import {
         Cloud, Environment, Fog, Lighting, MapInfo, Sky, Lens, BackgroundMusic,
-        Terrain, CollectionPrototype, AssetReference, CustomBall,
+        Terrain, CollectionPrototype, AssetReference, CustomBall, Landscaping,
     } from "game:type"
 
     type ComponentTypeMap = {
@@ -17,6 +17,7 @@ declare module "game:module" {
         CollectionPrototype: CollectionPrototype,
         AssetReference: AssetReference,
         CustomBall: CustomBall,
+        Landscaping: Landscaping,
     }
 
     type ComponentType = keyof ComponentTypeMap
@@ -30,15 +31,19 @@ declare module "game:module" {
          */
         const language: string
         /**
-         * @returns `json` string of the saved data.
-         * @NOTE not a JSON object, needs to be parsed before use.
+         * @returns `json` string of the saved data
+         * @NOTE
+         * - not a JSON object, needs to be parsed before use
+         * - some components' data may not be accessible during game runtime
          */
         const getData: <T extends ComponentType>(
             componentType: T,
             path: keyof ComponentTypeMap[T]
         ) => json
         /**
-         * @NOTE unlike `getData`, `values` should be a JSON object, not a string.
+         * @NOTE
+         * - unlike `getData`, `values` should be a JSON object, not a string
+         * - some components' data may not be settable during game runtime
          */
         const setData: <T extends ComponentType>(
             componentType: T,

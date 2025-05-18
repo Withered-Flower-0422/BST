@@ -30,6 +30,8 @@ declare module "game:type" {
         Camera = 27,
         Executor = 28,
         Empty = 29,
+        CustomBall = 30,
+        Place = 31,
     }
 
     type SettingsData = {
