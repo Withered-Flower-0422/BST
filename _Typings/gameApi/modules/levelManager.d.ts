@@ -57,7 +57,8 @@ declare module "game:module" {
         const callRestart: () => void
         const transferPlayer: (targetPosition: Float3) => void
         /**
-         * @description if `null` is passed, the camera will return to the player ball"s view.
+         * @param guid the guid of the item to be followed by the camera; if `null` is passed, the camera will follow the player ball's view
+         * @param displayName the name shown on the ui
          */
         const setCameraTarget: (guid: string | null, displayName: string) => void
         /**
@@ -67,20 +68,20 @@ declare module "game:module" {
         const hideTip: (guid: string) => void
         const hideAllTips: () => void
         /**
-         * @param data `json` string to save.
-         * @NOTE not a JSON object, needs to be stringified first.
+         * @param data `json` string to save
+         * @NOTE not a JSON object, needs to be stringified first
          */
         const save: (data: json) => bool
         /**
-         * @returns `json` string of the saved data.
-         * @NOTE not a JSON object, needs to be parsed before use.
+         * @returns `json` string of the saved data
+         * @NOTE not a JSON object, needs to be parsed before use
          */
         const load: () => json
         const cancelEvent: (eventName: CancelableEvent) => void
         const sendCustomEvent: (message: any) => void
         const spawnVfx: (type: VfxType, position: Float3) => void
         /**
-         * @description if `null` is passed, default camera will be used.
+         * @param camera the camera component to be used as custom camera; if `null` is passed, default camera will be used
          */
         const setCustomCamera: (camera: Component<"Camera"> | null) => void
         const invoke: (func: (...args: any[]) => any, delayFrame: int) => void

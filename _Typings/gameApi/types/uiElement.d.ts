@@ -103,7 +103,7 @@ declare module "game:type" {
         /**
          * @default_value `true`
          */
-        showMaskElement: bool //*默认: true
+        showMaskElement: bool
     }
 
     type Text = {

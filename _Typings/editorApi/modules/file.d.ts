@@ -1,7 +1,7 @@
 declare module "editor:module" {
     namespace file {
         /**
-         * @description - the system path to the floder where the BME assets / settings / etc. are stored.
+         * @description - the system path to the floder where the BME assets / settings / etc. are stored
          * - `readonly`
          */
         const dataDirectoryPath: string
