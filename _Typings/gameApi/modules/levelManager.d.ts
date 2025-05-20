@@ -1,5 +1,6 @@
 declare module "game:module" {
     import { Component } from "game:type"
+    import { AssertGuid } from "guid"
 
     type CancelableEvent = (
         "OnPreRestartLevel" |
@@ -60,13 +61,15 @@ declare module "game:module" {
          * @param guid the guid of the item to be followed by the camera; if `null` is passed, the camera will follow the player ball's view
          * @param displayName the name shown on the ui
          */
-        const setCameraTarget: (guid: string | null, displayName: string) => void
+        const setCameraTarget: <S extends string>(guid: AssertGuid<S> | null, displayName: string) => void
         /**
          * @returns returns the shown tip's guid
          */
         const showTip: (content: string) => string
         const hideTip: (guid: string) => void
         const hideAllTips: () => void
+        const hideTipDelay: (guid: string, frame: int) => void
+        const hideAllTipsDelay: (frame: int) => void
         /**
          * @param data `json` string to save
          * @NOTE not a JSON object, needs to be stringified first

@@ -1,13 +1,14 @@
 declare module "game:module" {
     import { Item, RaycastResult, CollisionLayer } from "game:type"
+    import { AssertGuid, AssertGuids } from "guid"
 
     namespace scene {
         const getAllItems: () => Item[]
-        const getItem: (guid: string) => Item
-        const getItems: (guids: string[]) => Item[]
+        const getItem: <S extends string>(guid: AssertGuid<S>) => Item
+        const getItems: <S extends readonly string[]>(guids: AssertGuids<S>) => Item[]
         const getPlayer: () => Player
-        const destroyItem: (guid: string) => void
-        const destroyItems: (guids: string[]) => void
+        const destroyItem: <S extends string>(guid: AssertGuid<S>) => void
+        const destroyItems: <S extends readonly string[]>(guids: AssertGuids<S>) => void
         const createItem: (name: string) => Item
         const raycast: (start: Float3, end: Float3) => RaycastResult
         const raycastAll: (start: Float3, end: Float3) => RaycastResult[]

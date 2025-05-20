@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.4 (2025-05-20)
+
+- Fixed a mistake that `hideTipDelay()` and `hideAllTipsDelay()` methods were in the wrong module `inputManager` instead of `levelManager`.
+- Now the methods that taken item guid(s) as a parameter can check if the guid(s) conform(s) to the format.
+
 ## v1.0.3 (2025-05-19)
 
 - Added `CustomBall` and `Place` enums to `HierachyIcon`.

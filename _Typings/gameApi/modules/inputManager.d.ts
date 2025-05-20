@@ -67,7 +67,5 @@ declare module "game:module" {
         const disablePlayerKey: (playerKeyName: PlayerKey) => void
         const enablePlayerKey: (playerKeyName: PlayerKey) => void
         const getPlayerKey: (playerKeyName: PlayerKey) => KeyboardKey
-        const hideTipDelay: (guid: string, frame: int) => void
-        const hideAllTipsDelay: (frame: int) => void
     }
 }
