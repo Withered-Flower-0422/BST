@@ -4,10 +4,22 @@ declare module "game:module" {
 
     namespace scene {
         const getAllItems: () => Item[]
+        /**
+         * @param {string} guid `string`: the guid string of the item to get
+         */
         const getItem: <S extends string>(guid: AssertGuid<S>) => Item
+        /**
+         * @param guids `string[]`: the guid strings in an array of the items to get
+         */
         const getItems: <S extends readonly string[]>(guids: AssertGuids<S>) => Item[]
         const getPlayer: () => Player
+        /**
+         * @param guid `string`: the guid string of the item to destroy
+         */
         const destroyItem: <S extends string>(guid: AssertGuid<S>) => void
+        /**
+         * @param guids `string[]`: the guid strings in an array of the items to destroy
+         */
         const destroyItems: <S extends readonly string[]>(guids: AssertGuids<S>) => void
         const createItem: (name: string) => Item
         const raycast: (start: Float3, end: Float3) => RaycastResult
