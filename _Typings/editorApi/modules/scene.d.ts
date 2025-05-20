@@ -13,7 +13,10 @@ declare module "editor:module" {
         const duplicateObjects: <S extends readonly string[]>(guids: AssertGuids<S>) => SceneObject<SceneObjectType>[]
         const getSelectedObject: () => SceneObject<SceneObjectType>
         const getSelectedObjects: () => SceneObject<SceneObjectType>[]
-        const setSelection: (activatedObjectGuid: string, selectedObjectsGuid: string[]) => void
+        const setSelection: <S1 extends string, S2 extends readonly string[]>(
+            activatedObjectGuid: AssertGuid<S1>,
+            selectedObjectsGuid: AssertGuids<S2>,
+        ) => void
         const getCameraPosition: () => Float3
         const getCameraPivot: () => Float3
         const setCameraPositionAndPivot: (position: Float3, pivot: Float3) => void
