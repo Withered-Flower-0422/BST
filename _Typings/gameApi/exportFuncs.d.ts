@@ -125,13 +125,13 @@ declare module "game:type" {
     global {
         /**
          * @param self the item referred to self
-         * @param vars variavles set on the Executor
+         * @param vars variables set on the *Executor*
          * @description only executed once when the script is being loaded before all events
          */
         type Init = (self: Item, vars: { [key: string]: any }) => void
 
         /**
-         * @description invoked by other Executor using execute()
+         * @description invoked by other *Executor* using execute()
          */
         type GameExecute = (...args: any[]) => void
 
