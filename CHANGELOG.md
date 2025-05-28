@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.5 (2025-05-28)
+
+- Renamed the property `GetGlobalUVMat` to `TryGetGlobalUVMat` in `RendererData` type.
+- Added a file `utils.d.ts`, in where a new type `Mutable` is defined for future use.
+
 ## v1.0.4 (2025-05-20)
 
 - Fixed a mistake that `hideTipDelay()` and `hideAllTipsDelay()` methods were in the wrong module `inputManager` instead of `levelManager`.

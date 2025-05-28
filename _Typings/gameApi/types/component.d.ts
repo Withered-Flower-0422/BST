@@ -1,4 +1,6 @@
 declare module "game:type" {
+    import { Mutable } from "utils"
+
     type ComponentCommon<T extends keyof ComponentTypeMap> = {
         /**
          * `readonly`
@@ -9,7 +11,7 @@ declare module "game:type" {
          * @NOTE some properties may not be allowed to be set during game runtime
          */
         setData: (
-            data: { [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K] }
+            data: Mutable<{ [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K] }>
         ) => void
     }
 

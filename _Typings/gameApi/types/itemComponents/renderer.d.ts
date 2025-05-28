@@ -11,7 +11,7 @@ declare module "game:type" {
         "Materials": string[]
         "AutoGetMesh": bool
         "AutoGetMaterials": bool
-        "GetGlobalUVMat": bool
+        "TryGetGlobalUVMat": bool
         "ShadowCastingMode": ShadowCastingMode
         "AutoOptimize": bool
         "ForceSetOpacity": bool

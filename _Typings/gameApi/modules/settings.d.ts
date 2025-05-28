@@ -4,6 +4,8 @@ declare module "game:module" {
         Terrain, CollectionPrototype, AssetReference, CustomBall, Landscaping,
     } from "game:type"
 
+    import { Mutable } from "utils"
+
     type ComponentTypeMap = {
         Cloud: Cloud,
         Environment: Environment,
@@ -20,8 +22,6 @@ declare module "game:module" {
         Landscaping: Landscaping,
     }
 
-    type ComponentType = keyof ComponentTypeMap
-
     namespace settings {
         let viewDistance: float
         let cameraOffset: Float3
@@ -36,7 +36,7 @@ declare module "game:module" {
          * - not a JSON object, needs to be parsed before use
          * - some components' data may not be accessible during game runtime
          */
-        const getData: <T extends ComponentType>(
+        const getData: <T extends keyof ComponentTypeMap>(
             componentType: T,
             path: keyof ComponentTypeMap[T]
         ) => json
@@ -45,9 +45,9 @@ declare module "game:module" {
          * - unlike `getData`, `values` should be a JSON object, not a string
          * - some components' data may not be settable during game runtime
          */
-        const setData: <T extends ComponentType>(
+        const setData: <T extends keyof ComponentTypeMap>(
             componentType: T,
-            values: { [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }
+            values: Mutable<{ [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }>
         ) => void
     }
 }

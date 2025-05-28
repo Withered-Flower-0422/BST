@@ -4,7 +4,7 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 
 ## Current Version
 
-- v1.0.4
+- v1.0.5
 
 ## Usage
 
