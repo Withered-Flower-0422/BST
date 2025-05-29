@@ -1,10 +1,10 @@
 declare module "game:type" {
     type ItemLinkData = {
-        "Link": string
+        readonly "Link": string
         /**
-         * @NOTE only for `Volcano` ItemLink
+         * different itemlink types have different data structure
          */
-        "Settings/DestroyOnContact": bool
+        [key: string]: any
     }
 
     type ItemLinkMethod = {

@@ -41,15 +41,15 @@ declare module "game:type" {
         "MeshColliderParams/Mesh": string
         "MeshColliderParams/AutoGetMesh": bool
         "MeshColliderParams/Convex": bool
-        "PhysicsBodyType": PhysicsBodyType
-        "WeldCollider": bool
+        readonly "PhysicsBodyType": PhysicsBodyType
+        readonly "WeldCollider": bool
         "RigidBodyParams/Mass": float
         "RigidBodyParams/LinearDrag": float
         "RigidBodyParams/AngularDrag": float
         "RigidBodyParams/GravityFactor": float
         "RigidBodyParams/Density": float
-        "RigidBodyParams/BuoyancyVoxelSize": float
-        "OverrideMassDistribution": bool
+        readonly "RigidBodyParams/BuoyancyVoxelSize": float
+        readonly "OverrideMassDistribution": bool
         "CenterOfMass": Float3
         "AutoGetPhysicsMaterial": bool
         "PhysicsMaterial": PhysicsMaterial
@@ -60,7 +60,7 @@ declare module "game:type" {
         "CustomRestitution": float
         "DisableCollisionAudio": bool
         "CollisionLayer": CollisionLayer
-        "Interactive": bool
+        readonly "Interactive": bool
         "InteractiveParams/MoveForce": float
         "InteractiveParams/TorqueForce": float
         "InteractiveParams/Defence": float

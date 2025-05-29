@@ -37,20 +37,20 @@ declare module "game:type" {
     }
 
     type MapInfo = {
-        "AuthorName": string
-        "AuthorSteamID": int64
-        "MapName": string
-        "MapDescription": string
-        "Version": int
-        "Difficulty": Difficulty
-        "MapType": MapType
-        "CoverPath": string
-        "InitialBallType": InitialBallType
-        "UseCustomBall": bool
-        "CustomBallName": string
-        "ViewMode": ViewMode
-        "ViewDistance": float
-        "CameraOffset": Float3
-        "Gravity": Float3
+        readonly "AuthorName": string
+        readonly "AuthorSteamID": int64
+        readonly "MapName": string
+        readonly "MapDescription": string
+        readonly "Version": int
+        readonly "Difficulty": Difficulty
+        readonly "MapType": MapType
+        readonly "CoverPath": string
+        readonly "InitialBallType": InitialBallType
+        readonly "UseCustomBall": bool
+        readonly "CustomBallName": string
+        readonly "ViewMode": ViewMode
+        readonly "ViewDistance": float
+        readonly "CameraOffset": Float3
+        readonly "Gravity": Float3
     }
 }

@@ -3,10 +3,10 @@ declare module "game:type" {
         /**
          * @description BME pathes to the background music
          */
-        "BGM": string[]
+        readonly "BGM": string[]
         /**
          * @description BME pathes to the sound effects
          */
-        "SFX": string[]
+        readonly "SFX": string[]
     }
 }

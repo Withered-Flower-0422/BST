@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.6 (2025-05-29)
+
+- Optimized the structure of the union types.
+- Roughly screened out the components' data that can be set during the game runtime.
+- Disallowed to add or remove a `Settings` component to an `Item`.
+
 ## v1.0.5 (2025-05-28)
 
 - Renamed the property `GetGlobalUVMat` to `TryGetGlobalUVMat` in `RendererData` type.

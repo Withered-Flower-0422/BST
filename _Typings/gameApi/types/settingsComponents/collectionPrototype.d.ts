@@ -14,6 +14,6 @@ declare module "game:type" {
     }
 
     type CollectionPrototype = {
-        "Prototypes": CollectionPrototypeData[]
+        readonly "Prototypes": CollectionPrototypeData[]
     }
 }

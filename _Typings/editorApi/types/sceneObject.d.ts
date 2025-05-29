@@ -33,13 +33,13 @@ declare module "editor:type" {
 
         addComponent: (
             T extends "Item" ?
-            <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> :
+            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => ItemComponent<U> :
             never
         )
 
         removeComponent: (
             T extends "Item" ?
-            <U extends keyof ItemComponentTypeMap>(componentType: U) => void :
+            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => void :
             never
         )
 

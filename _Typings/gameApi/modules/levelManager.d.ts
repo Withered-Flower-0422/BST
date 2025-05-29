@@ -2,33 +2,31 @@ declare module "game:module" {
     import { Component } from "game:type"
     import { AssertGuid } from "guid"
 
-    type CancelableEvent = (
-        "OnPreRestartLevel" |
-        "OnPrePlayerDeadStart" |
-        "OnPreCheckpointReached" |
-        "OnPreDestinationReached" |
-        "OnPreGetCollection" |
-        "OnPreSwitchBallStart" |
-        "OnPreSwitchBallEnd" |
-        "OnPreTransferBallStart" |
-        "OnPreTransferBallEnd"
-    )
+    type CancelableEvent =
+        | "OnPreRestartLevel"
+        | "OnPrePlayerDeadStart"
+        | "OnPreCheckpointReached"
+        | "OnPreDestinationReached"
+        | "OnPreGetCollection"
+        | "OnPreSwitchBallStart"
+        | "OnPreSwitchBallEnd"
+        | "OnPreTransferBallStart"
+        | "OnPreTransferBallEnd"
 
-    type VfxType = (
-        "SpawnPlayer" |
-        "SwitchBall" |
-        "DestroyObject" |
-        "WaterRipple" |
-        "CollectScore" |
-        "CollectRecover" |
-        "CollectCure" |
-        "CollectFroze" |
-        "CollectElectric" |
-        "CollectCollection" |
-        "TransportStart" |
-        "TransportEnd" |
-        "Explosion"
-    )
+    type VfxType =
+        | "SpawnPlayer"
+        | "SwitchBall"
+        | "DestroyObject"
+        | "WaterRipple"
+        | "CollectScore"
+        | "CollectRecover"
+        | "CollectCure"
+        | "CollectFroze"
+        | "CollectElectric"
+        | "CollectCollection"
+        | "TransportStart"
+        | "TransportEnd"
+        | "Explosion"
 
     namespace levelManager {
         let timeScale: float

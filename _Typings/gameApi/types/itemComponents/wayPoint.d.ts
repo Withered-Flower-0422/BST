@@ -5,11 +5,11 @@ declare module "game:type" {
     }
 
     type WayPointData = {
-        "TransformOffset": Trans
-        "MoveType": MoveType
-        "MoveSpeed": float
-        "MoveDuration": float
-        "StayTime": float
+        readonly "TransformOffset": Trans
+        readonly "MoveType": MoveType
+        readonly "MoveSpeed": float
+        readonly "MoveDuration": float
+        readonly "StayTime": float
     }
 
     type WayPointMethod = {

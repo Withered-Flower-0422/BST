@@ -5,5 +5,5 @@ declare module "utils" {
         [P in keyof T as Equal<{ [K in P]: T[K] }, { -readonly [K in P]: T[K] }> extends true ? P : never]: T[P]
     }
 
-    type Mutable<T> = Equal<_Mutable<T>, {}> extends true ? { [key: string | symbol]: never } : _Mutable<T>
+    type Mutable<T> = Equal<_Mutable<T>, {}> extends true ? never : _Mutable<T>
 }

@@ -11,15 +11,15 @@ declare module "game:type" {
         "TriggerEnterEvent": bool
         "TriggerStayEvent": bool
         "TriggerExitEvent": bool
-        "ColliderType": ColliderType
-        "BoxColliderParams/Center": Float3
-        "BoxColliderParams/Size": Float3
-        "BoxColliderParams/BevelRadius": float
-        "SphereColliderParams/Center": Float3
-        "SphereColliderParams/Radius": float
-        "MeshColliderParams/Mesh": string
-        "MeshColliderParams/AutoGetMesh": bool
-        "MeshColliderParams/Convex": bool
+        readonly "ColliderType": ColliderType
+        readonly "BoxColliderParams/Center": Float3
+        readonly "BoxColliderParams/Size": Float3
+        readonly "BoxColliderParams/BevelRadius": float
+        readonly "SphereColliderParams/Center": Float3
+        readonly "SphereColliderParams/Radius": float
+        readonly "MeshColliderParams/Mesh": string
+        readonly "MeshColliderParams/AutoGetMesh": bool
+        readonly "MeshColliderParams/Convex": bool
     }
 
     type TriggerMethod = {

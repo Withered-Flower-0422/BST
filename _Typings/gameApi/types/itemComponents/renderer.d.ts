@@ -13,7 +13,7 @@ declare module "game:type" {
         "AutoGetMaterials": bool
         "TryGetGlobalUVMat": bool
         "ShadowCastingMode": ShadowCastingMode
-        "AutoOptimize": bool
+        readonly "AutoOptimize": bool
         "ForceSetOpacity": bool
         /**
          * @range `0 ~ 1`

@@ -17,9 +17,6 @@ declare module "game:type" {
          * @range `0 ~ 1`
          */
         "CloudLayer1/CloudD": float
-        /**
-         * @range `0 ~ 1`
-         */
         "CloudLayer1/Altitude": float
         /**
          * @range `0 ~ 360`

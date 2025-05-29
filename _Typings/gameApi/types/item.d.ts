@@ -13,8 +13,8 @@ declare module "game:type" {
         getTransform: () => Float3[]
         getRotationQuaternion: () => Quaternion
         getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
-        addComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T>
-        removeComponent: (componentType: keyof ComponentTypeMap) => void
+        addComponent: <T extends Exclude<keyof ComponentTypeMap, "Settings">>(componentType: T) => Component<T>
+        removeComponent: (componentType: Exclude<keyof ComponentTypeMap, "Settings">) => void
         moveTo: (
             targetTransform: Trans,
             easeType: EaseType,

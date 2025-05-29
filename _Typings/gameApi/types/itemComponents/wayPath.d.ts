@@ -1,15 +1,15 @@
 declare module "game:type" {
     type WayPathData = {
-        "WayPoints": string[]
-        "AutoCollect": bool
-        "UseCurve": bool
-        "ClosedPath": bool
-        "Loop": bool
-        "RelativePosition": bool
-        "RelativeRotation": bool
-        "AlignTangent": bool
-        "AutoStart": bool
-        "Targets": string[]
+        readonly "WayPoints": string[]
+        readonly "AutoCollect": bool
+        readonly "UseCurve": bool
+        readonly "ClosedPath": bool
+        readonly "Loop": bool
+        readonly "RelativePosition": bool
+        readonly "RelativeRotation": bool
+        readonly "AlignTangent": bool
+        readonly "AutoStart": bool
+        readonly "Targets": string[]
     }
 
     type WayPathMethod = {

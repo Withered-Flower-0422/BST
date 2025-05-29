@@ -1,6 +1,6 @@
 declare module "game:type" {
     type CollectionData = {
-        "CollectionName": string
+        readonly "CollectionName": string
         "RotationVelocity": Float3
         "SFX": string
     }

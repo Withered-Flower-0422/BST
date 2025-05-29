@@ -85,13 +85,12 @@ declare module "game:type" {
         /**
          * @default_value `"None"`
          */
-        aspectRatioMode: (
-            "None" |
-            "WidthControlsHeight" |
-            "HeightControlsWidth" |
-            "FitInParent" |
-            "EnvelopeParent"
-        )
+        aspectRatioMode:
+        | "None"
+        | "WidthControlsHeight"
+        | "HeightControlsWidth"
+        | "FitInParent"
+        | "EnvelopeParent"
         /**
          * @default_value `1`
          */
@@ -122,25 +121,23 @@ declare module "game:type" {
         /**
          * @default_value `"Center"`
          */
-        horizontalAlignment: (
-            "Left" |
-            "Center" |
-            "Right" |
-            "Justified" |
-            "Flush" |
-            "Geometry"
-        )
+        horizontalAlignment:
+        | "Left"
+        | "Center"
+        | "Right"
+        | "Justified"
+        | "Flush"
+        | "Geometry"
         /**
          * @default_value `"Middle"`
          */
-        verticalAlignment: (
-            "Top" |
-            "Middle" |
-            "Bottom" |
-            "Baseline" |
-            "Geometry" |
-            "Capline"
-        )
+        verticalAlignment:
+        | "Top"
+        | "Middle"
+        | "Bottom"
+        | "Baseline"
+        | "Geometry"
+        | "Capline"
         /**
          * @default_value `false`
          */

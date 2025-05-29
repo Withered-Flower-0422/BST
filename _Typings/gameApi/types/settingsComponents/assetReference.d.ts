@@ -3,26 +3,26 @@ declare module "game:type" {
         /**
          * @description BME pathes to `Scenes`
          */
-        "Scenes": string[]
+        // readonly "Scenes": string[]
         /**
          * @description BME pathes to `Items`
          */
-        "Items": string[]
+        // readonly "Items": string[]
         /**
          * @description BME pathes to `Meshes`
          */
-        "Meshes": string[]
+        readonly "Meshes": string[]
         /**
          * @description BME pathes to `Textures`
          */
-        "Textures": string[]
+        readonly "Textures": string[]
         /**
          * @description BME pathes to `Materials`
          */
-        "Materials": string[]
+        readonly "Materials": string[]
         /**
          * @description BME pathes to `Audios`
          */
-        "Audios": string[]
+        readonly "Audios": string[]
     }
 }

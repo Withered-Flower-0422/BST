@@ -1,9 +1,8 @@
 declare module "editor:module" {
-    type LanguageType = (
-        "English" |
-        "Chinese" |
-        "Japanese"
-    )
+    type LanguageType =
+        | "English"
+        | "Chinese"
+        | "Japanese"
 
     namespace editor {
         /**

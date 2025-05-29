@@ -1,9 +1,16 @@
 declare module "game:module" {
-    type builtInCollections = (
-        "Score" | "Cure" | "Recover" | "Froze" | "Electric" |
-        "Key_Red" | "Key_Blue" | "Key_Green" |
-        "Key_Cyan" | "Key_Magenta" | "Key_Yellow"
-    )
+    type builtInCollections =
+        | "Score"
+        | "Cure"
+        | "Recover"
+        | "Froze"
+        | "Electric"
+        | "Key_Red"
+        | "Key_Blue"
+        | "Key_Green"
+        | "Key_Cyan"
+        | "Key_Magenta"
+        | "Key_Yellow"
 
     namespace variables {
         /**
