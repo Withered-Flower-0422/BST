@@ -22,5 +22,5 @@ export const execute = () => {
         obj.setRotation(rot)
     })
 
-    console.log('Angle Randomized')
+    console.log("Angle Randomized")
 }
