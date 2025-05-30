@@ -5,12 +5,12 @@ declare module "guid" {
         C extends any[] = [],
     > = C["length"] extends L
         ? S extends "" ? true : false
-        : S extends `${infer F extends (
-            | "0" | "1" | "2" | "3"
-            | "4" | "5" | "6" | "7"
-            | "8" | "9" | "a" | "b"
-            | "c" | "d" | "e" | "f"
-        )}${infer R}`
+        : S extends `${infer F extends
+        | "0" | "1" | "2" | "3"
+        | "4" | "5" | "6" | "7"
+        | "8" | "9" | "a" | "b"
+        | "c" | "d" | "e" | "f"
+        }${infer R}`
         ? IsHexStringOfExactLength<R, L, [...C, any]>
         : false
 
