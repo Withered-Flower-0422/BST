@@ -5,7 +5,7 @@ declare module "game:type" {
     }
 
     type Sky = {
-        "SkyType": SkyType
+        SkyType: SkyType
         "PhysicsSky/PlanetRotation": Float3
         "PhysicsSky/GroundColorTexture": string
         "PhysicsSky/GroundTint": ColorRGBA
@@ -79,6 +79,6 @@ declare module "game:type" {
         /**
          * @range `-20 ~ 20`
          */
-        "ExposureCompensation": float
+        ExposureCompensation: float
     }
 }

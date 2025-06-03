@@ -1,28 +1,28 @@
 declare module "game:type" {
     type AssetReference = {
         /**
-         * @description BME pathes to `Scenes`
+         * @description BME paths to `Scenes`
          */
         // readonly "Scenes": string[]
         /**
-         * @description BME pathes to `Items`
+         * @description BME paths to `Items`
          */
         // readonly "Items": string[]
         /**
-         * @description BME pathes to `Meshes`
+         * @description BME paths to `Meshes`
          */
-        readonly "Meshes": string[]
+        readonly Meshes: string[]
         /**
-         * @description BME pathes to `Textures`
+         * @description BME paths to `Textures`
          */
-        readonly "Textures": string[]
+        readonly Textures: string[]
         /**
-         * @description BME pathes to `Materials`
+         * @description BME paths to `Materials`
          */
-        readonly "Materials": string[]
+        readonly Materials: string[]
         /**
-         * @description BME pathes to `Audios`
+         * @description BME paths to `Audios`
          */
-        readonly "Audios": string[]
+        readonly Audios: string[]
     }
 }

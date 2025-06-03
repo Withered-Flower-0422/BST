@@ -1,11 +1,11 @@
 declare module "game:type" {
     type DecalData = {
-        "TransformOffset": Trans
-        "MaterialPath": string
-        "DrawDistance": float
-        "StartFade": float
-        "Opacity": float
-        "RotationSpeed": float
+        TransformOffset: Trans
+        MaterialPath: string
+        DrawDistance: float
+        StartFade: float
+        Opacity: float
+        RotationSpeed: float
     }
 
     type DecalMethod = {

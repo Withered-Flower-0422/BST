@@ -6,7 +6,7 @@ declare module "editor:type" {
         Scale = 4,
     }
 
-    type Transfrom = {
+    type Transform = {
         Position: Float3
         Rotation: Float3
         Scale: Float3
@@ -14,26 +14,26 @@ declare module "editor:type" {
 
     type Landscaping = {
         Instances: {
-            Ash_Tree_01: Transfrom[]
-            Ash_Tree_02: Transfrom[]
-            Ash_Tree_03: Transfrom[]
+            Ash_Tree_01: Transform[]
+            Ash_Tree_02: Transform[]
+            Ash_Tree_03: Transform[]
 
-            Bush_01: Transfrom[]
-            Bush_02: Transfrom[]
-            Bush_03: Transfrom[]
-            Bush_04: Transfrom[]
-            Bush_05: Transfrom[]
-            Bush_06: Transfrom[]
-            Bush_07: Transfrom[]
-            Bush_08: Transfrom[]
+            Bush_01: Transform[]
+            Bush_02: Transform[]
+            Bush_03: Transform[]
+            Bush_04: Transform[]
+            Bush_05: Transform[]
+            Bush_06: Transform[]
+            Bush_07: Transform[]
+            Bush_08: Transform[]
 
-            Fern_01: Transfrom[]
-            Fern_02: Transfrom[]
+            Fern_01: Transform[]
+            Fern_02: Transform[]
 
-            Grass_Patch_01: Transfrom[]
-            Grass_Patch_02: Transfrom[]
-            Grass_Patch_03: Transfrom[]
-            Grass_Patch_10: Transfrom[]
+            Grass_Patch_01: Transform[]
+            Grass_Patch_02: Transform[]
+            Grass_Patch_03: Transform[]
+            Grass_Patch_10: Transform[]
         }
     }
 }

@@ -1,45 +1,45 @@
 declare module "game:type" {
     type Lens = {
-        "AutoExposure": bool
+        AutoExposure: bool
         /**
          * @range `-5 ~ 15`
          */
-        "LimitMin": float
+        LimitMin: float
         /**
          * @range `-5 ~ 15`
          */
-        "LimitMax": float
-        "ExposureCompensation": float
-        "SpeedDarkToLight": float
-        "SpeedLightToDark": float
-        "FixedExposure": float
-        "PostExposure": float
+        LimitMax: float
+        ExposureCompensation: float
+        SpeedDarkToLight: float
+        SpeedLightToDark: float
+        FixedExposure: float
+        PostExposure: float
         /**
          * @range `-100 ~ 100`
          */
-        "Contrast": float
-        "ColorFilter": ColorRGBA
+        Contrast: float
+        ColorFilter: ColorRGBA
         /**
          * @range `-180 ~ 180`
          */
-        "HueShift": float
+        HueShift: float
         /**
          * @range `-100 ~ 100`
          */
-        "Saturation": float
-        "Shadows": ColorRGBA
-        "Highlights": ColorRGBA
+        Saturation: float
+        Shadows: ColorRGBA
+        Highlights: ColorRGBA
         /**
          * @range `-100 ~ 100`
          */
-        "Balance": float
+        Balance: float
         /**
          * @range `-100 ~ 100`
          */
-        "Temperature": float
+        Temperature: float
         /**
          * @range `-100 ~ 100`
          */
-        "Tint": float
+        Tint: float
     }
 }

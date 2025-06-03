@@ -1,25 +1,36 @@
 declare module "game:module" {
     import {
-        Cloud, Environment, Fog, Lighting, MapInfo, Sky, Lens, BackgroundMusic,
-        Terrain, CollectionPrototype, AssetReference, CustomBall, Landscaping,
+        Cloud,
+        Environment,
+        Fog,
+        Lighting,
+        MapInfo,
+        Sky,
+        Lens,
+        BackgroundMusic,
+        Terrain,
+        CollectionPrototype,
+        AssetReference,
+        CustomBall,
+        Landscaping,
     } from "game:type"
 
     import { Mutable } from "utils"
 
     type ComponentTypeMap = {
-        Cloud: Cloud,
-        Environment: Environment,
-        Fog: Fog,
-        Lighting: Lighting,
-        MapInfo: MapInfo,
-        Sky: Sky,
-        Lens: Lens,
-        BackgroundMusic: BackgroundMusic,
-        Terrain: Terrain,
-        CollectionPrototype: CollectionPrototype,
-        AssetReference: AssetReference,
-        CustomBall: CustomBall,
-        Landscaping: Landscaping,
+        Cloud: Cloud
+        Environment: Environment
+        Fog: Fog
+        Lighting: Lighting
+        MapInfo: MapInfo
+        Sky: Sky
+        Lens: Lens
+        BackgroundMusic: BackgroundMusic
+        Terrain: Terrain
+        CollectionPrototype: CollectionPrototype
+        AssetReference: AssetReference
+        CustomBall: CustomBall
+        Landscaping: Landscaping
     }
 
     namespace settings {
@@ -36,10 +47,7 @@ declare module "game:module" {
          * - not a JSON object, needs to be parsed before use
          * - some components' data may not be accessible during game runtime
          */
-        const getData: <T extends keyof ComponentTypeMap>(
-            componentType: T,
-            path: keyof ComponentTypeMap[T]
-        ) => json
+        const getData: <T extends keyof ComponentTypeMap>(componentType: T, path: keyof ComponentTypeMap[T]) => json
         /**
          * @NOTE
          * - unlike `getData`, `values` should be a JSON object, not a string

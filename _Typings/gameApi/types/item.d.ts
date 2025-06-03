@@ -15,13 +15,9 @@ declare module "game:type" {
         getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
         addComponent: <T extends Exclude<keyof ComponentTypeMap, "Settings">>(componentType: T) => Component<T>
         removeComponent: (componentType: Exclude<keyof ComponentTypeMap, "Settings">) => void
-        moveTo: (
-            targetTransform: Trans,
-            easeType: EaseType,
-            duration: int,
-        ) => void
+        moveTo: (targetTransform: Trans, easeType: EaseType, duration: int) => void
         /**
-         * @description only to interupt `item.moveTo()`, no effect for physical objects
+         * @description only to interrupt `item.moveTo()`, no effect for physical objects
          */
         stopMove: () => void
     }

@@ -118,10 +118,7 @@ declare module "game:module" {
         | "OEM4"
         | "OEM5"
 
-    type MouseButton =
-        | "Left"
-        | "Middle"
-        | "Right"
+    type MouseButton = "Left" | "Middle" | "Right"
 
     type GamePadButton =
         | "DpadUp"

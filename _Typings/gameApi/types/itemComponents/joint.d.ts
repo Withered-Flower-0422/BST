@@ -25,29 +25,29 @@ declare module "game:type" {
     }
 
     type JointData = {
-        readonly "PhysicsObjectA": string
-        readonly "PhysicsObjectB": string
-        readonly "ConnectSelf": bool
-        readonly "EnableCollision": bool
-        readonly "JointType": JointType
-        readonly "AutoSetConnected": bool
-        readonly "PositionLocal": Float3
-        readonly "PositionInConnectedEntity": Float3
-        readonly "AxisLocal": Float3
-        readonly "AxisInConnectedEntity": Float3
-        readonly "PerpendicularAxisLocal": Float3
-        readonly "PerpendicularAxisInConnectedEntity": Float3
-        readonly "MinAngle": float
-        readonly "MaxAngle": float
-        readonly "MinDistance": float
-        readonly "MaxDistance": float
-        readonly "MinDistanceOnAxis": float
-        readonly "MaxDistanceOnAxis": float
-        readonly "OrientationLocal": Float3
-        readonly "OrientationInConnectedEntity": Float3
-        readonly "LockLinearAxes": Bool3
-        readonly "LockAngularAxes": Bool3
-        readonly "Constraints": JointConstraint[]
+        readonly PhysicsObjectA: string
+        readonly PhysicsObjectB: string
+        readonly ConnectSelf: bool
+        readonly EnableCollision: bool
+        readonly JointType: JointType
+        readonly AutoSetConnected: bool
+        readonly PositionLocal: Float3
+        readonly PositionInConnectedEntity: Float3
+        readonly AxisLocal: Float3
+        readonly AxisInConnectedEntity: Float3
+        readonly PerpendicularAxisLocal: Float3
+        readonly PerpendicularAxisInConnectedEntity: Float3
+        readonly MinAngle: float
+        readonly MaxAngle: float
+        readonly MinDistance: float
+        readonly MaxDistance: float
+        readonly MinDistanceOnAxis: float
+        readonly MaxDistanceOnAxis: float
+        readonly OrientationLocal: Float3
+        readonly OrientationInConnectedEntity: Float3
+        readonly LockLinearAxes: Bool3
+        readonly LockAngularAxes: Bool3
+        readonly Constraints: JointConstraint[]
     }
 
     type JointMethod = {

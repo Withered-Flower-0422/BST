@@ -11,7 +11,7 @@ declare module "game:type" {
     }
 
     type Fog = {
-        "FogType": FogType
+        FogType: FogType
         "PhysicsFog/FalloffDistance": float
         "PhysicsFog/FogHeight": Float2
         "PhysicsFog/MaxDistance": float

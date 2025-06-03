@@ -1,8 +1,8 @@
 declare module "game:type" {
-    const enum HierachyIcon {
+    const enum HierarchyIcon {
         Auto = 0,
         MapInfo = 1,
-        Enviornment = 2,
+        Environment = 2,
         Lighting = 3,
         Sky = 4,
         Cloud = 5,
@@ -35,16 +35,16 @@ declare module "game:type" {
     }
 
     type SettingsData = {
-        "AsTemplete": bool
-        "TempleteName": string
-        "HierachyIcon": HierachyIcon
-        "HierachyColor": ColorRGBA
-        "ShowCube": bool
-        "CubePosition": Float3
-        "CubeRotation": Float3
-        "CubeScale": Float3
-        "CubeColor": ColorRGBA
-        "Tags": string[]
+        AsTemplate: bool
+        TemplateName: string
+        HierarchyIcon: HierarchyIcon
+        HierarchyColor: ColorRGBA
+        ShowCube: bool
+        CubePosition: Float3
+        CubeRotation: Float3
+        CubeScale: Float3
+        CubeColor: ColorRGBA
+        Tags: string[]
     }
 
     type SettingsMethod = {

@@ -1,7 +1,7 @@
 ﻿/**
  * This file teaches you how to generate a ball mesh
  * using the Road Generator Custom Script.
- * 
+ *
  * @author Mushreb, Withered_Flower
  */
 
@@ -20,7 +20,7 @@ export const generate = () => {
     const triangles = []
 
     const latStep = Math.PI / s
-    const lonStep = 2 * Math.PI / s
+    const lonStep = (2 * Math.PI) / s
     for (let lat = 0; lat <= s; lat++) {
         const theta = lat * latStep
         for (let lon = 0; lon <= s; lon++) {
@@ -32,11 +32,12 @@ export const generate = () => {
 
             vertices.push([x, y, z])
 
-            const u = lon / s * 5
-            const v = lat / s * 5
+            const u = (lon / s) * 5
+            const v = (lat / s) * 5
             uvs.push([u, v])
 
-            normals.push([x / r, y / r, z / r]) // normals can be an empty array, BME can calculate them automatically
+            // normals can be an empty array, BME can calculate them automatically
+            normals.push([x / r, y / r, z / r])
         }
     }
 
@@ -45,17 +46,14 @@ export const generate = () => {
             const first = lat * (s + 1) + lon
             const second = first + s + 1
 
-            triangles.push(
-                [first + 1, second, first],
-                [first + 1, second + 1, second]
-            )
+            triangles.push([first + 1, second, first], [first + 1, second + 1, second])
         }
     }
 
     /** @type {SubMesh} */
-    const submesh = [vertices, uvs, normals, triangles]
+    const subMesh = [vertices, uvs, normals, triangles]
     /** @type {Mesh} */
-    const mesh = [submesh]
+    const mesh = [subMesh]
 
     return mesh
 }

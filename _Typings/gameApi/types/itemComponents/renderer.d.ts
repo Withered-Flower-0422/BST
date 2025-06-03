@@ -7,19 +7,19 @@ declare module "game:type" {
     }
 
     type RendererData = {
-        "Mesh": string
-        "Materials": string[]
-        "AutoGetMesh": bool
-        "AutoGetMaterials": bool
-        "TryGetGlobalUVMat": bool
-        "ShadowCastingMode": ShadowCastingMode
-        readonly "AutoOptimize": bool
-        "ForceSetOpacity": bool
+        Mesh: string
+        Materials: string[]
+        AutoGetMesh: bool
+        AutoGetMaterials: bool
+        TryGetGlobalUVMat: bool
+        ShadowCastingMode: ShadowCastingMode
+        readonly AutoOptimize: bool
+        ForceSetOpacity: bool
         /**
          * @range `0 ~ 1`
          */
-        "Opacity": float
-        "NearDissolve": bool
+        Opacity: float
+        NearDissolve: bool
     }
 
     type RendererMethod = {

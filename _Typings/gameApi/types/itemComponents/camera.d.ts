@@ -1,9 +1,9 @@
 declare module "game:type" {
     type CameraData = {
-        "Orthographic": bool
-        "OrthographicSize": float
-        "FieldOfView": float
-        "ClippingPlane": Float2
+        Orthographic: bool
+        OrthographicSize: float
+        FieldOfView: float
+        ClippingPlane: Float2
     }
 
     type CameraMethod = {

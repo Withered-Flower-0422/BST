@@ -32,7 +32,7 @@ declare module "game:type" {
     }
 
     type PhysicsObjectData = {
-        "ColliderType": ColliderType
+        ColliderType: ColliderType
         "BoxColliderParams/Center": Float3
         "BoxColliderParams/Size": Float3
         "BoxColliderParams/BevelRadius": float
@@ -41,26 +41,26 @@ declare module "game:type" {
         "MeshColliderParams/Mesh": string
         "MeshColliderParams/AutoGetMesh": bool
         "MeshColliderParams/Convex": bool
-        readonly "PhysicsBodyType": PhysicsBodyType
-        readonly "WeldCollider": bool
+        readonly PhysicsBodyType: PhysicsBodyType
+        readonly WeldCollider: bool
         "RigidBodyParams/Mass": float
         "RigidBodyParams/LinearDrag": float
         "RigidBodyParams/AngularDrag": float
         "RigidBodyParams/GravityFactor": float
         "RigidBodyParams/Density": float
         readonly "RigidBodyParams/BuoyancyVoxelSize": float
-        readonly "OverrideMassDistribution": bool
-        "CenterOfMass": Float3
-        "AutoGetPhysicsMaterial": bool
-        "PhysicsMaterial": PhysicsMaterial
-        "CustomPhysicsMaterial": bool
-        "CustomFrictionMode": CustomFrictionMode
-        "CustomFriction": float
-        "CustomRestitutionMode": CustomRestitutionMode
-        "CustomRestitution": float
-        "DisableCollisionAudio": bool
-        "CollisionLayer": CollisionLayer
-        readonly "Interactive": bool
+        readonly OverrideMassDistribution: bool
+        CenterOfMass: Float3
+        AutoGetPhysicsMaterial: bool
+        PhysicsMaterial: PhysicsMaterial
+        CustomPhysicsMaterial: bool
+        CustomFrictionMode: CustomFrictionMode
+        CustomFriction: float
+        CustomRestitutionMode: CustomRestitutionMode
+        CustomRestitution: float
+        DisableCollisionAudio: bool
+        CollisionLayer: CollisionLayer
+        readonly Interactive: bool
         "InteractiveParams/MoveForce": float
         "InteractiveParams/TorqueForce": float
         "InteractiveParams/Defence": float
@@ -71,9 +71,9 @@ declare module "game:type" {
         "InteractiveParams/LowPowerForceMultiplier": float
         "InteractiveParams/AbsorbElectricMultiplier": float
         "InteractiveParams/Invincible": float
-        "CollisionEnterEvent": bool
-        "CollisionStayEvent": bool
-        "CollisionExitEvent": bool
+        CollisionEnterEvent: bool
+        CollisionStayEvent: bool
+        CollisionExitEvent: bool
     }
 
     type PhysicsObjectMethod = {

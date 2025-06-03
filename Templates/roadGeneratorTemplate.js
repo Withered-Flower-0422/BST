@@ -1,6 +1,6 @@
 ﻿/** @type {Generate} */
-export const generate = (vars) => {
-    const { } = vars
+export const generate = vars => {
+    const {} = vars
 
     /** @type {Vertex[]} */
     const vertices = []
@@ -11,16 +11,19 @@ export const generate = (vars) => {
     /** @type {Triangle[]} */
     const triangles = []
 
-
-
-
-
-
+    /* your code here 
+    
+    
+    
+    
+    
+    
+    */
 
     /** @type {SubMesh} */
-    const submesh = [vertices, uvs, normals, triangles]
+    const subMesh = [vertices, uvs, normals, triangles]
     /** @type {Mesh} */
-    const mesh = [submesh]
+    const mesh = [subMesh]
 
     return mesh
 }

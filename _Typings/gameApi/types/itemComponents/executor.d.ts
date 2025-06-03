@@ -3,7 +3,7 @@ declare module "game:type" {
         /**
          * @description BME path to the script
          */
-        readonly "ScriptPath": string
+        readonly ScriptPath: string
     }
 
     type ExecutorMethod = {

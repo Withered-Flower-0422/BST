@@ -19,7 +19,7 @@ declare module "game:type" {
     }
 
     type RoadGeneratorData = {
-        "GeneratorAlgorithm": GeneratorAlgorithm
+        GeneratorAlgorithm: GeneratorAlgorithm
         "Road/Length": float
         "Road/Width": float
         "Road/EndWidth": float

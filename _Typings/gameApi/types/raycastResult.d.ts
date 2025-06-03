@@ -5,7 +5,7 @@ declare module "game:type" {
          */
         item: Item
         /**
-         * @description the proportion of the distance between the collision point and the starting point to the total distance, 
+         * @description the proportion of the distance between the collision point and the starting point to the total distance
          * @range `0 ~ 1`
          */
         fraction: float

@@ -37,7 +37,7 @@ declare module "editor:module" {
          */
         const setSelection: <S1 extends string, S2 extends readonly string[]>(
             activatedObjectGuid: AssertGuid<S1>,
-            selectedObjectsGuid: AssertGuids<S2>,
+            selectedObjectsGuid: AssertGuids<S2>
         ) => void
         const getCameraPosition: () => Float3
         const getCameraPivot: () => Float3

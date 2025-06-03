@@ -21,8 +21,8 @@ declare module "game:type" {
     }
 
     type LightData = {
-        "TransformOffset": Trans
-        "LightType": LightType
+        TransformOffset: Trans
+        LightType: LightType
         "PointLight/Temperature": float
         "PointLight/Filter": ColorRGBA
         "PointLight/Intensity": float
@@ -69,7 +69,7 @@ declare module "game:type" {
          * @range `0 ~ 10`
          */
         "CircleAreaLight/ShadowNearClip": float
-        "EnableVolumetricLight": bool
+        EnableVolumetricLight: bool
         "VolumetricLight/OnlyVolumetric": bool
         "VolumetricLight/AutoOptimize": bool
         "VolumetricLight/BlendMode": LightBlendMode

@@ -8,9 +8,6 @@ declare module "roadGenerator:type" {
         type SubMesh = [Vertex[], UV[], Normal[], Triangle[]]
         type Mesh = SubMesh[]
 
-        type Generate = (vars: {
-            [key: string]: any,
-            [key: symbol]: never,
-        }) => Mesh
+        type Generate = (vars: { [key: string]: any; [key: symbol]: never }) => Mesh
     }
 }

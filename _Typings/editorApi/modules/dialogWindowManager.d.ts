@@ -7,7 +7,7 @@ declare module "editor:module" {
             closeButtonName: string,
             checkButtonName: string,
             onCloseButtonClick: () => void,
-            onCheckButtonClick: (inputText: string) => void,
+            onCheckButtonClick: (inputText: string) => void
         ) => void
 
         const openInputsDialog: (
@@ -17,13 +17,13 @@ declare module "editor:module" {
             closeButtonName: string,
             checkButtonName: string,
             onCloseButtonClick: () => void,
-            onCheckButtonClick: (inputsText: string[]) => void,
+            onCheckButtonClick: (inputsText: string[]) => void
         ) => void
 
         const openAssetPickerDialog: (
             onCancel: () => void,
             onPickAsset: (assetPath: string) => void,
-            assetType: "Scenes" | "Items" | "Textures" | "Meshes" | "Materials" | "Audios" | "Scripts" | "All",
+            assetType: "Scenes" | "Items" | "Textures" | "Meshes" | "Materials" | "Audios" | "Scripts" | "All"
         ) => void
     }
 }

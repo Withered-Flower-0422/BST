@@ -1,21 +1,21 @@
 declare module "game:type" {
     type AudioPlayerData = {
-        "TransformOffset": Trans
-        "AudioPath": string
-        "Loop": bool
+        TransformOffset: Trans
+        AudioPath: string
+        Loop: bool
         /**
          * @range `0 ~ 1`
          */
-        "Volume": float
-        "SpatializeAudio": bool
+        Volume: float
+        SpatializeAudio: bool
         /**
          * @range `0 ~ 100`
          */
-        "MinDistance": float
+        MinDistance: float
         /**
          * @range `0 ~ 100`
          */
-        "MaxDistance": float
+        MaxDistance: float
     }
 
     type AudioPlayerMethod = {

@@ -1,35 +1,35 @@
 declare module "game:type" {
     type Environment = {
-        "EnvironmentTemp": float
-        "AutoRainAvoidance": bool
-        "Wind": Float3
+        EnvironmentTemp: float
+        AutoRainAvoidance: bool
+        Wind: Float3
         /**
          * @range `0 ~ 1`
          */
-        "RainParticle": float
+        RainParticle: float
         /**
          * @range `0 ~ 1`
          */
-        "SnowParticle": float
+        SnowParticle: float
         /**
          * @range `0 ~ 1`
          */
-        "FogParticle": float
+        FogParticle: float
         /**
          * @range `0 ~ 1`
          */
-        "FireflyParticle": float
+        FireflyParticle: float
         /**
          * @range `0 ~ 1`
          */
-        "FireSparkParticle": float
+        FireSparkParticle: float
         /**
          * @range `0 ~ 1`
          */
-        "GlobalSnowCover": float
+        GlobalSnowCover: float
         /**
          * @range `0 ~ 1`
          */
-        "GlobalRainCover": float
+        GlobalRainCover: float
     }
 }

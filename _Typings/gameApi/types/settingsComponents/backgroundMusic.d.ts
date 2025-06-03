@@ -1,12 +1,12 @@
 declare module "game:type" {
     type BackgroundMusic = {
         /**
-         * @description BME pathes to the background music
+         * @description BME paths to the background music
          */
-        readonly "BGM": string[]
+        readonly BGM: string[]
         /**
-         * @description BME pathes to the sound effects
+         * @description BME paths to the sound effects
          */
-        readonly "SFX": string[]
+        readonly SFX: string[]
     }
 }

@@ -32,6 +32,6 @@ declare module "game:type" {
     }
 
     type CustomBall = {
-        readonly "CustomBalls": CustomBallSettings[]
+        readonly CustomBalls: CustomBallSettings[]
     }
 }

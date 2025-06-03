@@ -7,7 +7,7 @@ declare module "editor:type" {
          */
         readonly guid: string
         /**
-         * - `Floder` deprecated
+         * - `Folder` deprecated
          * - `readonly`
          */
         readonly type: T
@@ -23,25 +23,19 @@ declare module "editor:type" {
         getGlobalScale: () => Float3
         getParent: () => SceneObject<SceneObjectType> | null
 
-        getComponent: (
-            T extends "Item" ?
-            <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> | null :
-            T extends "Settings" ?
-            <U extends keyof SettingsComponentTypeMap>(componentType: U) => SettingsComponent<U> :
-            never
-        )
+        getComponent: T extends "Item"
+            ? <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> | null
+            : T extends "Settings"
+            ? <U extends keyof SettingsComponentTypeMap>(componentType: U) => SettingsComponent<U>
+            : never
 
-        addComponent: (
-            T extends "Item" ?
-            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => ItemComponent<U> :
-            never
-        )
+        addComponent: T extends "Item"
+            ? <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => ItemComponent<U>
+            : never
 
-        removeComponent: (
-            T extends "Item" ?
-            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => void :
-            never
-        )
+        removeComponent: T extends "Item"
+            ? <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => void
+            : never
 
         setParent: (parent: SceneObject<SceneObjectType> | null) => void
         getChildren: () => SceneObject<SceneObjectType>[]
