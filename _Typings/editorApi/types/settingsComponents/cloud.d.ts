@@ -1,4 +1,6 @@
 declare module "editor:type" {
+    import { IntRange } from "utils"
+
     type CloudLayer = {
         Enabled: bool
         /**
@@ -32,7 +34,7 @@ declare module "editor:type" {
         /**
          * @range `2 ~ 32`
          */
-        RayMarchingSteps: int
+        RayMarchingSteps: IntRange<2, 32>
         /**
          * @range `0 ~ 1`
          */

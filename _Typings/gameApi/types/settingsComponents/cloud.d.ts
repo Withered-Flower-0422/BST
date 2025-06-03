@@ -1,4 +1,6 @@
 declare module "game:type" {
+    import { IntRange } from "utils"
+
     type Cloud = {
         "CloudLayer1/Enabled": bool
         /**
@@ -32,7 +34,7 @@ declare module "game:type" {
         /**
          * @range `2 ~ 32`
          */
-        "CloudLayer1/RayMarchingSteps": int
+        "CloudLayer1/RayMarchingSteps": IntRange<2, 32>
         /**
          * @range `0 ~ 1`
          */
@@ -73,7 +75,7 @@ declare module "game:type" {
         /**
          * @range `2 ~ 32`
          */
-        "CloudLayer2/RayMarchingSteps": int
+        "CloudLayer2/RayMarchingSteps": IntRange<2, 32>
         /**
          * @range `0 ~ 1`
          */

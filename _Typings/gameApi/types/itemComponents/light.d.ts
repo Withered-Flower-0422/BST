@@ -1,4 +1,6 @@
 declare module "game:type" {
+    import { IntRange } from "utils"
+
     const enum LightType {
         Point = 0,
         Spot = 1,
@@ -76,7 +78,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "VolumetricLight/Quality": int
+        "VolumetricLight/Quality": IntRange<1, 256>
         "VolumetricLight/StepSize": float
         "VolumetricLight/MaxStep": int
         "VolumetricLight/Jitter": float

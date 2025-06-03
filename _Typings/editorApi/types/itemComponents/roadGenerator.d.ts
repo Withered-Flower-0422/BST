@@ -1,4 +1,6 @@
 declare module "editor:type" {
+    import { IntRange } from "utils"
+
     const enum GeneratorAlgorithm {
         Road = 0,
         Corner = 1,
@@ -26,9 +28,9 @@ declare module "editor:type" {
         Offset: float
         Thickness: float
         /**
-         * @range `0 ~ 1`
+         * @range `1 ~ 256`
          */
-        Segments: int
+        Segments: IntRange<1, 256>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -48,7 +50,7 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: int
+        Segments: IntRange<1, 256>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -65,11 +67,11 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: int
+        Segments: IntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        RotationSegments: int
+        RotationSegments: IntRange<1, 128>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -88,11 +90,11 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: int
+        Segments: IntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        RotationSegments: int
+        RotationSegments: IntRange<1, 128>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -127,7 +129,7 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: int
+        Segments: IntRange<1, 256>
         Bend: Float3
         AccurateUVLength: bool
         RotateMainUV: bool

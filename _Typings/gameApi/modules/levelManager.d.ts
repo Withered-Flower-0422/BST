@@ -33,8 +33,19 @@ declare module "game:module" {
         let score: float
         let spawnPointPosition: Float3
         let spawnPointRotation: float
-        let cameraMode: int
-        let cameraDirection: int
+        /**
+         * @`0`: Four Direction View
+         * @`1`: Free View
+         * @`2`: First Person View
+         */
+        let cameraMode: 0 | 1 | 2
+        /**
+         * @`0`: face to z+
+         * @`1`: face to x+
+         * @`2`: face to z-
+         * @`3`: face to x-
+         */
+        let cameraDirection: 0 | 1 | 2 | 3
         let cameraAngle: float
         let cameraPitch: float
         let cameraZoom: float

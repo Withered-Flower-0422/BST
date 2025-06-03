@@ -6,4 +6,12 @@ declare module "utils" {
     }
 
     type Mutable<T> = Equal<_Mutable<T>, {}> extends true ? never : _Mutable<T>
+
+    type TupleToExactLength<L extends int, T extends int[] = []> = T["length"] extends L
+        ? T
+        : TupleToExactLength<L, [...T, T["length"]]>
+
+    type IntRange<L extends int, H extends int> = TupleToExactLength<H> extends [...TupleToExactLength<L>, ...infer R]
+        ? [...R, H][number]
+        : never
 }

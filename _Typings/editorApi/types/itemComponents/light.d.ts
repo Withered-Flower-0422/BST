@@ -1,4 +1,6 @@
 declare module "editor:type" {
+    import { IntRange } from "utils"
+
     const enum LightType {
         Point = 0,
         Spot = 1,
@@ -85,7 +87,7 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Quality: int
+        Quality: IntRange<1, 256>
         StepSize: float
         MaxStep: int
         Jitter: float

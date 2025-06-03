@@ -52,7 +52,7 @@ declare module "game:type" {
         /**
          * @param which `0: Left`, `1: Middle`, `2: Right`
          */
-        onPointerClick: (which: int) => void
+        onPointerClick: (which: 0 | 1 | 2) => void
         /**
          * @default_value `true`
          */

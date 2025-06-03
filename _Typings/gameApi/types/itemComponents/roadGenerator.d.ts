@@ -1,4 +1,6 @@
 declare module "game:type" {
+    import { IntRange } from "utils"
+
     const enum GeneratorAlgorithm {
         Road = 0,
         Corner = 1,
@@ -29,7 +31,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "Road/Segments": int
+        "Road/Segments": IntRange<1, 256>
         "Road/Bend": Float3
         "Road/CreateCap": bool
         "Road/AccurateUVLength": bool
@@ -46,7 +48,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "WoodenBoard/Segments": int
+        "WoodenBoard/Segments": IntRange<1, 256>
         "WoodenBoard/Bend": Float3
         "WoodenBoard/CreateCap": bool
         "WoodenBoard/AccurateUVLength": bool
@@ -60,11 +62,11 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "Rail/Segments": int
+        "Rail/Segments": IntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        "Rail/RotationSegments": int
+        "Rail/RotationSegments": IntRange<1, 128>
         "Rail/Bend": Float3
         "Rail/CreateCap": bool
         "Rail/AccurateUVLength": bool
@@ -80,11 +82,11 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "Tube/Segments": int
+        "Tube/Segments": IntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        "Tube/RotationSegments": int
+        "Tube/RotationSegments": IntRange<1, 128>
         "Tube/Bend": Float3
         "Tube/CreateCap": bool
         "Tube/AccurateUVLength": bool
@@ -109,7 +111,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "CustomVertices/Segments": int
+        "CustomVertices/Segments": IntRange<1, 256>
         "CustomVertices/Bend": Float3
         "CustomVertices/AccurateUVLength": bool
         "CustomVertices/RotateMainUV": bool

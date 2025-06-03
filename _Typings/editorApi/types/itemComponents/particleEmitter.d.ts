@@ -1,4 +1,6 @@
 declare module "editor:type" {
+    import { IntRange } from "utils"
+
     const enum ParticleEmitterBlendMode {
         Alpha = 0,
         Additive = 1,
@@ -35,11 +37,11 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 32`
          */
-        AnimationTilesX: int
+        AnimationTilesX: IntRange<1, 32>
         /**
          * @range `1 ~ 32`
          */
-        AnimationTilesY: int
+        AnimationTilesY: IntRange<1, 32>
     }
 
     type ParticleEmitterMethod = {
