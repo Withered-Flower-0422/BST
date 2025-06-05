@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## v1.0.7 (2025-06-03)
+## v1.0.7 (2025-06-05)
 
 -   Reformatted the code to conform to the Prettier code style.
 -   Fixed mounts of typos.
@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 -   Restricted the value range of `levelManager.cameraMode` to `0 | 1 | 2`.
 -   Restricted the value range of `levelManager.cameraDirection` to `0 | 1 | 2 | 3`.
 -   Restricted the value range of the parameter `which` of `uiElement.onPointerClick()` to `0 | 1 | 2 `.
+-   let `AssertGuid` accept `string` as a valid value when the type parameter is not `const`.
 
 ## v1.0.6 (2025-05-29)
 

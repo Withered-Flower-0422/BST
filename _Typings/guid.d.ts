@@ -50,7 +50,9 @@ declare module "guid" {
             : AllElementsAreGuids<R>
         : true
 
-    type AssertGuid<S extends string> = S extends `${infer P1}-${infer P2}-${infer P3}-${infer P4}-${infer P5}`
+    type AssertGuid<S extends string> = string extends S
+        ? S
+        : S extends `${infer P1}-${infer P2}-${infer P3}-${infer P4}-${infer P5}`
         ? ValidateGuidParts<P1, P2, P3, P4, P5> extends true
             ? S
             : never
