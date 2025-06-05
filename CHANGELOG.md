@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 -   Added a new type `IntRange` in `utils.d.ts` and applied it to those parameters that accept a range of integers.
 -   Restricted the value range of `levelManager.cameraMode` to `0 | 1 | 2`.
 -   Restricted the value range of `levelManager.cameraDirection` to `0 | 1 | 2 | 3`.
--   Restricted the value range of the parameter `which` of `uiElement.onPointerClick()` to `0 | 1 | 2 `.
+-   Restricted the value range of the parameter `which` of `uiElement.onPointerClick()` to `0 | 1 | 2`.
 -   let `AssertGuid` accept `string` as a valid value when the type parameter is not `const`.
 
 ## v1.0.6 (2025-05-29)
