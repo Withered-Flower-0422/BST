@@ -17,7 +17,7 @@ declare module "editor:type" {
         setPosition: (position: Float3) => void
         setRotation: (rotation: Float3) => void
         setScale: (scale: Float3) => void
-        getTransform: () => Float3[]
+        getTransform: () => [Float3, Float3, Float3]
         getGlobalPosition: () => Float3
         getGlobalRotation: () => Float3
         getGlobalScale: () => Float3
