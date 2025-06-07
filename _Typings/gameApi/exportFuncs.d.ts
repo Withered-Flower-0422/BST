@@ -145,7 +145,7 @@ declare module "game:type" {
          */
         type OnEvents = (self: Item, events: Events) => void
 
-        type OnTrigger = (self: Item, triggeredItem: Item, type: CollisionEvent["eventType"]) => void
+        type OnTrigger = (self: Item, triggeredItem: Item | Player, type: CollisionEvent["eventType"]) => void
 
         type OnCollide = (self: Item, collisionEvent: CollisionEvent) => void
     }
