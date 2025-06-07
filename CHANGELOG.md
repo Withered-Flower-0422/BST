@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 -   Now `getTransform()` returns `[Float3, Float3, Float3]` instead of `Float3[]`.
 -   Added a new type `Tuple` in `utils.d.ts` and applied it where needed.
 -   Now the type of `triggeredItem` of `OnTrigger` is `Item | Player` instead of `Item`.
+-   Now the type of `itemA` and `itemB` of `CollisionEvent` is `Item | Player` instead of `Item`.
 
 ## v1.0.6 (2025-05-29)
 
