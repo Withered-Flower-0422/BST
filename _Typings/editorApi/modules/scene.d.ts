@@ -1,6 +1,7 @@
 declare module "editor:module" {
     import { SceneObject, SceneObjectType } from "editor:type"
     import { AssertGuid, AssertGuids } from "guid"
+    import { Tuple } from "utils"
 
     namespace scene {
         const getAllObjects: () => SceneObject<SceneObjectType>[]
@@ -11,7 +12,9 @@ declare module "editor:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the objects to get
          */
-        const getObjects: <S extends readonly string[]>(guids: AssertGuids<S>) => SceneObject<SceneObjectType>[]
+        const getObjects: <S extends readonly string[]>(
+            guids: AssertGuids<S>
+        ) => Tuple<SceneObject<SceneObjectType>, S["length"]>
         /**
          * @param guid `string`: the guid string of the object to destroy
          */
@@ -28,7 +31,9 @@ declare module "editor:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the objects to duplicate
          */
-        const duplicateObjects: <S extends readonly string[]>(guids: AssertGuids<S>) => SceneObject<SceneObjectType>[]
+        const duplicateObjects: <S extends readonly string[]>(
+            guids: AssertGuids<S>
+        ) => Tuple<SceneObject<SceneObjectType>, S["length"]>
         const getSelectedObject: () => SceneObject<SceneObjectType>
         const getSelectedObjects: () => SceneObject<SceneObjectType>[]
         /**

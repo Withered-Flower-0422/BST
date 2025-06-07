@@ -1,4 +1,6 @@
 declare module "game:type" {
+    import { Tuple } from "utils"
+
     type WayPathData = {
         readonly WayPoints: string[]
         readonly AutoCollect: bool
@@ -12,24 +14,18 @@ declare module "game:type" {
         readonly Targets: string[]
     }
 
+    type PointInfo = {
+        /**
+         * @range "0 ~ 1"
+         */
+        Point: float
+        Position: Float3
+        Rotation: Quaternion
+        Scale: float
+    }
+
     type WayPathMethod = {
-        getPointInfo: (point: float) => {
-            /**
-             * @range "0 ~ 1"
-             */
-            Point: float
-            Position: Float3
-            Rotation: Quaternion
-            Scale: float
-        }
-        getPointsInfo: (points: float[]) => {
-            /**
-             * @range "0 ~ 1"
-             */
-            Point: float
-            Position: Float3
-            Rotation: Quaternion
-            Scale: float
-        }[]
+        getPointInfo: (point: float) => PointInfo
+        getPointsInfo: <T extends float[]>(points: T) => Tuple<PointInfo, T["length"]>
     }
 }

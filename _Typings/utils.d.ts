@@ -14,4 +14,10 @@ declare module "utils" {
     type IntRange<L extends int, H extends int> = TupleToExactLength<H> extends [...TupleToExactLength<L>, ...infer R]
         ? [...R, H][number]
         : never
+
+    type Tuple<T, L extends number = number, C extends T[] = []> = number extends L
+        ? T[]
+        : C["length"] extends L
+        ? C
+        : Tuple<T, L, [...C, T]>
 }
