@@ -1,7 +1,7 @@
 declare module "game:type" {
     global {
         type Player = {
-            ballType: string
+            ballType: BallType
             /**
              * `readonly`
              */
