@@ -1,0 +1,159 @@
+declare module "editor:type" {
+    import { IntRange } from "utils"
+
+    const enum GeneratorAlgorithm {
+        Road = 0,
+        Corner = 1,
+        WoodBoard = 2,
+        Rail = 3,
+        Tube = 4,
+        CustomVertices = 5,
+        CustomScript = 6,
+    }
+
+    type Vertex = {
+        Position: Float2
+        UV: float
+    }
+
+    type VerticesArray = {
+        Vertices: Vertex[]
+    }
+
+    type Road = {
+        Length: float
+        Width: float
+        EndWidth: float
+        Height: float
+        Offset: float
+        Thickness: float
+        /**
+         * @range `1 ~ 256`
+         */
+        Segments: IntRange<1, 256>
+        Bend: Float3
+        CreateCap: bool
+        AccurateUVLength: bool
+        RotateMainUV: bool
+        MainUVOffset: Float2
+        SideUVOffset: float
+        Concave: float
+        EndConcave: float
+    }
+
+    type WoodenBoard = {
+        Length: float
+        Width: float
+        Height: float
+        Offset: float
+        Thickness: float
+        /**
+         * @range `1 ~ 256`
+         */
+        Segments: IntRange<1, 256>
+        Bend: Float3
+        CreateCap: bool
+        AccurateUVLength: bool
+        RotateMainUV: bool
+        MainUVOffset: Float2
+        SideUVOffset: float
+    }
+
+    type Rail = {
+        Length: float
+        Offsets: Float2[]
+        Height: float
+        Offset: float
+        /**
+         * @range `1 ~ 256`
+         */
+        Segments: IntRange<1, 256>
+        /**
+         * @range `1 ~ 128`
+         */
+        RotationSegments: IntRange<1, 128>
+        Bend: Float3
+        CreateCap: bool
+        AccurateUVLength: bool
+        MainUVOffset: Float2
+        Radius: float
+    }
+
+    type Tube = {
+        Length: float
+        Height: float
+        Offset: float
+        Radius: float
+        EndRadius: float
+        Slice: Float2
+        Thickness: float
+        /**
+         * @range `1 ~ 256`
+         */
+        Segments: IntRange<1, 256>
+        /**
+         * @range `1 ~ 128`
+         */
+        RotationSegments: IntRange<1, 128>
+        Bend: Float3
+        CreateCap: bool
+        AccurateUVLength: bool
+        MainUVOffset: Float2
+    }
+
+    type Corner = {
+        Corner: CornerSettings
+        Size: float
+        Thickness: float
+        CreateCap: bool
+        RotateMainUV: bool
+        MainUVOffset: Float2
+        Concave: float
+    }
+
+    type CornerSettings = {
+        P0: bool
+        P1: bool
+        P2: bool
+        P3: bool
+        L0: bool
+        L1: bool
+        L2: bool
+        L3: bool
+    }
+
+    type CustomVertices = {
+        VerticesArray: VerticesArray[]
+        Length: float
+        Height: float
+        /**
+         * @range `1 ~ 256`
+         */
+        Segments: IntRange<1, 256>
+        Bend: Float3
+        AccurateUVLength: bool
+        RotateMainUV: bool
+        MainUVOffset: Float2
+    }
+
+    type CustomScript = {
+        ScriptPath: string
+    }
+
+    type RoadGeneratorData = {
+        GeneratorAlgorithm: GeneratorAlgorithm
+        Road: Road
+        WoodenBoard: WoodenBoard
+        Rail: Rail
+        Tube: Tube
+        Corner: Corner
+        CustomVertices: CustomVertices
+        CustomScript: CustomScript
+    }
+
+    type RoadGeneratorMethod = {
+        clone: () => void
+        generate: () => void
+        createWayPoint: () => void
+    }
+}
