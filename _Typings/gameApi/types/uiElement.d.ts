@@ -19,7 +19,7 @@ declare module "game:type" {
         raycastPadding: Float4
         /**
          * @default_value `new Float4(0, 0, 1, 1)`
-         * @description uv"s offset and tile
+         * @description uv's offset and tile
          */
         uvRect: Float4
         /**
@@ -134,7 +134,7 @@ declare module "game:type" {
          */
         sizeDelta: Float2
         /**
-         * @default_value `new Float2(0, 0)`
+         * @default_value `new Float2(0.5, 0.5)`
          */
         pivot: Float2
         /**
