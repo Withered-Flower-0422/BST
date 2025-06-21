@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.0 (2025-06-21)
+
+-   Changed the type of `settings.language` to `"English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"`.
+-   Added `levelManager.createCustomStatusBar()`, `levelManager.setCustomStatusBarValue()` and `levelManager.destroyCustomStatusBar()`.
+
 ## v1.0.8 (2025-06-18)
 
 -   Fixed a bug that class `Trans` should take `Float3` instead of `Quaternion` as its `rot` parameter.

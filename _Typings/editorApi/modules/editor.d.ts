@@ -1,6 +1,4 @@
 declare module "editor:module" {
-    type LanguageType = "English" | "Chinese" | "Japanese"
-
     namespace editor {
         /**
          * `readonly`
@@ -9,7 +7,7 @@ declare module "editor:module" {
         /**
          * `readonly`
          */
-        const language: LanguageType
+        const language: "English" | "Chinese" | "Japanese"
         const refreshCache: () => void
         const reloadFolder: () => void
         const startTimer: () => void

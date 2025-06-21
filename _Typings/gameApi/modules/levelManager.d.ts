@@ -104,5 +104,37 @@ declare module "game:module" {
         const getDefaultCameraFov: () => float
         const getCameraOffsetSmooth: () => float
         const setCameraOffsetSmooth: (value: float) => void
+        /**
+         * @param statusBarName the unique name of the status bar to be created
+         * @param iconPath the path of the icon to be shown on the left side of the status bar
+         * @param marks the marks to be shown on the status bar, range from 0 to 1
+         * @param value the value of the status bar to be shown, range from 0 to 1
+         * @param valueString the string to be shown on the right side of the status bar, no related logic with the value, can be any text
+         * @param color the color of the status bar
+         */
+        const createCustomStatusBar: (
+            statusBarName: string,
+            iconPath: string,
+            marks: float[],
+            value: float,
+            valueString: string,
+            color: ColorRGBA
+        ) => void
+        /**
+         * @param statusBarName the unique name of the status bar to be set
+         * @param value the value of the status bar to be shown, range from 0 to 1
+         * @param valueString the string to be shown on the right side of the status bar, no related logic with the value, can be any text
+         * @param color the color of the status bar
+         */
+        const setCustomStatusBarValue: (
+            statusBarName: string,
+            value: float,
+            valueString: string,
+            color: ColorRGBA
+        ) => void
+        /**
+         * @param statusBarName the unique name of the status bar to be destroyed
+         */
+        const destroyCustomStatusBar: (statusBarName: string) => void
     }
 }

@@ -40,7 +40,7 @@ declare module "game:module" {
         /**
          * `readonly`
          */
-        const language: string
+        const language: "English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"
         /**
          * @returns `json` string of the saved data
          * @NOTE
