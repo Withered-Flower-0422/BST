@@ -26,12 +26,17 @@ declare module "editor:type" {
         ParticleEmitter = 23,
         AudioPlayer = 24,
         Decal = 25,
-        TerrainStamp = 26,
-        Camera = 27,
-        Executor = 28,
-        Empty = 29,
-        CustomBall = 30,
-        Place = 31,
+        // TerrainStamp = 26,
+        // Camera = 27,
+        // Executor = 28,
+        // Empty = 29,
+        // CustomBall = 30,
+        // Place = 31,
+        Camera = 26,
+        Executor = 27,
+        Empty = 28,
+        CustomBall = 29,
+        Place = 30,
     }
 
     type SettingsData = {

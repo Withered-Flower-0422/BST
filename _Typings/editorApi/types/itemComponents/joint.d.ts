@@ -47,7 +47,7 @@ declare module "editor:type" {
         OrientationInConnectedEntity: Float3
         LockLinearAxes: Bool3
         LockAngularAxes: Bool3
-        Constraints: JointConstraint[]
+        Constraints: Partial<JointConstraint>[]
     }
 
     type JointMethod = {

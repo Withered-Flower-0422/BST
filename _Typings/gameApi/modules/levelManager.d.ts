@@ -72,7 +72,7 @@ declare module "game:module" {
          */
         const setCameraTarget: <S extends string>(guid: AssertGuid<S> | null, displayName: string) => void
         /**
-         * @returns returns the shown tip's guid
+         * @returns the shown tip's guid
          */
         const showTip: (content: string) => string
         const hideTip: (guid: string) => void
@@ -92,6 +92,7 @@ declare module "game:module" {
         const cancelEvent: (eventName: CancelableEvent) => void
         const sendCustomEvent: (message: any) => void
         const spawnVfx: (type: VfxType, position: Float3) => void
+        const spawnVfxPRS: (type: VfxType, position: Float3, rotation: Float3, scale: Float3) => void
         /**
          * @param camera the camera component to be used as custom camera; if `null` is passed, default camera will be used
          */

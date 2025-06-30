@@ -6,12 +6,6 @@ declare module "editor:type" {
         Scale = 4,
     }
 
-    type Transform = {
-        Position: Float3
-        Rotation: Float3
-        Scale: Float3
-    }
-
     type Landscaping = {
         Instances: {
             Ash_Tree_01: Transform[]

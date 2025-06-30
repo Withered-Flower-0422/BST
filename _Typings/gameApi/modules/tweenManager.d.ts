@@ -10,6 +10,7 @@ declare module "game:module" {
             onUpdate: (curValue: float) => void,
             onFinish: () => void
         ) => Tween
+
         const createFloat3Tween: (
             from: Float3,
             to: Float3,
@@ -18,6 +19,7 @@ declare module "game:module" {
             onUpdate: (curValue: Float3) => void,
             onFinish: () => void
         ) => Tween
+
         const createQuaternionTween: (
             from: Quaternion,
             to: Quaternion,
@@ -26,6 +28,7 @@ declare module "game:module" {
             onUpdate: (curValue: Quaternion) => void,
             onFinish: () => void
         ) => Tween
+
         const createColorTween: (
             from: ColorRGBA,
             to: ColorRGBA,

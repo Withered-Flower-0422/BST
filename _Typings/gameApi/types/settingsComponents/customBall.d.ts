@@ -27,7 +27,7 @@ declare module "game:type" {
         SwitcherMaterial: string
         SwitcherGlowColor: ColorRGBA
         SwitcherGlowIntensity: float
-        switcherLightColor: ColorRGBA
+        SwitcherLightColor: ColorRGBA
         SwitcherLightIntensity: float
     }
 

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.1 (2025-06-30)
+
+-   Added `levelManager.spawnVfxPRS()`.
+-   Renamed `gameApi/alias/item.d.ts` to `gameApi/alias/utils.d.ts`, and more types are exported from this file.
+-   Fixed a typo that `CustomBallSettings.switcherLightColor` should be `CustomBallSettings.SwitcherLightColor`.
+-   Temporarily removed `TerrainStamp` from `HierarchyIcon`.
+-   Added `ExecutorVariables` property to `ExecutorData`.
+-   Added a new file `Transform.d.ts`, where the type `Transform` is defined. This is a different type from class `Trans` and is used in the editor.
+-   Now some object-array properties are marked as optional.
+-   Added some descriptions.
+-   Added `const` before some type variables to prevent type-widening.
+
 ## v1.1.0 (2025-06-21)
 
 -   Changed the type of `settings.language` to `"English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"`.

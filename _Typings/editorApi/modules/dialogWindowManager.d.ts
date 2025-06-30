@@ -12,7 +12,7 @@ declare module "editor:module" {
             onCheckButtonClick: (inputText: string) => void
         ) => void
 
-        const openInputsDialog: <T extends string[]>(
+        const openInputsDialog: <const T extends readonly string[]>(
             windowTitle: string,
             contentTexts: T,
             defaultInputTexts: Tuple<string, T["length"]>,
@@ -27,5 +27,23 @@ declare module "editor:module" {
             onPickAsset: (assetPath: string) => void,
             assetType: "Scenes" | "Items" | "Textures" | "Meshes" | "Materials" | "Audios" | "Scripts" | "All"
         ) => void
+
+        /*
+        const openMessageDialog: (
+            windowTitle: string,
+            contentText: string,
+            closeButtonName: string,
+            onCloseButtonClick: () => void
+        ) => void
+
+        const openSubWindow: <const T extends readonly string[], const U extends readonly string[]>(
+            windowTitle: string,
+            contentTexts: T,
+            defaultInputTexts: Tuple<string, T["length"]>,
+            buttonNames: U,
+            onButtonsClick: Tuple<(inputsText: Tuple<string, T["length"]>) => void, U["length"]>,
+            onCloseWindowClick: () => void
+        ) => void
+         */
     }
 }

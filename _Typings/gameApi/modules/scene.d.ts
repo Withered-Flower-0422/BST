@@ -12,7 +12,7 @@ declare module "game:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the items to get
          */
-        const getItems: <S extends readonly string[]>(guids: AssertGuids<S>) => Tuple<Item, S["length"]>
+        const getItems: <const S extends readonly string[]>(guids: AssertGuids<S>) => Tuple<Item, S["length"]>
         const getPlayer: () => Player
         /**
          * @param guid `string`: the guid string of the item to destroy
@@ -21,7 +21,7 @@ declare module "game:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the items to destroy
          */
-        const destroyItems: <S extends readonly string[]>(guids: AssertGuids<S>) => void
+        const destroyItems: <const S extends readonly string[]>(guids: AssertGuids<S>) => void
         const createItem: (templateName: string, pos: Float3, rot: Float3, scl: Float3) => Item
         const raycast: (start: Float3, end: Float3) => RaycastResult | null
         const raycastAll: (start: Float3, end: Float3) => RaycastResult[]

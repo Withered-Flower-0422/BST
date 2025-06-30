@@ -12,7 +12,7 @@ declare module "editor:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the objects to get
          */
-        const getObjects: <S extends readonly string[]>(
+        const getObjects: <const S extends readonly string[]>(
             guids: AssertGuids<S>
         ) => Tuple<SceneObject<SceneObjectType>, S["length"]>
         /**
@@ -22,7 +22,10 @@ declare module "editor:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the objects to destroy
          */
-        const destroyObjects: <S extends readonly string[]>(guids: AssertGuids<S>) => void
+        const destroyObjects: <const S extends readonly string[]>(guids: AssertGuids<S>) => void
+        /**
+         * @NOTE never manually create a folder or a settings object to avoid bugs
+         */
         const createObject: <T extends SceneObjectType>(name: string, type: T) => SceneObject<T>
         /**
          * @param guid `string`: the guid string of the object to duplicate
@@ -31,7 +34,7 @@ declare module "editor:module" {
         /**
          * @param guids `string[]`: the guid strings in an array of the objects to duplicate
          */
-        const duplicateObjects: <S extends readonly string[]>(
+        const duplicateObjects: <const S extends readonly string[]>(
             guids: AssertGuids<S>
         ) => Tuple<SceneObject<SceneObjectType>, S["length"]>
         const getSelectedObject: () => SceneObject<SceneObjectType>
@@ -40,7 +43,7 @@ declare module "editor:module" {
          * @param activatedObjectGuid `string`: the guid string of the main object to select
          * @param selectedObjectsGuid `string[]`: the guid strings in an array of other objects to select
          */
-        const setSelection: <S1 extends string, S2 extends readonly string[]>(
+        const setSelection: <S1 extends string, const S2 extends readonly string[]>(
             activatedObjectGuid: AssertGuid<S1>,
             selectedObjectsGuid: AssertGuids<S2>
         ) => void

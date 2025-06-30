@@ -27,11 +27,11 @@ declare module "editor:type" {
         SwitcherMaterial: string
         SwitcherGlowColor: ColorRGBA
         SwitcherGlowIntensity: float
-        switcherLightColor: ColorRGBA
+        SwitcherLightColor: ColorRGBA
         SwitcherLightIntensity: float
     }
 
     type CustomBall = {
-        CustomBalls: CustomBallSettings[]
+        CustomBalls: Partial<CustomBallSettings>[]
     }
 }

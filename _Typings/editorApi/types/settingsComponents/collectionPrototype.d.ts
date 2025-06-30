@@ -14,6 +14,6 @@ declare module "editor:type" {
     }
 
     type CollectionPrototype = {
-        Prototypes: CollectionPrototypeData[]
+        Prototypes: Partial<CollectionPrototypeData>[]
     }
 }

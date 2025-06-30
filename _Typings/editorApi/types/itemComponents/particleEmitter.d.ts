@@ -30,7 +30,7 @@ declare module "editor:type" {
         BlendMode: ParticleEmitterBlendMode
         Life: Float2
         Size: Float2
-        TimeNodes: ParticleEmitterTimeNode[]
+        TimeNodes: Partial<ParticleEmitterTimeNode>[]
         Gravity: float
         TurbulenceIntensity: float
         TurbulenceFrequency: float

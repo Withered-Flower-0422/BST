@@ -5,6 +5,10 @@ declare module "game:type" {
          */
         readonly elementType: "Image"
         /**
+         * @default_value `new Float2(100, 100)`
+         */
+        sizeDelta: Float2
+        /**
          * @default_value `new ColorRGBA(1, 1, 1, 1)`
          */
         color: ColorRGBA
@@ -46,6 +50,10 @@ declare module "game:type" {
          */
         readonly elementType: "Text"
         /**
+         * @default_value `new Float2(200, 50)`
+         */
+        sizeDelta: Float2
+        /**
          * @default_value `new ColorRGBA(1, 1, 1, 1)`
          */
         color: ColorRGBA
@@ -84,6 +92,10 @@ declare module "game:type" {
          * `readonly`
          */
         readonly elementType: "Panel"
+        /**
+         * @default_value `new Float2(100, 100)`
+         */
+        sizeDelta: Float2
         /**
          * @default_value `1`
          * @description used for convenient control of transparency for all sub UIs
@@ -126,13 +138,6 @@ declare module "game:type" {
          * @default_value `new Float2(0.5, 0.5)`
          */
         anchorMax: Float2
-        /**
-         * @default_value
-         * @Panel `new Float2(100, 100)`
-         * @Image `new Float2(100, 100)`
-         * @Text `new Float2(200, 50)`
-         */
-        sizeDelta: Float2
         /**
          * @default_value `new Float2(0.5, 0.5)`
          */
