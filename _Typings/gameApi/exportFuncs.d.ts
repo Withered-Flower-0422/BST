@@ -1,14 +1,5 @@
 declare module "game:type" {
-    type BallType =
-        | "WoodenBall"
-        | "StoneBall"
-        | "PaperBall"
-        | "IceBall"
-        | "SteelBall"
-        | "RubberBall"
-        | "BalloonBall"
-        | "StickyBall"
-        | "SpongeBall"
+    import { BuiltinCollections } from "game:type"
 
     type Events = {
         OnPhysicsUpdate?: never[]
@@ -67,13 +58,15 @@ declare module "game:type" {
         OnPostDestinationReached?: [Item]
         /**
          * @NOTE `cancelable`
+         * @BuiltinCollections click to see {@link BuiltinCollections | all built-in collections}
          * @Message name of collection items that are being collected, wrapped in an array
          */
-        OnPreGetCollection?: `C_${string}`[]
+        OnPreGetCollection?: string[]
         /**
+         * @BuiltinCollections click to see {@link BuiltinCollections | all built-in collections}
          * @Message name of collection items that are being collected, wrapped in an array
          */
-        OnPostGetCollection?: `C_${string}`[]
+        OnPostGetCollection?: string[]
         /**
          * @description before the ball switch animation starts
          * @NOTE `cancelable`

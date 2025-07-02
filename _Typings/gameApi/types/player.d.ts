@@ -1,4 +1,15 @@
 declare module "game:type" {
+    type BallType =
+        | "WoodenBall"
+        | "StoneBall"
+        | "PaperBall"
+        | "IceBall"
+        | "SteelBall"
+        | "RubberBall"
+        | "BalloonBall"
+        | "StickyBall"
+        | "SpongeBall"
+
     global {
         type Player = {
             ballType: BallType

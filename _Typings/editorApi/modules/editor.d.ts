@@ -3,7 +3,7 @@ declare module "editor:module" {
         /**
          * `readonly`
          */
-        const version: int
+        const version: string
         /**
          * `readonly`
          */

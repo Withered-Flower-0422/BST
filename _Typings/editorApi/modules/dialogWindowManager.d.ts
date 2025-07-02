@@ -28,7 +28,6 @@ declare module "editor:module" {
             assetType: "Scenes" | "Items" | "Textures" | "Meshes" | "Materials" | "Audios" | "Scripts" | "All"
         ) => void
 
-        /*
         const openMessageDialog: (
             windowTitle: string,
             contentText: string,
@@ -44,6 +43,5 @@ declare module "editor:module" {
             onButtonsClick: Tuple<(inputsText: Tuple<string, T["length"]>) => void, U["length"]>,
             onCloseWindowClick: () => void
         ) => void
-         */
     }
 }
