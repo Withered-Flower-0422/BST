@@ -8,9 +8,11 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 [![](https://img.shields.io/badge/QQ%20Group-797934847-09f?style=flat)](https://qm.qq.com/q/2mIPnK8JIk)
 [![](https://img.shields.io/badge/Discord-5NygdBmksE-56e?style=flat)](https://discord.gg/5NygdBmksE/)
 
+[![](https://img.shields.io/github/license/Withered-Flower-0422/BST)](https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE)
+
 ## Current Version
 
--   v1.1.3
+-   v1.1.4
 
 ## Usage
 

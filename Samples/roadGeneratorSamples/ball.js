@@ -2,7 +2,7 @@
  * This file teaches you how to generate a ball mesh
  * using the Road Generator Custom Script.
  *
- * @author Mushreb, Withered_Flower
+ * @author Mushreb, Withered Flower
  */
 
 /** @type {Generate} */

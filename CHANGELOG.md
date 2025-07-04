@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.4 (2025-07-05)
+
+-   Added `LICENSE` and `NOTICE` files.
+
 ## v1.1.3 (2025-07-04)
 
 -   Merged `editorApi/modules/math.d.ts` and `gameApi/modules/math.d.ts` into `utils/math.d.ts`.

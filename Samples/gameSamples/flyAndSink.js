@@ -4,7 +4,7 @@
  *
  * @NOTE Some unused modules and functions are removed for brevity.
  *
- * @author Withered_Flower
+ * @author Withered Flower
  */
 
 import { scene, levelManager, inputManager } from "gameApi"
