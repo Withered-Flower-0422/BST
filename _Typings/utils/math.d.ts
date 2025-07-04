@@ -1,4 +1,4 @@
-declare module "game:module" {
+declare module "math" {
     namespace math {
         const quaternionToFloat3: (value: Quaternion) => Float3
         const float3ToQuaternion: (value: Float3) => Quaternion
