@@ -9,7 +9,7 @@ declare module "game:module" {
     namespace scene {
         const getAllItems: () => Item[]
         /**
-         * @param {string} guid `string`: the guid string of the item to get
+         * @param guid `string`: the guid string of the item to get
          */
         const getItem: <S extends string>(guid: AssertGuid<S>) => Item
         /**

@@ -4,14 +4,6 @@
 declare module "editor:type" {
     type AssetReference = {
         /**
-         * @description BME paths to `Scenes`
-         */
-        // Scenes: string[]
-        /**
-         * @description BME paths to `Items`
-         */
-        // Items: string[]
-        /**
          * @description BME paths to `Meshes`
          */
         Meshes: string[]
