@@ -5,6 +5,11 @@ declare module "game:module" {
     import { Component } from "game:type"
     import { AssertGuid } from "guid"
 
+    const enum Skin {
+        Default = 0,
+        Mush = 1,
+    }
+
     type CancelableEvent =
         | "OnPreRestartLevel"
         | "OnPrePlayerDeadStart"
@@ -37,16 +42,16 @@ declare module "game:module" {
         let spawnPointPosition: Float3
         let spawnPointRotation: float
         /**
-         * @`0`: Four Direction View
-         * @`1`: Free View
-         * @`2`: First Person View
+         * - `0`: Four Direction View
+         * - `1`: Free View
+         * - `2`: First Person View
          */
         let cameraMode: 0 | 1 | 2
         /**
-         * @`0`: face to z+
-         * @`1`: face to x+
-         * @`2`: face to z-
-         * @`3`: face to x-
+         * - `0`: face to z+
+         * - `1`: face to x+
+         * - `2`: face to z-
+         * - `3`: face to x-
          */
         let cameraDirection: 0 | 1 | 2 | 3
         let cameraAngle: float
@@ -60,6 +65,12 @@ declare module "game:module" {
          * `readonly`
          */
         const time: int
+        /**
+         * `readonly`
+         *
+         * click to see {@link Skin | all skins}
+         */
+        const skin: Skin
         /**
          * `readonly`
          */

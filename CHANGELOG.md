@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.5 (2025-07-15)
+
+-   Added `levelManager.skin`.
+
 ## v1.1.4 (2025-07-05)
 
 -   Added `LICENSE` and `NOTICE` files.
