@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.6 (2025-07-16)
+
+-   Added `"DeathTransfer"` to `VfxType`.
+
 ## v1.1.5 (2025-07-15)
 
 -   Added `levelManager.skin`.

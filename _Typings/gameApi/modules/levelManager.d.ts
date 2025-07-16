@@ -35,6 +35,7 @@ declare module "game:module" {
         | "TransportStart"
         | "TransportEnd"
         | "Explosion"
+        | "DeathTransfer"
 
     namespace levelManager {
         let timeScale: float
