@@ -17,7 +17,7 @@ declare module "editor:type" {
     }
 
     type ParticleEmitterData = {
-        TransformOffset: Trans
+        TransformOffset: Transform
         AutoStart: bool
         Loop: bool
         SimulationInLocal: bool

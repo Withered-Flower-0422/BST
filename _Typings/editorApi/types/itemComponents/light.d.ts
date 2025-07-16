@@ -138,7 +138,7 @@ declare module "editor:type" {
     }
 
     type LightData = {
-        TransformOffset: Trans
+        TransformOffset: Transform
         LightType: LightType
         PointLight: PointLight
         SpotLight: SpotLight

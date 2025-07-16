@@ -3,7 +3,7 @@
 
 declare module "editor:type" {
     type AudioPlayerData = {
-        TransformOffset: Trans
+        TransformOffset: Transform
         AudioPath: string
         Loop: bool
         /**

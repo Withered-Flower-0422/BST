@@ -8,7 +8,7 @@ declare module "editor:type" {
     }
 
     type WayPointData = {
-        TransformOffset: Trans
+        TransformOffset: Transform
         MoveType: MoveType
         MoveSpeed: float
         MoveDuration: float

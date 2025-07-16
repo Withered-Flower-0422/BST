@@ -3,7 +3,7 @@
 
 declare module "editor:type" {
     type DecalData = {
-        TransformOffset: Trans
+        TransformOffset: Transform
         MaterialPath: string
         DrawDistance: float
         StartFade: float
