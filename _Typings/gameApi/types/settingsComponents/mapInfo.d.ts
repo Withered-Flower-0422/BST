@@ -4,7 +4,7 @@
 declare module "game:type" {
     type int64 = number
 
-    const enum Difficulty {
+    enum Difficulty {
         Easy = 0,
         Normal = 1,
         Hard = 2,
@@ -12,7 +12,7 @@ declare module "game:type" {
         Master = 4,
     }
 
-    const enum MapType {
+    enum MapType {
         Racing = 0,
         Casual = 1,
         Landscape = 2,
@@ -22,7 +22,7 @@ declare module "game:type" {
         Comprehensive = 6,
     }
 
-    const enum InitialBallType {
+    enum InitialBallType {
         WoodenBall = 0,
         StoneBall = 1,
         PaperBall = 2,
@@ -34,7 +34,7 @@ declare module "game:type" {
         SpongeBall = 8,
     }
 
-    const enum ViewMode {
+    enum ViewMode {
         FourDirectional = 0,
         FreeLook = 1,
     }

@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    const enum PlacementMode {
+    enum PlacementMode {
         Place = 1,
         Paint = 2,
         Erase = 3,

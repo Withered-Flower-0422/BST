@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    const enum VariableType {
+    enum VariableType {
         String = 0,
         Int = 1,
         Bool = 2,

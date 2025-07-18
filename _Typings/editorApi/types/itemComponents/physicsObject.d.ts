@@ -2,13 +2,13 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    const enum PhysicsBodyType {
+    enum PhysicsBodyType {
         Static = 0,
         Kinematic = 1,
         Rigid = 2,
     }
 
-    const enum PhysicsMaterial {
+    enum PhysicsMaterial {
         Wooden = 0,
         Stone = 1,
         Paper = 2,
@@ -20,14 +20,14 @@ declare module "editor:type" {
         Sponge = 8,
     }
 
-    const enum CustomFrictionMode {
+    enum CustomFrictionMode {
         GeometricMean = 0,
         Minimum = 1,
         Maximum = 2,
         ArithmeticMean = 3,
     }
 
-    const enum CustomRestitutionMode {
+    enum CustomRestitutionMode {
         GeometricMean = 0,
         Minimum = 1,
         Maximum = 2,

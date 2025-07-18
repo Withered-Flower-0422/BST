@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    const enum ShadowCastingMode {
+    enum ShadowCastingMode {
         On = 0,
         Off = 1,
         TwoSided = 2,

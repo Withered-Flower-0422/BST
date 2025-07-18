@@ -5,7 +5,7 @@ declare module "game:module" {
     import { Component } from "game:type"
     import { AssertGuid } from "guid"
 
-    const enum Skin {
+    enum Skin {
         Default = 0,
         Mush = 1,
     }

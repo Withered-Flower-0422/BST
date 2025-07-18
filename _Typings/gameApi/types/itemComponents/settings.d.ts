@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    const enum HierarchyIcon {
+    enum HierarchyIcon {
         Auto = 0,
         MapInfo = 1,
         Environment = 2,

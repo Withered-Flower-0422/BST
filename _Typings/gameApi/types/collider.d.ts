@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    const enum CollisionLayer {
+    enum CollisionLayer {
         Player = 0,
         RigidBody = 1,
         Machinery = 2,
@@ -13,7 +13,7 @@ declare module "game:type" {
         OnlyPlayer = 7,
     }
 
-    const enum ColliderType {
+    enum ColliderType {
         Box = 0,
         Sphere = 1,
         Mesh = 2,

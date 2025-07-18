@@ -4,21 +4,21 @@
 declare module "game:type" {
     import { IntRange } from "utils"
 
-    const enum LightType {
+    enum LightType {
         Point = 0,
         Spot = 1,
         RectArea = 2,
         CircleArea = 3,
     }
 
-    const enum ShadowQuality {
+    enum ShadowQuality {
         Off = 0,
         Low = 1,
         Medium = 2,
         High = 3,
     }
 
-    const enum LightBlendMode {
+    enum LightBlendMode {
         Additive = 0,
         Blend = 1,
         PreMultiply = 2,

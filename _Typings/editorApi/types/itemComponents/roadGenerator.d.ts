@@ -4,7 +4,7 @@
 declare module "editor:type" {
     import { IntRange } from "utils"
 
-    const enum GeneratorAlgorithm {
+    enum GeneratorAlgorithm {
         Road = 0,
         Corner = 1,
         WoodBoard = 2,

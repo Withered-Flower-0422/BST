@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    const enum JointType {
+    enum JointType {
         BallAndSocket = 0,
         Fixed = 1,
         Hinge = 2,
@@ -13,7 +13,7 @@ declare module "game:type" {
         Custom = 7,
     }
 
-    const enum ConstraintType {
+    enum ConstraintType {
         Linear = 0,
         Angular = 1,
     }

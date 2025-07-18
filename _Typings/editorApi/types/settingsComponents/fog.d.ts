@@ -2,13 +2,13 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    const enum FogType {
+    enum FogType {
         Disabled = 0,
         PhysicsFog = 1,
         ArtisticFog = 2,
     }
 
-    const enum FogBlendMode {
+    enum FogBlendMode {
         Multiply = 0,
         Additive = 1,
     }

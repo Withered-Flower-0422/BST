@@ -4,7 +4,7 @@
 declare module "game:type" {
     import { IntRange } from "utils"
 
-    const enum ParticleEmitterBlendMode {
+    enum ParticleEmitterBlendMode {
         Alpha = 0,
         Additive = 1,
         Premultiply = 2,

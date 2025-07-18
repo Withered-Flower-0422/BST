@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.7 (2025-07-19)
+
+-   Changed all `const enum` to `enum`.
+
 ## v1.1.6 (2025-07-16)
 
 -   Added `"DeathTransfer"` to `VfxType`.

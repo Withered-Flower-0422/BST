@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    const enum Difficulty {
+    enum Difficulty {
         Easy = 0,
         Normal = 1,
         Hard = 2,
@@ -10,7 +10,7 @@ declare module "editor:type" {
         Master = 4,
     }
 
-    const enum MapType {
+    enum MapType {
         Racing = 0,
         Casual = 1,
         Landscape = 2,
@@ -20,7 +20,7 @@ declare module "editor:type" {
         Comprehensive = 6,
     }
 
-    const enum InitialBallType {
+    enum InitialBallType {
         WoodenBall = 0,
         StoneBall = 1,
         PaperBall = 2,
@@ -32,7 +32,7 @@ declare module "editor:type" {
         SpongeBall = 8,
     }
 
-    const enum ViewMode {
+    enum ViewMode {
         FourDirectional = 0,
         FreeLook = 1,
     }
