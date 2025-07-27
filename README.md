@@ -10,7 +10,7 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 
 ## Current Version
 
--   v1.1.7
+-   v1.1.8
 
 ## Usage
 
@@ -35,6 +35,6 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 
 [![](https://img.shields.io/github/license/Withered-Flower-0422/BST)](https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE)
 
-Copyright 2025 Withered Flower.
+Copyright 2025-present Withered Flower.
 
 Distributed under the terms of the [Apache 2.0 license](https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE).

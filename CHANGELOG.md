@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.8 (2025-07-28)
+
+-   Fixed a bug that `math.angleQuaternion()` should take `Quaternion` instead of `Float3` as its parameter.
+
 ## v1.1.7 (2025-07-19)
 
 -   Changed all `const enum` to `enum`.
