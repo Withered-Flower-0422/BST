@@ -82,10 +82,10 @@ declare module "game:module" {
         const callRestart: () => void
         const transferPlayer: (targetPosition: Float3) => void
         /**
-         * @param guid `string`: the guid string of the item to be followed by the camera; if `null` is passed, the camera will follow the player ball's view
-         * @param displayName the name shown on the ui
+         * @param guid `string`: the guid string of the item to be followed by the camera; if `null` is passed, the camera will follow the player ball
+         * @param displayName the name shown on the ui; if `null` is passed, the name will be the player ball's name
          */
-        const setCameraTarget: <S extends string>(guid: AssertGuid<S> | null, displayName: string) => void
+        const setCameraTarget: <S extends string>(guid: AssertGuid<S> | null, displayName: string | null) => void
         /**
          * @returns the shown tip's guid
          */
