@@ -3,6 +3,7 @@
 
 declare module "game:module" {
     import { BuiltinVariables } from "game:type"
+    import { AssertInt } from "utils"
 
     namespace variables {
         /**
@@ -16,7 +17,10 @@ declare module "game:module" {
          * @NOTE **NEVER** name a variable starting with `C_` manually
          * @BuiltinVariables click to see {@link BuiltinVariables | all built-in variables}
          */
-        const set: <T extends string>(name: T, value: T extends `C_${string}` ? int : any) => void
+        const set: <T extends string, U extends int>(
+            name: T,
+            value: T extends `C_${string}` ? AssertInt<U> : any
+        ) => void
         /**
          * @description will not clear the variables starting with `C_`
          */

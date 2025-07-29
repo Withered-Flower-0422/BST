@@ -4,6 +4,7 @@
 declare module "game:module" {
     import { Component } from "game:type"
     import { AssertGuid } from "guid"
+    import { AssertInt } from "utils"
 
     enum Skin {
         Default = 0,
@@ -92,8 +93,8 @@ declare module "game:module" {
         const showTip: (content: string) => string
         const hideTip: (guid: string) => void
         const hideAllTips: () => void
-        const hideTipDelay: (guid: string, frame: int) => void
-        const hideAllTipsDelay: (frame: int) => void
+        const hideTipDelay: <T extends int>(guid: string, frame: AssertInt<T>) => void
+        const hideAllTipsDelay: <T extends int>(frame: AssertInt<T>) => void
         /**
          * @param data `json` string to save
          * @NOTE not a JSON object, needs to be stringified first
@@ -112,7 +113,7 @@ declare module "game:module" {
          * @param camera the camera component to be used as custom camera; if `null` is passed, default camera will be used
          */
         const setCustomCamera: (camera: Component<"Camera"> | null) => void
-        const invoke: (func: () => void, delayFrame: int) => void
+        const invoke: <T extends int>(func: () => void, delayFrame: AssertInt<T>) => void
         const startTimer: () => void
         const stopTimer: () => float
         const getDefaultCameraPosition: () => Float3

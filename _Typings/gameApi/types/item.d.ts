@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { AssertInt } from "utils"
+
     type Item = {
         /**
          * `readonly`
@@ -16,7 +18,7 @@ declare module "game:type" {
         getTransform: () => [Float3, Float3, Float3]
         getRotationQuaternion: () => Quaternion
         getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
-        moveTo: (targetTransform: Trans, easeType: EaseType, duration: int) => void
+        moveTo: <T extends int>(targetTransform: Trans, easeType: EaseType, duration: AssertInt<T>) => void
         /**
          * @description only to interrupt `item.moveTo()`, no effect for physical objects
          */

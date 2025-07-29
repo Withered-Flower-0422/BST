@@ -23,4 +23,6 @@ declare module "utils" {
         : C["length"] extends L
         ? C
         : Tuple<T, L, [...C, T]>
+
+    type AssertInt<T extends number> = `${T}` extends `${string}.${string}` ? never : T
 }

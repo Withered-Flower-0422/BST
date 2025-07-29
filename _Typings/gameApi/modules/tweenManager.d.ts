@@ -3,40 +3,41 @@
 
 declare module "game:module" {
     import { EaseType, Tween } from "game:type"
+    import { AssertInt } from "utils"
 
     namespace tweenManager {
-        const createFloatTween: (
+        const createFloatTween: <T extends int>(
             from: float,
             to: float,
             easeType: EaseType,
-            duration: int,
+            duration: AssertInt<T>,
             onUpdate: (curValue: float) => void,
             onFinish: () => void
         ) => Tween
 
-        const createFloat3Tween: (
+        const createFloat3Tween: <T extends int>(
             from: Float3,
             to: Float3,
             easeType: EaseType,
-            duration: int,
+            duration: AssertInt<T>,
             onUpdate: (curValue: Float3) => void,
             onFinish: () => void
         ) => Tween
 
-        const createQuaternionTween: (
+        const createQuaternionTween: <T extends int>(
             from: Quaternion,
             to: Quaternion,
             easeType: EaseType,
-            duration: int,
+            duration: AssertInt<T>,
             onUpdate: (curValue: Quaternion) => void,
             onFinish: () => void
         ) => Tween
 
-        const createColorTween: (
+        const createColorTween: <T extends int>(
             from: ColorRGBA,
             to: ColorRGBA,
             easeType: EaseType,
-            duration: int,
+            duration: AssertInt<T>,
             onUpdate: (curValue: ColorRGBA) => void,
             onFinish: () => void
         ) => Tween
