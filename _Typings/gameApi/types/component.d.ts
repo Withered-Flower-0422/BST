@@ -26,12 +26,23 @@ declare module "game:type" {
 
     type Component<T extends keyof ComponentTypeMap> = {
         /**
-         * `readonly`
+         * @readonly
          */
         readonly type: T
-        getData: <K extends keyof ComponentTypeMap[T]["data"]>(path: K) => ComponentTypeMap[T]["data"][K]
+
         /**
-         * @NOTE some properties may not be allowed to be set during game runtime
+         * Gets the specified data of the component.
+         * @param path - The path of the property to get.
+         * @returns The value of the property.
+         */
+        getData: <K extends keyof ComponentTypeMap[T]["data"]>(path: K) => ComponentTypeMap[T]["data"][K]
+
+        /**
+         * Sets data to the component.
+         * @param data - The data to set. In the form of `{ [path]: value }`.
+         * @returns
+         * @NOTE -
+         * - Some properties may not be allowed to be set during game runtime.
          */
         setData: (data: Mutable<{ [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K] }>) => void
     } & ComponentTypeMap[T]["method"]

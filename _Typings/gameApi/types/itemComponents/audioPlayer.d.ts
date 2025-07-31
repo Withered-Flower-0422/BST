@@ -22,8 +22,22 @@ declare module "game:type" {
     }
 
     type AudioPlayerMethod = {
+        /**
+         * Plays the audio.
+         * @returns
+         */
         play: () => void
+
+        /**
+         * Pauses the audio. The next call to `play()` will resume the audio from the paused position.
+         * @returns
+         */
         pause: () => void
+
+        /**
+         * Stops the audio. The next call to `play()` will start the audio from the beginning.
+         * @returns
+         */
         stop: () => void
     }
 }

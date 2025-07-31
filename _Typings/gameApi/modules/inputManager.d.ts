@@ -166,27 +166,120 @@ declare module "game:module" {
 
     namespace inputManager {
         namespace keyboard {
+            /**
+             * Checks if a key is currently down.
+             * @param key - The key to check.
+             * @returns Whether the key is currently down.
+             */
             const checkKeyDown: (key: KeyboardKey) => bool
+
+            /**
+             * Checks if a key is currently up.
+             * @param key - The key to check.
+             * @returns Whether the key is currently up.
+             */
             const checkKeyUp: (key: KeyboardKey) => bool
+
+            /**
+             * Checks if a key is currently being held down.
+             * @param key - The key to check.
+             * @returns Whether the key is currently being held down.
+             */
             const checkKeyHold: (key: KeyboardKey) => bool
         }
+
         namespace mouse {
+            /**
+             * Checks if a mouse button is currently down.
+             * @param button - The mouse button to check.
+             * @returns Whether the mouse button is currently down.
+             */
             const checkButtonDown: (button: MouseButton) => bool
+
+            /**
+             * Checks if a mouse button is currently up.
+             * @param button - The mouse button to check.
+             * @returns Whether the mouse button is currently up.
+             */
             const checkButtonUp: (button: MouseButton) => bool
+
+            /**
+             * Checks if a mouse button is currently being held down.
+             * @param button - The mouse button to check.
+             * @returns Whether the mouse button is currently being held down.
+             */
             const checkButtonHold: (button: MouseButton) => bool
+
+            /**
+             * Gets the mouse movement delta since the last frame.
+             * @returns The mouse movement delta.
+             */
             const getMoveDelta: () => Float2
+
+            /**
+             * Gets the mouse scroll delta since the last frame.
+             * @returns The mouse scroll delta.
+             */
             const getScrollDelta: () => Float2
         }
+
         namespace gamePad {
+            /**
+             * Checks if a game pad button is currently down.
+             * @param button - The game pad button to check.
+             * @returns Whether the game pad button is currently down.
+             */
             const checkButtonDown: (button: GamePadButton) => bool
+
+            /**
+             * Checks if a game pad button is currently up.
+             * @param button - The game pad button to check.
+             * @returns Whether the game pad button is currently up.
+             */
             const checkButtonUp: (button: GamePadButton) => bool
+
+            /**
+             * Checks if a game pad button is currently being held down.
+             * @param button - The game pad button to check.
+             * @returns Whether the game pad button is currently being held down.
+             */
             const checkButtonHold: (button: GamePadButton) => bool
+
+            /**
+             * Gets the D pad value.
+             * @returns The D pad value.
+             */
             const getDPadValue: () => Float2
+
+            /**
+             * Gets the left stick value.
+             * @returns The left stick value.
+             */
             const getLeftStickValue: () => Float2
+
+            /**
+             * Gets the right stick value.
+             * @returns The right stick value.
+             */
             const getRightStickValue: () => Float2
         }
+
+        /**
+         * Disables a player key, as known as a key that can be used to control the player ball.
+         * @returns
+         */
         const disablePlayerKey: (playerKeyName: PlayerKey) => void
+
+        /**
+         * Enables a player key, as known as a key that can be used to control the player ball.
+         * @returns
+         */
         const enablePlayerKey: (playerKeyName: PlayerKey) => void
-        const getPlayerKey: (playerKeyName: PlayerKey) => KeyboardKey
+
+        /**
+         * Gets the keyboard key associated with a player key, as known as a key that can be used to control the player ball.
+         * @returns The keyboard key associated with the player key. If there is no keyboard key associated with the player key, returns `"None"`.
+         */
+        const getPlayerKey: (playerKeyName: PlayerKey) => KeyboardKey | "None"
     }
 }

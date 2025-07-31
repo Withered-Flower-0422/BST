@@ -20,22 +20,26 @@ declare module "editor:type" {
 
     type SettingsComponent<T extends keyof SettingsComponentTypeMap> = {
         /**
-         * `readonly`
+         * @readonly
          */
         readonly type: T
+
         /**
-         * @returns the data of the component as a JSON string
-         * @NOTE
-         * - not a JSON object, need to parse it before use
-         * - because the returned data is a string, no type hint here,
-         *   you may set specific type to it manually if you want type hint
+         * Gets the data of the component as a JSON string.
+         * @returns The data of the component as a JSON string.
+         * @NOTE -
+         * - The returned data is **not** a JSON object, needs to parse it before use.
+         * - Because the returned data is a string, no type hint here,
+         *   you may set specified type to it manually if you want type hint
          */
         getData: () => json
+
         /**
-         * @param data the data of the component as a JSON string
-         * @NOTE
-         * - not a JSON object, need to stringify it before pass it in
-         * - some components' data may not be settable
+         * Sets data to the component.
+         * @param data - the data of the component to set, as a JSON string.
+         * @returns
+         * @NOTE -
+         * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
          */
         setData: (data: json) => void
     }

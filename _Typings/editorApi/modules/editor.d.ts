@@ -4,27 +4,56 @@
 declare module "editor:module" {
     namespace editor {
         /**
-         * `readonly`
+         * @readonly
          */
         const version: string
+
         /**
-         * `readonly`
+         * @readonly
          */
         const language: "English" | "Chinese" | "Japanese"
-        const refreshCache: () => void
-        const reloadFolder: () => void
-        const startTimer: () => void
-        const stopTimer: () => float
+
         /**
-         * @param delayTime the unit is seconds; when set to 0, the delay is 1 frame
+         * Refreshes the editor's cache.
+         * @returns
+         */
+        const refreshCache: () => void
+
+        /**
+         * Reloads the editor's folder.
+         * @returns
+         */
+        const reloadFolder: () => void
+
+        /**
+         * Starts the editor's internal timer.
+         * @returns
+         */
+        const startTimer: () => void
+
+        /**
+         * Stops the editor's internal timer.
+         * @returns The time elapsed since the last `startTimer()` call, in seconds.
+         */
+        const stopTimer: () => float
+
+        /**
+         * Invokes a function after a specified delay.
+         * @param func - The function to be invoked.
+         * @param delayTime - The delay time in seconds. When set to 0, the delay is 1 frame.
+         * @returns
          */
         const invoke: (func: (...args: any[]) => any, delayTime: float) => void
+
         /**
-         * @returns the editor's path to the selected asset
+         * Gets the editor's path to the selected asset.
+         * @returns The editor's path to the selected asset.
          */
         const getSelectedAsset: () => string
+
         /**
-         * @returns the editor's path to the selected asset's folder
+         * Gets the editor's path to the selected asset's folder.
+         * @returns The editor's path to the selected asset's folder.
          */
         const getSelectedAssetFolder: () => string
     }

@@ -54,6 +54,10 @@ declare module "game:type" {
     }
 
     type JointMethod = {
+        /**
+         * Breaks the joint.
+         * @returns
+         */
         breakJoint: () => void
     }
 }

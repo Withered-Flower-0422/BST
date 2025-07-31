@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.0 (2025-07-31)
+
+-   Rewrote all the descriptions of functions and some properties and types.
+
 ## v1.1.9 (2025-07-29)
 
 -   Added a new type `AssertInt` and applied it to wherever needed.

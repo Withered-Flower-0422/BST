@@ -101,6 +101,10 @@ declare module "editor:type" {
     }
 
     type PhysicsObjectMethod = {
+        /**
+         * Automatically sets the size of the minimum bounding box based on the mesh in the `Renderer` component.
+         * @returns
+         */
         autoDetectBoxCollider: () => void
     }
 }

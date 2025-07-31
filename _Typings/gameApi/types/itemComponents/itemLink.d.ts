@@ -5,12 +5,16 @@ declare module "game:type" {
     type ItemLinkData = {
         readonly Link: string
         /**
-         * different ItemLink types have different data structure
+         * Different ItemLink types have different data structure.
          */
         [key: string]: any
     }
 
     type ItemLinkMethod = {
+        /**
+         * Gets the internal items of the linked item.
+         * @returns The internal items of the linked item in an array.
+         */
         getInternalItems: () => Item[]
     }
 }

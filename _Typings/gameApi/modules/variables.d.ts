@@ -7,22 +7,30 @@ declare module "game:module" {
 
     namespace variables {
         /**
-         * @param name the name of the variable to get, if starts with `C_` it refers to a `Collection`
-         * @BuiltinVariables click to see {@link BuiltinVariables | all built-in variables}
+         * Gets the value of a variable.
+         * @param name - The name of the variable to get, if starts with `C_` it refers to a `Collection`.
+         * @returns The value of the variable. `Collection` values are `int`.
+         * @BuiltinVariables Click to see {@link BuiltinVariables | all built-in variables}.
          */
         const get: <T extends string>(name: T) => T extends `C_${string}` ? int : any
+
         /**
-         * @param name the name of the variable to set, if starts with `C_` it refers to a `Collection`
-         * @param value the value to set. `Collection` values should be `int`
-         * @NOTE **NEVER** name a variable starting with `C_` manually
-         * @BuiltinVariables click to see {@link BuiltinVariables | all built-in variables}
+         * Sets the value of a variable.
+         * @param name - The name of the variable to set, if starts with `C_` it refers to a `Collection`.
+         * @param value - The value to set. `Collection` values should be `int`.
+         * @returns
+         * @BuiltinVariables Click to see {@link BuiltinVariables | all built-in variables}.
+         * @NOTE -
+         * - **NEVER** name a variable starting with `C_` manually.
          */
         const set: <T extends string, U extends int>(
             name: T,
             value: T extends `C_${string}` ? AssertInt<U> : any
         ) => void
+
         /**
-         * @description will not clear the variables starting with `C_`
+         * Clears all variables except those starting with `C_`.
+         * @returns
          */
         const clear: () => void
     }

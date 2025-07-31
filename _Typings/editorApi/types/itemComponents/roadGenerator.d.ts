@@ -155,8 +155,23 @@ declare module "editor:type" {
     }
 
     type RoadGeneratorMethod = {
+        /**
+         * Creates an identical road at the end of the current road and automatically sets its rotation and other properties.
+         * @returns
+         */
         clone: () => void
+
+        /**
+         * Forcibly refreshes the current road generator.
+         * For a `Custom Script` road generator, you can call this method to refresh the generated result after modifying the script.
+         * @returns
+         */
         generate: () => void
+
+        /**
+         * Creates `Way Point` at the corresponding positions based on the current road generator's segments.
+         * @returns
+         */
         createWayPoint: () => void
     }
 }

@@ -41,20 +41,29 @@ declare module "game:module" {
         let cameraOffset: Float3
         let gravity: Float3
         /**
-         * `readonly`
+         * @readonly
          */
         const language: "English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"
+
         /**
-         * @returns `json` string of the saved data
-         * @NOTE
-         * - not a JSON object, needs to be parsed before use
-         * - some components' data may not be accessible during game runtime
+         * Gets the data of a component's property.
+         * @param componentType - The type of the component.
+         * @param path - The property path of the component.
+         * @returns A `json` string of the data.
+         * @NOTE -
+         * - The returned data is **not** a JSON object, needs to be parsed before use.
+         * - Some components' data may not be accessible during game runtime.
          */
         const getData: <T extends keyof ComponentTypeMap>(componentType: T, path: keyof ComponentTypeMap[T]) => json
+
         /**
-         * @NOTE
-         * - unlike `getData`, `values` should be a JSON object, not a string
-         * - some components' data may not be settable during game runtime
+         * Sets data to a component.
+         * @param componentType - The type of the component.
+         * @param values - The data to be set, in the form of `{ [path]: value }`.
+         * @returns
+         * @NOTE -
+         * - Unlike `getData()`, parameter `values` should be a JSON object here, **not** a string.
+         * - Some components' data may not be settable during game runtime.
          */
         const setData: <T extends keyof ComponentTypeMap>(
             componentType: T,

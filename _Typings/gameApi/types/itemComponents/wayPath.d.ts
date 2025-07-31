@@ -28,7 +28,18 @@ declare module "game:type" {
     }
 
     type WayPathMethod = {
+        /**
+         * Gets the point information of the given point.
+         * @param point - The point of the way path.
+         * @returns The point information of the given point.
+         */
         getPointInfo: (point: float) => PointInfo
+
+        /**
+         * Gets the point information of the given points.
+         * @param points - The points of the way path in an array.
+         * @returns The point information of the given points.
+         */
         getPointsInfo: <T extends float[]>(points: T) => Tuple<PointInfo, T["length"]>
     }
 }

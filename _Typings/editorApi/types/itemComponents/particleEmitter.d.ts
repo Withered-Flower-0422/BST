@@ -48,9 +48,30 @@ declare module "editor:type" {
     }
 
     type ParticleEmitterMethod = {
+        /**
+         * Refresh the particle emitter animation in the editor.
+         * @returns
+         */
         refresh: () => void
+
+        /**
+         * Start playing the particle emitter animation in the editor.
+         * @returns
+         */
         play: () => void
+
+        /**
+         * Pause the particle emitter animation in the editor.
+         * The next time you call `play()`, the animation will resume from the paused point.
+         * @returns
+         */
         pause: () => void
+
+        /**
+         * Stop the particle emitter animation in the editor.
+         * The next time you call `play()`, the animation will start from the beginning.
+         * @returns
+         */
         stop: () => void
     }
 }

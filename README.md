@@ -10,7 +10,7 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 
 ## Current Version
 
--   v1.1.9
+-   v1.2.0
 
 ## Usage
 
@@ -20,6 +20,10 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
     -   Ignore one line: add `// @ts-ignore` above the line you want to ignore.
     -   Ignore the whole file: add `// @ts-nocheck` at the top of the file.
     -   Ignore every file: change the `checkJS` setting in `jsconfig.json` to `false`.
+
+## Changelog
+
+Detailed changes are documented in the [CHANGELOG](https://github.com/Withered-Flower-0422/BST/blob/main/CHANGELOG.md).
 
 ## Contribution
 

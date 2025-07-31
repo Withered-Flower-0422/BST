@@ -7,33 +7,104 @@ declare module "game:module" {
     import { Tuple } from "utils"
 
     namespace scene {
-        const getAllItems: () => Item[]
         /**
-         * @param guid `string`: the guid string of the item to get
+         * Gets all the items in the scene.
+         * @returns An array of all the items in the scene.
+         */
+        const getAllItems: () => Item[]
+
+        /**
+         * Gets the item by its guid.
+         * @param guid - The guid string of the item to get.
+         * @returns The item with the given guid.
          */
         const getItem: <S extends string>(guid: AssertGuid<S>) => Item
+
         /**
-         * @param guids `string[]`: the guid strings in an array of the items to get
+         * Gets the items by their guids.
+         * @param guids - The guid strings in an array of the items to get.
+         * @returns An array of the items with the given guids.
          */
         const getItems: <const S extends readonly string[]>(guids: AssertGuids<S>) => Tuple<Item, S["length"]>
-        const getPlayer: () => Player
+
         /**
-         * @param guid `string`: the guid string of the item to destroy
+         * Gets the player. If the player has not been created, it will return `null`.
+         * @returns The player or `null` if the player has not been created.
+         */
+        const getPlayer: () => Player | null
+
+        /**
+         * Destroys the item by its guid.
+         * @param guid - The guid string of the item to destroy.
+         * @returns
          */
         const destroyItem: <S extends string>(guid: AssertGuid<S>) => void
+
         /**
-         * @param guids `string[]`: the guid strings in an array of the items to destroy
+         * Destroys the items by their guids.
+         * @param guids - The guid strings in an array of the items to destroy.
+         * @returns
          */
         const destroyItems: <const S extends readonly string[]>(guids: AssertGuids<S>) => void
+
+        /**
+         * Creates an item based on a template.
+         * @param templateName - The name of the template to create the item from.
+         * @param pos - The position of the item.
+         * @param rot - The rotation of the item.
+         * @param scl - The scale of the item.
+         * @returns The created item.
+         */
         const createItem: (templateName: string, pos: Float3, rot: Float3, scl: Float3) => Item
+
+        /**
+         * Casts a ray from the start position to the end position and returns the first item or player it hits.
+         * @param start - The start position of the ray.
+         * @param end - The end position of the ray.
+         * @returns The first item or player it hits or `null` if it hits nothing.
+         */
         const raycast: (start: Float3, end: Float3) => RaycastResult | null
+
+        /**
+         * Casts a ray from the start position to the end position and returns all the items or player it hits.
+         * @param start - The start position of the ray.
+         * @param end - The end position of the ray.
+         * @returns An array of all the items or player it hits.
+         */
         const raycastAll: (start: Float3, end: Float3) => RaycastResult[]
+
+        /**
+         * Casts a ray from the mouse position with the given maximum distance and returns the first item or player it hits.
+         * @param maxDistance - The maximum distance of the ray.
+         * @returns The first item or player it hits or `null` if it hits nothing.
+         */
         const mouseRaycast: (maxDistance: float) => RaycastResult | null
+
+        /**
+         * Casts a ray from the mouse position with the given maximum distance and returns all the items or player it hits.
+         * @param maxDistance - The maximum distance of the ray.
+         * @returns An array of all the items or player it hits.
+         */
         const mouseRaycastAll: (maxDistance: float) => RaycastResult[]
+
+        /**
+         * Casts a sphere from the center position with the given radius and returns all the items or player it hits by their collision layers.
+         * @param center - The center position of the sphere.
+         * @param radius - The radius of the sphere.
+         * @returns An object with the items or player it hits by their collision layers.
+         */
         const sphereCastAll: (
             center: Float3,
             radius: float
         ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: (Item | Player)[] }
+
+        /**
+         * Casts a box from the center position with the given size and rotation and returns all the items or player it hits by their collision layers.
+         * @param center - The center position of the box.
+         * @param size - The size of the box.
+         * @param rotation - The rotation of the box.
+         * @returns An object with the items or player it hits by their collision layers.
+         */
         const boxCastAll: (
             center: Float3,
             size: Float3,

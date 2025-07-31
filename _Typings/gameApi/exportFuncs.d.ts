@@ -5,144 +5,217 @@ declare module "game:type" {
     import { BuiltinCollections } from "game:type"
 
     type Events = {
-        OnPhysicsUpdate?: never[]
         /**
-         * @description after level loaded, before level start
+         * On every physics updates. The physics frame rate of Ballex² is 100Hz.
+         */
+        OnPhysicsUpdate?: never[]
+
+        /**
+         * After level loaded, before level start.
          */
         OnLoadLevel?: never[]
+
         /**
-         * @description on level start, including the first entering and restarting
+         * On level start, including the first entering and restarting.
          */
         OnStartLevel?: never[]
+
         /**
-         * @description on quit level without completing it
+         * On quitting level without completing it.
          */
         OnQuitLevel?: never[]
+
         /**
-         * @description on timer active when the player ball is generated
+         * On timer active, as well as when the player ball is generated.
          */
         OnTimerActive?: never[]
+
         /**
-         * @description on pre-restart level, excludes the restarting after completing the level
-         * @NOTE `cancelable`
+         * On pre-restarting level, excludes the restarting after completing the level.
+         * @cancelable
          */
         OnPreRestartLevel?: never[]
-        OnPostRestartLevel?: never[]
+
         /**
-         * @description on pre player ball is dead (falling into the death zone || duration expired || suicide)
-         * @NOTE `cancelable`
+         * On post-restarting level.
+         */
+        OnPostRestartLevel?: never[]
+
+        /**
+         * On pre player ball is dead. (falling into the death area / duration expired / suicide)
+         * @cancelable
          */
         OnPrePlayerDeadStart?: never[]
+
         /**
-         * @description on post player ball is dead (falling into the death zone || duration expired || suicide)
+         * On post player ball is dead. (falling into the death area / duration expired / suicide)
          */
         OnPostPlayerDeadStart?: never[]
+
         /**
-         * @description on player ball has already dead, after the death animation
+         * On player ball has already dead, after the death animation.
          */
         OnPlayerDeadEnd?: never[]
+
         /**
-         * @NOTE `cancelable`
-         * @Message the checkpoint item, wrapped in an array
+         * On pre-reached the checkpoint.
+         * @cancelable
+         * @Message The checkpoint item, wrapped in an array.
          */
         OnPreCheckpointReached?: [Item]
+
         /**
-         * @Message the checkpoint item, wrapped in an array
+         * On post-reached the checkpoint.
+         * @Message The checkpoint item, wrapped in an array.
          */
         OnPostCheckpointReached?: [Item]
+
         /**
-         * @NOTE `cancelable`
-         * @Message the destination item, wrapped in an array
+         * On pre-reached the destination.
+         * @cancelable
+         * @Message The destination item, wrapped in an array.
          */
         OnPreDestinationReached?: [Item]
+
         /**
-         * @Message the destination item, wrapped in an array
+         * On post-reached the destination.
+         * @Message The destination item, wrapped in an array.
          */
         OnPostDestinationReached?: [Item]
+
         /**
-         * @NOTE `cancelable`
-         * @BuiltinCollections click to see {@link BuiltinCollections | all built-in collections}
-         * @Message name of collection items that are being collected, wrapped in an array
+         * On pre-getting collections.
+         * @cancelable
+         * @Message Name of collection items that are being collected, wrapped in an array.
+         * @BuiltinCollections Click to see {@link BuiltinCollections | all built-in collections}.
          */
         OnPreGetCollection?: string[]
+
         /**
-         * @BuiltinCollections click to see {@link BuiltinCollections | all built-in collections}
-         * @Message name of collection items that are being collected, wrapped in an array
+         * On post-getting collections.
+         * @BuiltinCollections Click to see {@link BuiltinCollections | all built-in collections}.
+         * @Message Name of collection items that are being collected, wrapped in an array.
          */
         OnPostGetCollection?: string[]
+
         /**
-         * @description before the ball switch animation starts
-         * @NOTE `cancelable`
-         * @Message the type of the ball that is being switched to, wrapped in an array
+         * Before the ball switch animation starts.
+         * @cancelable
+         * @Message The type of the ball that is being switched to, wrapped in an array.
          */
         OnPreSwitchBallStart?: [BallType]
+
         /**
-         * @description before the ball switch animation ends
-         * @NOTE `cancelable`
-         * @Message the type of the ball that is being switched to, wrapped in an array
+         * Before the ball switch animation ends.
+         * @cancelable
+         * @Message The type of the ball that is being switched to, wrapped in an array.
          */
         OnPreSwitchBallEnd?: [BallType]
+
         /**
-         * @description after the ball switch animation ends
-         * @Message the type of the ball that is being switched to, wrapped in an array
+         * After the ball switch animation ends.
+         * @Message The type of the ball that is being switched to, wrapped in an array.
          */
         OnPostSwitchBallEnd?: [BallType]
+
         /**
-         * @description before the ball transfer animation starts
-         * @NOTE `cancelable`
-         * @Message the transporter items that are being used, wrapped in an array, first item is the current transporter, second item is the target transporter
+         * Before the ball transfer animation starts.
+         * @cancelable
+         * @Message The transporter items that are being triggered, wrapped in an array.
+         * - The first item is the current transporter, and the second item is the target transporter.
          */
         OnPreTransferBallStart?: [Item, Item]
+
         /**
-         * @description before the ball transfer animation ends
-         * @NOTE `cancelable`
-         * @Message the transporter items that are being used, wrapped in an array, first item is the current transporter, second item is the target transporter
+         * Before the ball transfer animation ends.
+         * @cancelable
+         * @Message The transporter items that are being triggered, wrapped in an array.
+         * - The first item is the current transporter, and the second item is the target transporter.
          */
         OnPreTransferBallEnd?: [Item, Item]
+
         /**
-         * @description after the ball transfer animation ends
-         * @Message the transporter items that are being used, wrapped in an array, first item is the current transporter, second item is the target transporter
+         * After the ball transfer animation ends.
+         * @Message The transporter items that are being triggered, wrapped in an array.
+         * - The first item is the current transporter, and the second item is the target transporter.
          */
         OnPostTransferBallEnd?: [Item, Item]
-        OnPlayerCollideEnter?: CollisionEvent[]
-        OnPlayerCollideStay?: CollisionEvent[]
-        OnPlayerCollideExit?: CollisionEvent[]
+
         /**
-         * @Message customized values
+         * On player starting to collide with other item.
+         * @Message The collision events, wrapped in an array.
+         */
+        OnPlayerCollideEnter?: CollisionEvent[]
+
+        /**
+         * On player staying in collision with other item.
+         * @Message The collision events, wrapped in an array.
+         */
+        OnPlayerCollideStay?: CollisionEvent[]
+
+        /**
+         * On player leaving collision with other item.
+         * @Message The collision events, wrapped in an array.
+         */
+        OnPlayerCollideExit?: CollisionEvent[]
+
+        /**
+         * On Receiving custom event.
+         * @Message Customized values, wrapped in an array.
          */
         OnReceiveCustomEvent?: [any]
+
         /**
-         * @Message pos of each TNT explosion
+         * On TNT explosion.
+         * @Message The positions of each TNT explosion, wrapped in an array.
          */
         OnTntExploded?: Float3[]
     }
 
     global {
         /**
-         * @param self the item referred to self
-         * @param vars variables set on the *Executor*
-         * @description only executed once when the script is being loaded before all events
+         * Executed when the executor loads the script. It executes before all other events and only executes once.
+         * @param self - A reference to the item where the executor component is located.
+         * @param vars - The variables set on the executor, passed in as key-value pairs.
+         * @returns
          */
         type Init = (self: Item, vars: { [key: string]: any }) => void
 
         /**
-         * @description invoked by other *Executor* using execute()
+         * Executed when `execute()` is called by another executor in the game.
+         * @param data - The data passed in by the executor that called `execute()`.
+         * @returns
          */
         type GameExecute = (...args: any[]) => void
 
         /**
-         * click to see all {@link Events}
+         * Click to see all {@link Events}.
          */
         type RegisterEvent = keyof Events
 
         /**
-         * @param self the item referred to self
-         * @param events registered triggered events
+         * Executed when a registered event is triggered.
+         * @param self - A reference to the item where the executor component is located.
+         * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
+         * @returns
          */
         type OnEvents = (self: Item, events: Events) => void
 
+        /**
+         * Executed when the trigger is activated.
+         * @param self - A reference to the item where the trigger component is located.
+         * @param triggeredItem - A reference to the item or player that activated the trigger.
+         * @param type - The type of trigger event.
+         * @returns
+         */
         type OnTrigger = (self: Item, triggeredItem: Item | Player, type: CollisionEvent["eventType"]) => void
 
+        /**
+         * Executed when an object collides.
+         * @param self - A reference to the item where the collider component is located.
+         * @param collisionEvent - The collision event object, which contains information about the colliding object, the type of collision, the position of the collision, etc.
+         * @returns
+         */
         type OnCollide = (self: Item, collisionEvent: CollisionEvent) => void
     }
 }

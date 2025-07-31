@@ -9,6 +9,10 @@ declare module "game:type" {
     }
 
     type CollectionMethod = {
+        /**
+         * Resets the collection.
+         * @returns
+         */
         resetCollection: () => void
     }
 }

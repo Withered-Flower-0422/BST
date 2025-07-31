@@ -60,7 +60,7 @@ declare module "editor:type" {
 
     type ExecutorData = {
         /**
-         * @description BME path to the script
+         * BME path to the script.
          */
         ScriptPath: string
         ExecutorVariables: Partial<ExecutorVariable>[]

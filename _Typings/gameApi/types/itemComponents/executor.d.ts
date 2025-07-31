@@ -60,13 +60,18 @@ declare module "game:type" {
 
     type ExecutorData = {
         /**
-         * @description BME path to the script
+         * BME path to the script.
          */
         readonly ScriptPath: string
         readonly ExecutorVariables: ExecutorVariable[]
     }
 
     type ExecutorMethod = {
+        /**
+         * Executed when `execute()` is called by another executor in the game.
+         * @param data - The data passed in by the executor that called `execute()`.
+         * @returns
+         */
         execute: GameExecute
     }
 }
