@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.1 (2025-08-03)
+
+-   Now all the components data can be imported from `editor:alias`and `game:alias`.
+-   Fixed some typos.
+
 ## v1.2.0 (2025-07-31)
 
 -   Rewrote all the descriptions of functions and some properties and types.

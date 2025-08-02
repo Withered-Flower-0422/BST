@@ -36,7 +36,7 @@ declare module "editor:type" {
 
         /**
          * Sets data to the component.
-         * @param data - the data of the component to set, as a JSON string.
+         * @param data - The data of the component to set, as a JSON string.
          * @returns
          * @NOTE -
          * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
