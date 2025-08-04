@@ -11,7 +11,7 @@ declare module "game:module" {
              * @param key - The key to check.
              * @returns Whether the key is currently down.
              * @NOTE -
-             * Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
             const checkKeyDown: (key: Exclude<KeyboardKey, "None">) => bool
@@ -21,7 +21,7 @@ declare module "game:module" {
              * @param key - The key to check.
              * @returns Whether the key is currently up.
              * @NOTE -
-             * Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
             const checkKeyUp: (key: Exclude<KeyboardKey, "None">) => bool
@@ -31,7 +31,7 @@ declare module "game:module" {
              * @param key - The key to check.
              * @returns Whether the key is currently being held down.
              * @NOTE -
-             * Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
             const checkKeyHold: (key: Exclude<KeyboardKey, "None">) => bool

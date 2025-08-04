@@ -307,7 +307,7 @@ declare module "game:module" {
          * @param name - The name of the custom value.
          * @returns The index of the custom value that selected by the player.
          * @NOTE -
-         * If the custom value is a keyboard key, returns the index of the key in the {@link KeyboardKeyEnum | `KeyboardKey` enum}.
+         * - If the custom value is a keyboard key, returns the index of the key in the {@link KeyboardKeyEnum | `KeyboardKey` enum}.
          */
         const getConfig: (name: string) => int
 
@@ -316,7 +316,7 @@ declare module "game:module" {
          * @param key - The name of the key.
          * @returns The custom keyboard key that selected by the player.
          * @NOTE -
-         * If the key is not set or valid, or the custom value is not a keyboard key, returns `"None"`.
+         * - If the key is not set or valid, or the custom value is not a keyboard key, returns `"None"`.
          */
         const getConfigInputKey: (key: string) => KeyboardKey
     }
