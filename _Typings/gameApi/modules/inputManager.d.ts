@@ -10,6 +10,9 @@ declare module "game:module" {
              * Checks if a key is currently down.
              * @param key - The key to check.
              * @returns Whether the key is currently down.
+             * @NOTE -
+             * Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * and the function may not be able to be invoked in time at that moment.
              */
             const checkKeyDown: (key: Exclude<KeyboardKey, "None">) => bool
 
@@ -17,6 +20,9 @@ declare module "game:module" {
              * Checks if a key is currently up.
              * @param key - The key to check.
              * @returns Whether the key is currently up.
+             * @NOTE -
+             * Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * and the function may not be able to be invoked in time at that moment.
              */
             const checkKeyUp: (key: Exclude<KeyboardKey, "None">) => bool
 
@@ -24,6 +30,9 @@ declare module "game:module" {
              * Checks if a key is currently being held down.
              * @param key - The key to check.
              * @returns Whether the key is currently being held down.
+             * @NOTE -
+             * Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * and the function may not be able to be invoked in time at that moment.
              */
             const checkKeyHold: (key: Exclude<KeyboardKey, "None">) => bool
         }
@@ -120,6 +129,6 @@ declare module "game:module" {
          * Gets the keyboard key associated with a player key, as known as a key that can be used to control the player ball.
          * @returns The keyboard key associated with the player key. If there is no keyboard key associated with the player key, returns `"None"`.
          */
-        const getPlayerKey: (playerKeyName: PlayerKey) => Exclude<KeyboardKey, "Enter">
+        const getPlayerKey: (playerKeyName: PlayerKey) => Exclude<KeyboardKey, "Enter" | "Escape">
     }
 }

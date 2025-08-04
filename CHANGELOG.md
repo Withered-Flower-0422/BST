@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 -   Added a new file `keys.d.ts`, moved `KeyboardKey`, `MouseButton`, `GamePadButton` and `PlayerKey` from `inputManager.d.ts` to it, and modified some files to adapt to this change.
 -   Added `enum KeyboardKeyEnum`, `enum MouseButtonEnum`, `enum GamePadButtonEnum`, and `enum PlayerKeyEnum` to `keys.d.ts`, and `KeyboardKey`, `MouseButton`, `GamePadButton` and `PlayerKey` are now computed by these enums.
 -   Added `None` to `KeyboardKeyEnum`.
--   Now `inputManager.getPlayerKey()` returns `Exclude<KeyboardKey, "Enter">` instead of `KeyboardKey | "None"`.
+-   Now `inputManager.getPlayerKey()` returns `Exclude<KeyboardKey, "Enter" | "Escape">` instead of `KeyboardKey | "None"`.
 -   Added a new file `localize.d.ts` where `LocalizedString` is defined.
 -   Modified `CustomBallSettings` using `LocalizedString`.
 -   Added new parameter `Configurations` to type `MapInfo`.
