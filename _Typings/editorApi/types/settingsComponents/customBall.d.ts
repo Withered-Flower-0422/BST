@@ -2,14 +2,11 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { LocalizedString } from "localize"
+
     type CustomBallSettings = {
         ItemTemplate: string
         BallName: string
-        English: string
-        SimplifiedChinese: string
-        TraditionalChinese: string
-        Japanese: string
-        Spanish: string
         WetnessUI: bool
         TemperatureUI: bool
         ScaleUI: bool
@@ -32,7 +29,7 @@ declare module "editor:type" {
         SwitcherGlowIntensity: float
         SwitcherLightColor: ColorRGBA
         SwitcherLightIntensity: float
-    }
+    } & LocalizedString
 
     type CustomBall = {
         CustomBalls: Partial<CustomBallSettings>[]

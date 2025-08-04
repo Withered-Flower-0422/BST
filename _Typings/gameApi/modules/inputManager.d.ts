@@ -2,167 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    type KeyboardKey =
-        | "Space"
-        | "Enter"
-        | "Tab"
-        | "Backquote"
-        | "Quote"
-        | "Semicolon"
-        | "Comma"
-        | "Period"
-        | "Slash"
-        | "Backslash"
-        | "LeftBracket"
-        | "RightBracket"
-        | "Minus"
-        | "Equals"
-        | "A"
-        | "B"
-        | "C"
-        | "D"
-        | "E"
-        | "F"
-        | "G"
-        | "H"
-        | "I"
-        | "J"
-        | "K"
-        | "L"
-        | "M"
-        | "N"
-        | "O"
-        | "P"
-        | "Q"
-        | "R"
-        | "S"
-        | "T"
-        | "U"
-        | "V"
-        | "W"
-        | "X"
-        | "Y"
-        | "Z"
-        | "Digit1"
-        | "Digit2"
-        | "Digit3"
-        | "Digit4"
-        | "Digit5"
-        | "Digit6"
-        | "Digit7"
-        | "Digit8"
-        | "Digit9"
-        | "Digit0"
-        | "LeftShift"
-        | "RightShift"
-        | "LeftAlt"
-        | "RightAlt"
-        | "AltGr=RightAlt"
-        | "LeftCtrl"
-        | "RightCtrl"
-        | "LeftMeta"
-        | "RightMeta"
-        | "LeftWindows"
-        | "RightWindows"
-        | "LeftApple"
-        | "RightApple"
-        | "LeftCommand"
-        | "RightCommand"
-        | "ContextMenu"
-        | "Escape"
-        | "LeftArrow"
-        | "RightArrow"
-        | "UpArrow"
-        | "DownArrow"
-        | "Backspace"
-        | "PageDown"
-        | "PageUp"
-        | "Home"
-        | "End"
-        | "Insert"
-        | "Delete"
-        | "CapsLock"
-        | "NumLock"
-        | "PrintScreen"
-        | "ScrollLock"
-        | "Pause"
-        | "NumpadEnter"
-        | "NumpadDivide"
-        | "NumpadMultiply"
-        | "NumpadPlus"
-        | "NumpadMinus"
-        | "NumpadPeriod"
-        | "NumpadEquals"
-        | "Numpad0"
-        | "Numpad1"
-        | "Numpad2"
-        | "Numpad3"
-        | "Numpad4"
-        | "Numpad5"
-        | "Numpad6"
-        | "Numpad7"
-        | "Numpad8"
-        | "Numpad9"
-        | "F1"
-        | "F2"
-        | "F3"
-        | "F4"
-        | "F5"
-        | "F6"
-        | "F7"
-        | "F8"
-        | "F9"
-        | "F10"
-        | "F11"
-        | "F12"
-        | "OEM1"
-        | "OEM2"
-        | "OEM3"
-        | "OEM4"
-        | "OEM5"
-
-    type MouseButton = "Left" | "Middle" | "Right"
-
-    type GamePadButton =
-        | "DpadUp"
-        | "DpadDown"
-        | "DpadLeft"
-        | "DpadRight"
-        | "North"
-        | "East"
-        | "South"
-        | "West"
-        | "LeftStick"
-        | "RightStick"
-        | "LeftShoulder"
-        | "RightShoulder"
-        | "Start"
-        | "Select"
-        | "LeftTrigger"
-        | "RightTrigger"
-        | "X"
-        | "Y"
-        | "A"
-        | "B"
-        | "Cross"
-        | "Square"
-        | "Triangle"
-        | "Circle"
-
-    type PlayerKey =
-        | "MoveForward"
-        | "MoveBackward"
-        | "MoveLeft"
-        | "MoveRight"
-        | "ViewClockwiseRotate"
-        | "ViewCounterclockwiseRotate"
-        | "CameraOverlook"
-        | "FreeLookMoveForward"
-        | "FreeLookMoveBackward"
-        | "FreeLookMoveLeft"
-        | "FreeLookMoveRight"
-        | "FreeLookLockView"
-        | "FreeLookToggleFirstPersonView"
+    import { KeyboardKey, MouseButton, GamePadButton, PlayerKey } from "keys"
 
     namespace inputManager {
         namespace keyboard {
@@ -171,21 +11,21 @@ declare module "game:module" {
              * @param key - The key to check.
              * @returns Whether the key is currently down.
              */
-            const checkKeyDown: (key: KeyboardKey) => bool
+            const checkKeyDown: (key: Exclude<KeyboardKey, "None">) => bool
 
             /**
              * Checks if a key is currently up.
              * @param key - The key to check.
              * @returns Whether the key is currently up.
              */
-            const checkKeyUp: (key: KeyboardKey) => bool
+            const checkKeyUp: (key: Exclude<KeyboardKey, "None">) => bool
 
             /**
              * Checks if a key is currently being held down.
              * @param key - The key to check.
              * @returns Whether the key is currently being held down.
              */
-            const checkKeyHold: (key: KeyboardKey) => bool
+            const checkKeyHold: (key: Exclude<KeyboardKey, "None">) => bool
         }
 
         namespace mouse {
@@ -280,6 +120,6 @@ declare module "game:module" {
          * Gets the keyboard key associated with a player key, as known as a key that can be used to control the player ball.
          * @returns The keyboard key associated with the player key. If there is no keyboard key associated with the player key, returns `"None"`.
          */
-        const getPlayerKey: (playerKeyName: PlayerKey) => KeyboardKey | "None"
+        const getPlayerKey: (playerKeyName: PlayerKey) => Exclude<KeyboardKey, "Enter">
     }
 }

@@ -2,6 +2,9 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { KeyboardKey } from "keys"
+    import { LocalizedString } from "localize"
+
     type int64 = number
 
     enum Difficulty {
@@ -39,6 +42,22 @@ declare module "game:type" {
         FreeLook = 1,
     }
 
+    enum ConfigType {
+        String = 0,
+        LocalizedString = 1,
+        Keys = 2,
+    }
+
+    type Configuration = {
+        Key: string
+        ConfigItemName: LocalizedString
+        ConfigType: ConfigType
+        DefaultIndex: int
+        DefaultKey: KeyboardKey
+        Strings: string[]
+        LocalizedStrings: LocalizedString[]
+    }
+
     type MapInfo = {
         readonly AuthorName: string
         readonly AuthorSteamID: int64
@@ -55,5 +74,6 @@ declare module "game:type" {
         readonly ViewDistance: float
         readonly CameraOffset: Float3
         readonly Gravity: Float3
+        readonly Configurations: Configuration[]
     }
 }

@@ -5,6 +5,7 @@ declare module "game:module" {
     import { Component } from "game:type"
     import { AssertGuid } from "guid"
     import { AssertInt } from "utils"
+    import { KeyboardKey, KeyboardKeyEnum } from "keys"
 
     enum Skin {
         Default = 0,
@@ -300,5 +301,23 @@ declare module "game:module" {
          * @returns
          */
         const destroyCustomStatusBar: (statusBarName: string) => void
+
+        /**
+         * Gets the index of the custom value that selected by the player.
+         * @param name - The name of the custom value.
+         * @returns The index of the custom value that selected by the player.
+         * @NOTE -
+         * If the custom value is a keyboard key, returns the index of the key in the {@link KeyboardKeyEnum | `KeyboardKey` enum}.
+         */
+        const getConfig: (name: string) => int
+
+        /**
+         * Gets the custom keyboard key that selected by the player.
+         * @param key - The name of the key.
+         * @returns The custom keyboard key that selected by the player.
+         * @NOTE -
+         * If the key is not set or valid, or the custom value is not a keyboard key, returns `"None"`.
+         */
+        const getConfigInputKey: (key: string) => KeyboardKey
     }
 }

@@ -2,6 +2,9 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { KeyboardKey } from "keys"
+    import { LocalizedString } from "localize"
+
     enum Difficulty {
         Easy = 0,
         Normal = 1,
@@ -37,6 +40,22 @@ declare module "editor:type" {
         FreeLook = 1,
     }
 
+    enum ConfigType {
+        String = 0,
+        LocalizedString = 1,
+        Keys = 2,
+    }
+
+    type Configuration = {
+        Key: string
+        ConfigItemName: LocalizedString
+        ConfigType: ConfigType
+        DefaultIndex: int
+        DefaultKey: KeyboardKey
+        Strings: string[]
+        LocalizedStrings: LocalizedString[]
+    }
+
     type MapInfo = {
         AuthorName: string
         MapName: string
@@ -52,5 +71,6 @@ declare module "editor:type" {
         ViewDistance: float
         CameraOffset: Float3
         Gravity: Float3
+        Configurations: Partial<Configuration>[]
     }
 }
