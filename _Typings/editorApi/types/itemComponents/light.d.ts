@@ -149,6 +149,6 @@ declare module "editor:type" {
     }
 
     type LightMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

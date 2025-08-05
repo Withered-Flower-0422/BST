@@ -26,6 +26,6 @@ declare module "game:type" {
     }
 
     type TriggerMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

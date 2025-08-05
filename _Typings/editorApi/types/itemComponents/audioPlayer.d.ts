@@ -22,6 +22,6 @@ declare module "editor:type" {
     }
 
     type AudioPlayerMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

@@ -10,6 +10,6 @@ declare module "game:type" {
     }
 
     type CameraMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

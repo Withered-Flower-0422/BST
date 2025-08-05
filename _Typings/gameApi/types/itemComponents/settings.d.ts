@@ -56,6 +56,6 @@ declare module "game:type" {
     }
 
     type SettingsMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

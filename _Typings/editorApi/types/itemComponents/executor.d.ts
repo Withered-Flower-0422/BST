@@ -67,6 +67,6 @@ declare module "editor:type" {
     }
 
     type ExecutorMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

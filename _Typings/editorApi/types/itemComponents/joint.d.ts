@@ -54,6 +54,6 @@ declare module "editor:type" {
     }
 
     type JointMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

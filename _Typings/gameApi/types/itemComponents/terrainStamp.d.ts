@@ -3,10 +3,10 @@
 
 declare module "game:type" {
     type TerrainStampData = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 
     type TerrainStampMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

@@ -10,6 +10,6 @@ declare module "editor:type" {
     }
 
     type CameraMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

@@ -56,6 +56,6 @@ declare module "editor:type" {
     }
 
     type SettingsMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

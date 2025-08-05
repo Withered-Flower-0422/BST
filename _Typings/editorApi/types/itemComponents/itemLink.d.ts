@@ -3,7 +3,7 @@
 
 declare module "editor:type" {
     type ItemLinkSettings = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 
     type ItemLinkData = {

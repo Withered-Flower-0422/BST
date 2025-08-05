@@ -9,6 +9,6 @@ declare module "editor:type" {
     }
 
     type CollectionMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

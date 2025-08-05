@@ -26,6 +26,6 @@ declare module "editor:type" {
     }
 
     type RendererMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

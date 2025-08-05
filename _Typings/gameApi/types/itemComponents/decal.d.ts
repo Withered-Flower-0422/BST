@@ -12,6 +12,6 @@ declare module "game:type" {
     }
 
     type DecalMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }

@@ -16,6 +16,6 @@ declare module "editor:type" {
     }
 
     type WayPathMethod = {
-        [key: string | symbol]: never
+        [key: PropertyKey]: never
     }
 }
