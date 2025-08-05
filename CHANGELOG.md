@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 -   Rewrote the logic of `AssertInt`.
 -   Added new types `AssertNeg`, `AssertNonNeg`, `AssertNegInt`, `AssertNonNegInt`, `Assert0To1` and `Assert0To1s`, and applied them to wherever needed.
 -   Added some descriptions to some functions.
+-   Fixed a bug that `settings.getData()` should return the exact type of the data, not a `json` string.
 
 ## v1.2.3 (2025-08-05)
 

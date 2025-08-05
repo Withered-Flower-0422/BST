@@ -49,12 +49,14 @@ declare module "game:module" {
          * Gets the data of a component's property.
          * @param componentType - The type of the component.
          * @param path - The property path of the component.
-         * @returns A `json` string of the data.
+         * @returns The data of the component's property.
          * @NOTE -
-         * - The returned data is **not** a JSON object, needs to be parsed before use.
          * - Some components' data may not be accessible during game runtime.
          */
-        const getData: <T extends keyof ComponentTypeMap>(componentType: T, path: keyof ComponentTypeMap[T]) => json
+        const getData: <T extends keyof ComponentTypeMap, K extends keyof ComponentTypeMap[T]>(
+            componentType: T,
+            path: K
+        ) => ComponentTypeMap[T][K]
 
         /**
          * Sets data to a component.
@@ -62,7 +64,6 @@ declare module "game:module" {
          * @param values - The data to be set, in the form of `{ [path]: value }`.
          * @returns
          * @NOTE -
-         * - Unlike `getData()`, parameter `values` should be a JSON object here, **not** a string.
          * - Some components' data may not be settable during game runtime.
          */
         const setData: <T extends keyof ComponentTypeMap>(
