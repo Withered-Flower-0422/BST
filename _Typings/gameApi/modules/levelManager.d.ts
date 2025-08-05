@@ -4,7 +4,7 @@
 declare module "game:module" {
     import { Component } from "game:type"
     import { AssertGuid } from "guid"
-    import { AssertInt } from "utils"
+    import { Assert0To1, Assert0To1s, AssertNonNeg, AssertNonNegInt } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
 
     enum Skin {
@@ -144,14 +144,14 @@ declare module "game:module" {
          * @param frame - The number of frames to wait before hiding the tip.
          * @returns
          */
-        const hideTipDelay: <T extends int>(guid: string, frame: AssertInt<T>) => void
+        const hideTipDelay: <T extends int>(guid: string, frame: AssertNonNegInt<T>) => void
 
         /**
          * Hides all tips after a specified number of frames.
          * @param frame - The number of frames to wait before hiding all tips.
          * @returns
          */
-        const hideAllTipsDelay: <T extends int>(frame: AssertInt<T>) => void
+        const hideAllTipsDelay: <T extends int>(frame: AssertNonNegInt<T>) => void
 
         /**
          * Saves data to the local storage.
@@ -216,7 +216,7 @@ declare module "game:module" {
          * @param delayFrame - The number of frames to wait before invoking the function.
          * @returns
          */
-        const invoke: <T extends int>(func: () => void, delayFrame: AssertInt<T>) => void
+        const invoke: <T extends int>(func: () => void, delayFrame: AssertNonNegInt<T>) => void
 
         /**
          * Starts the game's internal timer.
@@ -259,7 +259,7 @@ declare module "game:module" {
          * @param value - The value to be set to the default camera's offset smoothness.
          * @returns
          */
-        const setCameraOffsetSmooth: (value: float) => void
+        const setCameraOffsetSmooth: <T extends float>(value: AssertNonNeg<T>) => void
 
         /**
          * Creates a custom status bar which will show on the bottom of the screen.
@@ -271,11 +271,11 @@ declare module "game:module" {
          * @param color - The color of the status bar.
          * @returns
          */
-        const createCustomStatusBar: (
+        const createCustomStatusBar: <const T extends readonly float[], U extends float>(
             statusBarName: string,
             iconPath: string,
-            marks: float[],
-            value: float,
+            marks: Assert0To1s<T>,
+            value: Assert0To1<U>,
             valueString: string,
             color: ColorRGBA
         ) => void
@@ -288,9 +288,9 @@ declare module "game:module" {
          * @param color - The color of the status bar.
          * @returns
          */
-        const setCustomStatusBarValue: (
+        const setCustomStatusBarValue: <T extends float>(
             statusBarName: string,
-            value: float,
+            value: Assert0To1<T>,
             valueString: string,
             color: ColorRGBA
         ) => void

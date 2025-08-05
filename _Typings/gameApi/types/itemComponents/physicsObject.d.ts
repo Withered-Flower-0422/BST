@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { AssertNonNeg } from "utils"
+
     enum PhysicsBodyType {
         Static = 0,
         Kinematic = 1,
@@ -143,6 +145,6 @@ declare module "game:type" {
          * @param mass - The mass to set.
          * @returns
          */
-        setMass: (mass: float) => void
+        setMass: <T extends float>(mass: AssertNonNeg<T>) => void
     }
 }

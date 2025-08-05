@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    import { IntRange } from "utils"
+    import { NonNegIntRange } from "utils"
 
     enum GeneratorAlgorithm {
         Road = 0,
@@ -33,7 +33,7 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: IntRange<1, 256>
+        Segments: NonNegIntRange<1, 256>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -53,7 +53,7 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: IntRange<1, 256>
+        Segments: NonNegIntRange<1, 256>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -70,11 +70,11 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: IntRange<1, 256>
+        Segments: NonNegIntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        RotationSegments: IntRange<1, 128>
+        RotationSegments: NonNegIntRange<1, 128>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -93,11 +93,11 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: IntRange<1, 256>
+        Segments: NonNegIntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        RotationSegments: IntRange<1, 128>
+        RotationSegments: NonNegIntRange<1, 128>
         Bend: Float3
         CreateCap: bool
         AccurateUVLength: bool
@@ -132,7 +132,7 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 256`
          */
-        Segments: IntRange<1, 256>
+        Segments: NonNegIntRange<1, 256>
         Bend: Float3
         AccurateUVLength: bool
         RotateMainUV: bool

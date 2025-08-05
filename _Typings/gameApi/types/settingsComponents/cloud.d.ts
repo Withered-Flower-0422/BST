@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { IntRange } from "utils"
+    import { NonNegIntRange } from "utils"
 
     type Cloud = {
         "CloudLayer1/Enabled": bool
@@ -37,7 +37,7 @@ declare module "game:type" {
         /**
          * @range `2 ~ 32`
          */
-        "CloudLayer1/RayMarchingSteps": IntRange<2, 32>
+        "CloudLayer1/RayMarchingSteps": NonNegIntRange<2, 32>
         /**
          * @range `0 ~ 1`
          */
@@ -78,7 +78,7 @@ declare module "game:type" {
         /**
          * @range `2 ~ 32`
          */
-        "CloudLayer2/RayMarchingSteps": IntRange<2, 32>
+        "CloudLayer2/RayMarchingSteps": NonNegIntRange<2, 32>
         /**
          * @range `0 ~ 1`
          */

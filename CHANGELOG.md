@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.4 (2025-08-06)
+
+-   Renamed type `IntRange` to `NonNegIntRange`.
+-   Rewrote the logic of `AssertInt`.
+-   Added new types `AssertNeg`, `AssertNonNeg`, `AssertNegInt`, `AssertNonNegInt`, `Assert0To1` and `Assert0To1s`, and applied them to wherever needed.
+-   Added some descriptions to some functions.
+
 ## v1.2.3 (2025-08-05)
 
 -   Added `scene.createObjectsFromAssets()`.

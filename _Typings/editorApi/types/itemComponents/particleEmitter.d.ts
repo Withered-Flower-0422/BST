@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    import { IntRange } from "utils"
+    import { NonNegIntRange } from "utils"
 
     enum ParticleEmitterBlendMode {
         Alpha = 0,
@@ -40,11 +40,11 @@ declare module "editor:type" {
         /**
          * @range `1 ~ 32`
          */
-        AnimationTilesX: IntRange<1, 32>
+        AnimationTilesX: NonNegIntRange<1, 32>
         /**
          * @range `1 ~ 32`
          */
-        AnimationTilesY: IntRange<1, 32>
+        AnimationTilesY: NonNegIntRange<1, 32>
     }
 
     type ParticleEmitterMethod = {

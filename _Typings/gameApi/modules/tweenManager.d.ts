@@ -3,7 +3,7 @@
 
 declare module "game:module" {
     import { EaseType, Tween } from "game:type"
-    import { AssertInt } from "utils"
+    import { AssertNonNegInt } from "utils"
 
     namespace tweenManager {
         /**
@@ -20,7 +20,7 @@ declare module "game:module" {
             from: float,
             to: float,
             easeType: EaseType,
-            duration: AssertInt<T>,
+            duration: AssertNonNegInt<T>,
             onUpdate: (curValue: float) => void,
             onFinish: () => void
         ) => Tween
@@ -39,7 +39,7 @@ declare module "game:module" {
             from: Float3,
             to: Float3,
             easeType: EaseType,
-            duration: AssertInt<T>,
+            duration: AssertNonNegInt<T>,
             onUpdate: (curValue: Float3) => void,
             onFinish: () => void
         ) => Tween
@@ -58,7 +58,7 @@ declare module "game:module" {
             from: Quaternion,
             to: Quaternion,
             easeType: EaseType,
-            duration: AssertInt<T>,
+            duration: AssertNonNegInt<T>,
             onUpdate: (curValue: Quaternion) => void,
             onFinish: () => void
         ) => Tween
@@ -77,7 +77,7 @@ declare module "game:module" {
             from: ColorRGBA,
             to: ColorRGBA,
             easeType: EaseType,
-            duration: AssertInt<T>,
+            duration: AssertNonNegInt<T>,
             onUpdate: (curValue: ColorRGBA) => void,
             onFinish: () => void
         ) => Tween

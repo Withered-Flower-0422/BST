@@ -4,7 +4,7 @@
 declare module "game:module" {
     import { Item, RaycastResult, CollisionLayer } from "game:type"
     import { AssertGuid, AssertGuids } from "guid"
-    import { Tuple } from "utils"
+    import { AssertNonNeg, Tuple } from "utils"
 
     namespace scene {
         /**
@@ -78,14 +78,14 @@ declare module "game:module" {
          * @param maxDistance - The maximum distance of the ray.
          * @returns The first item or player it hits or `null` if it hits nothing.
          */
-        const mouseRaycast: (maxDistance: float) => RaycastResult | null
+        const mouseRaycast: <T extends float>(maxDistance: AssertNonNeg<T>) => RaycastResult | null
 
         /**
          * Casts a ray from the mouse position with the given maximum distance and returns all the items or player it hits.
          * @param maxDistance - The maximum distance of the ray.
          * @returns An array of all the items or player it hits.
          */
-        const mouseRaycastAll: (maxDistance: float) => RaycastResult[]
+        const mouseRaycastAll: <T extends float>(maxDistance: AssertNonNeg<T>) => RaycastResult[]
 
         /**
          * Casts a sphere from the center position with the given radius and returns all the items or player it hits by their collision layers.
@@ -93,9 +93,9 @@ declare module "game:module" {
          * @param radius - The radius of the sphere.
          * @returns An object with the items or player it hits by their collision layers.
          */
-        const sphereCastAll: (
+        const sphereCastAll: <T extends float>(
             center: Float3,
-            radius: float
+            radius: AssertNonNeg<T>
         ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: (Item | Player)[] }
 
         /**

@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { Tuple } from "utils"
+    import { Assert0To1, Assert0To1s, Tuple } from "utils"
 
     type WayPathData = {
         readonly WayPoints: string[]
@@ -17,11 +17,8 @@ declare module "game:type" {
         readonly Targets: string[]
     }
 
-    type PointInfo = {
-        /**
-         * @range "0 ~ 1"
-         */
-        Point: float
+    type PointInfo<P extends float = float> = {
+        Point: P
         Position: Float3
         Rotation: Quaternion
         Scale: float
@@ -30,16 +27,16 @@ declare module "game:type" {
     type WayPathMethod = {
         /**
          * Gets the point information of the given point.
-         * @param point - The point of the way path.
+         * @param point - The point proportion of the way path, ranging from 0 to 1.
          * @returns The point information of the given point.
          */
-        getPointInfo: (point: float) => PointInfo
+        getPointInfo: <T extends float>(point: Assert0To1<T>) => PointInfo<T>
 
         /**
          * Gets the point information of the given points.
-         * @param points - The points of the way path in an array.
+         * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
          * @returns The point information of the given points.
          */
-        getPointsInfo: <T extends float[]>(points: T) => Tuple<PointInfo, T["length"]>
+        getPointsInfo: <const T extends readonly float[]>(points: Assert0To1s<T>) => Tuple<PointInfo, T["length"]>
     }
 }

@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { IntRange } from "utils"
+    import { NonNegIntRange } from "utils"
 
     enum GeneratorAlgorithm {
         Road = 0,
@@ -34,7 +34,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "Road/Segments": IntRange<1, 256>
+        "Road/Segments": NonNegIntRange<1, 256>
         "Road/Bend": Float3
         "Road/CreateCap": bool
         "Road/AccurateUVLength": bool
@@ -51,7 +51,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "WoodenBoard/Segments": IntRange<1, 256>
+        "WoodenBoard/Segments": NonNegIntRange<1, 256>
         "WoodenBoard/Bend": Float3
         "WoodenBoard/CreateCap": bool
         "WoodenBoard/AccurateUVLength": bool
@@ -65,11 +65,11 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "Rail/Segments": IntRange<1, 256>
+        "Rail/Segments": NonNegIntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        "Rail/RotationSegments": IntRange<1, 128>
+        "Rail/RotationSegments": NonNegIntRange<1, 128>
         "Rail/Bend": Float3
         "Rail/CreateCap": bool
         "Rail/AccurateUVLength": bool
@@ -85,11 +85,11 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "Tube/Segments": IntRange<1, 256>
+        "Tube/Segments": NonNegIntRange<1, 256>
         /**
          * @range `1 ~ 128`
          */
-        "Tube/RotationSegments": IntRange<1, 128>
+        "Tube/RotationSegments": NonNegIntRange<1, 128>
         "Tube/Bend": Float3
         "Tube/CreateCap": bool
         "Tube/AccurateUVLength": bool
@@ -114,7 +114,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "CustomVertices/Segments": IntRange<1, 256>
+        "CustomVertices/Segments": NonNegIntRange<1, 256>
         "CustomVertices/Bend": Float3
         "CustomVertices/AccurateUVLength": bool
         "CustomVertices/RotateMainUV": bool

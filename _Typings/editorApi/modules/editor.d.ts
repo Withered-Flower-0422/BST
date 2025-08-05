@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:module" {
+    import { AssertNonNeg } from "utils"
+
     namespace editor {
         /**
          * @readonly
@@ -43,7 +45,7 @@ declare module "editor:module" {
          * @param delayTime - The delay time in seconds. When set to 0, the delay is 1 frame.
          * @returns
          */
-        const invoke: (func: (...args: any[]) => any, delayTime: float) => void
+        const invoke: <T extends float>(func: (...args: any[]) => any, delayTime: AssertNonNeg<T>) => void
 
         /**
          * Gets the editor's path to the selected asset.

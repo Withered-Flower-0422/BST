@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { AssertInt } from "utils"
+    import { AssertNonNegInt } from "utils"
 
     type Item = {
         /**
@@ -71,10 +71,10 @@ declare module "game:type" {
          * Moves the item to a specified transform.
          * @param targetTransform - The target transform to move to.
          * @param easeType - The ease type to use for the movement.
-         * @param duration - The duration of the movement.
+         * @param duration - The duration of the movement in frames.
          * @returns
          */
-        moveTo: <T extends int>(targetTransform: Trans, easeType: EaseType, duration: AssertInt<T>) => void
+        moveTo: <T extends int>(targetTransform: Trans, easeType: EaseType, duration: AssertNonNegInt<T>) => void
 
         /**
          * Stops the movement of the item cased by `item.moveTo()`

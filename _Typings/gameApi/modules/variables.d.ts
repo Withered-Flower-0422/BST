@@ -22,6 +22,7 @@ declare module "game:module" {
          * @BuiltinVariables Click to see {@link BuiltinVariables | all built-in variables}.
          * @NOTE -
          * - **NEVER** name a variable starting with `C_` manually.
+         * - The `Collection` values can be negative if you really need.
          */
         const set: <T extends string, U extends int>(
             name: T,

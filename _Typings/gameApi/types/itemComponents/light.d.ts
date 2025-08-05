@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { IntRange } from "utils"
+    import { NonNegIntRange } from "utils"
 
     enum LightType {
         Point = 0,
@@ -81,7 +81,7 @@ declare module "game:type" {
         /**
          * @range `1 ~ 256`
          */
-        "VolumetricLight/Quality": IntRange<1, 256>
+        "VolumetricLight/Quality": NonNegIntRange<1, 256>
         "VolumetricLight/StepSize": float
         "VolumetricLight/MaxStep": int
         "VolumetricLight/Jitter": float

@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
-    import { IntRange } from "utils"
+    import { NonNegIntRange } from "utils"
 
     type CloudLayer = {
         Enabled: bool
@@ -37,7 +37,7 @@ declare module "editor:type" {
         /**
          * @range `2 ~ 32`
          */
-        RayMarchingSteps: IntRange<2, 32>
+        RayMarchingSteps: NonNegIntRange<2, 32>
         /**
          * @range `0 ~ 1`
          */
