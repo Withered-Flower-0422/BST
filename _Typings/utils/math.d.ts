@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "math" {
+    import { Assert0To1 } from "utils"
+
     namespace math {
         /**
          * Converts a Float3 to a Quaternion.
@@ -29,64 +31,64 @@ declare module "math" {
          * Linearly interpolates between two float values.
          * @param a - The first float value.
          * @param b - The second float value.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The interpolated float value.
          */
-        const lerp: (a: float, b: float, t: float) => float
+        const lerp: <T extends float>(a: float, b: float, t: Assert0To1<T>) => float
 
         /**
          * Linearly interpolates between two angles in degrees.
          * @param a - The first angle in degrees.
          * @param b - The second angle in degrees.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The interpolated angle in degrees.
          */
-        const lerpAngle: (a: float, b: float, t: float) => float
+        const lerpAngle: <T extends float>(a: float, b: float, t: Assert0To1<T>) => float
 
         /**
          * Linearly interpolates between two Float2 values.
          * @param a - The first Float2 value.
          * @param b - The second Float2 value.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The interpolated Float2 value.
          */
-        const lerpFloat2: (a: Float2, b: Float2, t: float) => Float2
+        const lerpFloat2: <T extends float>(a: Float2, b: Float2, t: Assert0To1<T>) => Float2
 
         /**
          * Linearly interpolates between two Float3 values.
          * @param a - The first Float3 value.
          * @param b - The second Float3 value.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The interpolated Float3 value.
          */
-        const lerpFloat3: (a: Float3, b: Float3, t: float) => Float3
+        const lerpFloat3: <T extends float>(a: Float3, b: Float3, t: Assert0To1<T>) => Float3
 
         /**
          * Linearly interpolates between two Float4 values.
          * @param a - The first Float4 value.
          * @param b - The second Float4 value.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The interpolated Float4 value.
          */
-        const lerpFloat4: (a: Float4, b: Float4, t: float) => Float4
+        const lerpFloat4: <T extends float>(a: Float4, b: Float4, t: Assert0To1<T>) => Float4
 
         /**
          * Linearly interpolates between two Quaternion values.
          * @param a - The first Quaternion value.
          * @param b - The second Quaternion value.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The interpolated Quaternion value.
          */
-        const lerpQuaternion: (a: Quaternion, b: Quaternion, t: float) => Quaternion
+        const lerpQuaternion: <T extends float>(a: Quaternion, b: Quaternion, t: Assert0To1<T>) => Quaternion
 
         /**
          * Spherically interpolates between two Float3 values.
          * @param a - The first Float3 value.
          * @param b - The second Float3 value.
-         * @param t - The interpolation value.
+         * @param t - The interpolation value, between 0 and 1.
          * @returns The spherically interpolated Float3 value.
          */
-        const slerpFloat3: (a: Float3, b: Float3, t: float) => Float3
+        const slerpFloat3: <T extends float>(a: Float3, b: Float3, t: Assert0To1<T>) => Float3
 
         /**
          * Normalizes a Float3 value.

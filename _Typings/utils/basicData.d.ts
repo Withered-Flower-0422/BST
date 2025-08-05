@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "basicData" {
+    import { Assert0To1 } from "utils"
+
     global {
         type int = number
         type float = number
@@ -63,14 +65,26 @@ declare module "basicData" {
             constructor(pos: Float3, rot: Float3, scl: Float3)
         }
 
-        class ColorRGBA {
+        class ColorRGBA<
+            R extends float = float,
+            G extends float = float,
+            B extends float = float,
+            A extends float = float
+        > {
             private _brand?: never
 
             r: float
             g: float
             b: float
             a: float
-            constructor(r: float, g: float, b: float, a: float)
+
+            /**
+             * @param r - The red component of the color, between 0 and 1.
+             * @param g - The green component of the color, between 0 and 1.
+             * @param b - The blue component of the color, between 0 and 1.
+             * @param a - The alpha component of the color, between 0 and 1.
+             */
+            constructor(r: Assert0To1<R>, g: Assert0To1<G>, b: Assert0To1<B>, a: Assert0To1<A>)
         }
     }
 }
