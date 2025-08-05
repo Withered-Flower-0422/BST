@@ -55,7 +55,7 @@ declare module "editor:module" {
 
         /**
          * Duplicates an object by its guid.
-         * @param guid `- The guid string of the object to duplicate.
+         * @param guid - The guid string of the object to duplicate.
          * @returns The duplicated object.
          */
         const duplicateObject: <S extends string>(guid: AssertGuid<S>) => SceneObject<SceneObjectType>
@@ -71,7 +71,7 @@ declare module "editor:module" {
 
         /**
          * Gets the selected object in the scene. If no object is selected, returns `null`.
-         * If multiple objects are selected, returns the activated selected object which displays in the `Inspector`.
+         * If multiple objects are selected, returns the activated selected object.
          * @returns The activated selected object or `null` if no object is selected.
          */
         const getSelectedObject: () => SceneObject<SceneObjectType> | null
@@ -84,8 +84,8 @@ declare module "editor:module" {
 
         /**
          * Sets the selection of the objects in the scene.
-         * @param activatedObjectGuid - The guid string of the activated object to select, which will display in the `Inspector`.
-         * @param selectedObjectsGuid - The guid strings in an array of other objects to select.
+         * @param activatedObjectGuid - The guid string of the activated object to select. This will influence the result of `getSelectedObject()`.
+         * @param selectedObjectsGuid - The guid strings in an array of all the objects to select. If not include the activated object, the activated object will be the first one in the array.
          * @returns
          */
         const setSelection: <S1 extends string, const S2 extends readonly string[]>(
@@ -112,5 +112,12 @@ declare module "editor:module" {
          * @returns
          */
         const setCameraPositionAndPivot: (position: Float3, pivot: Float3) => void
+
+        /**
+         * Creates objects from assets in the given path.
+         * @param path - The path to the assets.
+         * @returns The main object created from the assets.
+         */
+        const createObjectsFromAssets: (path: string) => SceneObject<"Item">
     }
 }

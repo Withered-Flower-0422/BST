@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.3 (2025-08-05)
+
+-   Added `scene.createObjectsFromAssets()`.
+-   Rewrote some descriptions of functions.
+
 ## v1.2.2 (2025-08-04)
 
 -   Added `levelManager.getConfigInputKey()` and `levelManager.getConfig()`.
