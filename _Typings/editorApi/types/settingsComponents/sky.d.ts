@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { Path } from "path"
+
     enum SkyType {
         PhysicsSky = 0,
         HDRISky = 1,
@@ -9,12 +11,12 @@ declare module "editor:type" {
 
     type PhysicsSky = {
         PlanetRotation: Float3
-        GroundColorTexture: string
+        GroundColorTexture: Path<"Textures">
         GroundTint: ColorRGBA
-        GroundEmissionTexture: string
+        GroundEmissionTexture: Path<"Textures">
         GroundEmissionMultiplier: float
         SpaceRotation: Float3
-        SpaceEmissionTexture: string
+        SpaceEmissionTexture: Path<"Textures">
         SpaceEmissionMultiplier: float
         AirMaximumAltitude: float
         /**
@@ -67,12 +69,12 @@ declare module "editor:type" {
     }
 
     type HDRISky = {
-        SkyboxTexturePathUp: string
-        SkyboxTexturePathDown: string
-        SkyboxTexturePathLeft: string
-        SkyboxTexturePathRight: string
-        SkyboxTexturePathFront: string
-        SkyboxTexturePathBack: string
+        SkyboxTexturePathUp: Path<"Textures">
+        SkyboxTexturePathDown: Path<"Textures">
+        SkyboxTexturePathLeft: Path<"Textures">
+        SkyboxTexturePathRight: Path<"Textures">
+        SkyboxTexturePathFront: Path<"Textures">
+        SkyboxTexturePathBack: Path<"Textures">
         /**
          * @range `0 ~ 360`
          */

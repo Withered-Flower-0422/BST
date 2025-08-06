@@ -6,6 +6,7 @@ declare module "game:module" {
     import { AssertGuid } from "guid"
     import { Assert0To1, Assert0To1s, AssertNonNeg, AssertNonNegInt } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
+    import { AssertPath } from "path"
 
     enum Skin {
         Default = 0,
@@ -271,9 +272,9 @@ declare module "game:module" {
          * @param color - The color of the status bar.
          * @returns
          */
-        const createCustomStatusBar: <const T extends readonly float[], U extends float>(
+        const createCustomStatusBar: <const T extends readonly float[], U extends float, V extends string>(
             statusBarName: string,
-            iconPath: string,
+            iconPath: AssertPath<V, "Textures">,
             marks: Assert0To1s<T>,
             value: Assert0To1<U>,
             valueString: string,

@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { NonNegIntRange } from "utils"
+    import { Path } from "path"
 
     enum ParticleEmitterBlendMode {
         Alpha = 0,
@@ -29,7 +30,7 @@ declare module "editor:type" {
         StartRotation: Float2
         AngularVelocity: Float2
         FollowCamera: bool
-        TexturePath: string
+        TexturePath: Path<"Textures">
         BlendMode: ParticleEmitterBlendMode
         Life: Float2
         Size: Float2

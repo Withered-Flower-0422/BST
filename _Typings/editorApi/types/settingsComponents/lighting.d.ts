@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { Path } from "path"
+
     type Lighting = {
         Enabled: bool
         Rotation: Float3
@@ -9,7 +11,7 @@ declare module "editor:type" {
          * @range `0 ~ 360`
          */
         AngularDiameter: float
-        SurfaceTexture: string
+        SurfaceTexture: Path<"Textures">
         SurfaceTint: ColorRGBA
         /**
          * @range `0 ~ 90`

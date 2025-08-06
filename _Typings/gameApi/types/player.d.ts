@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { AssertPath, AssertPaths } from "path"
+
     type BallType =
         | "WoodenBall"
         | "StoneBall"
@@ -63,14 +65,14 @@ declare module "game:type" {
              * @param path - The path of the mesh to set as the player's renderer mesh.
              * @returns
              */
-            setRendererMesh: (path: string) => void
+            setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
 
             /**
              * Sets the player's renderer materials.
              * @param paths - The paths of the materials to set as the player's renderer materials.
              * @returns
              */
-            setRendererMaterials: (paths: string[]) => void
+            setRendererMaterials: <const T extends readonly string[]>(paths: AssertPaths<T, "Materials">) => void
         }
     }
 }

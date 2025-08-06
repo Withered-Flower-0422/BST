@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { LocalizedString } from "localize"
+    import { Path } from "path"
 
     type CustomBallSettings = {
         ItemTemplate: string
@@ -21,10 +22,10 @@ declare module "editor:type" {
         LowPowerForceMultiplier: float
         AbsorbElectricMultiplier: float
         Invincible: float
-        RollOnWood: string
-        RollOnStone: string
-        RollOnSteel: string
-        SwitcherMaterial: string
+        RollOnWood: Path<"Audios">
+        RollOnStone: Path<"Audios">
+        RollOnSteel: Path<"Audios">
+        SwitcherMaterial: Path<"Materials">
         SwitcherGlowColor: ColorRGBA
         SwitcherGlowIntensity: float
         SwitcherLightColor: ColorRGBA

@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { AssetsSuffixMap, Path } from "path"
+
     enum VariableType {
         String = 0,
         Int = 1,
@@ -42,7 +44,7 @@ declare module "editor:type" {
         Float4Var: Float4
         ColorRGBAVar: ColorRGBA
         TransformVar: Transform
-        AssetReferenceVar: string
+        AssetReferenceVar: Path<keyof AssetsSuffixMap>
         ObjectReferenceVar: string
         StringArrayVar: string[]
         IntArrayVar: int[]
@@ -54,7 +56,7 @@ declare module "editor:type" {
         Float4ArrayVar: Float4[]
         ColorRGBAArrayVar: ColorRGBA[]
         TransformArrayVar: Transform[]
-        AssetReferenceArrayVar: string[]
+        AssetReferenceArrayVar: Path<keyof AssetsSuffixMap>[]
         ObjectReferenceArrayVar: string[]
     }
 
@@ -62,7 +64,7 @@ declare module "editor:type" {
         /**
          * BME path to the script.
          */
-        ScriptPath: string
+        ScriptPath: Path<"Scripts">
         ExecutorVariables: Partial<ExecutorVariable>[]
     }
 

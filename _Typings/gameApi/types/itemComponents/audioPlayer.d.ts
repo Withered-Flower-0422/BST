@@ -2,9 +2,11 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     type AudioPlayerData = {
         TransformOffset: Trans
-        AudioPath: string
+        AudioPath: Path<"Audios">
         Loop: bool
         /**
          * @range `0 ~ 1`

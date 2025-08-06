@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { NonNegIntRange } from "utils"
+    import { Path } from "path"
 
     enum GeneratorAlgorithm {
         Road = 0,
@@ -119,7 +120,7 @@ declare module "game:type" {
         "CustomVertices/AccurateUVLength": bool
         "CustomVertices/RotateMainUV": bool
         "CustomVertices/MainUVOffset": Float2
-        "CustomScript/ScriptPath": string
+        "CustomScript/ScriptPath": Path<"Scripts">
     }
 
     type RoadGeneratorMethod = {

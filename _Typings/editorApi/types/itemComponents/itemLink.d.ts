@@ -2,12 +2,14 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { Path } from "path"
+
     type ItemLinkSettings = {
         [key: PropertyKey]: never
     }
 
     type ItemLinkData = {
-        Link: string
+        Link: Path<"Items", false>
         Settings: ItemLinkSettings
     }
 

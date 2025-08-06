@@ -4,6 +4,7 @@
 declare module "editor:type" {
     import { KeyboardKey } from "keys"
     import { LocalizedString } from "localize"
+    import { Path } from "path"
 
     enum Difficulty {
         Easy = 0,
@@ -63,7 +64,7 @@ declare module "editor:type" {
         Version: int
         Difficulty: Difficulty
         MapType: MapType
-        CoverPath: string
+        CoverPath: Path<"Textures">
         InitialBallType: InitialBallType
         UseCustomBall: bool
         CustomBallName: string

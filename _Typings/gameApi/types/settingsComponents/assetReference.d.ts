@@ -2,22 +2,24 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     type AssetReference = {
         /**
          * BME paths to `Meshes`.
          */
-        readonly Meshes: string[]
+        readonly Meshes: Path<"Meshes">[]
         /**
          * BME paths to `Textures`.
          */
-        readonly Textures: string[]
+        readonly Textures: Path<"Textures">[]
         /**
          * BME paths to `Materials`.
          */
-        readonly Materials: string[]
+        readonly Materials: Path<"Materials">[]
         /**
          * BME paths to `Audios`.
          */
-        readonly Audios: string[]
+        readonly Audios: Path<"Audios">[]
     }
 }

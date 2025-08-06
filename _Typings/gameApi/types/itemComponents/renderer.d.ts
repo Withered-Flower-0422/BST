@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     enum ShadowCastingMode {
         On = 0,
         Off = 1,
@@ -10,8 +12,8 @@ declare module "game:type" {
     }
 
     type RendererData = {
-        Mesh: string
-        Materials: string[]
+        Mesh: Path<"Meshes">
+        Materials: Path<"Materials">[]
         AutoGetMesh: bool
         AutoGetMaterials: bool
         TryGetGlobalUVMat: bool

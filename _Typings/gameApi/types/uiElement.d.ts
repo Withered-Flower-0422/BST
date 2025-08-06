@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     type Image = {
         /**
          * @readonly
@@ -18,7 +20,7 @@ declare module "game:type" {
         /**
          * Path of the texture.
          */
-        texture: string
+        texture: Path<"Textures">
         /**
          * Adjust the raycast range `(x, y, width, height)`.
          * @default new Float4(0, 0, 0, 0)

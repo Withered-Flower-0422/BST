@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { NonNegIntRange } from "utils"
+    import { Path } from "path"
 
     enum LightType {
         Point = 0,
@@ -123,7 +124,7 @@ declare module "editor:type" {
          */
         FrustumAngleRectArea: float
         TipRadius: float
-        ProjectorTexture: string
+        ProjectorTexture: Path<"Textures">
         ProjectorScale: Float2
         ProjectorOffset: Float2
         ProjectorScrollSpeed: Float2

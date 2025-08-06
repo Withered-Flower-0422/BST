@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     enum SkyType {
         PhysicsSky = 0,
         HDRISky = 1,
@@ -10,12 +12,12 @@ declare module "game:type" {
     type Sky = {
         SkyType: SkyType
         "PhysicsSky/PlanetRotation": Float3
-        "PhysicsSky/GroundColorTexture": string
+        "PhysicsSky/GroundColorTexture": Path<"Textures">
         "PhysicsSky/GroundTint": ColorRGBA
-        "PhysicsSky/GroundEmissionTexture": string
+        "PhysicsSky/GroundEmissionTexture": Path<"Textures">
         "PhysicsSky/GroundEmissionMultiplier": float
         "PhysicsSky/SpaceRotation": Float3
-        "PhysicsSky/SpaceEmissionTexture": string
+        "PhysicsSky/SpaceEmissionTexture": Path<"Textures">
         "PhysicsSky/SpaceEmissionMultiplier": float
         "PhysicsSky/AirMaximumAltitude": float
         /**
@@ -65,12 +67,12 @@ declare module "game:type" {
          */
         "PhysicsSky/horizonZenithShift": float
         "PhysicsSky/ZenithTint": ColorRGBA
-        "HDRISky/SkyboxTexturePathUp": string
-        "HDRISky/SkyboxTexturePathDown": string
-        "HDRISky/SkyboxTexturePathLeft": string
-        "HDRISky/SkyboxTexturePathRight": string
-        "HDRISky/SkyboxTexturePathFront": string
-        "HDRISky/SkyboxTexturePathBack": string
+        "HDRISky/SkyboxTexturePathUp": Path<"Textures">
+        "HDRISky/SkyboxTexturePathDown": Path<"Textures">
+        "HDRISky/SkyboxTexturePathLeft": Path<"Textures">
+        "HDRISky/SkyboxTexturePathRight": Path<"Textures">
+        "HDRISky/SkyboxTexturePathFront": Path<"Textures">
+        "HDRISky/SkyboxTexturePathBack": Path<"Textures">
         /**
          * @range `0 ~ 360`
          */

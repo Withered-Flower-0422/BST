@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { AssertNonNeg } from "utils"
+    import { Path } from "path"
 
     enum PhysicsBodyType {
         Static = 0,
@@ -43,7 +44,7 @@ declare module "game:type" {
         "BoxColliderParams/BevelRadius": float
         "SphereColliderParams/Center": Float3
         "SphereColliderParams/Radius": float
-        "MeshColliderParams/Mesh": string
+        "MeshColliderParams/Mesh": Path<"Meshes">
         "MeshColliderParams/AutoGetMesh": bool
         "MeshColliderParams/Convex": bool
         readonly PhysicsBodyType: PhysicsBodyType

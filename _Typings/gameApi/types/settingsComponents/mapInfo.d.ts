@@ -4,6 +4,7 @@
 declare module "game:type" {
     import { KeyboardKey } from "keys"
     import { LocalizedString } from "localize"
+    import { Path } from "path"
 
     type int64 = number
 
@@ -66,7 +67,7 @@ declare module "game:type" {
         readonly Version: int
         readonly Difficulty: Difficulty
         readonly MapType: MapType
-        readonly CoverPath: string
+        readonly CoverPath: Path<"Textures">
         readonly InitialBallType: InitialBallType
         readonly UseCustomBall: bool
         readonly CustomBallName: string

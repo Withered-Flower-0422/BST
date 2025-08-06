@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { NonNegIntRange } from "utils"
+    import { Path } from "path"
 
     enum LightType {
         Point = 0,
@@ -114,7 +115,7 @@ declare module "game:type" {
          */
         "VolumetricLight/FrustumAngleRectArea": float
         "VolumetricLight/TipRadius": float
-        "VolumetricLight/ProjectorTexture": string
+        "VolumetricLight/ProjectorTexture": Path<"Textures">
         "VolumetricLight/ProjectorScale": Float2
         "VolumetricLight/ProjectorOffset": Float2
         "VolumetricLight/ProjectorScrollSpeed": Float2

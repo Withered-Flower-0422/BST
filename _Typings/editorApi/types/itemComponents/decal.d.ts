@@ -2,9 +2,11 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { Path } from "path"
+
     type DecalData = {
         TransformOffset: Transform
-        MaterialPath: string
+        MaterialPath: Path<"Materials">
         DrawDistance: float
         StartFade: float
         Opacity: float

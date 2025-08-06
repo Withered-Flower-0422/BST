@@ -2,14 +2,12 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { LocalizedString } from "localize"
+    import { Path } from "path"
+
     type CustomBallSettings = {
         ItemTemplate: string
         BallName: string
-        English: string
-        SimplifiedChinese: string
-        TraditionalChinese: string
-        Japanese: string
-        Spanish: string
         WetnessUI: bool
         TemperatureUI: bool
         ScaleUI: bool
@@ -24,15 +22,15 @@ declare module "game:type" {
         LowPowerForceMultiplier: float
         AbsorbElectricMultiplier: float
         Invincible: float
-        RollOnWood: string
-        RollOnStone: string
-        RollOnSteel: string
-        SwitcherMaterial: string
+        RollOnWood: Path<"Audios">
+        RollOnStone: Path<"Audios">
+        RollOnSteel: Path<"Audios">
+        SwitcherMaterial: Path<"Materials">
         SwitcherGlowColor: ColorRGBA
         SwitcherGlowIntensity: float
         SwitcherLightColor: ColorRGBA
         SwitcherLightIntensity: float
-    }
+    } & LocalizedString
 
     type CustomBall = {
         readonly CustomBalls: CustomBallSettings[]

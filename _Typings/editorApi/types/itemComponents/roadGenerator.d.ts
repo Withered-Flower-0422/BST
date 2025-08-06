@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { NonNegIntRange } from "utils"
+    import { Path } from "path"
 
     enum GeneratorAlgorithm {
         Road = 0,
@@ -140,7 +141,7 @@ declare module "editor:type" {
     }
 
     type CustomScript = {
-        ScriptPath: string
+        ScriptPath: Path<"Scripts">
     }
 
     type RoadGeneratorData = {

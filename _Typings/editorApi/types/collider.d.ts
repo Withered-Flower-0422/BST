@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { Path } from "path"
+
     enum CollisionLayer {
         Player = 0,
         RigidBody = 1,
@@ -32,7 +34,7 @@ declare module "editor:type" {
 
     type MeshColliderParams = {
         AutoGetMesh: bool
-        Mesh: string
+        Mesh: Path<"Meshes">
         Convex: bool
     }
 }

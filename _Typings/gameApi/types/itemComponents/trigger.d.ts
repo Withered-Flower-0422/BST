@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     type TriggerData = {
         TriggerPlayerLayer: bool
         TriggerRigidBodyLayer: bool
@@ -20,7 +22,7 @@ declare module "game:type" {
         readonly "BoxColliderParams/BevelRadius": float
         readonly "SphereColliderParams/Center": Float3
         readonly "SphereColliderParams/Radius": float
-        readonly "MeshColliderParams/Mesh": string
+        readonly "MeshColliderParams/Mesh": Path<"Meshes">
         readonly "MeshColliderParams/AutoGetMesh": bool
         readonly "MeshColliderParams/Convex": bool
     }

@@ -5,6 +5,7 @@ declare module "editor:module" {
     import { SceneObject, SceneObjectType } from "editor:type"
     import { AssertGuid, AssertGuids } from "guid"
     import { Tuple } from "utils"
+    import { AssertPath } from "path"
 
     namespace scene {
         /**
@@ -115,9 +116,9 @@ declare module "editor:module" {
 
         /**
          * Creates objects from assets in the given path.
-         * @param path - The path to the assets.
+         * @param path - The path to the item assets, in the format of `` `Items/${folder}/${name}.item` ``.
          * @returns The main object created from the assets.
          */
-        const createObjectsFromAssets: (path: string) => SceneObject<"Item">
+        const createObjectsFromAssets: <T extends string>(path: AssertPath<T, "Items">) => SceneObject<"Item">
     }
 }

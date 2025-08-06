@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Path } from "path"
+
     enum CollectionResetType {
         OnLifeStart = 0,
         OnRestart = 1,
@@ -11,7 +13,7 @@ declare module "game:type" {
         CollectionResetType: CollectionResetType
         CollectionName: string
         Priority: int
-        Texture: string
+        Texture: Path<"Textures">
         AlwaysShow: bool
         ShowMaxCount: bool
     }
