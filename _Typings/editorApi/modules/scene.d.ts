@@ -119,6 +119,8 @@ declare module "editor:module" {
          * @param path - The path to the item assets, in the format of `` `Items/${folder}/${name}.item` ``.
          * @returns The main object created from the assets.
          */
-        const createObjectsFromAssets: <T extends string>(path: AssertPath<T, "Items">) => SceneObject<"Item">
+        const createObjectsFromAssets: <T extends string>(
+            path: T extends "" ? never : AssertPath<T, "Items">
+        ) => SceneObject<"Item">
     }
 }
