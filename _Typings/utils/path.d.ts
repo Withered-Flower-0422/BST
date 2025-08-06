@@ -81,4 +81,13 @@ declare module "path" {
         P extends keyof AssetsSuffixMap,
         S extends boolean = true
     > = ValidatePaths<T, P, S> extends true ? T : never
+
+    // ============== alias ==============
+    type ScenePath = Path<"Scenes">
+    type ItemPath = Path<"Items">
+    type MeshPath = Path<"Meshes">
+    type TexturePath = Path<"Textures">
+    type MaterialPath = Path<"Materials">
+    type AudioPath = Path<"Audios">
+    type ScriptPath = Path<"Scripts">
 }

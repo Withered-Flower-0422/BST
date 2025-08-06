@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## v1.2.5 (2025-08-06)
 
 -   Added a new file `path.d.ts`, where `Folder`, `Path`, `AssertFolder`, `AssertPath`, `AssertFolders` and `AssertPaths` are defined, and applied them to wherever needed.
+-   Now `Path` alias can import from `game:alias` and `editor:alias`.
 
 ## v1.2.4 (2025-08-06)
 
