@@ -3,6 +3,7 @@
 
 declare module "editor:module" {
     import { Tuple } from "utils"
+    import { AssetsSuffixMap, Path } from "path"
 
     namespace dialogWindowManager {
         /**
@@ -54,10 +55,15 @@ declare module "editor:module" {
          * @param assetType - The type of the asset to be picked.
          * @returns
          */
-        const openAssetPickerDialog: (
+        const openAssetPickerDialog: <T extends keyof AssetsSuffixMap | "All">(
             onCancel: () => void,
-            onPickAsset: (assetPath: string) => void,
-            assetType: "Scenes" | "Items" | "Textures" | "Meshes" | "Materials" | "Audios" | "Scripts" | "All"
+            onPickAsset: (
+                assetPath: Exclude<
+                    T extends "All" ? Path<keyof AssetsSuffixMap> : Path<T extends keyof AssetsSuffixMap ? T : never>,
+                    ""
+                >
+            ) => void,
+            assetType: T
         ) => void
 
         /**
