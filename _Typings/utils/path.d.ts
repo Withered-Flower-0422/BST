@@ -14,9 +14,11 @@ declare module "path" {
 
     type Folder<T extends keyof AssetsSuffixMap> = `${T}/${string}`
 
-    type Path<T extends keyof AssetsSuffixMap, S extends boolean = true> = {
-        [P in T]: `${P}/${string}/${string}${S extends true ? `.${AssetsSuffixMap[P]}` : ""}`
-    }[T]
+    type Path<T extends keyof AssetsSuffixMap, S extends boolean = true> =
+        | {
+              [P in T]: `${P}/${string}/${string}${S extends true ? `.${AssetsSuffixMap[P]}` : ""}`
+          }[T]
+        | ""
 
     type ValidateFolder<T extends string, P extends keyof AssetsSuffixMap> = string extends T
         ? true
@@ -26,7 +28,9 @@ declare module "path" {
             : true
         : false
 
-    type ValidatePath<T extends string, P extends keyof AssetsSuffixMap, S extends boolean = true> = string extends T
+    type ValidatePath<T extends string, P extends keyof AssetsSuffixMap, S extends boolean = true> = T extends ""
+        ? true
+        : string extends T
         ? true
         : T extends `${P}/${infer A}/${infer B}${S extends true ? `.${AssetsSuffixMap[P]}` : ""}`
         ? A extends ""
