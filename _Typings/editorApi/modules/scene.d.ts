@@ -116,7 +116,7 @@ declare module "editor:module" {
 
         /**
          * Creates objects from assets in the given path.
-         * @param path - The path to the item assets, in the format of `` `Items/${folder}/${name}.item` ``.
+         * @param path - The path to the item assets, in the format of `` `Items/${folder}/${name}.item` `` or `` `Meshes/${folder}/${name}.mesh` ``.
          * @returns The main object created from the assets.
          */
         const createObjectsFromAssets: <T extends string>(
