@@ -32,13 +32,17 @@ declare module "path" {
         ? true
         : string extends T
         ? true
-        : T extends `${P}/${infer A}/${infer B}${S extends true ? `.${AssetsSuffixMap[P]}` : ""}`
-        ? A extends ""
-            ? false
-            : B extends ""
-            ? false
-            : true
-        : false
+        : {
+              [K in P]: T extends `${K}/${infer A}/${infer B}${S extends true ? `.${AssetsSuffixMap[K]}` : ""}`
+                  ? A extends ""
+                      ? false
+                      : B extends ""
+                      ? false
+                      : true
+                  : false
+          }[P] extends false
+        ? false
+        : true
 
     type ValidateFolders<T extends readonly string[], P extends keyof AssetsSuffixMap> = T extends readonly [
         infer F extends string,
