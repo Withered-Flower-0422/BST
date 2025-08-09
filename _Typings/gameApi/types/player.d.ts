@@ -33,6 +33,9 @@ declare module "game:type" {
              * @range `0 ~ 100`
              */
             durability: float
+            /**
+             * @range `-273.15 ~ 1000`
+             */
             temperature: float
             /**
              * @range `0 ~ 100`
