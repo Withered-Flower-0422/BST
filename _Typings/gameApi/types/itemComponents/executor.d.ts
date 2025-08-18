@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { AssetsSuffixMap, Path } from "path"
+    import { Path } from "path"
 
     enum VariableType {
         String = 0,
@@ -44,7 +44,7 @@ declare module "game:type" {
         Float4Var: Float4
         ColorRGBAVar: ColorRGBA
         TransVar: Trans
-        AssetReferenceVar: Path<keyof AssetsSuffixMap>
+        AssetReferenceVar: Path
         ObjectReferenceVar: string
         StringArrayVar: string[]
         IntArrayVar: int[]
@@ -56,7 +56,7 @@ declare module "game:type" {
         Float4ArrayVar: Float4[]
         ColorRGBAArrayVar: ColorRGBA[]
         TransArrayVar: Trans[]
-        AssetReferenceArrayVar: Path<keyof AssetsSuffixMap>[]
+        AssetReferenceArrayVar: Path[]
         ObjectReferenceArrayVar: string[]
     }
 

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.6 (2025-08-18)
+
+-   Gave default values to the parameters of path-related types, and modified some files to adapt to this change.
+-   Now `Path` and `Folder` can be imported from `game:alias` and `editor:alias`.
+
 ## v1.2.5 (2025-08-06)
 
 -   Added a new file `path.d.ts`, where `Folder`, `Path`, `AssertFolder`, `AssertPath`, `AssertFolders` and `AssertPaths` are defined, and applied them to wherever needed.

@@ -3,7 +3,7 @@
 
 declare module "editor:module" {
     import { AssertNonNeg } from "utils"
-    import { AssetsSuffixMap, Folder, Path } from "path"
+    import { Folder, Path } from "path"
 
     namespace editor {
         /**
@@ -52,12 +52,12 @@ declare module "editor:module" {
          * Gets the editor's path to the selected asset.
          * @returns The editor's path to the selected asset. If no asset is selected, an empty string is returned.
          */
-        const getSelectedAsset: () => Path<keyof AssetsSuffixMap> | ""
+        const getSelectedAsset: () => Path
 
         /**
          * Gets the editor's path to the selected asset's folder.
          * @returns The editor's path to the selected asset's folder.
          */
-        const getSelectedAssetFolder: () => Folder<keyof AssetsSuffixMap>
+        const getSelectedAssetFolder: () => Folder
     }
 }

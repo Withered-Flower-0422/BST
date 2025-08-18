@@ -2,5 +2,5 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:alias" {
-    export { ScenePath, ItemPath, MeshPath, TexturePath, MaterialPath, AudioPath, ScriptPath } from "path"
+    export { Folder, Path, ScenePath, ItemPath, MeshPath, TexturePath, MaterialPath, AudioPath, ScriptPath } from "path"
 }

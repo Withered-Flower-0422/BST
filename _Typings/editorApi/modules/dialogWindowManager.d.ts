@@ -58,10 +58,7 @@ declare module "editor:module" {
         const openAssetPickerDialog: <T extends keyof AssetsSuffixMap | "All">(
             onCancel: () => void,
             onPickAsset: (
-                assetPath: Exclude<
-                    T extends "All" ? Path<keyof AssetsSuffixMap> : Path<T extends keyof AssetsSuffixMap ? T : never>,
-                    ""
-                >
+                assetPath: Exclude<T extends "All" ? Path : Path<T extends keyof AssetsSuffixMap ? T : never>, "">
             ) => void,
             assetType: T
         ) => void
