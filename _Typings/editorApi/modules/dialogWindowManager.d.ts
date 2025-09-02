@@ -2,7 +2,6 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:module" {
-    import { Tuple } from "utils"
     import { AssetsSuffixMap, Path } from "path"
 
     namespace dialogWindowManager {
@@ -41,11 +40,11 @@ declare module "editor:module" {
         const openInputsDialog: <const T extends readonly string[]>(
             windowTitle: string,
             contentTexts: T,
-            defaultInputTexts: Tuple<string, T["length"]>,
+            defaultInputTexts: { [P in keyof T]: string },
             closeButtonName: string,
             checkButtonName: string,
             onCloseButtonClick: () => void,
-            onCheckButtonClick: (inputsText: Tuple<string, T["length"]>) => void
+            onCheckButtonClick: (inputsText: { [P in keyof T]: string }) => void
         ) => void
 
         /**
@@ -91,9 +90,9 @@ declare module "editor:module" {
         const openSubWindow: <const T extends readonly string[], const U extends readonly string[]>(
             windowTitle: string,
             contentTexts: T,
-            defaultInputTexts: Tuple<string, T["length"]>,
+            defaultInputTexts: { [P in keyof T]: string },
             buttonNames: U,
-            onButtonsClick: Tuple<(inputsText: Tuple<string, T["length"]>) => void, U["length"]>,
+            onButtonsClick: { [Q in keyof U]: (inputsText: { [P in keyof T]: string }) => void },
             onCloseWindowClick: () => void
         ) => void
     }

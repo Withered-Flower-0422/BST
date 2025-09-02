@@ -4,7 +4,7 @@
 declare module "game:module" {
     import { Item, RaycastResult, CollisionLayer } from "game:type"
     import { AssertGuid, AssertGuids } from "guid"
-    import { AssertNonNeg, Tuple } from "utils"
+    import { AssertNonNeg } from "utils"
 
     namespace scene {
         /**
@@ -25,7 +25,7 @@ declare module "game:module" {
          * @param guids - The guid strings in an array of the items to get.
          * @returns An array of the items with the given guids.
          */
-        const getItems: <const S extends readonly string[]>(guids: AssertGuids<S>) => Tuple<Item, S["length"]>
+        const getItems: <const S extends readonly string[]>(guids: AssertGuids<S>) => { [P in keyof S]: Item }
 
         /**
          * Gets the player. If the player has not been created, it will return `null`.

@@ -4,7 +4,6 @@
 declare module "editor:module" {
     import { SceneObject, SceneObjectType } from "editor:type"
     import { AssertGuid, AssertGuids } from "guid"
-    import { Tuple } from "utils"
     import { AssertPath } from "path"
 
     namespace scene {
@@ -28,7 +27,7 @@ declare module "editor:module" {
          */
         const getObjects: <const S extends readonly string[]>(
             guids: AssertGuids<S>
-        ) => Tuple<SceneObject<SceneObjectType>, S["length"]>
+        ) => { [P in keyof S]: SceneObject<SceneObjectType> }
 
         /**
          * Destroys an object by its guid.
@@ -68,7 +67,7 @@ declare module "editor:module" {
          */
         const duplicateObjects: <const S extends readonly string[]>(
             guids: AssertGuids<S>
-        ) => Tuple<SceneObject<SceneObjectType>, S["length"]>
+        ) => { [P in keyof S]: SceneObject<SceneObjectType> }
 
         /**
          * Gets the selected object in the scene. If no object is selected, returns `null`.

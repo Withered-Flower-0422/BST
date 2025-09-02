@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { Assert0To1, Assert0To1s, Tuple } from "utils"
+    import { Assert0To1, Assert0To1s } from "utils"
 
     type WayPathData = {
         readonly WayPoints: string[]
@@ -37,6 +37,6 @@ declare module "game:type" {
          * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
          * @returns The point information of the given points.
          */
-        getPointsInfo: <const T extends readonly float[]>(points: Assert0To1s<T>) => Tuple<PointInfo, T["length"]>
+        getPointsInfo: <const T extends readonly float[]>(points: Assert0To1s<T>) => { [P in keyof T]: PointInfo<T[P]> }
     }
 }

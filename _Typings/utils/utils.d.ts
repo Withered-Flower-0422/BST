@@ -4,11 +4,12 @@
 declare module "utils" {
     type Equal<T, U> = (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2 ? true : false
 
-    type _Mutable<T> = {
-        [P in keyof T as Equal<{ [K in P]: T[K] }, { -readonly [K in P]: T[K] }> extends true ? P : never]: T[P]
-    }
-
-    type Mutable<T> = Equal<_Mutable<T>, {}> extends true ? never : _Mutable<T>
+    type Mutable<
+        T,
+        M = {
+            [P in keyof T as Equal<{ [K in P]: T[K] }, { -readonly [K in P]: T[K] }> extends true ? P : never]: T[P]
+        }
+    > = Equal<M, {}> extends true ? never : M
 
     type TupleToExactLength<L extends int, T extends int[] = []> = T["length"] extends L
         ? T
@@ -27,6 +28,10 @@ declare module "utils" {
         ? C
         : Tuple<T, L, [...C, T]>
 
+    type AssertNeg<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? T : never
+
+    type AssertNonNeg<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? never : T
+
     type ValidateIntString<T extends string> = T extends `${string}e+${string}`
         ? true
         : T extends `${string}e-${string}`
@@ -36,10 +41,6 @@ declare module "utils" {
         : true
 
     type AssertInt<T extends number> = number extends T ? T : ValidateIntString<`${T}`> extends true ? T : never
-
-    type AssertNeg<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? T : never
-
-    type AssertNonNeg<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? never : T
 
     type AssertNegInt<T extends number> = number extends T
         ? T
@@ -51,34 +52,25 @@ declare module "utils" {
 
     type AssertNonNegInt<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? never : AssertInt<T>
 
-    type Validate0To1<T extends number> = number extends T
-        ? true
+    type Assert0To1<T extends number> = number extends T
+        ? T
         : T extends 0
-        ? true
+        ? T
         : T extends 1
-        ? true
+        ? T
         : `${T}` extends `-${string}`
-        ? false
+        ? never
         : `${T}` extends `${string}e+${string}`
-        ? false
+        ? never
         : `${T}` extends `${string}e-${string}`
-        ? true
+        ? T
         : `${T}` extends `${infer I}.${string}`
         ? I extends "0"
-            ? true
-            : false
-        : false
+            ? T
+            : never
+        : never
 
-    type Validate0To1s<T extends readonly number[]> = T extends readonly [
-        infer F extends number,
-        ...infer R extends readonly number[]
-    ]
-        ? Validate0To1<F> extends false
-            ? false
-            : Validate0To1s<R>
-        : true
-
-    type Assert0To1<T extends number> = Validate0To1<T> extends true ? T : never
-
-    type Assert0To1s<T extends readonly number[]> = Validate0To1s<T> extends true ? T : never
+    type Assert0To1s<T extends readonly number[]> = {
+        [K in keyof T]: Assert0To1<T[K]>
+    }
 }

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.3.0 (2025-09-02)
+
+-   Rewrote the logic of `ValidateGuidParts`, `AssertGuid`, `AssertGuids`, `AssertFolder`, `AssertPath`, `AssertFolders`, `AssertPaths`, `Assert0To1` and `Assert0To1s`.
+-   Rewrote the return type of the functions that originally returned the `Tuple` type.
+
 ## v1.2.6 (2025-08-18)
 
 -   Gave default values to the parameters of path-related types, and modified some files to adapt to this change.

@@ -20,22 +20,22 @@ declare module "path" {
           }[T]
         | ""
 
-    type ValidateFolder<T extends string, P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = string extends T
-        ? true
+    type AssertFolder<T extends string, P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = string extends T
+        ? T
         : T extends `${P}/${infer A}`
         ? A extends ""
-            ? false
-            : true
-        : false
+            ? never
+            : T
+        : never
 
-    type ValidatePath<
+    type AssertPath<
         T extends string,
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
         S extends boolean = true
     > = T extends ""
-        ? true
+        ? T
         : string extends T
-        ? true
+        ? T
         : {
               [K in P]: T extends `${K}/${infer A}/${infer B}${S extends true ? `.${AssetsSuffixMap[K]}` : ""}`
                   ? A extends ""
@@ -45,51 +45,20 @@ declare module "path" {
                       : true
                   : false
           }[P] extends false
-        ? false
-        : true
+        ? never
+        : T
 
-    type ValidateFolders<
-        T extends readonly string[],
-        P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap
-    > = T extends readonly [infer F extends string, ...infer R extends readonly string[]]
-        ? ValidateFolder<F, P> extends false
-            ? false
-            : ValidateFolders<R, P>
-        : true
-
-    type ValidatePaths<
-        T extends readonly string[],
-        P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
-        S extends boolean = true
-    > = T extends readonly [infer F extends string, ...infer R extends readonly string[]]
-        ? ValidatePath<F, P, S> extends false
-            ? false
-            : ValidatePaths<R, P, S>
-        : true
-
-    type AssertFolder<T extends string, P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = ValidateFolder<
-        T,
-        P
-    > extends true
-        ? T
-        : never
-
-    type AssertPath<
-        T extends string,
-        P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
-        S extends boolean = true
-    > = ValidatePath<T, P, S> extends true ? T : never
-
-    type AssertFolders<
-        T extends readonly string[],
-        P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap
-    > = ValidateFolders<T, P> extends true ? T : never
+    type AssertFolders<T extends readonly string[], P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = {
+        [K in keyof T]: AssertFolder<T[K], P>
+    }
 
     type AssertPaths<
         T extends readonly string[],
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
         S extends boolean = true
-    > = ValidatePaths<T, P, S> extends true ? T : never
+    > = {
+        [K in keyof T]: AssertPath<T[K], P, S>
+    }
 
     // ============== alias ==============
     type ScenePath = Path<"Scenes">
