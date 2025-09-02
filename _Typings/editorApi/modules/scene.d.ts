@@ -25,7 +25,7 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to get.
          * @returns An array of the objects with the given guids.
          */
-        const getObjects: <const S extends readonly string[]>(
+        const getObjects: <const S extends string[]>(
             guids: AssertGuids<S>
         ) => { [P in keyof S]: SceneObject<SceneObjectType> }
 
@@ -41,7 +41,7 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to destroy.
          * @returns
          */
-        const destroyObjects: <const S extends readonly string[]>(guids: AssertGuids<S>) => void
+        const destroyObjects: <const S extends string[]>(guids: AssertGuids<S>) => void
 
         /**
          * Creates a new object with the given name and type.
@@ -65,7 +65,7 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to duplicate.
          * @returns An array of the duplicated objects.
          */
-        const duplicateObjects: <const S extends readonly string[]>(
+        const duplicateObjects: <const S extends string[]>(
             guids: AssertGuids<S>
         ) => { [P in keyof S]: SceneObject<SceneObjectType> }
 
@@ -88,7 +88,7 @@ declare module "editor:module" {
          * @param selectedObjectsGuid - The guid strings in an array of all the objects to select. If not include the activated object, the activated object will be the first one in the array.
          * @returns
          */
-        const setSelection: <S1 extends string, const S2 extends readonly string[]>(
+        const setSelection: <S1 extends string, const S2 extends string[]>(
             activatedObjectGuid: AssertGuid<S1>,
             selectedObjectsGuid: AssertGuids<S2>
         ) => void

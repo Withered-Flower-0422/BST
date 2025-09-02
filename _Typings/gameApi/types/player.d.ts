@@ -75,7 +75,7 @@ declare module "game:type" {
              * @param paths - The paths of the materials to set as the player's renderer materials.
              * @returns
              */
-            setRendererMaterials: <const T extends readonly string[]>(paths: AssertPaths<T, "Materials">) => void
+            setRendererMaterials: <const T extends string[]>(paths: AssertPaths<T, "Materials">) => void
         }
     }
 }

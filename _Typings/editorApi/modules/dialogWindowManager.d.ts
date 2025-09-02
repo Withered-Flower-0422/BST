@@ -37,7 +37,7 @@ declare module "editor:module" {
          * @param onCheckButtonClick - The function to be called when the check button is clicked. The input texts will be passed as an argument.
          * @returns
          */
-        const openInputsDialog: <const T extends readonly string[]>(
+        const openInputsDialog: <const T extends string[]>(
             windowTitle: string,
             contentTexts: T,
             defaultInputTexts: { [P in keyof T]: string },
@@ -87,7 +87,7 @@ declare module "editor:module" {
          * @param onCloseWindowClick - The function to be called when the close button is clicked.
          * @returns
          */
-        const openSubWindow: <const T extends readonly string[], const U extends readonly string[]>(
+        const openSubWindow: <const T extends string[], const U extends string[]>(
             windowTitle: string,
             contentTexts: T,
             defaultInputTexts: { [P in keyof T]: string },
