@@ -6,7 +6,7 @@ declare module "guid" {
         ? S extends ""
             ? true
             : false
-        : S extends `${infer _ extends
+        : S extends `${
               | "0"
               | "1"
               | "2"
@@ -26,28 +26,16 @@ declare module "guid" {
         ? IsHexStringOfExactLength<R, L, [...C, 0]>
         : false
 
-    type ValidateGuidParts<P extends [string, string, string, string, string]> = P extends [
-        infer P1 extends string,
-        infer P2 extends string,
-        infer P3 extends string,
-        infer P4 extends string,
-        infer P5 extends string
-    ]
+    type AssertGuid<S extends string> = string extends S
+        ? S
+        : S extends `${infer P1}-${infer P2}-${infer P3}-${infer P4}-${infer P5}`
         ? [
               IsHexStringOfExactLength<P1, 8>,
               IsHexStringOfExactLength<P2, 4>,
               IsHexStringOfExactLength<P3, 4>,
               IsHexStringOfExactLength<P4, 4>,
               IsHexStringOfExactLength<P5, 12>
-          ] extends [true, true, true, true, true]
-            ? true
-            : false
-        : false
-
-    type AssertGuid<S extends string> = string extends S
-        ? S
-        : S extends `${infer P1}-${infer P2}-${infer P3}-${infer P4}-${infer P5}`
-        ? ValidateGuidParts<[P1, P2, P3, P4, P5]> extends true
+          ][number] extends true
             ? S
             : never
         : never
