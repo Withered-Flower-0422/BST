@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.3.1 (2025-09-14)
+
+-   Added `RepeatStr`, `PadEnd`, `NumToStr`, `GetStrLen` and `Compare` in `utils.d.ts` for further use.
+
 ## v1.3.0 (2025-09-02)
 
 -   Rewrote the logic of `ValidateGuidParts`, `AssertGuid`, `AssertGuids`, `AssertFolder`, `AssertPath`, `AssertFolders`, `AssertPaths`, `Assert0To1` and `Assert0To1s`.
