@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## v1.3.1 (2025-09-14)
 
--   Added `RepeatStr`, `PadEnd`, `NumToStr`, `GetStrLen` and `Compare` in `utils.d.ts` for further use.
+-   Added `RepeatStr`, `PadEnd`, `NumToStr`, `GetStrLen` and `Compare` in `utils.d.ts` for future use.
 
 ## v1.3.0 (2025-09-02)
 
