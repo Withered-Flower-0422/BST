@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 -   Optimized some descriptions of functions.
 -   Now most methods are readonly.
 -   Now the `registerEvents` in `gameTemplate.ts` is **satisfied** to `RegisterEvent[]` instead of **typed** to `RegisterEvent[]`, which provides better type hints for parameter `events` in `onEvents`.
+-   Changed `never[]` types in `Events` to `[null]`.
+-   Updated files in `Samples` and `Templates` to adapt to the changes.
 
 ## v1.3.1 (2025-09-14)
 

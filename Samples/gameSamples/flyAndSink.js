@@ -12,19 +12,19 @@ import { scene, levelManager, inputManager } from "gameApi"
 /** @type {Player} */
 let player
 
-/** @type {RegisterEvent[]} */
+/** @satisfies {RegisterEvent[]} */
 export const registerEvents = ["OnTimerActive", "OnPhysicsUpdate"]
 
-/** @type {OnEvents} */
+/** @type {OnEvents<typeof registerEvents>} */
 export const onEvents = (self, events) => {
-    if ("OnTimerActive" in events) {
+    if (events.OnTimerActive) {
         // load the player only once to improve performance
         if (!player) {
             player = scene.getPlayer()
         }
     }
 
-    if ("OnPhysicsUpdate" in events) {
+    if (events.OnPhysicsUpdate) {
         // ensure the ball is movable
         if (!levelManager.timerEnabled) {
             return

@@ -8,54 +8,54 @@ declare module "game:type" {
         /**
          * On every physics updates. The physics frame rate of Ballex² is 100Hz.
          */
-        OnPhysicsUpdate?: never[]
+        OnPhysicsUpdate?: [null]
 
         /**
          * After level loaded, before level start.
          */
-        OnLoadLevel?: never[]
+        OnLoadLevel?: [null]
 
         /**
          * On level start, including the first entering and restarting.
          */
-        OnStartLevel?: never[]
+        OnStartLevel?: [null]
 
         /**
          * On quitting level without completing it.
          */
-        OnQuitLevel?: never[]
+        OnQuitLevel?: [null]
 
         /**
          * On timer active, as well as when the player ball is generated.
          */
-        OnTimerActive?: never[]
+        OnTimerActive?: [null]
 
         /**
          * On pre-restarting level, excludes the restarting after completing the level.
          * @cancelable
          */
-        OnPreRestartLevel?: never[]
+        OnPreRestartLevel?: [null]
 
         /**
          * On post-restarting level.
          */
-        OnPostRestartLevel?: never[]
+        OnPostRestartLevel?: [null]
 
         /**
          * On pre player ball is dead. (falling into the death area / duration expired / suicide)
          * @cancelable
          */
-        OnPrePlayerDeadStart?: never[]
+        OnPrePlayerDeadStart?: [null]
 
         /**
          * On post player ball is dead. (falling into the death area / duration expired / suicide)
          */
-        OnPostPlayerDeadStart?: never[]
+        OnPostPlayerDeadStart?: [null]
 
         /**
          * On player ball has already dead, after the death animation.
          */
-        OnPlayerDeadEnd?: never[]
+        OnPlayerDeadEnd?: [null]
 
         /**
          * On pre-reached the checkpoint.
