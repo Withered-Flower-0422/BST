@@ -54,28 +54,28 @@ declare module "game:type" {
              * Recovers all properties of the player.
              * @returns
              */
-            recoverAll: () => void
+            readonly recoverAll: () => void
 
             /**
              * Transfers the player to a new position.
              * @param targetPosition - The position to transfer the player to.
              * @returns
              */
-            transfer: (targetPosition: Float3) => void
+            readonly transfer: (targetPosition: Float3) => void
 
             /**
              * Sets the player's renderer mesh.
              * @param path - The path of the mesh to set as the player's renderer mesh.
              * @returns
              */
-            setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
+            readonly setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
 
             /**
              * Sets the player's renderer materials.
              * @param paths - The paths of the materials to set as the player's renderer materials.
              * @returns
              */
-            setRendererMaterials: <const T extends string[]>(paths: AssertPaths<T, "Materials">) => void
+            readonly setRendererMaterials: <const T extends string[]>(paths: AssertPaths<T, "Materials">) => void
         }
     }
 }

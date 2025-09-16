@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    type Tween = {
+    type Tween = Readonly<{
         /**
          * Plays the tween for one step.
          * @returns
@@ -20,5 +20,5 @@ declare module "game:type" {
          * @returns
          */
         stop: () => void
-    }
+    }>
 }

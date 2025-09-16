@@ -36,7 +36,7 @@ declare module "editor:type" {
          * - Because the returned data is a string, no type hint here,
          *   you may set specified type to it manually if you want type hint.
          */
-        getData: () => json
+        readonly getData: () => json
 
         /**
          * Sets data to the component.
@@ -45,8 +45,8 @@ declare module "editor:type" {
          * @NOTE -
          * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
          */
-        setData: (data: json) => void
-    } & ItemComponentTypeMap[T]["method"] &
+        readonly setData: (data: json) => void
+    } & Readonly<ItemComponentTypeMap[T]["method"]> &
         (T extends "Settings"
             ? {}
             : {
@@ -54,12 +54,12 @@ declare module "editor:type" {
                    * Copies all data from this component to the editor's internal clipboard.
                    * @returns
                    */
-                  copyData: () => void
+                  readonly copyData: () => void
 
                   /**
                    * Pastes component data from the editor's internal clipboard to this component.
                    * @returns
                    */
-                  pasteData: () => void
+                  readonly pasteData: () => void
               })
 }

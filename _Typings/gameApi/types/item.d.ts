@@ -18,54 +18,54 @@ declare module "game:type" {
          * @param scale - The scale to set.
          * @returns
          */
-        setTransform: (position: Float3, rotation: Float3, scale: Float3) => void
+        readonly setTransform: (position: Float3, rotation: Float3, scale: Float3) => void
 
         /**
          * Sets a specified position for the item without changing the rotation or scale.
          * @param position - The position to set.
          * @returns
          */
-        setPosition: (position: Float3) => void
+        readonly setPosition: (position: Float3) => void
 
         /**
          * Sets a specified euler angle format rotation for the item without changing the position or scale.
          * @param rotation - The rotation to set, in euler angle format.
          * @returns
          */
-        setRotation: (rotation: Float3) => void
+        readonly setRotation: (rotation: Float3) => void
 
         /**
          * Sets a specified quaternion format rotation for the item without changing the position or scale.
          * @param rotation - The rotation to set, in quaternion format.
          * @returns
          */
-        setRotationQuaternion: (rotation: Quaternion) => void
+        readonly setRotationQuaternion: (rotation: Quaternion) => void
 
         /**
          * Sets a specified scale for the item without changing the position or rotation.
          * @param scale - The scale to set.
          * @returns
          */
-        setScale: (scale: Float3) => void
+        readonly setScale: (scale: Float3) => void
 
         /**
          * Gets the transform of the item, in the form of `[position, rotation, scale]`.
          * @returns The transform of the item, in the form of `[position, rotation, scale]`.
          */
-        getTransform: () => [Float3, Float3, Float3]
+        readonly getTransform: () => [Float3, Float3, Float3]
 
         /**
          * Gets the quaternion format rotation of the item.
          * @returns The position of the item, in quaternion format.
          */
-        getRotationQuaternion: () => Quaternion
+        readonly getRotationQuaternion: () => Quaternion
 
         /**
          * Gets the specified component of the item. If the item doesn't have the component, returns `null`.
          * @param componentType - The type of the component to get.
          * @returns The specified component of the item, or `null` if the item doesn't have the specified component.
          */
-        getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
+        readonly getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
 
         /**
          * Moves the item to a specified transform.
@@ -74,7 +74,11 @@ declare module "game:type" {
          * @param duration - The duration of the movement in frames.
          * @returns
          */
-        moveTo: <T extends int>(targetTransform: Trans, easeType: EaseType, duration: AssertNonNegInt<T>) => void
+        readonly moveTo: <T extends int>(
+            targetTransform: Trans,
+            easeType: EaseType,
+            duration: AssertNonNegInt<T>
+        ) => void
 
         /**
          * Stops the movement of the item cased by `item.moveTo()`
@@ -82,6 +86,6 @@ declare module "game:type" {
          * @NOTE -
          * - Only to interrupt `item.moveTo()`, no effect for physical objects.
          */
-        stopMove: () => void
+        readonly stopMove: () => void
     }
 }

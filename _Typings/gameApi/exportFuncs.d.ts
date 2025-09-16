@@ -199,7 +199,10 @@ declare module "game:type" {
          * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
          * @returns
          */
-        type OnEvents = (self: Item, events: Events) => void
+        type OnEvents<RegisterEvents extends RegisterEvent[] = RegisterEvent[]> = (
+            self: Item,
+            events: Pick<Events, RegisterEvents[number]>
+        ) => void
 
         /**
          * Executed when the trigger is activated.

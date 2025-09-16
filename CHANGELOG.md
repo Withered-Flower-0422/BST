@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.0 (2025-09-16)
+
+-   Optimized some descriptions of functions.
+-   Now most methods are readonly.
+-   Now the `registerEvents` in `gameTemplate.ts` is **satisfied** to `RegisterEvent[]` instead of **typed** to `RegisterEvent[]`, which provides better type hints for parameter `events` in `onEvents`.
+
 ## v1.3.1 (2025-09-14)
 
 -   Added `RepeatStr`, `PadEnd`, `NumToStr`, `GetStrLen` and `Compare` in `utils.d.ts` for future use.

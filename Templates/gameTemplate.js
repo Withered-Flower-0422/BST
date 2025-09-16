@@ -66,8 +66,8 @@ export const onTrigger = (self, triggeredItem, type) => {}
 /** @type {OnCollide} */
 export const onCollide = (self, collisionEvent) => {}
 
-/** @type {RegisterEvent[]} */
+/** @satisfies {RegisterEvent[]} */
 export const registerEvents = []
 
-/** @type {OnEvents} */
+/** @type {OnEvents<typeof registerEvents>} */
 export const onEvents = (self, events) => {}
