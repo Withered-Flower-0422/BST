@@ -173,6 +173,7 @@ declare module "keys" {
     }
 
     type KeyboardKey = keyof typeof KeyboardKeyEnum
+    type NonNoneKey = Exclude<KeyboardKey, "None">
     type MouseButton = keyof typeof MouseButtonEnum
     type GamePadButton = keyof typeof GamePadButtonEnum
     type PlayerKey = keyof typeof PlayerKeyEnum

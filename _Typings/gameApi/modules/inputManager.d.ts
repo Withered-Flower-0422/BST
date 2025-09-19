@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { KeyboardKey, MouseButton, GamePadButton, PlayerKey } from "keys"
+    import { KeyboardKey, NonNoneKey, MouseButton, GamePadButton, PlayerKey } from "keys"
 
     namespace inputManager {
         namespace keyboard {
@@ -14,7 +14,7 @@ declare module "game:module" {
              * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
-            const checkKeyDown: (key: Exclude<KeyboardKey, "None">) => bool
+            const checkKeyDown: (key: NonNoneKey) => bool
 
             /**
              * Checks if a key is currently up.
@@ -24,7 +24,7 @@ declare module "game:module" {
              * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
-            const checkKeyUp: (key: Exclude<KeyboardKey, "None">) => bool
+            const checkKeyUp: (key: NonNoneKey) => bool
 
             /**
              * Checks if a key is currently being held down.
@@ -34,7 +34,7 @@ declare module "game:module" {
              * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
-            const checkKeyHold: (key: Exclude<KeyboardKey, "None">) => bool
+            const checkKeyHold: (key: NonNoneKey) => bool
         }
 
         namespace mouse {

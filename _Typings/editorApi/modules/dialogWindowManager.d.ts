@@ -78,6 +78,24 @@ declare module "editor:module" {
         ) => void
 
         /**
+         * Opens a confirm dialog window.
+         * @param windowTitle - The title of the window.
+         * @param contentText - The content text of the window.
+         * @param closeButtonName - The name of the close button.
+         * @param checkButtonName - The name of the check button.
+         * @param onCloseButtonClick - The function to be called when the close button is clicked.
+         * @param onCheckButtonClick - The function to be called when the check button is clicked.
+         */
+        const openConfirmDialog: (
+            windowTitle: string,
+            contentText: string,
+            closeButtonName: string,
+            checkButtonName: string,
+            onCloseButtonClick: () => void,
+            onCheckButtonClick: () => void
+        ) => void
+
+        /**
          * Opens a sub-window. The window will stay open until the close button is clicked.
          * @param windowTitle - The title of the window.
          * @param contentTexts - The content texts of the window, as well as the prompts for the input fields.

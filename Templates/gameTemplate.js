@@ -54,8 +54,21 @@
 /** @type {Player} */
 let player
 
+/** @description Variables set on the `executor`. */
+const $ = {
+    // Declare types of variables here if you want type hints.
+    // Leave the values as `null`; the `init` function will set the values.
+
+    /** @type {int} */ var1: null,
+    /** @type {string} */ var2: null,
+
+    // Clear the above codes if you don't need type hints.
+}
+
 /** @type {Init} */
-export const init = (self, v) => {}
+export const init = (self, v) => {
+    for (const k in v) $[k] = v[k]
+}
 
 /** @type {GameExecute} */
 export const execute = (...args) => {}

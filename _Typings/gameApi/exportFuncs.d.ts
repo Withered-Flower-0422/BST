@@ -172,6 +172,8 @@ declare module "game:type" {
         OnTntExploded?: Float3[]
     }
 
+    type RegisterEvents<RE extends RegisterEvent[] = RegisterEvent[]> = Pick<Events, RE[number]>
+
     global {
         /**
          * Executed when the executor loads the script. It executes before all other events and only executes once.
@@ -199,10 +201,7 @@ declare module "game:type" {
          * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
          * @returns
          */
-        type OnEvents<RegisterEvents extends RegisterEvent[] = RegisterEvent[]> = (
-            self: Item,
-            events: Pick<Events, RegisterEvents[number]>
-        ) => void
+        type OnEvents<RE extends RegisterEvent[] = RegisterEvent[]> = (self: Item, events: RegisterEvents<RE>) => void
 
         /**
          * Executed when the trigger is activated.

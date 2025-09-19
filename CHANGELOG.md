@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.1 (2025-09-20)
+
+-   Added `dialogWindowManager.openConfirmDialog()`.
+-   Added type `NonNoneKey` which represents `Exclude<KeyboardKey, "None">` and exported it from `game:alias`.
+-   Added generic type `RegisterEvents` and exported it from `game:alias`.
+-   Optimized `gameTemplate.js`.
+
 ## v1.4.0 (2025-09-16)
 
 -   Optimized some descriptions of functions.
