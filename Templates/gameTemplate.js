@@ -54,7 +54,7 @@
 /** @type {Player} */
 let player
 
-/** @description Variables set on the `executor`. */
+/** @description Variables set on the `Executor`. */
 const $ = {
     // Declare types of variables here if you want type hints.
     // Leave the values as `null`; the `init` function will set the values.
