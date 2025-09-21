@@ -3,7 +3,7 @@
 
 declare module "game:type" {
     import { BuiltinCollections } from "game:type"
-    import { AssertUnique as AU, ExpectTrue as ET } from "utils"
+    import { IsUnique as IU, ExpectTrue as ET } from "utils"
 
     type Events = {
         /**
@@ -199,7 +199,7 @@ declare module "game:type" {
         /**
          * Helper type to check if a list of items is unique.
          */
-        type AssertUnique<T extends readonly any[]> = AU<T>
+        type IsUnique<T extends readonly any[]> = IU<T>
 
         /**
          * Helper type to check if a type is `true`.

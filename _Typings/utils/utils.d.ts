@@ -180,10 +180,10 @@ declare module "utils" {
             : Includes<R, U>
         : false
 
-    type AssertUnique<T extends readonly any[]> = T extends [infer F, ...infer R]
+    type IsUnique<T extends readonly any[]> = T extends [infer F, ...infer R]
         ? Includes<R, F> extends true
             ? false
-            : AssertUnique<R>
+            : IsUnique<R>
         : true
 
     type ExpectTrue<T extends true> = T

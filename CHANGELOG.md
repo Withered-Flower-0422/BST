@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## v1.4.2 (2025-09-21)
 
--   Added `Includes`, `AssertUnique` and `ExpectTrue` types in `utils.d.ts`.
+-   Added `Includes`, `IsUnique` and `ExpectTrue` types in `utils.d.ts`.
 -   Optimized `gameTemplate.js`. Now it can check if there are repeated events in `registerEvents`.
 -   Updated files in `Samples` to adapt to the changes.
 
