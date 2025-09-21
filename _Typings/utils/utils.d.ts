@@ -186,5 +186,5 @@ declare module "utils" {
             : AssertUnique<R>
         : true
 
-    type ExceptTrue<T extends true> = T
+    type ExpectTrue<T extends true> = T
 }

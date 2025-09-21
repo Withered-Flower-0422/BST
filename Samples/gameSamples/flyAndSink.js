@@ -12,7 +12,7 @@ import { scene, levelManager, inputManager } from "gameApi"
 /** @type {Player} */
 let player
 
-/** @satisfies {RegisterEvent[]} @typedef {ExceptTrue<AssertUnique<typeof registerEvents>>} */
+/** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<AssertUnique<typeof registerEvents>>} */
 export const registerEvents = /** @type {const} */ (["OnTimerActive", "OnPhysicsUpdate"])
 
 /** @type {OnEvents<typeof registerEvents>} */

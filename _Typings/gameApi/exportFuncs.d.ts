@@ -3,7 +3,7 @@
 
 declare module "game:type" {
     import { BuiltinCollections } from "game:type"
-    import { AssertUnique as AU, ExceptTrue as ET } from "utils"
+    import { AssertUnique as AU, ExpectTrue as ET } from "utils"
 
     type Events = {
         /**
@@ -204,7 +204,7 @@ declare module "game:type" {
         /**
          * Helper type to check if a type is `true`.
          */
-        type ExceptTrue<T extends true> = ET<T>
+        type ExpectTrue<T extends true> = ET<T>
 
         /**
          * Executed when a registered event is triggered.

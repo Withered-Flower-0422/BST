@@ -79,7 +79,7 @@ export const onTrigger = (self, triggeredItem, type) => {}
 /** @type {OnCollide} */
 export const onCollide = (self, collisionEvent) => {}
 
-/** @satisfies {RegisterEvent[]} @typedef {ExceptTrue<AssertUnique<typeof registerEvents>>} */
+/** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<AssertUnique<typeof registerEvents>>} */
 export const registerEvents = /** @type {const} */ ([])
 
 /** @type {OnEvents<typeof registerEvents>} */
