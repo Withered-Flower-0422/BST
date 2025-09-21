@@ -173,4 +173,18 @@ declare module "utils" {
             ? _CompareStrIntAndDecParts<T1, T2, U1, U2>
             : never
         : never
+
+    type Includes<T extends readonly any[], U> = T extends [infer F, ...infer R]
+        ? Equal<F, U> extends true
+            ? true
+            : Includes<R, U>
+        : false
+
+    type AssertUnique<T extends readonly any[]> = T extends [infer F, ...infer R]
+        ? Includes<R, F> extends true
+            ? false
+            : AssertUnique<R>
+        : true
+
+    type ExceptTrue<T extends true> = T
 }

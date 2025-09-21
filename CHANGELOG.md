@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.2 (2025-09-21)
+
+-   Added `Includes`, `AssertUnique` and `ExceptTrue` types in `utils.d.ts`.
+-   Optimized `gameTemplate.js`. Now it can check if there are repeated events in `registerEvents`.
+-   Updated files in `Samples` to adapt to the changes.
+
 ## v1.4.1 (2025-09-20)
 
 -   Added `dialogWindowManager.openConfirmDialog()`.

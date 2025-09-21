@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { BuiltinCollections } from "game:type"
+    import { AssertUnique as AU, ExceptTrue as ET } from "utils"
 
     type Events = {
         /**
@@ -194,6 +195,16 @@ declare module "game:type" {
          * Click to see all {@link Events}.
          */
         type RegisterEvent = keyof Events
+
+        /**
+         * Helper type to check if a list of items is unique.
+         */
+        type AssertUnique<T extends readonly any[]> = AU<T>
+
+        /**
+         * Helper type to check if a type is `true`.
+         */
+        type ExceptTrue<T extends true> = ET<T>
 
         /**
          * Executed when a registered event is triggered.

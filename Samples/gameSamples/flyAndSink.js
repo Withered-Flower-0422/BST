@@ -12,8 +12,8 @@ import { scene, levelManager, inputManager } from "gameApi"
 /** @type {Player} */
 let player
 
-/** @satisfies {RegisterEvent[]} */
-export const registerEvents = ["OnTimerActive", "OnPhysicsUpdate"]
+/** @satisfies {RegisterEvent[]} @typedef {ExceptTrue<AssertUnique<typeof registerEvents>>} */
+export const registerEvents = /** @type {const} */ (["OnTimerActive", "OnPhysicsUpdate"])
 
 /** @type {OnEvents<typeof registerEvents>} */
 export const onEvents = (self, events) => {
