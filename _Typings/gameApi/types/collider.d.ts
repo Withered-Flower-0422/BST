@@ -19,8 +19,10 @@ declare module "game:type" {
         Mesh = 2,
     }
 
+    type EventType = "Enter" | "Exit" | "Stay"
+
     type CollisionEvent = {
-        eventType: "Enter" | "Exit" | "Stay"
+        eventType: EventType
         itemA: Item | Player
         itemB: Item | Player
         impulse: float
