@@ -177,7 +177,9 @@ declare module "game:module" {
          * @returns
          * @CancelableEvent Click to see {@link CancelableEvent | all cancelable events}.
          */
-        const cancelEvent: (eventName: CancelableEvent) => void
+        const cancelEvent: <RE extends RegisterEvent[] = RegisterEvent[]>(
+            eventName: CancelableEvent & RE[number]
+        ) => void
 
         /**
          * Sends a custom event with the specified message. Other scripts can listen to this event by registering `OnReceiveCustomEvent`.
