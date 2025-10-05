@@ -16,9 +16,9 @@ declare module "game:module" {
         /**
          * Gets the item by its guid.
          * @param guid - The guid string of the item to get.
-         * @returns The item with the given guid.
+         * @returns The item with the given guid, or `null` if the item does not exist.
          */
-        const getItem: <S extends string>(guid: AssertGuid<S>) => Item
+        const getItem: <S extends string>(guid: AssertGuid<S>) => Item | null
 
         /**
          * Gets the items by their guids.

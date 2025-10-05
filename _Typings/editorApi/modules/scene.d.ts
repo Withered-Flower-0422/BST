@@ -16,9 +16,9 @@ declare module "editor:module" {
         /**
          * Gets an object by its guid.
          * @param guid - The guid string of the object to get.
-         * @returns The object with the given guid.
+         * @returns The object with the given guid, or `null` if the object does not exist.
          */
-        const getObject: <S extends string>(guid: AssertGuid<S>) => SceneObject<SceneObjectType>
+        const getObject: <S extends string>(guid: AssertGuid<S>) => SceneObject<SceneObjectType> | null
 
         /**
          * Gets multiple objects by their guids.
