@@ -14,7 +14,9 @@ declare module "editor:type" {
          * @param componentType - The type of the component to get.
          * @returns The component of the specified type, or `null` if the item does not have a component of that type.
          */
-        getComponent: <U extends keyof ItemComponentTypeMap>(componentType: U) => ItemComponent<U> | null
+        getComponent: <U extends keyof ItemComponentTypeMap>(
+            componentType: U
+        ) => U extends "Settings" ? ItemComponent<"Settings"> : ItemComponent<U> | null
 
         /**
          * Adds a component to the item. `Settings` component cannot be added.

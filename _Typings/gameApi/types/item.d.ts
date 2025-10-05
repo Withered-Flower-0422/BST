@@ -65,7 +65,9 @@ declare module "game:type" {
          * @param componentType - The type of the component to get.
          * @returns The specified component of the item, or `null` if the item doesn't have the specified component.
          */
-        readonly getComponent: <T extends keyof ComponentTypeMap>(componentType: T) => Component<T> | null
+        readonly getComponent: <T extends keyof ComponentTypeMap>(
+            componentType: T
+        ) => T extends "Settings" ? Component<"Settings"> : Component<T> | null
 
         /**
          * Moves the item to a specified transform.
