@@ -228,8 +228,8 @@ declare module "game:module" {
         const startTimer: () => void
 
         /**
-         * Stops the game's internal timer and returns the time elapsed in seconds.
-         * @returns The time elapsed in seconds.
+         * Stops the game's internal timer.
+         * @returns The time elapsed since the last `startTimer()` call, in milliseconds.
          */
         const stopTimer: () => float
 
