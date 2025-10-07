@@ -6,7 +6,7 @@ declare module "game:type" {
         /**
          * The colliding item.
          */
-        item: Item | Player
+        item: Item
         /**
          * The proportion of the distance between the collision point and the starting point to the total distance.
          * @range `0 ~ 1`

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 -   Removed type `Player` from `global`; exported it from `game:alias`.
 -   Optimized `gameTemplate.js` and `gameApi.d.ts`. Now `player` can be directly imported from `gameApi`.
+-   The type of `triggeredItem` of `OnTrigger`, `itemA` and `itemB` of `CollisionEvent` and `item` of `RaycastResult` are now back to `Item`.
 
 ## v1.4.2 (2025-09-21)
 
@@ -143,7 +144,7 @@ All notable changes to this project will be documented in this file.
 -   Fixed a bug that class `Trans` should take `Float3` instead of `Quaternion` as its `rot` parameter.
 -   Added a private parameter `_brand` to all basic data types to prevent type-widening.
 -   Now the in-game `console.log()`, `console.error()` and `console.message()` functions only take one parameter.
--   Now the type of `item` of `RaycastResult` is `Item | Player` instead of `Item`.
+-   ~~Now the type of `item` of `RaycastResult` is `Item | Player` instead of `Item`.~~
 -   Fixed some edge cases and bugs about raycast functions.
 -   Added a `bool` property `DisableCollisionDamage` to type `PhysicsObjectData`.
 -   Changed the type of `Events.OnReceiveCustomEvent` from `any[]` to `[any]`.
@@ -164,8 +165,8 @@ All notable changes to this project will be documented in this file.
 -   let `AssertGuid` accept `string` as a valid value when the type parameter is not `const`.
 -   Now `getTransform()` returns `[Float3, Float3, Float3]` instead of `Float3[]`.
 -   Added a new type `Tuple` in `utils.d.ts` and applied it where needed.
--   Now the type of `triggeredItem` of `OnTrigger` is `Item | Player` instead of `Item`.
--   Now the type of `itemA` and `itemB` of `CollisionEvent` is `Item | Player` instead of `Item`.
+-   ~~Now the type of `triggeredItem` of `OnTrigger` is `Item | Player` instead of `Item`.~~
+-   ~~Now the type of `itemA` and `itemB` of `CollisionEvent` is `Item | Player` instead of `Item`.~~
 -   Optimized the logic of `uiElement`, `component` and `sceneObject`.
 
 ## v1.0.6 (2025-05-29)
