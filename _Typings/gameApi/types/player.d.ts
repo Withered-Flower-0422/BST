@@ -16,7 +16,12 @@ declare module "game:type" {
         | "SpongeBall"
 
     type Player = {
-        ballType: BallType
+        /**
+         * If the player ball is never created, the `ballType` will be `null`.
+         */
+        get ballType(): BallType | null
+        set ballType(ballType: BallType)
+
         /**
          * @readonly
          */
