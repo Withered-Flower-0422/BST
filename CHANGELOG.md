@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.3 (2025-10-08)
+
+-   Removed type `Player` from `global`; exported it from `game:alias`.
+-   Optimized `gameTemplate.js` and `gameApi.d.ts`. Now `player` can be directly imported from `gameApi`.
+
 ## v1.4.2 (2025-09-21)
 
 -   Added `Includes`, `IsUnique` and `ExpectTrue` types in `utils.d.ts`.

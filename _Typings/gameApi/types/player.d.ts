@@ -15,67 +15,65 @@ declare module "game:type" {
         | "StickyBall"
         | "SpongeBall"
 
-    global {
-        type Player = {
-            ballType: BallType
-            /**
-             * @readonly
-             */
-            readonly guid: string
-            position: Float3
-            rotation: Float3
-            rotationQuaternion: Quaternion
-            /**
-             * @readonly
-             */
-            readonly physicsObject: Component<"PhysicsObject">
-            /**
-             * @range `0 ~ 100`
-             */
-            durability: float
-            /**
-             * @range `-273.15 ~ 1000`
-             */
-            temperature: float
-            /**
-             * @range `0 ~ 100`
-             */
-            wetness: float
-            /**
-             * @range `0 ~ 100`
-             */
-            power: float
-            /**
-             * @range `0.2 ~ 2.5`
-             */
-            scale: float
+    type Player = {
+        ballType: BallType
+        /**
+         * @readonly
+         */
+        readonly guid: string
+        position: Float3
+        rotation: Float3
+        rotationQuaternion: Quaternion
+        /**
+         * @readonly
+         */
+        readonly physicsObject: Component<"PhysicsObject">
+        /**
+         * @range `0 ~ 100`
+         */
+        durability: float
+        /**
+         * @range `-273.15 ~ 1000`
+         */
+        temperature: float
+        /**
+         * @range `0 ~ 100`
+         */
+        wetness: float
+        /**
+         * @range `0 ~ 100`
+         */
+        power: float
+        /**
+         * @range `0.2 ~ 2.5`
+         */
+        scale: float
 
-            /**
-             * Recovers all properties of the player.
-             * @returns
-             */
-            readonly recoverAll: () => void
+        /**
+         * Recovers all properties of the player.
+         * @returns
+         */
+        readonly recoverAll: () => void
 
-            /**
-             * Transfers the player to a new position.
-             * @param targetPosition - The position to transfer the player to.
-             * @returns
-             */
-            readonly transfer: (targetPosition: Float3) => void
+        /**
+         * Transfers the player to a new position.
+         * @param targetPosition - The position to transfer the player to.
+         * @returns
+         */
+        readonly transfer: (targetPosition: Float3) => void
 
-            /**
-             * Sets the player's renderer mesh.
-             * @param path - The path of the mesh to set as the player's renderer mesh.
-             * @returns
-             */
-            readonly setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
+        /**
+         * Sets the player's renderer mesh.
+         * @param path - The path of the mesh to set as the player's renderer mesh.
+         * @returns
+         */
+        readonly setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
 
-            /**
-             * Sets the player's renderer materials.
-             * @param paths - The paths of the materials to set as the player's renderer materials.
-             * @returns
-             */
-            readonly setRendererMaterials: <const T extends string[]>(paths: AssertPaths<T, "Materials">) => void
-        }
+        /**
+         * Sets the player's renderer materials.
+         * @param paths - The paths of the materials to set as the player's renderer materials.
+         * @returns
+         */
+        readonly setRendererMaterials: <const T extends string[]>(paths: AssertPaths<T, "Materials">) => void
     }
 }

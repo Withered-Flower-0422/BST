@@ -6,5 +6,15 @@ declare module "game:alias" {
 
     export { CancelableEvent, VfxType } from "game:module"
 
-    export { BallType, CollisionEvent, EaseType, Events, RegisterEvents, Item, RaycastResult, Tween } from "game:type"
+    export {
+        BallType,
+        CollisionEvent,
+        EaseType,
+        Events,
+        RegisterEvents,
+        Item,
+        Player,
+        RaycastResult,
+        Tween,
+    } from "game:type"
 }

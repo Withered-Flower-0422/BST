@@ -2,6 +2,10 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "gameApi" {
+    import { Player } from "game:type"
+
+    export const player: Player
+
     export {
         console,
         scene,

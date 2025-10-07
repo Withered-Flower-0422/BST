@@ -1,4 +1,7 @@
 ﻿import {
+    // player
+    player,
+
     // modules
     console,
     scene,
@@ -50,9 +53,6 @@
     WayPoint,
 } from "game:alias" 
 */
-
-/** @type {Player} */
-let player
 
 /** @description Variables set on the `Executor`. */
 const $ = {

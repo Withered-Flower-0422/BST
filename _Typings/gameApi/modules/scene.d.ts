@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { Item, RaycastResult, CollisionLayer } from "game:type"
+    import { Item, Player, RaycastResult, CollisionLayer } from "game:type"
     import { AssertGuid, AssertGuids } from "guid"
     import { AssertNonNeg } from "utils"
 
