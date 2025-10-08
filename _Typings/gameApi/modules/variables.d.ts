@@ -12,7 +12,7 @@ declare module "game:module" {
          * @returns The value of the variable. `Collection` values are `int`.
          * @BuiltinVariables Click to see {@link BuiltinVariables | all built-in variables}.
          */
-        const get: <T extends string>(name: T) => T extends `C_${string}` ? int : any
+        const get: <T extends string>(name: T) => T extends `C_${string}` ? int | null : any
 
         /**
          * Sets the value of a variable.
