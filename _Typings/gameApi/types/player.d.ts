@@ -15,6 +15,9 @@ declare module "game:type" {
         | "StickyBall"
         | "SpongeBall"
 
+    /**
+     * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
+     */
     type Player = {
         /**
          * If the player ball is never created, the `ballType` will be `null`.
