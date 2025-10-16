@@ -8,9 +8,9 @@ declare module "game:module" {
          * @returns
          * @NOTE -
          * - The message only shown in `Testmap Mode`.
-         * - Unlike js intrinsic `console.log()`, this function only takes one argument, and some data types may not be printed correctly.
+         * - Unlike `console.log()` in *browser* or *node*, this function only takes one argument, and some data types may not be printed correctly.
          */
-        const log: (data: any) => void
+        const log: <T>(data: T) => void
 
         /**
          * Logs an error message to the console.
@@ -19,7 +19,7 @@ declare module "game:module" {
          * - The message only shown in `Testmap Mode`.
          * - This function only takes one argument, and some data types may not be printed correctly.
          */
-        const error: (data: any) => void
+        const error: <T>(data: T) => void
 
         /**
          * Logs a message to the console.
@@ -28,7 +28,7 @@ declare module "game:module" {
          * - The message always shown.
          * - This function only takes one argument, and some data types may not be printed correctly.
          */
-        const message: (data: any) => void
+        const message: <T>(data: T) => void
 
         /**
          * Clears the console.
