@@ -3,6 +3,7 @@
 
 declare module "game:module" {
     import { UIElement, UIElementTypeMap } from "game:type"
+    import { Float2 } from "basicData"
 
     namespace uiCanvas {
         /**

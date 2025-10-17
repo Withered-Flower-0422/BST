@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Trans } from "basicData"
+
     type Landscaping = {
         readonly "Instances/Ash_Tree_01": Trans[]
         readonly "Instances/Ash_Tree_02": Trans[]

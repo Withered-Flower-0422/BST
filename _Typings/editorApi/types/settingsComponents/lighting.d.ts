@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { Path } from "path"
+    import { Float3, ColorRGBA } from "basicData"
 
     type Lighting = {
         Enabled: bool

@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { Path } from "path"
+    import { Trans } from "basicData"
 
     type DecalData = {
         TransformOffset: Trans

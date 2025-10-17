@@ -4,6 +4,7 @@
 declare module "game:type" {
     import { NonNegIntRange } from "utils"
     import { Path } from "path"
+    import { Float2, Float3, ColorRGBA, Trans } from "basicData"
 
     enum ParticleEmitterBlendMode {
         Alpha = 0,

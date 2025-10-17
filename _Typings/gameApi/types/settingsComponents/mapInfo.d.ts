@@ -5,6 +5,7 @@ declare module "game:type" {
     import { KeyboardKey } from "keys"
     import { LocalizedString } from "localize"
     import { Path } from "path"
+    import { Float3 } from "basicData"
 
     type int64 = number
 

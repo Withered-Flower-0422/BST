@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Float2 } from "basicData"
+
     type CameraData = {
         Orthographic: bool
         OrthographicSize: float

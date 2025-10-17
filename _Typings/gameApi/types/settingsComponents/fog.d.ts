@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Float2, Float3, ColorRGBA } from "basicData"
+
     enum FogType {
         Disabled = 0,
         PhysicsFog = 1,

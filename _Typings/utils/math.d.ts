@@ -3,6 +3,7 @@
 
 declare module "math" {
     import { Assert0To1 } from "utils"
+    import { Float2, Float3, Float4, Quaternion } from "basicData"
 
     namespace math {
         /**

@@ -4,6 +4,7 @@
 declare module "game:type" {
     import { AssertNonNeg } from "utils"
     import { Path } from "path"
+    import { Float3 } from "basicData"
 
     enum PhysicsBodyType {
         Static = 0,

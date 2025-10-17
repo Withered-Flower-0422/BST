@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { NonNegIntRange } from "utils"
+    import { ColorRGBA } from "basicData"
 
     type CloudLayer = {
         Enabled: bool

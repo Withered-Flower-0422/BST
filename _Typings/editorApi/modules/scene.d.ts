@@ -5,6 +5,7 @@ declare module "editor:module" {
     import { SceneObject, SceneObjectType } from "editor:type"
     import { AssertGuid, AssertGuids } from "guid"
     import { AssertPath } from "path"
+    import { Float3 } from "basicData"
 
     namespace scene {
         /**

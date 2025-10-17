@@ -4,6 +4,7 @@
 declare module "editor:type" {
     import { NonNegIntRange } from "utils"
     import { Path } from "path"
+    import { Float2, Float3, ColorRGBA } from "basicData"
 
     enum LightType {
         Point = 0,

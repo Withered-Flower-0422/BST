@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { Path } from "path"
+    import { Float2, Float3, Float4, Bool3, ColorRGBA } from "basicData"
 
     enum VariableType {
         String = 0,

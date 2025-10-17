@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { Path } from "path"
+    import { Float2, Float3, Float4, Bool3, ColorRGBA, Trans } from "basicData"
 
     enum VariableType {
         String = 0,

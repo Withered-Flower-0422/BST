@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { AssertNonNegInt } from "utils"
+    import { Float3, Quaternion, Trans } from "basicData"
 
     type Item = {
         /**

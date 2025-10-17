@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { Path } from "path"
+    import { Float3 } from "basicData"
 
     type CollectionData = {
         readonly CollectionName: string

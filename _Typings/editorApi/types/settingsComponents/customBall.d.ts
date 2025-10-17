@@ -4,6 +4,7 @@
 declare module "editor:type" {
     import { LocalizedString } from "localize"
     import { Path } from "path"
+    import { ColorRGBA } from "basicData"
 
     type CustomBallSettings = {
         ItemTemplate: string

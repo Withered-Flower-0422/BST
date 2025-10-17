@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { Path } from "path"
+    import { Float2, Float4, ColorRGBA } from "basicData"
 
     type Image = {
         /**

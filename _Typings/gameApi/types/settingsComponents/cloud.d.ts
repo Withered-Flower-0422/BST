@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { NonNegIntRange } from "utils"
+    import { ColorRGBA } from "basicData"
 
     type Cloud = {
         "CloudLayer1/Enabled": bool

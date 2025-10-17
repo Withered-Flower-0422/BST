@@ -5,6 +5,7 @@ declare module "editor:type" {
     import { KeyboardKey } from "keys"
     import { LocalizedString } from "localize"
     import { Path } from "path"
+    import { Float3 } from "basicData"
 
     enum Difficulty {
         Easy = 0,

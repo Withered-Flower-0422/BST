@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
+    import { Float3 } from "basicData"
+
     import {
         Cloud,
         Environment,

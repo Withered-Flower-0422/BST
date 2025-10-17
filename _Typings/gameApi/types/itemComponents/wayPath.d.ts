@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { Assert0To1, Assert0To1s } from "utils"
+    import { Float3, Quaternion } from "basicData"
 
     type WayPathData = {
         readonly WayPoints: string[]

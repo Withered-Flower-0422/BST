@@ -7,6 +7,7 @@ declare module "game:module" {
     import { Assert0To1, Assert0To1s, AssertNonNeg, AssertNonNegInt } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
     import { AssertPath } from "path"
+    import { Float3, ColorRGBA } from "basicData"
 
     enum Skin {
         Default = 0,

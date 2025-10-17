@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.0 (2025-10-17)
+
+-   Removed `Float2`, `Float3`, `Float4`, `Quaternion`, `Bool3`, `Trans` and `ColorRGBA` from `global`.
+-   Modified some files to adapt to the changes.
+
 ## v1.4.4 (2025-10-17)
 
 -   Now the in-game `console.log()` should take exactly one parameter. (Errors can be correctly caught if no parameter is passed.)

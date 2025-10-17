@@ -3,6 +3,7 @@
 
 declare module "game:module" {
     import { KeyboardKey, NonNoneKey, MouseButton, GamePadButton, PlayerKey } from "keys"
+    import { Float2 } from "basicData"
 
     namespace inputManager {
         namespace keyboard {

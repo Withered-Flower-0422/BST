@@ -3,6 +3,7 @@
 
 declare module "editor:type" {
     import { Path } from "path"
+    import { Float3 } from "basicData"
 
     enum CollisionLayer {
         Player = 0,

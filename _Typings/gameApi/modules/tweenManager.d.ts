@@ -4,6 +4,7 @@
 declare module "game:module" {
     import { EaseType, Tween } from "game:type"
     import { AssertNonNegInt } from "utils"
+    import { Float3, Quaternion, ColorRGBA } from "basicData"
 
     namespace tweenManager {
         /**

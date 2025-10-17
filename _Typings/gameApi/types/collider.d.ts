@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Float3 } from "basicData"
+
     enum CollisionLayer {
         Player = 0,
         RigidBody = 1,

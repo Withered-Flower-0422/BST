@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:type" {
+    import { Float3, ColorRGBA } from "basicData"
+
     enum HierarchyIcon {
         Auto = 0,
         MapInfo = 1,

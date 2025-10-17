@@ -3,6 +3,7 @@
 
 declare module "game:type" {
     import { AssertPath, AssertPaths } from "path"
+    import { Float3, Quaternion } from "basicData"
 
     type BallType =
         | "WoodenBall"

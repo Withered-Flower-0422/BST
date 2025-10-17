@@ -4,6 +4,7 @@
 declare module "game:type" {
     import { BuiltinCollections } from "game:type"
     import { IsUnique as IU, ExpectTrue as ET } from "utils"
+    import { Float3 } from "basicData"
 
     type Events = {
         /**
