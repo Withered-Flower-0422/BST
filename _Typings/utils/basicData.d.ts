@@ -154,10 +154,18 @@ declare module "__future__" {
         a: float
     }
 
-    const ColorRGBA: new <R extends float, G extends float, B extends float, A extends float>(
+    type ColorRGBAConstructor = new <R extends float, G extends float, B extends float, A extends float>(
         r: Assert0To1<R>,
         g: Assert0To1<G>,
         b: Assert0To1<B>,
         a: Assert0To1<A>
     ) => ColorRGBA
+
+    /**
+     * @param r - The red component of the color, between 0 and 1.
+     * @param g - The green component of the color, between 0 and 1.
+     * @param b - The blue component of the color, between 0 and 1.
+     * @param a - The alpha component of the color, between 0 and 1.
+     */
+    const ColorRGBA: ColorRGBAConstructor
 }
