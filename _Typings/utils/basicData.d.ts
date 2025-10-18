@@ -3,6 +3,7 @@
 
 declare module "basicData" {
     import { Assert0To1 } from "utils"
+    import { ColorRGBA as _ColorRGBA } from "__future__"
 
     global {
         type int = number
@@ -121,7 +122,42 @@ declare module "basicData" {
          * @param g - The green component of the color, between 0 and 1.
          * @param b - The blue component of the color, between 0 and 1.
          * @param a - The alpha component of the color, between 0 and 1.
+         *
+         * @Note -
+         * - The generic type parameters here are to check if the color components are between 0 and 1, but they bring some issues.
+         * - You are allowed to modify the color components during runtime, but the generic type parameters will not be updated.
+         * - e.g.
+         *
+         * ```ts
+         * const color = new ColorRGBA(1, 0, 0, 1) // The type of `color` is `ColorRGBA<1, 0, 0, 1>`.
+         * color.r = 0.5 // The type of `color` is still `ColorRGBA<1, 0, 0, 1>`, but `r` is now actually 0.5.
+         * ```
+         *
+         * - This may cause confusion, so **it's recommended to create a new instance of `ColorRGBA` instead of modifying the existing one**.
+         * - {@link _ColorRGBA | Here} is a possible fix for this issue, but I don't know if it's a better way compared to the current implementation. So I'll leave it in the `__future__` module for now.
          */
         constructor(r: Assert0To1<R>, g: Assert0To1<G>, b: Assert0To1<B>, a: Assert0To1<A>)
     }
+}
+
+declare module "__future__" {
+    import { Assert0To1 } from "utils"
+
+    const _ColorRGBABrand: unique symbol
+
+    type ColorRGBA = {
+        [_ColorRGBABrand]: never
+
+        r: float
+        g: float
+        b: float
+        a: float
+    }
+
+    const ColorRGBA: new <R extends float, G extends float, B extends float, A extends float>(
+        r: Assert0To1<R>,
+        g: Assert0To1<G>,
+        b: Assert0To1<B>,
+        a: Assert0To1<A>
+    ) => ColorRGBA
 }
