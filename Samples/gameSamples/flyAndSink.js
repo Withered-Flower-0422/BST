@@ -7,23 +7,13 @@
  * @author Withered Flower
  */
 
-import { scene, levelManager, inputManager } from "gameApi"
-
-/** @type {Player} */
-let player
+import { player, levelManager, inputManager } from "gameApi"
 
 /** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<IsUnique<typeof registerEvents>>} */
-export const registerEvents = /** @type {const} */ (["OnTimerActive", "OnPhysicsUpdate"])
+export const registerEvents = /** @type {const} */ (["OnPhysicsUpdate"])
 
 /** @type {OnEvents<typeof registerEvents>} */
 export const onEvents = (self, events) => {
-    if (events.OnTimerActive) {
-        // load the player only once to improve performance
-        if (!player) {
-            player = scene.getPlayer()
-        }
-    }
-
     if (events.OnPhysicsUpdate) {
         // ensure the ball is movable
         if (!levelManager.timerEnabled) {
