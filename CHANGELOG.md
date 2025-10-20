@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.1 (2025-10-20)
+
+-   Rewrote the logic of class `ColorRGBA`.
+-   Optimized the description of `player.ballType`.
+
 ## v1.5.0 (2025-10-17)
 
 -   Removed `Float2`, `Float3`, `Float4`, `Quaternion`, `Bool3`, `Trans` and `ColorRGBA` from `global`.

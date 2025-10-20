@@ -5,6 +5,10 @@ declare module "game:type" {
     import { AssertPath, AssertPaths } from "path"
     import { Float3, Quaternion } from "basicData"
 
+    /**
+     * Ball type can be any string if custom balls are considered.
+     * This type does not consider custom balls for easy typing.
+     */
     type BallType =
         | "WoodenBall"
         | "StoneBall"
@@ -22,6 +26,10 @@ declare module "game:type" {
     type Player = {
         /**
          * If the player ball is never created, the `ballType` will be `null`.
+         *
+         * @Note -
+         * - Ball type can be any string if custom balls are considered.
+         * - This type does not consider custom balls for easy typing.
          */
         get ballType(): BallType | null
         set ballType(ballType: BallType)
