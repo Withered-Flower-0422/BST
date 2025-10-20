@@ -121,7 +121,7 @@ declare module "basicData" {
          * @param b - The blue component of the color, between 0 and 1.
          * @param a - The alpha component of the color, between 0 and 1.
          */
-        new <R extends float, G extends float, B extends float, A extends float>(
+        new <R extends float = float, G extends float = float, B extends float = float, A extends float = float>(
             r: Assert0To1<R>,
             g: Assert0To1<G>,
             b: Assert0To1<B>,
