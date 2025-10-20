@@ -198,9 +198,9 @@ declare module "game:type" {
         type RegisterEvent = keyof Events
 
         /**
-         * Helper type to check if a list of items is unique.
+         * Helper type to check if a list of items is unique and not contain any `any` type.
          */
-        type IsUnique<T extends readonly any[]> = IU<T>
+        type IsUnique<T extends readonly any[]> = IU<T, false>
 
         /**
          * Helper type to check if a type is `true`.

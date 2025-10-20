@@ -180,7 +180,11 @@ declare module "utils" {
             : Includes<R, U>
         : false
 
-    type IsUnique<T extends readonly any[]> = T extends [infer F, ...infer R]
+    type IsUnique<T extends readonly any[], AllowAny extends boolean = true> = AllowAny extends false
+        ? Includes<T, any> extends true
+            ? false
+            : IsUnique<T>
+        : T extends [infer F, ...infer R]
         ? Includes<R, F> extends true
             ? false
             : IsUnique<R>
