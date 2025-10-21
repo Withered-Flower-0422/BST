@@ -105,7 +105,7 @@ declare module "basicData" {
 
     const _ColorRGBABrand: unique symbol
 
-    type ColorRGBA = {
+    interface ColorRGBA {
         [_ColorRGBABrand]: never
 
         r: float
@@ -114,7 +114,7 @@ declare module "basicData" {
         a: float
     }
 
-    type ColorRGBAConstructor = {
+    interface ColorRGBAConstructor {
         /**
          * @param r - The red component of the color, between 0 and 1.
          * @param g - The green component of the color, between 0 and 1.
