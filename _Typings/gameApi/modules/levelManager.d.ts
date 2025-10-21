@@ -106,7 +106,7 @@ declare module "game:module" {
         const callRestart: () => void
 
         /**
-         * Transfers the player ball to the specified position.
+         * Transfers the player ball to the specified position. The camera will jump to the position directly.
          * @param targetPosition - The position to transfer the player ball to.
          * @returns
          */

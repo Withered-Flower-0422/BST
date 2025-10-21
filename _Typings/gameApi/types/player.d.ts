@@ -29,7 +29,7 @@ declare module "game:type" {
          *
          * @Note -
          * - Ball type can be any string if custom balls are considered.
-         * - This type does not consider custom balls for easy typing.
+         * - Custom balls are not considered here for easy typing.
          */
         get ballType(): BallType | null
         set ballType(ballType: BallType)
@@ -38,6 +38,10 @@ declare module "game:type" {
          * @readonly
          */
         readonly guid: string
+        /**
+         * - Assigning a value to this property will change the player's position with camera following smoothly.
+         * - If you want the camera to jump to the player's position directly, use `player.transfer()` or `levelManager.transferPlayer()` instead.
+         */
         position: Float3
         rotation: Float3
         rotationQuaternion: Quaternion
@@ -73,7 +77,7 @@ declare module "game:type" {
         readonly recoverAll: () => void
 
         /**
-         * Transfers the player to a new position.
+         * Transfers the player to a new position. The camera will jump to the new position directly.
          * @param targetPosition - The position to transfer the player to.
          * @returns
          */
