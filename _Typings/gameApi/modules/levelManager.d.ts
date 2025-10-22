@@ -172,7 +172,7 @@ declare module "game:module" {
          * @returns
          */
         const cancelEvent: <RE extends RegisterEvent[] = RegisterEvent[]>(
-            eventName: keyof Events & `OnPre${string}` & RE[number]
+            eventName: `OnPre${string}` & RE[number]
         ) => void
 
         /**

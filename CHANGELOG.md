@@ -6,7 +6,8 @@ All notable changes to this project will be documented in this file.
 
 -   Removed type `CancelableEvent`.
 -   Use `interface` to define `ColorRGBA` and `ColorRGBAConstructor` instead of `type`.
--   Added default generic type values to `new ColorRGBA()`
+-   Added default generic type values to `new ColorRGBA()`.
+-   Now `BallType` can be any string.
 
 ## v1.5.1 (2025-10-20)
 
