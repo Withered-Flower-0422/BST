@@ -4,7 +4,7 @@
 declare module "game:alias" {
     export { KeyboardKey, NonNoneKey, MouseButton, GamePadButton, PlayerKey } from "keys"
 
-    export { CancelableEvent, VfxType } from "game:module"
+    export { VfxType } from "game:module"
 
     export {
         BallType,

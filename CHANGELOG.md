@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.2 (2025-10-22)
+
+-   Removed type `CancelableEvent`.
+-   Use `interface` to define `ColorRGBA` and `ColorRGBAConstructor` instead of `type`.
+-   Added default generic type values to `new ColorRGBA()`
+
 ## v1.5.1 (2025-10-20)
 
 -   Rewrote the logic of class `ColorRGBA`.

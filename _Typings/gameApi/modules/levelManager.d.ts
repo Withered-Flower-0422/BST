@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { Component } from "game:type"
+    import { Component, Events } from "game:type"
     import { AssertGuid } from "guid"
     import { Assert0To1, Assert0To1s, AssertNonNeg, AssertNonNegInt } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
@@ -13,17 +13,6 @@ declare module "game:module" {
         Default = 0,
         Mush = 1,
     }
-
-    type CancelableEvent =
-        | "OnPreRestartLevel"
-        | "OnPrePlayerDeadStart"
-        | "OnPreCheckpointReached"
-        | "OnPreDestinationReached"
-        | "OnPreGetCollection"
-        | "OnPreSwitchBallStart"
-        | "OnPreSwitchBallEnd"
-        | "OnPreTransferBallStart"
-        | "OnPreTransferBallEnd"
 
     type VfxType =
         | "SpawnPlayer"
@@ -178,13 +167,12 @@ declare module "game:module" {
         const load: () => json
 
         /**
-         * Cancels the specified event. The event must be cancelable.
+         * Cancels the specified event. The event must be cancelable (i.e. starts with `OnPre`).
          * @param eventName - The name of the event to be canceled.
          * @returns
-         * @CancelableEvent Click to see {@link CancelableEvent | all cancelable events}.
          */
         const cancelEvent: <RE extends RegisterEvent[] = RegisterEvent[]>(
-            eventName: CancelableEvent & RE[number]
+            eventName: keyof Events & `OnPre${string}` & RE[number]
         ) => void
 
         /**
