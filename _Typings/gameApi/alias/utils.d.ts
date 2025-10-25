@@ -7,6 +7,7 @@ declare module "game:alias" {
     export { VfxType } from "game:module"
 
     export {
+        BuiltinBallType,
         BallType,
         CollisionEvent,
         EaseType,
