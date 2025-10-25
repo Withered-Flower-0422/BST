@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.3 (2025-10-26)
+
+-   Temporarily prohibited assigning non-builtin ball types to `player.ballType`.
+
 ## v1.5.2 (2025-10-22)
 
 -   Removed type `CancelableEvent`.

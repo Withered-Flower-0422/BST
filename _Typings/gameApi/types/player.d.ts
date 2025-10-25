@@ -5,7 +5,7 @@ declare module "game:type" {
     import { AssertPath, AssertPaths } from "path"
     import { Float3, Quaternion } from "basicData"
 
-    type BallType =
+    type BuiltinBallType =
         | "WoodenBall"
         | "StoneBall"
         | "PaperBall"
@@ -15,17 +15,22 @@ declare module "game:type" {
         | "BalloonBall"
         | "StickyBall"
         | "SpongeBall"
-        | (string & {})
+
+    type BallType = BuiltinBallType | (string & {})
 
     /**
      * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
      */
     type Player = {
         /**
-         * If the player ball is never created, the `ballType` will be `null`.
+         * - If the player ball is never created, the `ballType` will be `null`.
          */
         get ballType(): BallType | null
-        set ballType(ballType: BallType)
+
+        /**
+         * - Only {@link BuiltinBallType | builtin ball types} can be set.
+         */
+        set ballType(ballType: BuiltinBallType)
 
         /**
          * @readonly
