@@ -32,7 +32,7 @@ declare module "editor:type" {
          * - Because the returned data is a string, no type hint here,
          *   you may set specified type to it manually if you want type hint
          */
-        getData: () => json
+        readonly getData: () => json
 
         /**
          * Sets data to the component.
@@ -41,6 +41,6 @@ declare module "editor:type" {
          * @NOTE -
          * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
          */
-        setData: (data: json) => void
+        readonly setData: (data: json) => void
     }
 }

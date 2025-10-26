@@ -16,7 +16,7 @@ declare module "editor:type" {
          * @param componentType - The type of the component to get.
          * @returns The component of the specified type, or `null` if the item does not have a component of that type.
          */
-        getComponent: <U extends keyof ItemComponentTypeMap>(
+        readonly getComponent: <U extends keyof ItemComponentTypeMap>(
             componentType: U
         ) => U extends "Settings" ? ItemComponent<"Settings"> : ItemComponent<U> | null
 
@@ -25,14 +25,16 @@ declare module "editor:type" {
          * @param componentType - The type of the component to add.
          * @returns The added component of the specified type.
          */
-        addComponent: <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => ItemComponent<U>
+        readonly addComponent: <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(
+            componentType: U
+        ) => ItemComponent<U>
 
         /**
          * Removes a component from the item. `Settings` component cannot be removed.
          * @param componentType - The type of the component to remove.
          * @returns
          */
-        removeComponent: <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => void
+        readonly removeComponent: <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U) => void
     }
 
     type Settings = {
@@ -47,7 +49,7 @@ declare module "editor:type" {
          * @param componentType - The type of the component to get.
          * @returns The component of the specified type.
          */
-        getComponent: <U extends keyof SettingsComponentTypeMap>(componentType: U) => SettingsComponent<U>
+        readonly getComponent: <U extends keyof SettingsComponentTypeMap>(componentType: U) => SettingsComponent<U>
     }
 
     type Folder = {
@@ -81,7 +83,7 @@ declare module "editor:type" {
          * Generates a new guid for the object.
          * @returns The new guid of the object.
          */
-        getNewGuid: () => string
+        readonly getNewGuid: () => string
 
         /**
          * Sets a specified local transform to the object.
@@ -90,70 +92,70 @@ declare module "editor:type" {
          * @param scale - The local scale to set.
          * @returns
          */
-        setTransform: (position: Float3, rotation: Float3, scale: Float3) => void
+        readonly setTransform: (position: Float3, rotation: Float3, scale: Float3) => void
 
         /**
          * Sets a specified local position to the object without changing the rotation or scale.
          * @param position - The local position to set.
          * @returns
          */
-        setPosition: (position: Float3) => void
+        readonly setPosition: (position: Float3) => void
 
         /**
          * Sets a specified local rotation to the object without changing the position or scale.
          * @param rotation - The local rotation to set.
          * @returns
          */
-        setRotation: (rotation: Float3) => void
+        readonly setRotation: (rotation: Float3) => void
 
         /**
          * Sets a specified local scale to the object without changing the position or rotation.
          * @param scale - The local scale to set.
          * @returns
          */
-        setScale: (scale: Float3) => void
+        readonly setScale: (scale: Float3) => void
 
         /**
          * Gets the local transform of the object.
          * @returns The local transform of the object.
          */
-        getTransform: () => [Float3, Float3, Float3]
+        readonly getTransform: () => [Float3, Float3, Float3]
 
         /**
          * Gets the global position of the object.
          * @returns The global position of the object.
          */
-        getGlobalPosition: () => Float3
+        readonly getGlobalPosition: () => Float3
 
         /**
          * Gets the global rotation of the object.
          * @returns The global rotation of the object.
          */
-        getGlobalRotation: () => Float3
+        readonly getGlobalRotation: () => Float3
 
         /**
          * Gets the global scale of the object.
          * @returns The global scale of the object.
          */
-        getGlobalScale: () => Float3
+        readonly getGlobalScale: () => Float3
 
         /**
          * Gets the parent of the object. If the object has no parent, returns `null`.
          * @returns The parent of the object, or `null` if the object has no parent.
          */
-        getParent: () => SceneObject<SceneObjectType> | null
+        readonly getParent: () => SceneObject<SceneObjectType> | null
 
         /**
          * Sets the parent of the object. If `null` is passed, the object will be removed from its parent.
          * @param parent - The parent to set. If `null`, the object will be removed from its parent.
          * @returns
          */
-        setParent: (parent: SceneObject<SceneObjectType> | null) => void
+        readonly setParent: (parent: SceneObject<SceneObjectType> | null) => void
 
         /**
          * Gets the children of the object.
          * @returns The children of the object.
          */
-        getChildren: () => SceneObject<SceneObjectType>[]
+        readonly getChildren: () => SceneObject<SceneObjectType>[]
     } & SceneObjectTypeMap[T]
 }
