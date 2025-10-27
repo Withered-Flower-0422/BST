@@ -140,7 +140,7 @@ All notable changes to this project will be documented in this file.
 
 ## v1.1.2 (2025-07-02)
 
--   Renamed type `builtInCollections` to `BuiltinCollections`, and moved it to a new file `builtin.d.ts`, where another type `BuiltinVariables` is defined.
+-   Renamed type `builtInCollections` to `BuiltinCollection`, and moved it to a new file `builtin.d.ts`, where another type `BuiltinVariable` is defined.
 -   Moved type `BallType` to `player.d.ts`.
 -   Fixed a bug that the type of `Events.OnPreGetCollection` and `Events.OnPostGetCollection` should be `string[]` instead of `` `C_${string}`[] ``.
 -   Fixed some wrong descriptions.

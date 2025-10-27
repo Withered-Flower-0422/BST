@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { BuiltinCollections } from "game:type"
+    import { BuiltinCollection } from "game:type"
     import { IsUnique as IU, ExpectTrue as ET } from "utils"
     import { Float3 } from "basicData"
 
@@ -89,13 +89,13 @@ declare module "game:type" {
          * On pre-getting collections.
          * @cancelable
          * @Message Name of collection items that are being collected, wrapped in an array.
-         * @BuiltinCollections Click to see {@link BuiltinCollections | all built-in collections}.
+         * @BuiltinCollection Click to see {@link BuiltinCollection | all built-in collections}.
          */
         OnPreGetCollection?: string[]
 
         /**
          * On post-getting collections.
-         * @BuiltinCollections Click to see {@link BuiltinCollections | all built-in collections}.
+         * @BuiltinCollection Click to see {@link BuiltinCollection | all built-in collections}.
          * @Message Name of collection items that are being collected, wrapped in an array.
          */
         OnPostGetCollection?: string[]

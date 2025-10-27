@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { BuiltinVariables } from "game:type"
+    import { BuiltinVariable } from "game:type"
     import { AssertInt } from "utils"
 
     namespace variables {
@@ -10,7 +10,7 @@ declare module "game:module" {
          * Gets the value of a variable.
          * @param name - The name of the variable to get, if starts with `C_` it refers to a `Collection`.
          * @returns The value of the variable. `Collection` values are `int`.
-         * @BuiltinVariables Click to see {@link BuiltinVariables | all built-in variables}.
+         * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
          */
         const get: <T extends string>(name: T) => T extends `C_${string}` ? int | null : any
 
@@ -19,7 +19,7 @@ declare module "game:module" {
          * @param name - The name of the variable to set, if starts with `C_` it refers to a `Collection`.
          * @param value - The value to set. `Collection` values should be `int`.
          * @returns
-         * @BuiltinVariables Click to see {@link BuiltinVariables | all built-in variables}.
+         * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
          * @NOTE -
          * - **NEVER** name a variable starting with `C_` manually.
          * - The `Collection` values can be negative if you really need.
