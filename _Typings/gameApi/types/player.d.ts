@@ -29,14 +29,14 @@ declare module "game:type" {
               get ballType(): BallType | null
 
               /**
-               * - Only {@link BuiltinBallType | builtin ball types} can be set.
+               * - Only {@link BuiltinBallType | builtin ball types} can be set for now.
                */
               set ballType(ballType: BuiltinBallType)
           }
         : {
               get ballType(): BallType
               /**
-               * - Only {@link BuiltinBallType | builtin ball types} can be set.
+               * - Only {@link BuiltinBallType | builtin ball types} can be set for now.
                */
               set ballType(ballType: BuiltinBallType)
           }) & {

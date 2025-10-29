@@ -52,6 +52,7 @@ declare module "editor:type" {
         readonly getComponent: <U extends keyof SettingsComponentTypeMap>(componentType: U) => SettingsComponent<U>
     }
 
+    /** @deprecated */
     type Folder = {
         /**
          * `Folder` deprecated

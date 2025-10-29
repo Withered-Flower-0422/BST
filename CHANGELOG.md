@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.5 (2025-10-30)
+
+-   Added `levelManager.spawnBallType`.
+-   Marked `levelManager.spawnBallType` and `dialogWindowManager.openConfirmDialog()` as `Not Implemented`.
+-   Marked `SceneFolder` as `deprecated`.
+
 ## v1.5.4 (2025-10-29)
 
 -   Optimized the return type of `scene.getPlayer()`.
