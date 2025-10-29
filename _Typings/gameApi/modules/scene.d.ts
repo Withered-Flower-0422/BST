@@ -32,15 +32,7 @@ declare module "game:module" {
          * Gets the player. If the player has not been created, it will return `null`.
          * @returns The player or `null` if the player has not been created.
          */
-        const getPlayer: () =>
-            | (Omit<Player, "ballType"> & {
-                  get ballType(): BallType
-                  /**
-                   * - Only {@link BuiltinBallType | builtin ball types} can be set.
-                   */
-                  set ballType(ballType: BuiltinBallType)
-              })
-            | null
+        const getPlayer: () => Player<true> | null
 
         /**
          * Destroys the item by its guid.

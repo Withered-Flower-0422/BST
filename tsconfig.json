@@ -1,0 +1,7 @@
+{
+    "extends":"./jsconfig.json",
+    "compilerOptions": {
+        "strict": true,
+        "noEmit": true
+    }
+}

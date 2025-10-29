@@ -21,17 +21,25 @@ declare module "game:type" {
     /**
      * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
      */
-    type Player = {
-        /**
-         * - If the player ball is never created, the `ballType` will be `null`.
-         */
-        get ballType(): BallType | null
+    type Player<Scene extends bool = false> = (Scene extends false
+        ? {
+              /**
+               * - If the player ball is never created, the `ballType` will be `null`.
+               */
+              get ballType(): BallType | null
 
-        /**
-         * - Only {@link BuiltinBallType | builtin ball types} can be set.
-         */
-        set ballType(ballType: BuiltinBallType)
-
+              /**
+               * - Only {@link BuiltinBallType | builtin ball types} can be set.
+               */
+              set ballType(ballType: BuiltinBallType)
+          }
+        : {
+              get ballType(): BallType
+              /**
+               * - Only {@link BuiltinBallType | builtin ball types} can be set.
+               */
+              set ballType(ballType: BuiltinBallType)
+          }) & {
         /**
          * @readonly
          */

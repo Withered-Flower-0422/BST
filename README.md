@@ -17,9 +17,12 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 -   Put the `_Typings` folder and `jsconfig.json` file in `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro HDRP\Assets\Scripts`.
 
 -   If you don't want type checking during coding:
+
     -   Ignore one line: add `// @ts-ignore` above the line you want to ignore.
     -   Ignore the whole file: add `// @ts-nocheck` at the top of the file.
     -   Ignore every file: change the `checkJS` setting in `jsconfig.json` to `false`.
+
+-   If you want to enable [strict](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#--strict-) type checking, you can uncomment `"strict": true` in `tsconfig.json`.
 
 ## Changelog
 
