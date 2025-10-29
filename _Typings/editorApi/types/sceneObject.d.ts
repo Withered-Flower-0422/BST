@@ -68,7 +68,7 @@ declare module "editor:type" {
 
     type SceneObjectType = keyof SceneObjectTypeMap
 
-    type SceneObject<T extends SceneObjectType> = {
+    type SceneObject<T extends SceneObjectType = SceneObjectType> = {
         /**
          * @readonly
          */
@@ -143,19 +143,19 @@ declare module "editor:type" {
          * Gets the parent of the object. If the object has no parent, returns `null`.
          * @returns The parent of the object, or `null` if the object has no parent.
          */
-        readonly getParent: () => SceneObject<SceneObjectType> | null
+        readonly getParent: () => SceneObject | null
 
         /**
          * Sets the parent of the object. If `null` is passed, the object will be removed from its parent.
          * @param parent - The parent to set. If `null`, the object will be removed from its parent.
          * @returns
          */
-        readonly setParent: (parent: SceneObject<SceneObjectType> | null) => void
+        readonly setParent: (parent: SceneObject | null) => void
 
         /**
          * Gets the children of the object.
          * @returns The children of the object.
          */
-        readonly getChildren: () => SceneObject<SceneObjectType>[]
+        readonly getChildren: () => SceneObject[]
     } & SceneObjectTypeMap[T]
 }

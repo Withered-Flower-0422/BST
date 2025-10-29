@@ -24,7 +24,7 @@ declare module "game:type" {
         Executor: { data: ExecutorData; method: ExecutorMethod }
     }
 
-    type Component<T extends keyof ComponentTypeMap> = {
+    type Component<T extends keyof ComponentTypeMap = keyof ComponentTypeMap> = {
         /**
          * @readonly
          */

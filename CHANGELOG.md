@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.4 (2025-10-29)
+
+-   Optimized the return type of `scene.getPlayer()`.
+-   Gave default generic type values to `UIElement`, `SceneObject` and `Component`.
+
 ## v1.5.3 (2025-10-26)
 
 -   Temporarily prohibited assigning non-builtin ball types to `player.ballType`.

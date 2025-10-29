@@ -36,6 +36,6 @@ declare module "game:module" {
          * @param element - The UI element to destroy.
          * @returns
          */
-        const destroyUI: (element: UIElement<keyof UIElementTypeMap>) => void
+        const destroyUI: (element: UIElement) => void
     }
 }

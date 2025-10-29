@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { Item, Player, RaycastResult, CollisionLayer } from "game:type"
+    import { Item, Player, RaycastResult, CollisionLayer, BuiltinBallType, BallType } from "game:type"
     import { AssertGuid, AssertGuids } from "guid"
     import { AssertNonNeg } from "utils"
     import { Float3, Quaternion } from "basicData"
@@ -32,7 +32,15 @@ declare module "game:module" {
          * Gets the player. If the player has not been created, it will return `null`.
          * @returns The player or `null` if the player has not been created.
          */
-        const getPlayer: () => Player | null
+        const getPlayer: () =>
+            | (Omit<Player, "ballType"> & {
+                  get ballType(): BallType
+                  /**
+                   * - Only {@link BuiltinBallType | builtin ball types} can be set.
+                   */
+                  set ballType(ballType: BuiltinBallType)
+              })
+            | null
 
         /**
          * Destroys the item by its guid.

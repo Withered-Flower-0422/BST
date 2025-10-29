@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { Component, Events } from "game:type"
+    import { Component } from "game:type"
     import { AssertGuid } from "guid"
     import { Assert0To1, Assert0To1s, AssertNonNeg, AssertNonNegInt } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"

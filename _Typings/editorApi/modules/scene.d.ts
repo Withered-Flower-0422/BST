@@ -12,23 +12,21 @@ declare module "editor:module" {
          * Gets all the objects in the scene.
          * @returns An array of all the objects in the scene.
          */
-        const getAllObjects: () => SceneObject<SceneObjectType>[]
+        const getAllObjects: () => SceneObject[]
 
         /**
          * Gets an object by its guid.
          * @param guid - The guid string of the object to get.
          * @returns The object with the given guid, or `null` if the object does not exist.
          */
-        const getObject: <S extends string>(guid: AssertGuid<S>) => SceneObject<SceneObjectType> | null
+        const getObject: <S extends string>(guid: AssertGuid<S>) => SceneObject | null
 
         /**
          * Gets multiple objects by their guids.
          * @param guids - The guid strings in an array of the objects to get.
          * @returns An array of the objects with the given guids.
          */
-        const getObjects: <const S extends string[]>(
-            guids: AssertGuids<S>
-        ) => { [P in keyof S]: SceneObject<SceneObjectType> }
+        const getObjects: <const S extends string[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
 
         /**
          * Destroys an object by its guid.
@@ -59,29 +57,27 @@ declare module "editor:module" {
          * @param guid - The guid string of the object to duplicate.
          * @returns The duplicated object.
          */
-        const duplicateObject: <S extends string>(guid: AssertGuid<S>) => SceneObject<SceneObjectType>
+        const duplicateObject: <S extends string>(guid: AssertGuid<S>) => SceneObject
 
         /**
          * Duplicates multiple objects by their guids.
          * @param guids - The guid strings in an array of the objects to duplicate.
          * @returns An array of the duplicated objects.
          */
-        const duplicateObjects: <const S extends string[]>(
-            guids: AssertGuids<S>
-        ) => { [P in keyof S]: SceneObject<SceneObjectType> }
+        const duplicateObjects: <const S extends string[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
 
         /**
          * Gets the selected object in the scene. If no object is selected, returns `null`.
          * If multiple objects are selected, returns the activated selected object.
          * @returns The activated selected object or `null` if no object is selected.
          */
-        const getSelectedObject: () => SceneObject<SceneObjectType> | null
+        const getSelectedObject: () => SceneObject | null
 
         /**
          * Gets all the selected objects in the scene. If no object is selected, returns an empty array.
          * @returns An array of all the selected objects in the scene.
          */
-        const getSelectedObjects: () => SceneObject<SceneObjectType>[]
+        const getSelectedObjects: () => SceneObject[]
 
         /**
          * Sets the selection of the objects in the scene.

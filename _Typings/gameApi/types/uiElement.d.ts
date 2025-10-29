@@ -115,7 +115,7 @@ declare module "game:type" {
         Panel: Panel
     }
 
-    type UIElement<T extends keyof UIElementTypeMap> = {
+    type UIElement<T extends keyof UIElementTypeMap = keyof UIElementTypeMap> = {
         /**
          * @default true
          */
@@ -123,7 +123,7 @@ declare module "game:type" {
         /**
          * @default null
          */
-        parent: UIElement<keyof UIElementTypeMap> | null
+        parent: UIElement | null
         /**
          * @default new Float2(0, 0)
          */
