@@ -1,7 +1,15 @@
 {
-    "extends":"./jsconfig.json",
     "compilerOptions": {
         "strict": true,
-        "noEmit": true
-    }
+        "noEmit": true,
+        "target": "esnext",
+        "checkJs": true
+    },
+    "include": [
+        // "Samples/**/*",
+        // "Templates/**/*",
+        // "test/js/**/*",
+        "_Typings/**/*",
+        "test/ts/**/*"
+    ]
 }

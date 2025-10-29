@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        // "strict": true,
         "target": "esnext",
+        // "strict": true,
         "checkJs": true
     }
 }
