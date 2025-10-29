@@ -22,7 +22,7 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
     -   Ignore the whole file: add `// @ts-nocheck` at the top of the file.
     -   Ignore every file: change the `checkJS` setting in `jsconfig.json` to `false`.
 
--   If you want to enable [strict](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#--strict-) type checking, you can uncomment `"strict": true` in `jsconfig.json`.
+-   If you want to enable [strict](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#--strict-) type checking (not recommended), you can uncomment `"strict": true` in `jsconfig.json`.
 
 ## Changelog
 
