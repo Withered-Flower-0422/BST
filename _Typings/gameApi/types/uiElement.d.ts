@@ -168,10 +168,10 @@ declare module "game:type" {
 
         /**
          * Invoked when the pointer clicks the UI element.
-         * @param which - Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
+         * @param mouseButton - Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
          * @returns
          */
-        onPointerClick: (which: MouseButton) => void
+        onPointerClick: (mouseButton: MouseButton) => void
 
         /**
          * @default true
