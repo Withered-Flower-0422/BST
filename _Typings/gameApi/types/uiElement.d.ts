@@ -4,6 +4,7 @@
 declare module "game:type" {
     import { Path } from "path"
     import { Float2, Float4, ColorRGBA } from "basicData"
+    import { MouseButtonEnum as MouseButton } from "keys"
 
     type Image = {
         /**
@@ -167,10 +168,10 @@ declare module "game:type" {
 
         /**
          * Invoked when the pointer clicks the UI element.
-         * @param which - Which mouse button was clicked. `0: Left`, `1: Middle`, `2: Right`
+         * @param which - Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
          * @returns
          */
-        onPointerClick: (which: 0 | 1 | 2) => void
+        onPointerClick: (which: MouseButton) => void
 
         /**
          * @default true

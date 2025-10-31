@@ -14,6 +14,23 @@ declare module "game:module" {
         Mush = 1,
     }
 
+    enum CameraMode {
+        FourDirection = 0,
+        FreeLook = 1,
+        FirstPerson = 2,
+    }
+
+    enum CameraDirection {
+        /** Face to `z+`. */
+        North = 0,
+        /** Face to `x+`. */
+        East = 1,
+        /** Face to `z-`. */
+        South = 2,
+        /** Face to `x-`. */
+        West = 3,
+    }
+
     type VfxType =
         | "SpawnPlayer"
         | "SwitchBall"
@@ -38,18 +55,13 @@ declare module "game:module" {
         /** @deprecated Not implemented yet. */
         let spawnBallType: BallType
         /**
-         * - `0`: Four Direction View.
-         * - `1`: Free View.
-         * - `2`: First Person View.
+         * Click to see {@link CameraMode | all camera modes}.
          */
-        let cameraMode: 0 | 1 | 2
+        let cameraMode: CameraMode
         /**
-         * - `0`: Face to `z+`.
-         * - `1`: Face to `x+`.
-         * - `2`: Face to `z-`.
-         * - `3`: Face to `x-`.
+         * Click to see {@link CameraDirection | all camera directions}.
          */
-        let cameraDirection: 0 | 1 | 2 | 3
+        let cameraDirection: CameraDirection
         let cameraAngle: float
         let cameraPitch: float
         let cameraZoom: float
