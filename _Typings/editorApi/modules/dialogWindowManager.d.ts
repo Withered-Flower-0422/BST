@@ -86,7 +86,6 @@ declare module "editor:module" {
          * @param onCloseButtonClick - The function to be called when the close button is clicked.
          * @param onCheckButtonClick - The function to be called when the check button is clicked.
          * @returns
-         * @deprecated Not implemented yet.
          */
         const openConfirmDialog: (
             windowTitle: string,

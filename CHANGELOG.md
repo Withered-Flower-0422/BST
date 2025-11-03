@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.6 (2025-11-03)
+
+-   `dialogWindowManager.openConfirmDialog()` has been implemented.
+-   Added `saveMesh()` method to `RoadGeneratorMethod`.
+
 ## v1.5.5 (2025-10-30)
 
 -   Added `levelManager.spawnBallType`.

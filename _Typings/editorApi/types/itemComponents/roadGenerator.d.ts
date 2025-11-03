@@ -171,6 +171,12 @@ declare module "editor:type" {
         generate: () => void
 
         /**
+         * Saves the road as mesh to `Assets/Meshes/Default`.
+         * @returns
+         */
+        saveMesh: () => void
+
+        /**
          * Creates `Way Point` at the corresponding positions based on the current road generator's segments.
          * @returns
          */
