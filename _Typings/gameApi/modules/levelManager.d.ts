@@ -48,6 +48,9 @@ declare module "game:module" {
         | "DeathTransfer"
 
     namespace levelManager {
+        /**
+         * @range `0.1 ~ 2`
+         */
         let timeScale: float
         let score: float
         let spawnPointPosition: Float3
