@@ -231,5 +231,11 @@ declare module "game:type" {
          * @returns
          */
         type OnCollide = (self: Item, collisionEvent: CollisionEvent) => void
+
+        /**
+         * - Default type for executor variables `$`.
+         * - Override this type to define custom variables for executors.
+         */
+        type $ = { [key: string]: any }
     }
 }

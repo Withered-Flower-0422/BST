@@ -54,20 +54,20 @@
 } from "game:alias" 
 */
 
-/** @description Variables set on the `Executor`. */
-const $ = {
-    // Declare types of variables here if you want type hints.
-    // Leave the values as `null`; the `init` function will set the values.
+/**
+ * Declare types of executor variables here if you want type hints.
+ * Clear the comments if you don't need type hints.
+ * @typedef {object} $
+ * @prop {int} var1
+ * @prop {string} var2
+ */
 
-    /** @type {int} */ var1: null,
-    /** @type {string} */ var2: null,
-
-    // Clear the above codes if you don't need type hints.
-}
+/** @type {$} @description Variables set on the `Executor`. */
+let $
 
 /** @type {Init} */
 export const init = (self, v) => {
-    for (const k in v) $[k] = v[k]
+    $ = /** @type {$} */ (v)
 }
 
 /** @type {GameExecute} */
