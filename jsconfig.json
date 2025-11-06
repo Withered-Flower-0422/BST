@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-        "target": "esnext",
         // "strict": true,
+        "target": "esnext",
+        "allowSyntheticDefaultImports": false,
         "checkJs": true
     }
 }
