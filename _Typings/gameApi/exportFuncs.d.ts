@@ -183,7 +183,7 @@ declare module "game:type" {
          * @param vars - The variables set on the executor, passed in as key-value pairs.
          * @returns
          */
-        type Init = (self: Item, vars: { [key: string]: any }) => void
+        type Init<ExecVar = $> = (self: Item, vars: ExecVar) => void
 
         /**
          * Executed when `execute()` is called by another executor in the game.

@@ -54,21 +54,22 @@
 } from "game:alias" 
 */
 
+// Declare types of executor variables below to get type hints.
+// Or clear the comments if you don't need type hints.
 /**
- * Declare types of executor variables here if you want type hints.
- * Clear the comments if you don't need type hints.
  * @typedef {object} $
  * @prop {int} var1
  * @prop {string} var2
  */
 
-/** @type {$} @description Variables set on the `Executor`. */
+/**
+ * Variables set on the `Executor`.
+ * @type {$} @readonly
+ */
 let $
 
-/** @type {Init} */
-export const init = (self, v) => {
-    $ = /** @type {$} */ (v)
-}
+/** @type {Init<$>} */
+export const init = (self, v) => (($ = v), void 0)
 
 /** @type {GameExecute} */
 export const execute = (...args) => {}
