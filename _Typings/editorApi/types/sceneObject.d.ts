@@ -117,10 +117,10 @@ declare module "editor:type" {
         readonly setScale: (scale: Float3) => void
 
         /**
-         * Gets the local transform of the object.
-         * @returns The local transform of the object.
+         * Gets the local transform of the object, in the form of `[position, rotation, scale]`.
+         * @returns The local transform of the object, in the form of `[position, rotation, scale]`.
          */
-        readonly getTransform: () => [Float3, Float3, Float3]
+        readonly getTransform: () => [pos: Float3, rot: Float3, scl: Float3]
 
         /**
          * Gets the global position of the object.

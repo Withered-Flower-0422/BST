@@ -53,7 +53,7 @@ declare module "game:type" {
          * Gets the transform of the item, in the form of `[position, rotation, scale]`.
          * @returns The transform of the item, in the form of `[position, rotation, scale]`.
          */
-        readonly getTransform: () => [Float3, Float3, Float3]
+        readonly getTransform: () => [pos: Float3, rot: Float3, scl: Float3]
 
         /**
          * Gets the quaternion format rotation of the item.
