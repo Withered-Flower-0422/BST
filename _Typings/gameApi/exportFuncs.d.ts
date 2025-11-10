@@ -126,7 +126,7 @@ declare module "game:type" {
          * @Message The transporter items that are being triggered, wrapped in an array.
          * - The first item is the current transporter, and the second item is the target transporter.
          */
-        OnPreTransferBallStart?: [Item, Item]
+        OnPreTransferBallStart?: [current: Item, target: Item]
 
         /**
          * Before the ball transfer animation ends.
@@ -134,14 +134,14 @@ declare module "game:type" {
          * @Message The transporter items that are being triggered, wrapped in an array.
          * - The first item is the current transporter, and the second item is the target transporter.
          */
-        OnPreTransferBallEnd?: [Item, Item]
+        OnPreTransferBallEnd?: [current: Item, target: Item]
 
         /**
          * After the ball transfer animation ends.
          * @Message The transporter items that are being triggered, wrapped in an array.
          * - The first item is the current transporter, and the second item is the target transporter.
          */
-        OnPostTransferBallEnd?: [Item, Item]
+        OnPostTransferBallEnd?: [current: Item, target: Item]
 
         /**
          * On player starting to collide with other item.
