@@ -39,5 +39,26 @@ declare module "game:type" {
          * @returns The point information of the given points.
          */
         getPointsInfo: <const T extends float[]>(points: Assert0To1s<T>) => { [P in keyof T]: PointInfo<T[P]> }
+
+        /**
+         * Plays the way path so all the targets move along the path.
+         * @returns
+         * @deprecated Not implemented yet.
+         */
+        play(): void
+
+        /**
+         * Pauses the way path so all the targets stop moving. The next call of `play()` will resume the movement from the paused point.
+         * @returns
+         * @deprecated Not implemented yet.
+         */
+        pause(): void
+
+        /**
+         * Stops the way path so all the targets stop moving. The next call of `play()` will start the movement from the beginning.
+         * @returns
+         * @deprecated Not implemented yet.
+         */
+        stop(): void
     }
 }

@@ -14,13 +14,13 @@ declare module "game:module" {
         const playBgm: <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>) => void
 
         /**
-         * Pauses the background music. The next call to `playBgm()` will resume the music from the point where it was paused.
+         * Pauses the background music. The next call of `playBgm()` will resume the music from the point where it was paused.
          * @returns
          */
         const pauseBgm: () => void
 
         /**
-         * Stops the background music. The next call to `playBgm()` will start the music from the beginning.
+         * Stops the background music. The next call of `playBgm()` will start the music from the beginning.
          * @returns
          */
         const stopBgm: () => void
@@ -41,13 +41,13 @@ declare module "game:module" {
         const playSfx: <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>) => void
 
         /**
-         * Pauses the sound effect. The next call to `playSfx()` will resume the sound effect from the point where it was paused.
+         * Pauses the sound effect. The next call of `playSfx()` will resume the sound effect from the point where it was paused.
          * @returns
          */
         const pauseSfx: () => void
 
         /**
-         * Stops the sound effect. The next call to `playSfx()` will start the sound effect from the beginning.
+         * Stops the sound effect. The next call of `playSfx()` will start the sound effect from the beginning.
          * @returns
          */
         const stopSfx: () => void

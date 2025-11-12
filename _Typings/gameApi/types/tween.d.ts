@@ -16,7 +16,7 @@ declare module "game:type" {
         readonly play: () => void
 
         /**
-         * Stops the tween. The next call to `next()` or `play()` will restart the tween from the beginning.
+         * Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning.
          * @returns
          */
         readonly stop: () => void

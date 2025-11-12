@@ -32,13 +32,13 @@ declare module "game:type" {
         play: () => void
 
         /**
-         * Pauses the audio. The next call to `play()` will resume the audio from the paused position.
+         * Pauses the audio. The next call of `play()` will resume the audio from the paused position.
          * @returns
          */
         pause: () => void
 
         /**
-         * Stops the audio. The next call to `play()` will start the audio from the beginning.
+         * Stops the audio. The next call of `play()` will start the audio from the beginning.
          * @returns
          */
         stop: () => void

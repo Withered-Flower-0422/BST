@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.7 (2025-11-12)
+
+-   Enhanced some descriptions and types and fixed some typos and grammar errors.
+-   Added `play()`, `pause()` and `stop()` methods to `wayPath`. These methods are not implemented yet and may change in the future.
+
 ## v1.5.6 (2025-11-03)
 
 -   `dialogWindowManager.openConfirmDialog()` has been implemented.
