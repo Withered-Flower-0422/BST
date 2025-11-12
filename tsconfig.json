@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
         "strict": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noFallthroughCasesInSwitch": true,
         "noEmit": true,
         "target": "esnext",
         "checkJs": true
