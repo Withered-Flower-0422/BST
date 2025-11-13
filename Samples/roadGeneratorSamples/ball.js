@@ -5,7 +5,7 @@
  * @author Mushreb, Withered Flower
  */
 
-/** @type {Generate} */
+/** @type {Generate<$>} */
 export const generate = () => {
     const r = 0.375 // radius of the ball
     const s = 32 // number of segments
@@ -36,7 +36,7 @@ export const generate = () => {
             const v = (lat / s) * 5
             uvs.push([u, v])
 
-            // normals can be an empty array, BME can calculate them automatically
+            // Normals can be an empty array, BME can calculate them automatically.
             normals.push([x / r, y / r, z / r])
         }
     }

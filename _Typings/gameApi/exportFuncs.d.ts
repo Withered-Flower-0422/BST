@@ -236,6 +236,6 @@ declare module "game:type" {
          * Default type for executor variables `$`.
          * Override this type to define variable types set on the executor.
          */
-        type $ = { [key: string]: any }
+        type $ = { [key: string]: any; [key: symbol]: never }
     }
 }
