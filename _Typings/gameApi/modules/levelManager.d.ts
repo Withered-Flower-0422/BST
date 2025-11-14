@@ -118,18 +118,23 @@ declare module "game:module" {
          */
         const transferPlayer: (targetPosition: Float3) => void
 
-        /**
-         * Sets the camera to follow the specified item.
-         * @param guid - The guid string of the item to be followed by the camera. If `null` is passed, the camera will follow back to the player ball.
-         * @param displayName - The name shown on the ui. This parameter only works when `guid` is **not** `null`.
-         * @returns
-         * @Note -
-         * - If `guid` is `null`, the name shown on the ui will always be the name of the player ball, so just leave `displayName` as `null`.
-         */
-        const setCameraTarget: <S extends string | null>(
-            guid: S extends null ? null : AssertGuid<S extends string ? S : never>,
-            displayName: S extends null ? null : string
-        ) => void
+        const setCameraTarget: {
+            /**
+             * Sets the camera to follow the specified item.
+             * @param guid - The guid string of the item to be followed by the camera.
+             * @param displayName - The name shown on the ui. This parameter only works when `guid` is **not** `null`.
+             * @returns
+             */
+            <S extends string>(guid: AssertGuid<S>, displayName: string): void
+
+            /**
+             * Sets the camera to follow the specified item.
+             * @param guid - If `null` is passed, the camera will follow back to the player ball.
+             * @param displayName - If `guid` is `null`, the name shown on the ui will always be the name of the player ball.
+             * @returns
+             */
+            (guid: null, displayName: null): void
+        }
 
         /**
          * Shows a tip with the specified content.

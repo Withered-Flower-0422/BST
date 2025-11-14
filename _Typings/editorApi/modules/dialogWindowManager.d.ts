@@ -47,20 +47,29 @@ declare module "editor:module" {
             onCheckButtonClick: (inputsText: { [P in keyof T]: string }) => void
         ) => void
 
-        /**
-         * Opens an asset picker dialog window.
-         * @param onCancel - The function to be called when the cancel button is clicked.
-         * @param onPickAsset - The function to be called when an asset is picked. The picked asset path will be passed as an argument.
-         * @param assetType - The type of the asset to be picked.
-         * @returns
-         */
-        const openAssetPickerDialog: <T extends keyof AssetsSuffixMap | "All">(
-            onCancel: () => void,
-            onPickAsset: (
-                assetPath: Exclude<T extends "All" ? Path : Path<T extends keyof AssetsSuffixMap ? T : never>, "">
-            ) => void,
-            assetType: T
-        ) => void
+        const openAssetPickerDialog: {
+            /**
+             * Opens an asset picker dialog window.
+             * @param onCancel - The function to be called when the cancel button is clicked.
+             * @param onPickAsset - The function to be called when an asset is picked. The picked asset path will be passed as an argument.
+             * @param assetType - The type of the asset to be picked.
+             * @returns
+             */
+            <T extends keyof AssetsSuffixMap>(
+                onCancel: () => void,
+                onPickAsset: (assetPath: Exclude<Path<T>, "">) => void,
+                assetType: T
+            ): void
+
+            /**
+             * Opens an asset picker dialog window.
+             * @param onCancel - The function to be called when the cancel button is clicked.
+             * @param onPickAsset - The function to be called when an asset is picked. The picked asset path will be passed as an argument.
+             * @param assetType - The type of the asset to be picked.
+             * @returns
+             */
+            (onCancel: () => void, onPickAsset: (assetPath: Exclude<Path, "">) => void, assetType: "All"): void
+        }
 
         /**
          * Opens a message dialog window.
