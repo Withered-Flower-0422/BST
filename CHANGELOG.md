@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.0 (2025-11-14)
+
+-   Added some types in `__future__` module for future use. These types or features may not be really implemented in the future.
+-   Now `variables.get()` and `variables.set()` can take generic type values.
+
 ## v1.5.7 (2025-11-12)
 
 -   Enhanced some descriptions and types and fixed some typos and grammar errors.

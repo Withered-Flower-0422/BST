@@ -239,3 +239,45 @@ declare module "game:type" {
         type $ = { [key: string]: any; [key: symbol]: never }
     }
 }
+
+declare module "__future__" {
+    import { KeyboardKey } from "keys"
+    import { LocalizedString } from "localize"
+
+    // global {
+    /**
+     * @example
+     * ```js
+     * export const customKeys: CustomKey[] = [
+     *     {
+     *         keyName: "Jump",
+     *         defaultKeyValue: "Space",
+     *         localize: {
+     *             English: "Jump",
+     *             SimplifiedChinese: "跳跃",
+     *             TraditionalChinese: "跳躍",
+     *             Japanese: "ジャンプ",
+     *             Spanish: "Saltar",
+     *         },
+     *     },
+     *     {
+     *         keyName: "MultiSwitchBall",
+     *         defaultKeyValue: "Tab",
+     *         localize: {
+     *             English: "Switch Controlled Ball",
+     *             SimplifiedChinese: "切换控制球",
+     *             TraditionalChinese: "切換控制球",
+     *             Japanese: "制御されている玉を切替",
+     *             Spanish: "Cambiar bola controlada",
+     *         },
+     *     },
+     * ]
+     * ```
+     */
+    type CustomKey = {
+        keyName: string
+        defaultKeyValue: KeyboardKey
+        localize: LocalizedString
+    }
+    // }
+}
