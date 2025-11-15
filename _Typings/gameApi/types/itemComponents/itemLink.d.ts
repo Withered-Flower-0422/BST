@@ -17,6 +17,6 @@ declare module "game:type" {
          * Gets the internal items of the linked item.
          * @returns The internal items of the linked item in an array.
          */
-        getInternalItems: () => Item[]
+        getInternalItems: () => [Item, ...Item[]]
     }
 }

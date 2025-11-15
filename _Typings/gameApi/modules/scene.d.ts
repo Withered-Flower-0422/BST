@@ -97,7 +97,7 @@ declare module "game:module" {
         const sphereCastAll: <T extends float>(
             center: Float3,
             radius: AssertNonNeg<T>
-        ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: Item[] }
+        ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: [Item, ...Item[]] }
 
         /**
          * Casts a box from the center position with the given size and rotation and returns all the items or player it hits by their collision layers.
@@ -110,6 +110,6 @@ declare module "game:module" {
             center: Float3,
             size: Float3,
             rotation: Quaternion
-        ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: Item[] }
+        ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: [Item, ...Item[]] }
     }
 }
