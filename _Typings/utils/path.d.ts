@@ -14,11 +14,15 @@ declare module "path" {
 
     type Folder<T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = `${T}/${string}`
 
-    type Path<T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap, S extends boolean = true> =
+    type Path<
+        T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
+        S extends boolean = true,
+        E extends boolean = true
+    > =
         | {
               [P in T]: `${P}/${string}/${string}${S extends true ? `.${AssetsSuffixMap[P]}` : ""}`
           }[T]
-        | ""
+        | (E extends true ? "" : never)
 
     type AssertFolder<T extends string, P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = string extends T
         ? T
