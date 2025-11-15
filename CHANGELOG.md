@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.1 (2025-11-15)
+
+-   Optimized the message type of `Events`. Once some of the events are triggered, the corresponding message must contain at least one item.
+-   Added `Collection` type and exported it as `CollectionName` from `game:alias`.
+-   Exported `BuiltinCollection` from `game:alias`.
+-   Optimized `variables.get()` and `variables.set()`. Now they can infer `BuiltinCollection` first.
+
 ## v1.6.0 (2025-11-14)
 
 -   Added some types in `__future__` module for future use. These types or features may not be really implemented in the future.

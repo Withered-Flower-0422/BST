@@ -13,6 +13,14 @@ declare module "game:module" {
              * @returns The number of the `Collection`.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
+            (name: BuiltinVariable): int | null
+
+            /**
+             * Gets the number of the `Collection`.
+             * @param name - The name of the `Collection`.
+             * @returns The number of the `Collection`.
+             * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
+             */
             (name: `C_${string}`): int | null
 
             /**
@@ -31,6 +39,18 @@ declare module "game:module" {
         }
 
         const set: {
+            /**
+             * Sets the number of the `Collection`.
+             * @param name - The name of the `Collection`.
+             * @param value - The value to set.
+             * @returns
+             * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
+             * @NOTE -
+             * - **NEVER** name a variable starting with `C_` manually.
+             * - The `Collection` values can be negative if you really need.
+             */
+            <T extends int>(name: BuiltinVariable, value: AssertInt<T>): void
+
             /**
              * Sets the number of the `Collection`.
              * @param name - The name of the `Collection`.
@@ -81,6 +101,14 @@ declare module "__future__" {
              * @returns The number of the `Collection`.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
+            (name: BuiltinVariable): int | null
+
+            /**
+             * Gets the number of the `Collection`.
+             * @param name - The name of the `Collection`.
+             * @returns The number of the `Collection`.
+             * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
+             */
             (name: `C_${string}`): int | null
 
             /**
@@ -107,6 +135,18 @@ declare module "__future__" {
         }
 
         const set: {
+            /**
+             * Sets the number of the `Collection`.
+             * @param name - The name of the `Collection`.
+             * @param value - The value to set.
+             * @returns
+             * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
+             * @NOTE -
+             * - **NEVER** name a variable starting with `C_` manually.
+             * - The `Collection` values can be negative if you really need.
+             */
+            <T extends int>(name: BuiltinVariable, value: AssertInt<T>): void
+
             /**
              * Sets the number of the `Collection`.
              * @param name - The name of the `Collection`.

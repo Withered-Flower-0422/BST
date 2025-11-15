@@ -9,6 +9,8 @@ declare module "game:alias" {
     export {
         BuiltinBallType,
         BallType,
+        BuiltinCollection,
+        Collection as CollectionName,
         CollisionEvent,
         EaseType,
         Events,

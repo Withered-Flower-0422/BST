@@ -15,5 +15,7 @@ declare module "game:type" {
         | "Key_Magenta"
         | "Key_Yellow"
 
+    type Collection = BuiltinCollection | (string & {})
+
     type BuiltinVariable = "C_Key_Red" | "C_Key_Blue" | "C_Key_Green" | "C_Key_Cyan" | "C_Key_Magenta" | "C_Key_Yellow"
 }

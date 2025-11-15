@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
-    import { BuiltinCollection } from "game:type"
+    import { BuiltinCollection, Collection } from "game:type"
     import { IsUnique as IU, ExpectTrue as ET } from "utils"
     import { Float3 } from "basicData"
 
@@ -91,14 +91,14 @@ declare module "game:type" {
          * @Message Name of collection items that are being collected, wrapped in an array.
          * @BuiltinCollection Click to see {@link BuiltinCollection | all built-in collections}.
          */
-        OnPreGetCollection?: string[]
+        OnPreGetCollection?: [Collection, ...Collection[]]
 
         /**
          * On post-getting collections.
          * @BuiltinCollection Click to see {@link BuiltinCollection | all built-in collections}.
          * @Message Name of collection items that are being collected, wrapped in an array.
          */
-        OnPostGetCollection?: string[]
+        OnPostGetCollection?: [Collection, ...Collection[]]
 
         /**
          * Before the ball switch animation starts.
@@ -147,19 +147,19 @@ declare module "game:type" {
          * On player starting to collide with other item.
          * @Message The collision events, wrapped in an array.
          */
-        OnPlayerCollideEnter?: CollisionEvent[]
+        OnPlayerCollideEnter?: [CollisionEvent, ...CollisionEvent[]]
 
         /**
          * On player staying in collision with other item.
          * @Message The collision events, wrapped in an array.
          */
-        OnPlayerCollideStay?: CollisionEvent[]
+        OnPlayerCollideStay?: [CollisionEvent, ...CollisionEvent[]]
 
         /**
          * On player leaving collision with other item.
          * @Message The collision events, wrapped in an array.
          */
-        OnPlayerCollideExit?: CollisionEvent[]
+        OnPlayerCollideExit?: [CollisionEvent, ...CollisionEvent[]]
 
         /**
          * On Receiving custom event.
@@ -171,7 +171,7 @@ declare module "game:type" {
          * On TNT explosion.
          * @Message The positions of each TNT explosion, wrapped in an array.
          */
-        OnTntExploded?: Float3[]
+        OnTntExploded?: [Float3, ...Float3[]]
     }
 
     type RegisterEvents<RE extends RegisterEvent[] = RegisterEvent[]> = Pick<Events, RE[number]>
