@@ -116,7 +116,7 @@ declare module "editor:module" {
          * @returns The main object created from the assets.
          */
         const createObjectsFromAssets: <T extends string>(
-            path: T extends "" ? never : AssertPath<T, "Items" | "Meshes">
+            path: AssertPath<T, "Items" | "Meshes", true, false>
         ) => SceneObject<"Item">
     }
 }

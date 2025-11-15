@@ -35,9 +35,12 @@ declare module "path" {
     type AssertPath<
         T extends string,
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
-        S extends boolean = true
+        S extends boolean = true,
+        E extends boolean = true
     > = T extends ""
-        ? T
+        ? E extends true
+            ? T
+            : never
         : string extends T
         ? T
         : {
@@ -59,9 +62,10 @@ declare module "path" {
     type AssertPaths<
         T extends string[],
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
-        S extends boolean = true
+        S extends boolean = true,
+        E extends boolean = true
     > = {
-        [K in keyof T]: AssertPath<T[K], P, S>
+        [K in keyof T]: AssertPath<T[K], P, S, E>
     }
 
     // ============== alias ==============
