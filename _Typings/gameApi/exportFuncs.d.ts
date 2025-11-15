@@ -211,7 +211,7 @@ declare module "game:type" {
          * @param type - The type of trigger event.
          * @returns
          */
-        type OnTrigger = (self: Item, triggeredItem: Item, type: EventType) => void
+        type OnTrigger<ET extends EventType = EventType> = (self: Item, triggeredItem: Item, type: ET) => void
 
         /**
          * Executed when an object collides.
@@ -219,7 +219,7 @@ declare module "game:type" {
          * @param collisionEvent - The collision event object, which contains information about the colliding object, the type of collision, the position of the collision, etc.
          * @returns
          */
-        type OnCollide = (self: Item, collisionEvent: CollisionEvent) => void
+        type OnCollide<ET extends EventType = EventType> = (self: Item, collisionEvent: CollisionEvent<ET>) => void
     }
 }
 

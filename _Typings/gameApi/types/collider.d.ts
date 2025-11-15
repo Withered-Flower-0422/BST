@@ -23,8 +23,8 @@ declare module "game:type" {
 
     type EventType = "Enter" | "Exit" | "Stay"
 
-    type CollisionEvent = {
-        eventType: EventType
+    type CollisionEvent<ET extends EventType = EventType> = {
+        eventType: ET
         itemA: Item
         itemB: Item
         impulse: float
