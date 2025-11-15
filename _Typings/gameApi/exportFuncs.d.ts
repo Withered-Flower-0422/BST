@@ -3,7 +3,6 @@
 
 declare module "game:type" {
     import { BuiltinCollection, Collection } from "game:type"
-    import { IsUnique as IU, ExpectTrue as ET } from "utils"
     import { Float3 } from "basicData"
 
     type Events = {
@@ -198,16 +197,6 @@ declare module "game:type" {
         type RegisterEvent = keyof Events
 
         /**
-         * Helper type to check if a list of items is unique and not contain any `any` type.
-         */
-        type IsUnique<T extends readonly any[]> = IU<T, false>
-
-        /**
-         * Helper type to check if a type is `true`.
-         */
-        type ExpectTrue<T extends true> = ET<T>
-
-        /**
          * Executed when a registered event is triggered.
          * @param self - A reference to the item where the executor component is located.
          * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
@@ -231,12 +220,6 @@ declare module "game:type" {
          * @returns
          */
         type OnCollide = (self: Item, collisionEvent: CollisionEvent) => void
-
-        /**
-         * Default type for executor variables `$`.
-         * Override this type to define variable types set on the executor.
-         */
-        type $ = { [key: string]: any; [key: symbol]: never }
     }
 }
 

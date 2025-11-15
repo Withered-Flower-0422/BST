@@ -1,4 +1,4 @@
-﻿// Declare types of executor variables below to get type hints.
+﻿// Declare types of road generator variables below to get type hints.
 // Or clear the comments if you don't need type hints.
 /**
  * @typedef {object} $
