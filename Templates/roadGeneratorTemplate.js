@@ -7,9 +7,7 @@
  */
 
 /** @type {Generate<$>} */
-export const generate = vars => {
-    const {} = vars
-
+export const generate = ({ var1, var2 }) => {
     /** @type {Vertex[]} */
     const vertices = []
     /** @type {UV[]} */
