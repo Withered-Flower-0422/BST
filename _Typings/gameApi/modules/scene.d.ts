@@ -19,14 +19,14 @@ declare module "game:module" {
          * @param guid - The guid string of the item to get.
          * @returns The item with the given guid, or `null` if the item does not exist.
          */
-        const getItem: <S extends string>(guid: AssertGuid<S>) => Item | null
+        const getItem: <S extends guid>(guid: AssertGuid<S>) => Item | null
 
         /**
          * Gets the items by their guids.
          * @param guids - The guid strings in an array of the items to get.
          * @returns An array of the items with the given guids.
          */
-        const getItems: <const S extends string[]>(guids: AssertGuids<S>) => { [P in keyof S]: Item }
+        const getItems: <const S extends guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: Item }
 
         /**
          * Gets the player. If the player has not been created, it will return `null`.
@@ -39,14 +39,14 @@ declare module "game:module" {
          * @param guid - The guid string of the item to destroy.
          * @returns
          */
-        const destroyItem: <S extends string>(guid: AssertGuid<S>) => void
+        const destroyItem: <S extends guid>(guid: AssertGuid<S>) => void
 
         /**
          * Destroys the items by their guids.
          * @param guids - The guid strings in an array of the items to destroy.
          * @returns
          */
-        const destroyItems: <const S extends string[]>(guids: AssertGuids<S>) => void
+        const destroyItems: <const S extends guid[]>(guids: AssertGuids<S>) => void
 
         /**
          * Creates an item based on a template.

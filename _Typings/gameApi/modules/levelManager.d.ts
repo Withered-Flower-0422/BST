@@ -125,7 +125,7 @@ declare module "game:module" {
              * @param displayName - The name shown on the ui. This parameter only works when `guid` is **not** `null`.
              * @returns
              */
-            <S extends string>(guid: AssertGuid<S>, displayName: string): void
+            <S extends guid>(guid: AssertGuid<S>, displayName: string): void
 
             /**
              * Sets the camera to follow the specified item.

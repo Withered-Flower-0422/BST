@@ -19,28 +19,28 @@ declare module "editor:module" {
          * @param guid - The guid string of the object to get.
          * @returns The object with the given guid, or `null` if the object does not exist.
          */
-        const getObject: <S extends string>(guid: AssertGuid<S>) => SceneObject | null
+        const getObject: <S extends guid>(guid: AssertGuid<S>) => SceneObject | null
 
         /**
          * Gets multiple objects by their guids.
          * @param guids - The guid strings in an array of the objects to get.
          * @returns An array of the objects with the given guids.
          */
-        const getObjects: <const S extends string[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
+        const getObjects: <const S extends guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
 
         /**
          * Destroys an object by its guid.
          * @param guid - The guid string of the object to destroy.
          * @returns
          */
-        const destroyObject: <S extends string>(guid: AssertGuid<S>) => void
+        const destroyObject: <S extends guid>(guid: AssertGuid<S>) => void
 
         /**
          * Destroys multiple objects by their guids.
          * @param guids - The guid strings in an array of the objects to destroy.
          * @returns
          */
-        const destroyObjects: <const S extends string[]>(guids: AssertGuids<S>) => void
+        const destroyObjects: <const S extends guid[]>(guids: AssertGuids<S>) => void
 
         /**
          * Creates a new object with the given name and type.
@@ -57,14 +57,14 @@ declare module "editor:module" {
          * @param guid - The guid string of the object to duplicate.
          * @returns The duplicated object.
          */
-        const duplicateObject: <S extends string>(guid: AssertGuid<S>) => SceneObject
+        const duplicateObject: <S extends guid>(guid: AssertGuid<S>) => SceneObject
 
         /**
          * Duplicates multiple objects by their guids.
          * @param guids - The guid strings in an array of the objects to duplicate.
          * @returns An array of the duplicated objects.
          */
-        const duplicateObjects: <const S extends string[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
+        const duplicateObjects: <const S extends guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
 
         /**
          * Gets the selected object in the scene. If no object is selected, returns `null`.
@@ -85,7 +85,7 @@ declare module "editor:module" {
          * @param selectedObjectsGuid - The guid strings in an array of all the objects to select. If not include the activated object, the activated object will be the first one in the array.
          * @returns
          */
-        const setSelection: <S1 extends string, const S2 extends string[]>(
+        const setSelection: <S1 extends guid, const S2 extends guid[]>(
             activatedObjectGuid: AssertGuid<S1>,
             selectedObjectsGuid: AssertGuids<S2>
         ) => void
