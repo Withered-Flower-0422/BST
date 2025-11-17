@@ -322,6 +322,14 @@ declare module "game:module" {
         const destroyCustomStatusBar: (statusBarName: string) => void
 
         /**
+         * Checks if the custom status bar with the specified name exists.
+         * @param statusBarName - The unique name of the status bar to be checked.
+         * @returns Whether the custom status bar with the specified name exists.
+         * @deprecated Not implemented yet.
+         */
+        const isCustomStatusBarExist: (statusBarName: string) => bool
+
+        /**
          * Gets the index of the custom value that selected by the player.
          * @param name - The name of the custom value.
          * @returns The index of the custom value that selected by the player.

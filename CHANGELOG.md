@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 -   Added a new game sample `transfer.js`.
 -   Moved some types from `exportFuncs.d.ts` to `utils.d.ts`.
 -   Added a global type `guid` whose actual type is `string`.
+-   Added a new, not-implemented-yet function `levelManager.isCustomStatusBarExist()`.
 
 ## v1.6.1 (2025-11-15)
 
