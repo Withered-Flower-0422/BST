@@ -74,10 +74,10 @@ export const init = (self, v) => (($ = v), void 0)
 /** @type {GameExecute} */
 export const execute = (...args) => {}
 
-/** @type {OnTrigger} */
+/** @type {OnTrigger<'Enter'|'Stay'|'Exit'>} */
 export const onTrigger = (self, triggeredItem, type) => {}
 
-/** @type {OnCollide} */
+/** @type {OnCollide<'Enter'|'Stay'|'Exit'>} */
 export const onCollide = (self, collisionEvent) => {}
 
 /** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<IsUnique<typeof registerEvents>>} */
