@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 -   Made `OnTrigger`, `OnCollide` and `CollisionEvent` to be generic types.
 -   Added a new game sample `transfer.js`.
 -   Moved some types from `exportFuncs.d.ts` to `utils.d.ts`.
+-   Added a global type `guid` whose actual type is `string`.
 
 ## v1.6.1 (2025-11-15)
 

@@ -9,6 +9,7 @@ declare module "basicData" {
         type float = number
         type bool = boolean
         type json = string
+        type guid = string
     }
 
     class Float2 {
