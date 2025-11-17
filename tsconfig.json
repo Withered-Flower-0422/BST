@@ -6,6 +6,7 @@
         "noFallthroughCasesInSwitch": true,
         "noEmit": true,
         "target": "esnext",
+        "lib": ["ESNext"],
         "checkJs": true
     },
     "include": [
