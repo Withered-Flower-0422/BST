@@ -144,21 +144,21 @@ declare module "game:type" {
 
         /**
          * On player starting to collide with other item.
-         * @Message The collision events, wrapped in an array.
+         * @Message The collision events, wrapped in an array. `itemA` is player, `itemB` is the other item.
          */
-        OnPlayerCollideEnter?: [CollisionEvent, ...CollisionEvent[]]
+        OnPlayerCollideEnter?: [CollisionEvent<"Enter">, ...CollisionEvent<"Enter">[]]
 
         /**
          * On player staying in collision with other item.
-         * @Message The collision events, wrapped in an array.
+         * @Message The collision events, wrapped in an array. `itemA` is player, `itemB` is the other item.
          */
-        OnPlayerCollideStay?: [CollisionEvent, ...CollisionEvent[]]
+        OnPlayerCollideStay?: [CollisionEvent<"Stay">, ...CollisionEvent<"Stay">[]]
 
         /**
          * On player leaving collision with other item.
-         * @Message The collision events, wrapped in an array.
+         * @Message The collision events, wrapped in an array. `itemA` is player, `itemB` is the other item.
          */
-        OnPlayerCollideExit?: [CollisionEvent, ...CollisionEvent[]]
+        OnPlayerCollideExit?: [CollisionEvent<"Exit">, ...CollisionEvent<"Exit">[]]
 
         /**
          * On Receiving custom event.
