@@ -3,9 +3,10 @@
 
 declare module "editor:alias" {
     import { SceneObject } from "editor:type"
+    export { SceneObject }
 
     /** @deprecated */
-    type SceneFolder = SceneObject<"Folder">
-    type SceneItem = SceneObject<"Item">
-    type SceneSettings = SceneObject<"Settings">
+    export type SceneFolder = SceneObject<"Folder">
+    export type SceneItem = SceneObject<"Item">
+    export type SceneSettings = SceneObject<"Settings">
 }

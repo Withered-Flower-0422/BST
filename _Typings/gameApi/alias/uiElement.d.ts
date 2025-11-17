@@ -3,8 +3,9 @@
 
 declare module "game:alias" {
     import { UIElement } from "game:type"
+    export { UIElement }
 
-    type Image = UIElement<"Image">
-    type Text = UIElement<"Text">
-    type Panel = UIElement<"Panel">
+    export type Image = UIElement<"Image">
+    export type Text = UIElement<"Text">
+    export type Panel = UIElement<"Panel">
 }

@@ -3,22 +3,23 @@
 
 declare module "game:alias" {
     import { Component } from "game:type"
+    export { Component }
 
-    type AudioPlayer = Component<"AudioPlayer">
-    type Camera = Component<"Camera">
-    type Collection = Component<"Collection">
-    type Decal = Component<"Decal">
-    type Executor = Component<"Executor">
-    type ItemLink = Component<"ItemLink">
-    type Joint = Component<"Joint">
-    type Light = Component<"Light">
-    type ParticleEmitter = Component<"ParticleEmitter">
-    type PhysicsObject = Component<"PhysicsObject">
-    type Renderer = Component<"Renderer">
-    type RoadGenerator = Component<"RoadGenerator">
-    type Settings = Component<"Settings">
-    type TerrainStamp = Component<"TerrainStamp">
-    type Trigger = Component<"Trigger">
-    type WayPath = Component<"WayPath">
-    type WayPoint = Component<"WayPoint">
+    export type AudioPlayer = Component<"AudioPlayer">
+    export type Camera = Component<"Camera">
+    export type Collection = Component<"Collection">
+    export type Decal = Component<"Decal">
+    export type Executor = Component<"Executor">
+    export type ItemLink = Component<"ItemLink">
+    export type Joint = Component<"Joint">
+    export type Light = Component<"Light">
+    export type ParticleEmitter = Component<"ParticleEmitter">
+    export type PhysicsObject = Component<"PhysicsObject">
+    export type Renderer = Component<"Renderer">
+    export type RoadGenerator = Component<"RoadGenerator">
+    export type Settings = Component<"Settings">
+    export type TerrainStamp = Component<"TerrainStamp">
+    export type Trigger = Component<"Trigger">
+    export type WayPath = Component<"WayPath">
+    export type WayPoint = Component<"WayPoint">
 }

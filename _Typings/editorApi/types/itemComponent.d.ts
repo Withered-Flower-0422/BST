@@ -22,7 +22,7 @@ declare module "editor:type" {
         Executor: { data: ExecutorData; method: ExecutorMethod }
     }
 
-    type ItemComponent<T extends keyof ItemComponentTypeMap> = {
+    type ItemComponent<T extends keyof ItemComponentTypeMap = keyof ItemComponentTypeMap> = {
         /**
          * @readonly
          */

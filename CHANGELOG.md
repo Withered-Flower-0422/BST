@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.2 (2025-11-17)
+
+-   Gave default generic type values to `SettingsComponent` and `ItemComponent`.
+-   Exported `SettingsComponent`, `ItemComponent` and `SceneObject` from `editor:alias`.
+-   Exported `Component` and `UIElement` from `game:alias`.
+-   Optimized some templates and types.
+-   Specified `lib` in `jsconfig.json`.
+-   Made `OnTrigger`, `OnCollide` and `CollisionEvent` to be generic types.
+-   Added a new game sample `transfer.js`.
+-   Moved some types from `exportFuncs.d.ts` to `utils.d.ts`.
+
 ## v1.6.1 (2025-11-15)
 
 -   Optimized the message type of `Events`. Once some of the events are triggered, the corresponding message must contain at least one item.

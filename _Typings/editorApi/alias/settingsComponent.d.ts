@@ -3,18 +3,19 @@
 
 declare module "editor:alias" {
     import { SettingsComponent } from "editor:type"
+    export { SettingsComponent }
 
-    type AssetReference = SettingsComponent<"AssetReference">
-    type BackgroundMusic = SettingsComponent<"BackgroundMusic">
-    type Cloud = SettingsComponent<"Cloud">
-    type CollectionPrototype = SettingsComponent<"CollectionPrototype">
-    type CustomBall = SettingsComponent<"CustomBall">
-    type Environment = SettingsComponent<"Environment">
-    type Fog = SettingsComponent<"Fog">
-    type Lens = SettingsComponent<"Lens">
-    type Lighting = SettingsComponent<"Lighting">
-    type Landscaping = SettingsComponent<"Landscaping">
-    type MapInfo = SettingsComponent<"MapInfo">
-    type Sky = SettingsComponent<"Sky">
-    type Terrain = SettingsComponent<"Terrain">
+    export type AssetReference = SettingsComponent<"AssetReference">
+    export type BackgroundMusic = SettingsComponent<"BackgroundMusic">
+    export type Cloud = SettingsComponent<"Cloud">
+    export type CollectionPrototype = SettingsComponent<"CollectionPrototype">
+    export type CustomBall = SettingsComponent<"CustomBall">
+    export type Environment = SettingsComponent<"Environment">
+    export type Fog = SettingsComponent<"Fog">
+    export type Lens = SettingsComponent<"Lens">
+    export type Lighting = SettingsComponent<"Lighting">
+    export type Landscaping = SettingsComponent<"Landscaping">
+    export type MapInfo = SettingsComponent<"MapInfo">
+    export type Sky = SettingsComponent<"Sky">
+    export type Terrain = SettingsComponent<"Terrain">
 }

@@ -18,7 +18,7 @@ declare module "editor:type" {
         Landscaping: Landscaping
     }
 
-    type SettingsComponent<T extends keyof SettingsComponentTypeMap> = {
+    type SettingsComponent<T extends keyof SettingsComponentTypeMap = keyof SettingsComponentTypeMap> = {
         /**
          * @readonly
          */
