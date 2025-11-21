@@ -2,28 +2,19 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "guid" {
-    type IsHexStringOfExactLength<S extends string, L extends number, C extends 0[] = []> = C["length"] extends L
+    type IsHexStringOfExactLength<
+        S extends string,
+        L extends number,
+        B extends boolean = false,
+        C extends 0[] = []
+    > = C["length"] extends L
         ? S extends ""
             ? true
             : false
         : S extends `${
-              | "0"
-              | "1"
-              | "2"
-              | "3"
-              | "4"
-              | "5"
-              | "6"
-              | "7"
-              | "8"
-              | "9"
-              | "a"
-              | "b"
-              | "c"
-              | "d"
-              | "e"
-              | "f"}${infer R}`
-        ? IsHexStringOfExactLength<R, L, [...C, 0]>
+              | ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "a" | "b" | "c" | "d" | "e" | "f")
+              | (B extends true ? "A" | "B" | "C" | "D" | "E" | "F" : never)}${infer R}`
+        ? IsHexStringOfExactLength<R, L, B, [...C, 0]>
         : false
 
     type AssertGuid<S extends string> = string extends S
