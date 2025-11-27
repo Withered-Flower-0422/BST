@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { KeyboardKey, NonNoneKey, MouseButton, GamePadButton, PlayerKey } from "keys"
+    import { KeyboardKey, MouseButton, GamePadButton, PlayerKey } from "keys"
     import { Float2 } from "basicData"
 
     namespace inputManager {
@@ -12,30 +12,33 @@ declare module "game:module" {
              * @param key - The key to check.
              * @returns Whether the key is currently down.
              * @NOTE -
-             * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * - Passing in `"None"` will always return `false`.
+             * - Be careful when passing in `"Escape"`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
-            const checkKeyDown: (key: NonNoneKey) => bool
+            const checkKeyDown: <T extends KeyboardKey>(key: T) => T extends "None" ? false : bool
 
             /**
              * Checks if a key is currently up.
              * @param key - The key to check.
              * @returns Whether the key is currently up.
              * @NOTE -
-             * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * - Passing in `"None"` will always return `false`.
+             * - Be careful when passing in `"Escape"`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
-            const checkKeyUp: (key: NonNoneKey) => bool
+            const checkKeyUp: <T extends KeyboardKey>(key: T) => T extends "None" ? false : bool
 
             /**
              * Checks if a key is currently being held down.
              * @param key - The key to check.
              * @returns Whether the key is currently being held down.
              * @NOTE -
-             * - Be careful when passing in `Escape`, as `Escape` is to pause the game,
+             * - Passing in `"None"` will always return `false`.
+             * - Be careful when passing in `"Escape"`, as `Escape` is to pause the game,
              * and the function may not be able to be invoked in time at that moment.
              */
-            const checkKeyHold: (key: NonNoneKey) => bool
+            const checkKeyHold: <T extends KeyboardKey>(key: T) => T extends "None" ? false : bool
         }
 
         namespace mouse {
