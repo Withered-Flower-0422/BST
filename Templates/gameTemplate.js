@@ -58,9 +58,10 @@ import { type } from "os"
 // Declare types of executor variables below to get type hints.
 // Or clear the comments if you don't need type hints.
 /**
- * @typedef {object} $
- * @prop {int} var1
- * @prop {string} var2
+ * @typedef {{
+ * var1: number,
+ * readonly var2: string,
+ * }} $
  */
 
 /** Variables set on the `Executor`. */
