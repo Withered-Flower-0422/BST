@@ -23,7 +23,6 @@
     Trans,
     Quaternion,
 } from "gameApi"
-import { type } from "os"
 /** commonly used types if needed
 @import {
     // Item
