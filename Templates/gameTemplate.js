@@ -23,6 +23,7 @@
     Trans,
     Quaternion,
 } from "gameApi"
+import { type } from "os"
 /** commonly used types if needed
 @import {
     // Item
@@ -62,14 +63,11 @@
  * @prop {string} var2
  */
 
-/**
- * Variables set on the `Executor`.
- * @type {$} @readonly
- */
-let $
+/** Variables set on the `Executor`. */
+const $ = /** @type {$} */ ({})
 
 /** @type {Init<$>} */
-export const init = (self, v) => (($ = v), void 0)
+export const init = (self, v) => Object.setPrototypeOf($, v)
 
 /** @type {GameExecute} */
 export const execute = (...args) => {}
