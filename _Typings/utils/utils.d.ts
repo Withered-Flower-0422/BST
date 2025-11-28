@@ -103,7 +103,7 @@ declare module "utils" {
             : never
         : never
 
-    type Assert0To1s<T extends number[]> = {
+    type Assert0To1s<T extends readonly number[]> = {
         [K in keyof T]: Assert0To1<T[K]>
     }
 

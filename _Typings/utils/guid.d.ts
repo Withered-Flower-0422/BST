@@ -37,7 +37,7 @@ declare module "guid" {
             : never
         : never
 
-    type AssertGuids<S extends string[]> = {
+    type AssertGuids<S extends readonly string[]> = {
         [K in keyof S]: AssertGuid<S[K]>
     }
 }

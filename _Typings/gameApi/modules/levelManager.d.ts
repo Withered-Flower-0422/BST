@@ -292,7 +292,7 @@ declare module "game:module" {
          * @param color - The color of the status bar.
          * @returns
          */
-        const createCustomStatusBar: <const T extends float[], U extends float, V extends string>(
+        const createCustomStatusBar: <const T extends readonly float[], U extends float, V extends string>(
             statusBarName: string,
             iconPath: AssertPath<V, "Textures">,
             marks: Assert0To1s<T>,

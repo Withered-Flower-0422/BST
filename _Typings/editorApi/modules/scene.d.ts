@@ -26,7 +26,7 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to get.
          * @returns An array of the objects with the given guids.
          */
-        const getObjects: <const S extends guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
+        const getObjects: <const S extends readonly guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
 
         /**
          * Destroys an object by its guid.
@@ -40,7 +40,7 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to destroy.
          * @returns
          */
-        const destroyObjects: <const S extends guid[]>(guids: AssertGuids<S>) => void
+        const destroyObjects: <const S extends readonly guid[]>(guids: AssertGuids<S>) => void
 
         /**
          * Creates a new object with the given name and type.
@@ -64,7 +64,9 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to duplicate.
          * @returns An array of the duplicated objects.
          */
-        const duplicateObjects: <const S extends guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
+        const duplicateObjects: <const S extends readonly guid[]>(
+            guids: AssertGuids<S>
+        ) => { [P in keyof S]: SceneObject }
 
         /**
          * Gets the selected object in the scene. If no object is selected, returns `null`.

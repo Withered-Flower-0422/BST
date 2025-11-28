@@ -38,7 +38,7 @@ declare module "game:type" {
          * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
          * @returns The point information of the given points.
          */
-        getPointsInfo: <const T extends float[]>(points: Assert0To1s<T>) => { [P in keyof T]: PointInfo<T[P]> }
+        getPointsInfo: <const T extends readonly float[]>(points: Assert0To1s<T>) => { [P in keyof T]: PointInfo<T[P]> }
 
         /**
          * Plays the way path so all the targets move along the path.

@@ -55,12 +55,12 @@ declare module "path" {
         ? never
         : T
 
-    type AssertFolders<T extends string[], P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = {
+    type AssertFolders<T extends readonly string[], P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = {
         [K in keyof T]: AssertFolder<T[K], P>
     }
 
     type AssertPaths<
-        T extends string[],
+        T extends readonly string[],
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
         S extends boolean = true,
         E extends boolean = true
