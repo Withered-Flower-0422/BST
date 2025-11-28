@@ -9,6 +9,8 @@ declare module "game:module" {
     import { AssertPath } from "path"
     import { Float3, ColorRGBA } from "basicData"
 
+    type TipGuid = string & { readonly _TipGuidBrand: unique symbol }
+
     enum Skin {
         Default = 0,
         Mush = 1,
@@ -141,14 +143,14 @@ declare module "game:module" {
          * @param content - The content of the tip to be shown.
          * @returns The shown tip's guid.
          */
-        const showTip: (content: string) => string
+        const showTip: (content: string) => TipGuid
 
         /**
          * Hides the tip with the specified guid.
          * @param guid - The guid of the tip to be hidden.
          * @returns
          */
-        const hideTip: (guid: string) => void
+        const hideTip: (guid: TipGuid) => void
 
         /**
          * Hides all tips.
@@ -162,7 +164,7 @@ declare module "game:module" {
          * @param frame - The number of frames to wait before hiding the tip.
          * @returns
          */
-        const hideTipDelay: <T extends int>(guid: string, frame: AssertNonNegInt<T>) => void
+        const hideTipDelay: <T extends int>(guid: TipGuid, frame: AssertNonNegInt<T>) => void
 
         /**
          * Hides all tips after a specified number of frames.

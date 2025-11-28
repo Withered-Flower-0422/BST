@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.3 (2025-11-28)
+
+-   Added a new type `TipGuid` and exported it from `game:alias`. `levelManager.showTip()`, `levelManager.hideTip()` and `levelManager.hideTipDelay()` now relate to this type.
+
 ## v1.6.2 (2025-11-17)
 
 -   Gave default generic type values to `SettingsComponent` and `ItemComponent`.
