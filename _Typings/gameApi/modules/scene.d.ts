@@ -56,7 +56,7 @@ declare module "game:module" {
          * @param scl - The scale of the item.
          * @returns The created item.
          */
-        const createItem: (templateName: string, pos: Float3, rot: Float3, scl: Float3) => Item
+        const createItem: (templateName: string, pos: Float3, rot: Float3, scl: Float3) => Item | null
 
         /**
          * Casts a ray from the start position to the end position and returns the first item or player it hits.
