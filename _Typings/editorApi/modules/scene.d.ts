@@ -26,7 +26,9 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to get.
          * @returns An array of the objects with the given guids.
          */
-        const getObjects: <const S extends readonly guid[]>(guids: AssertGuids<S>) => { [P in keyof S]: SceneObject }
+        const getObjects: <const S extends readonly guid[]>(
+            guids: S & AssertGuids<S>
+        ) => { [P in keyof S]: SceneObject }
 
         /**
          * Destroys an object by its guid.
@@ -40,7 +42,7 @@ declare module "editor:module" {
          * @param guids - The guid strings in an array of the objects to destroy.
          * @returns
          */
-        const destroyObjects: <const S extends readonly guid[]>(guids: AssertGuids<S>) => void
+        const destroyObjects: <const S extends readonly guid[]>(guids: S & AssertGuids<S>) => void
 
         /**
          * Creates a new object with the given name and type.
@@ -65,7 +67,7 @@ declare module "editor:module" {
          * @returns An array of the duplicated objects.
          */
         const duplicateObjects: <const S extends readonly guid[]>(
-            guids: AssertGuids<S>
+            guids: S & AssertGuids<S>
         ) => { [P in keyof S]: SceneObject }
 
         /**
@@ -89,7 +91,7 @@ declare module "editor:module" {
          */
         const setSelection: <S1 extends guid, const S2 extends guid[]>(
             activatedObjectGuid: AssertGuid<S1>,
-            selectedObjectsGuid: AssertGuids<S2>
+            selectedObjectsGuid: S2 & AssertGuids<S2>
         ) => void
 
         /**

@@ -295,7 +295,7 @@ declare module "game:module" {
         const createCustomStatusBar: <const T extends readonly float[], U extends float, V extends string>(
             statusBarName: string,
             iconPath: AssertPath<V, "Textures">,
-            marks: Assert0To1s<T>,
+            marks: T & Assert0To1s<T>,
             value: Assert0To1<U>,
             valueString: string,
             color: ColorRGBA
