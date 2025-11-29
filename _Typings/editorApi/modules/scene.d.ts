@@ -24,7 +24,7 @@ declare module "editor:module" {
         /**
          * Gets multiple objects by their guids.
          * @param guids - The guid strings in an array of the objects to get.
-         * @returns An array of the objects with the given guids.
+         * @returns An array of the objects (or `null` if the object does not exist) with the given guids.
          */
         const getObjects: <const S extends readonly guid[]>(
             guids: S & AssertGuids<S>

@@ -24,7 +24,7 @@ declare module "game:module" {
         /**
          * Gets the items by their guids.
          * @param guids - The guid strings in an array of the items to get.
-         * @returns An array of the items with the given guids.
+         * @returns An array of the items (or `null` if the item does not exist) with the given guids.
          */
         const getItems: <const S extends readonly guid[]>(guids: S & AssertGuids<S>) => { [P in keyof S]: Item | null }
 
@@ -54,7 +54,7 @@ declare module "game:module" {
          * @param pos - The position of the item.
          * @param rot - The rotation of the item.
          * @param scl - The scale of the item.
-         * @returns The created item.
+         * @returns The created item, or `null` if the template does not exist.
          */
         const createItem: (templateName: string, pos: Float3, rot: Float3, scl: Float3) => Item | null
 
