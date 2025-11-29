@@ -28,7 +28,7 @@ declare module "editor:module" {
          */
         const getObjects: <const S extends readonly guid[]>(
             guids: S & AssertGuids<S>
-        ) => { [P in keyof S]: SceneObject }
+        ) => { [P in keyof S]: SceneObject | null }
 
         /**
          * Destroys an object by its guid.
