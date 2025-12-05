@@ -262,5 +262,13 @@ declare module "__future__" {
         defaultKeyValue: KeyboardKey
         localize: LocalizedString
     }
+
+    type Events = {
+        /**
+         * On player sending message to the console.
+         * @Message The message sent by the player.
+         */
+        OnReceiveConsoleMessage?: [string]
+    }
     // }
 }
