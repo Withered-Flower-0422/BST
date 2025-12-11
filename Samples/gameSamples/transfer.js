@@ -13,8 +13,8 @@ import { player, levelManager, inputManager } from "gameApi"
 export const registerEvents = /** @type {const} */ (["OnPhysicsUpdate"])
 
 /** @type {OnEvents<typeof registerEvents>} */
-export const onEvents = (self, events) => {
-    if (events.OnPhysicsUpdate) {
+export const onEvents = (self, { OnPhysicsUpdate }) => {
+    if (OnPhysicsUpdate) {
         // Ensure the ball is movable.
         if (!levelManager.timerEnabled) {
             return

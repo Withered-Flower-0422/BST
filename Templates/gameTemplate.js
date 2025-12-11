@@ -63,11 +63,13 @@
  * }} $
  */
 
-/** Variables set on the `Executor`. */
-const $ = /** @type {$} */ ({})
+/** @type {$} Variables set on the `Executor`. */
+let $
 
 /** @type {Init<$>} */
-export const init = (self, v) => Object.setPrototypeOf($, v)
+export const init = (self, v) => {
+    $ = v
+}
 
 /** @type {GameExecute} */
 export const execute = (...args) => {}
@@ -82,4 +84,4 @@ export const onCollide = (self, collisionEvent) => {}
 export const registerEvents = /** @type {const} */ ([])
 
 /** @type {OnEvents<typeof registerEvents>} */
-export const onEvents = (self, events) => {}
+export const onEvents = (self, {}) => {}
