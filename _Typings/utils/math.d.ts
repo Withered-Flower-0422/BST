@@ -8,15 +8,15 @@ declare module "math" {
     namespace math {
         /**
          * Converts a Quaternion to a Float3.
-         * @param value - The Float3 to convert.
-         * @returns The Quaternion representation of the Float3.
+         * @param value - The Quaternion to convert.
+         * @returns The Float3 representation of the Quaternion.
          */
         const quaternionToFloat3: (value: Quaternion) => Float3
 
         /**
          * Converts a Float3 to a Quaternion.
-         * @param value - The Quaternion to convert.
-         * @returns The Float3 representation of the Quaternion.
+         * @param value - The Float3 to convert.
+         * @returns The Quaternion representation of the Float3.
          */
         const float3ToQuaternion: (value: Float3) => Quaternion
 
