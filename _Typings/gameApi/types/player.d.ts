@@ -43,7 +43,7 @@ declare module "game:type" {
         /**
          * @readonly
          */
-        readonly guid: string
+        readonly guid: guid
         /**
          * - Assigning a value to this property will change the player's position with camera following smoothly.
          * - If you want the camera to jump to the player's position directly, use `player.transfer()` or `levelManager.transferPlayer()` instead.
@@ -126,7 +126,7 @@ declare module "__future__" {
         /**
          * @readonly
          */
-        readonly guid: string
+        readonly guid: guid
         /**
          * - Assigning a value to this property will change the player's position with camera following smoothly.
          * - If you want the camera to jump to the player's position directly, use `player.transfer()` or `levelManager.transferPlayer()` instead.

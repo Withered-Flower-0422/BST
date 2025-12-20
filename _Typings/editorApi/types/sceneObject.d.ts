@@ -73,7 +73,7 @@ declare module "editor:type" {
         /**
          * @readonly
          */
-        readonly guid: string
+        readonly guid: guid
 
         /**
          * The name of the object, which is displayed in the `Hierarchy` panel.
@@ -84,7 +84,7 @@ declare module "editor:type" {
          * Generates a new guid for the object.
          * @returns The new guid of the object.
          */
-        readonly getNewGuid: () => string
+        readonly getNewGuid: () => guid
 
         /**
          * Sets a specified local transform to the object.

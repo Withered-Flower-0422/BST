@@ -9,7 +9,7 @@ declare module "game:type" {
         /**
          * @readonly
          */
-        readonly guid: string
+        readonly guid: guid
         name: string
 
         /**
