@@ -21,25 +21,14 @@ declare module "game:type" {
     /**
      * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
      */
-    type Player<Scene extends bool = false> = (Scene extends false
-        ? {
-              /**
-               * - If the player ball is never created, the `ballType` will be `null`.
-               */
-              get ballType(): BallType | null
+    type Player<Scene extends bool = false> = {
+        /**
+         * - If the player ball is never created, the `ballType` will be `null`.
+         * - Only {@link BuiltinBallType | builtin ball types} can be set for now.
+         */
+        get ballType(): BallType | (Scene extends false ? null : never)
+        set ballType(ballType: BuiltinBallType)
 
-              /**
-               * - Only {@link BuiltinBallType | builtin ball types} can be set for now.
-               */
-              set ballType(ballType: BuiltinBallType)
-          }
-        : {
-              get ballType(): BallType
-              /**
-               * - Only {@link BuiltinBallType | builtin ball types} can be set for now.
-               */
-              set ballType(ballType: BuiltinBallType)
-          }) & {
         /**
          * @readonly
          */
@@ -112,17 +101,16 @@ declare module "__future__" {
     import { Float3, Quaternion } from "basicData"
     import { BallType, Component } from "game:type"
 
-    type Player<Scene extends bool = false> = (Scene extends false
-        ? {
-              /**
-               * If the player ball is never created, the `ballType` will be `null`.
-               */
-              get ballType(): BallType | null
-              set ballType(ballType: BallType)
-          }
-        : {
-              ballType: BallType
-          }) & {
+    /**
+     * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
+     */
+    type Player<Scene extends bool = false> = {
+        /**
+         * - If the player ball is never created, the `ballType` will be `null`.
+         */
+        get ballType(): BallType | (Scene extends false ? null : never)
+        set ballType(ballType: BallType)
+
         /**
          * @readonly
          */
