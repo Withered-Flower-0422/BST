@@ -67,7 +67,7 @@ declare module "game:type" {
          * @returns The specified component of the item, or `null` if the item doesn't have the specified component.
          */
         readonly getComponent: <T extends keyof ComponentTypeMap>(
-            componentType: T
+            componentType: T,
         ) => T extends "Settings" ? Component<"Settings"> : Component<T> | null
 
         /**
@@ -80,7 +80,7 @@ declare module "game:type" {
         readonly moveTo: <T extends int>(
             targetTransform: Trans,
             easeType: EaseType,
-            duration: AssertNonNegInt<T>
+            duration: AssertNonNegInt<T>,
         ) => void
 
         /**

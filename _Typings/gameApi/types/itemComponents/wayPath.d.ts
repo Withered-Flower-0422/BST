@@ -39,7 +39,7 @@ declare module "game:type" {
          * @returns The point information of the given points.
          */
         getPointsInfo: <const T extends readonly float[]>(
-            points: T & Assert0To1s<T>
+            points: T & Assert0To1s<T>,
         ) => { [P in keyof T]: PointInfo<T[P]> }
 
         /**

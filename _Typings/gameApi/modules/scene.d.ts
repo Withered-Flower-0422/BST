@@ -96,7 +96,7 @@ declare module "game:module" {
          */
         const sphereCastAll: <T extends float>(
             center: Float3,
-            radius: AssertNonNeg<T>
+            radius: AssertNonNeg<T>,
         ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: [Item, ...Item[]] }
 
         /**
@@ -109,7 +109,7 @@ declare module "game:module" {
         const boxCastAll: (
             center: Float3,
             size: Float3,
-            rotation: Quaternion
+            rotation: Quaternion,
         ) => { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: [Item, ...Item[]] }
     }
 }

@@ -17,7 +17,7 @@ declare module "path" {
     type Path<
         T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
         S extends boolean = true,
-        E extends boolean = true
+        E extends boolean = true,
     > =
         | {
               [P in T]: `${P}/${string}/${string}${S extends true ? `.${AssetsSuffixMap[P]}` : ""}`
@@ -27,33 +27,33 @@ declare module "path" {
     type AssertFolder<T extends string, P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = string extends T
         ? T
         : T extends `${P}/${infer A}`
-        ? A extends ""
-            ? never
-            : T
-        : never
+          ? A extends ""
+              ? never
+              : T
+          : never
 
     type AssertPath<
         T extends string,
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
         S extends boolean = true,
-        E extends boolean = true
+        E extends boolean = true,
     > = T extends ""
         ? E extends true
             ? T
             : never
         : string extends T
-        ? T
-        : {
-              [K in P]: T extends `${K}/${infer A}/${infer B}${S extends true ? `.${AssetsSuffixMap[K]}` : ""}`
-                  ? A extends ""
-                      ? false
-                      : B extends ""
-                      ? false
-                      : true
-                  : false
-          }[P] extends false
-        ? never
-        : T
+          ? T
+          : {
+                  [K in P]: T extends `${K}/${infer A}/${infer B}${S extends true ? `.${AssetsSuffixMap[K]}` : ""}`
+                      ? A extends ""
+                          ? false
+                          : B extends ""
+                            ? false
+                            : true
+                      : false
+              }[P] extends false
+            ? never
+            : T
 
     type AssertFolders<T extends readonly string[], P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = {
         [K in keyof T]: AssertFolder<T[K], P>
@@ -63,7 +63,7 @@ declare module "path" {
         T extends readonly string[],
         P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
         S extends boolean = true,
-        E extends boolean = true
+        E extends boolean = true,
     > = {
         [K in keyof T]: AssertPath<T[K], P, S, E>
     }

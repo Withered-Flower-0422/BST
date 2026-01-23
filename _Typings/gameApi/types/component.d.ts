@@ -45,7 +45,7 @@ declare module "game:type" {
          * - Some properties may not be allowed to be set during game runtime.
          */
         readonly setData: (
-            data: Mutable<{ [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K] }>
+            data: Mutable<{ [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K] }>,
         ) => void
     } & Readonly<ComponentTypeMap[T]["method"]>
 }

@@ -23,7 +23,7 @@ declare module "game:module" {
             easeType: EaseType,
             duration: AssertNonNegInt<T>,
             onUpdate: (curValue: float) => void,
-            onFinish: () => void
+            onFinish: () => void,
         ) => Tween
 
         /**
@@ -42,7 +42,7 @@ declare module "game:module" {
             easeType: EaseType,
             duration: AssertNonNegInt<T>,
             onUpdate: (curValue: Float3) => void,
-            onFinish: () => void
+            onFinish: () => void,
         ) => Tween
 
         /**
@@ -61,7 +61,7 @@ declare module "game:module" {
             easeType: EaseType,
             duration: AssertNonNegInt<T>,
             onUpdate: (curValue: Quaternion) => void,
-            onFinish: () => void
+            onFinish: () => void,
         ) => Tween
 
         /**
@@ -80,7 +80,7 @@ declare module "game:module" {
             easeType: EaseType,
             duration: AssertNonNegInt<T>,
             onUpdate: (curValue: ColorRGBA) => void,
-            onFinish: () => void
+            onFinish: () => void,
         ) => Tween
     }
 }

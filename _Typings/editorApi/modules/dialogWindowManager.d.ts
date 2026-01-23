@@ -23,7 +23,7 @@ declare module "editor:module" {
             closeButtonName: string,
             checkButtonName: string,
             onCloseButtonClick: () => void,
-            onCheckButtonClick: (inputText: string) => void
+            onCheckButtonClick: (inputText: string) => void,
         ) => void
 
         /**
@@ -44,7 +44,7 @@ declare module "editor:module" {
             closeButtonName: string,
             checkButtonName: string,
             onCloseButtonClick: () => void,
-            onCheckButtonClick: (inputsText: { [P in keyof T]: string }) => void
+            onCheckButtonClick: (inputsText: { [P in keyof T]: string }) => void,
         ) => void
 
         const openAssetPickerDialog: {
@@ -58,7 +58,7 @@ declare module "editor:module" {
             <T extends keyof AssetsSuffixMap>(
                 onCancel: () => void,
                 onPickAsset: (assetPath: Exclude<Path<T>, "">) => void,
-                assetType: T
+                assetType: T,
             ): void
 
             /**
@@ -83,7 +83,7 @@ declare module "editor:module" {
             windowTitle: string,
             contentText: string,
             closeButtonName: string,
-            onCloseButtonClick: () => void
+            onCloseButtonClick: () => void,
         ) => void
 
         /**
@@ -102,7 +102,7 @@ declare module "editor:module" {
             closeButtonName: string,
             checkButtonName: string,
             onCloseButtonClick: () => void,
-            onCheckButtonClick: () => void
+            onCheckButtonClick: () => void,
         ) => void
 
         /**
@@ -121,7 +121,7 @@ declare module "editor:module" {
             defaultInputTexts: { [P in keyof T]: string },
             buttonNames: U,
             onButtonsClick: { [Q in keyof U]: (inputsText: { [P in keyof T]: string }) => void },
-            onCloseWindowClick: () => void
+            onCloseWindowClick: () => void,
         ) => void
     }
 }

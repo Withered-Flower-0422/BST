@@ -169,7 +169,7 @@ declare module "__future__" {
              */
             <T extends string, U extends int>(
                 name: T extends `K_${string}` ? never : T,
-                value: T extends `C_${string}` ? AssertInt<U> : T extends `K_${string}` ? never : any
+                value: T extends `C_${string}` ? AssertInt<U> : T extends `K_${string}` ? never : any,
             ): void
 
             /**

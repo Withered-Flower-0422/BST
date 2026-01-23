@@ -57,7 +57,7 @@ declare module "game:module" {
          */
         const getData: <T extends keyof ComponentTypeMap, K extends keyof ComponentTypeMap[T]>(
             componentType: T,
-            path: K
+            path: K,
         ) => ComponentTypeMap[T][K]
 
         /**
@@ -70,7 +70,7 @@ declare module "game:module" {
          */
         const setData: <T extends keyof ComponentTypeMap>(
             componentType: T,
-            values: Mutable<{ [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }>
+            values: Mutable<{ [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }>,
         ) => void
     }
 }

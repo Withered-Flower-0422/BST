@@ -27,7 +27,7 @@ declare module "editor:module" {
          * @returns An array of the objects (or `null` if the object does not exist) with the given guids.
          */
         const getObjects: <const S extends readonly guid[]>(
-            guids: S & AssertGuids<S>
+            guids: S & AssertGuids<S>,
         ) => { [P in keyof S]: SceneObject | null }
 
         /**
@@ -67,7 +67,7 @@ declare module "editor:module" {
          * @returns An array of the duplicated objects.
          */
         const duplicateObjects: <const S extends readonly guid[]>(
-            guids: S & AssertGuids<S>
+            guids: S & AssertGuids<S>,
         ) => { [P in keyof S]: SceneObject }
 
         /**
@@ -91,7 +91,7 @@ declare module "editor:module" {
          */
         const setSelection: <S1 extends guid, const S2 extends guid[]>(
             activatedObjectGuid: AssertGuid<S1>,
-            selectedObjectsGuid: S2 & AssertGuids<S2>
+            selectedObjectsGuid: S2 & AssertGuids<S2>,
         ) => void
 
         /**
@@ -120,7 +120,7 @@ declare module "editor:module" {
          * @returns The main object created from the assets.
          */
         const createObjectsFromAssets: <T extends string>(
-            path: AssertPath<T, "Items" | "Meshes", true, false>
+            path: AssertPath<T, "Items" | "Meshes", true, false>,
         ) => SceneObject<"Item">
     }
 }

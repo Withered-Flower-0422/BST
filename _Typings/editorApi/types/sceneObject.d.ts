@@ -17,7 +17,7 @@ declare module "editor:type" {
          * @returns The component of the specified type, or `null` if the item does not have a component of that type.
          */
         readonly getComponent: <U extends keyof ItemComponentTypeMap>(
-            componentType: U
+            componentType: U,
         ) => U extends "Settings" ? ItemComponent<"Settings"> : ItemComponent<U> | null
 
         /**
@@ -26,7 +26,7 @@ declare module "editor:type" {
          * @returns The added component of the specified type.
          */
         readonly addComponent: <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(
-            componentType: U
+            componentType: U,
         ) => ItemComponent<U>
 
         /**

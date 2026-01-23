@@ -196,7 +196,7 @@ declare module "game:module" {
          * @returns
          */
         const cancelEvent: <RE extends RegisterEvent[] = RegisterEvent[]>(
-            eventName: `OnPre${string}` & RE[number]
+            eventName: `OnPre${string}` & RE[number],
         ) => void
 
         /**
@@ -298,7 +298,7 @@ declare module "game:module" {
             marks: T & Assert0To1s<T>,
             value: Assert0To1<U>,
             valueString: string,
-            color: ColorRGBA
+            color: ColorRGBA,
         ) => void
 
         /**
@@ -313,7 +313,7 @@ declare module "game:module" {
             statusBarName: string,
             value: Assert0To1<T>,
             valueString: string,
-            color: ColorRGBA
+            color: ColorRGBA,
         ) => void
 
         /**

@@ -126,7 +126,7 @@ declare module "basicData" {
             r: Assert0To1<R>,
             g: Assert0To1<G>,
             b: Assert0To1<B>,
-            a: Assert0To1<A>
+            a: Assert0To1<A>,
         ): ColorRGBA
 
         prototype: ColorRGBA
