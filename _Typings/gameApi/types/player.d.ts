@@ -2,6 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { Assert0To1 } from "utils"
     import { AssertPath, AssertPaths } from "path"
     import { Float3, Quaternion } from "basicData"
 
@@ -91,8 +92,16 @@ declare module "game:type" {
          * @returns
          */
         readonly setRendererMaterials: <const T extends readonly string[]>(
-            paths: T & AssertPaths<T, "Materials">
+            paths: T & AssertPaths<T, "Materials">,
         ) => void
+
+        /**
+         * Sets the player's renderer opacity.
+         * @param opacity - The opacity of the player's renderer.
+         * @returns
+         * @deprecated Not implemented yet.
+         */
+        readonly setRendererOpacity: <T extends float>(opacity: Assert0To1<T>) => void
     }
 }
 
@@ -173,7 +182,7 @@ declare module "__future__" {
          * @returns
          */
         readonly setRendererMaterials: <const T extends readonly string[]>(
-            paths: T & AssertPaths<T, "Materials">
+            paths: T & AssertPaths<T, "Materials">,
         ) => void
     }
 }

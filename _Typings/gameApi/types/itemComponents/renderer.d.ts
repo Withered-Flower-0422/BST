@@ -19,7 +19,7 @@ declare module "game:type" {
         TryGetGlobalUVMat: bool
         ShadowCastingMode: ShadowCastingMode
         readonly AutoOptimize: bool
-        ForceSetOpacity: bool
+        readonly ForceSetOpacity: bool
         /**
          * @range `0 ~ 1`
          */
