@@ -85,28 +85,24 @@ declare module "editor:type" {
         DisableCollisionAudio: bool
         DisableCollisionDamage: bool
         CollisionLayer: CollisionLayer
-        /**
-         * @deprecated
-         */
+        /** @deprecated */
         Interactive: bool
-        /**
-         * @deprecated
-         */
+        /** @deprecated */
         InteractiveParams: InteractiveParams
         CollisionEnterEvent: bool
         CollisionStayEvent: bool
         CollisionExitEvent: bool
-        /**
-         * @deprecated
-         */
+        /** @deprecated */
         ShowStatus: ShowStatus
     }
 
     type PhysicsObjectMethod = {
-        /**
-         * Automatically sets the size of the minimum bounding box based on the mesh in the `Renderer` component.
-         * @returns
-         */
-        autoDetectBoxCollider: () => void
+        autoDetectBoxCollider: {
+            /**
+             * Automatically sets the size of the minimum bounding box based on the mesh in the `Renderer` component.
+             * @returns
+             */
+            (): void
+        }
     }
 }

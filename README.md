@@ -10,19 +10,18 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 
 ## Current Version
 
--   v1.6.3
+- v1.7.0
 
 ## Usage
 
--   Put the `_Typings` folder and `jsconfig.json` file in `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro HDRP\Assets\Scripts`.
+- Put the `_Typings` folder and `jsconfig.json` file in `%USERPROFILE%\AppData\LocalLow\Mushreb\BME Pro HDRP\Assets\Scripts`.
 
--   If you don't want type checking during coding:
+- If you don't want type checking during coding:
+    - Ignore one line: add `// @ts-ignore` above the line you want to ignore.
+    - Ignore the whole file: add `// @ts-nocheck` at the top of the file.
+    - Ignore every file: change the `checkJS` setting in `jsconfig.json` to `false`.
 
-    -   Ignore one line: add `// @ts-ignore` above the line you want to ignore.
-    -   Ignore the whole file: add `// @ts-nocheck` at the top of the file.
-    -   Ignore every file: change the `checkJS` setting in `jsconfig.json` to `false`.
-
--   If you want to enable [strict](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#--strict-) type checking (not recommended), you can uncomment `"strict": true` in `jsconfig.json`.
+- If you want to enable [strict](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#--strict-) type checking (not recommended), you can uncomment `"strict": true` in `jsconfig.json`.
 
 ## Changelog
 
@@ -30,13 +29,13 @@ Detailed changes are documented in the [CHANGELOG](https://github.com/Withered-F
 
 ## Contribution
 
--   If you are in the [Ballex² official discord server `5NygdBmksE`](https://discord.gg/5NygdBmksE/) or the [Ballex² official QQ group `797934847`](https://qm.qq.com/q/2mIPnK8JIk), you can directly `@枯萎の花`.
--   If you are familiar with the routines, you can create issues or pull requests here.
+- If you are in the [Ballex² official discord server `5NygdBmksE`](https://discord.gg/5NygdBmksE/) or the [Ballex² official QQ group `797934847`](https://qm.qq.com/q/2mIPnK8JIk), you can directly `@枯萎の花`.
+- If you are familiar with the routines, you can create issues or pull requests here.
 
 ## Ballex² Mapping Tutorial
 
--   If you are new to Ballex² mapping, you can check out the [mapping tutorial](https://withered-flower-0422.github.io/BMT/).
--   And its [source code repository](https://github.com/Withered-Flower-0422/BMT) if you want to do a local setup.
+- If you are new to Ballex² mapping, you can check out the [mapping tutorial](https://withered-flower-0422.github.io/BMT/).
+- And its [source code repository](https://github.com/Withered-Flower-0422/BMT) if you want to do a local setup.
 
 ## License
 

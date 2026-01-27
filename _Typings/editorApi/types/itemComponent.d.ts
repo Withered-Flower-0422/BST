@@ -23,43 +23,49 @@ declare module "editor:type" {
     }
 
     type ItemComponent<T extends keyof ItemComponentTypeMap = keyof ItemComponentTypeMap> = {
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly type: T
 
-        /**
-         * Gets the data of the component as a JSON string.
-         * @returns The data of the component as a JSON string.
-         * @NOTE -
-         * - The returned data is **not** a JSON object, needs to parse it before use.
-         * - Because the returned data is a string, no type hint here,
-         *   you may set specified type to it manually if you want type hint.
-         */
-        readonly getData: () => json
+        readonly getData: {
+            /**
+             * Gets the data of the component as a JSON string.
+             * @returns The data of the component as a JSON string.
+             * @NOTE -
+             * - The returned data is **not** a JSON object, needs to parse it before use.
+             * - Because the returned data is a string, no type hint here,
+             *   you may set specified type to it manually if you want type hint.
+             */
+            (): json
+        }
 
-        /**
-         * Sets data to the component.
-         * @param data - The data of the component to set, as a JSON string.
-         * @returns
-         * @NOTE -
-         * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
-         */
-        readonly setData: (data: json) => void
+        readonly setData: {
+            /**
+             * Sets data to the component.
+             * @param data - The data of the component to set, as a JSON string.
+             * @returns
+             * @NOTE -
+             * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
+             */
+            (data: json): void
+        }
     } & Readonly<ItemComponentTypeMap[T]["method"]> &
         (T extends "Settings"
             ? {}
             : {
-                  /**
-                   * Copies all data from this component to the editor's internal clipboard.
-                   * @returns
-                   */
-                  readonly copyData: () => void
+                  readonly copyData: {
+                      /**
+                       * Copies all data from this component to the editor's internal clipboard.
+                       * @returns
+                       */
+                      (): void
+                  }
 
-                  /**
-                   * Pastes component data from the editor's internal clipboard to this component.
-                   * @returns
-                   */
-                  readonly pasteData: () => void
+                  readonly pasteData: {
+                      /**
+                       * Pastes component data from the editor's internal clipboard to this component.
+                       * @returns
+                       */
+                      (): void
+                  }
               })
 }

@@ -80,11 +80,13 @@ declare module "game:module" {
             <O extends object, T extends keyof O>(name: T, value: O[T]): void
         }
 
-        /**
-         * Clears all variables except those starting with `C_`.
-         * @returns
-         */
-        const clear: () => void
+        const clear: {
+            /**
+             * Clears all variables except those starting with `C_`.
+             * @returns
+             */
+            (): void
+        }
     }
 }
 
@@ -183,10 +185,12 @@ declare module "__future__" {
             <O extends object, T extends keyof O>(name: T, value: O[T]): void
         }
 
-        /**
-         * Clears all variables except those starting with `C_` and `K_`.
-         * @returns
-         */
-        const clear: () => void
+        const clear: {
+            /**
+             * Clears all variables except those starting with `C_` and `K_`.
+             * @returns
+             */
+            (): void
+        }
     }
 }

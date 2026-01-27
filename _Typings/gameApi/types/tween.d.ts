@@ -3,22 +3,28 @@
 
 declare module "game:type" {
     type Tween = {
-        /**
-         * Plays the tween for one step.
-         * @returns
-         */
-        readonly next: () => void
+        readonly next: {
+            /**
+             * Plays the tween for one step.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Plays the tween until it is completed.
-         * @returns
-         */
-        readonly play: () => void
+        readonly play: {
+            /**
+             * Plays the tween until it is completed.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning.
-         * @returns
-         */
-        readonly stop: () => void
+        readonly stop: {
+            /**
+             * Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning.
+             * @returns
+             */
+            (): void
+        }
     }
 }

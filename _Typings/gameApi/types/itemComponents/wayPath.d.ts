@@ -26,41 +26,49 @@ declare module "game:type" {
     }
 
     type WayPathMethod = {
-        /**
-         * Gets the point information of the given point.
-         * @param point - The point proportion of the way path, ranging from 0 to 1.
-         * @returns The point information of the given point.
-         */
-        getPointInfo: <T extends float>(point: Assert0To1<T>) => PointInfo<T>
+        getPointInfo: {
+            /**
+             * Gets the point information of the given point.
+             * @param point - The point proportion of the way path, ranging from 0 to 1.
+             * @returns The point information of the given point.
+             */
+            <T extends float>(point: Assert0To1<T>): PointInfo<T>
+        }
 
-        /**
-         * Gets the point information of the given points.
-         * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
-         * @returns The point information of the given points.
-         */
-        getPointsInfo: <const T extends readonly float[]>(
-            points: T & Assert0To1s<T>,
-        ) => { [P in keyof T]: PointInfo<T[P]> }
+        getPointsInfo: {
+            /**
+             * Gets the point information of the given points.
+             * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
+             * @returns The point information of the given points.
+             */
+            <const T extends readonly float[]>(points: T & Assert0To1s<T>): { [P in keyof T]: PointInfo<T[P]> }
+        }
 
-        /**
-         * Plays the way path so all the targets move along the path.
-         * @returns
-         * @deprecated Not implemented yet.
-         */
-        play(): void
+        /** @deprecated Not implemented yet. */
+        play: {
+            /**
+             * Plays the way path so all the targets move along the path.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Pauses the way path so all the targets stop moving. The next call of `play()` will resume the movement from the paused point.
-         * @returns
-         * @deprecated Not implemented yet.
-         */
-        pause(): void
+        /** @deprecated Not implemented yet. */
+        pause: {
+            /**
+             * Pauses the way path so all the targets stop moving. The next call of `play()` will resume the movement from the paused point.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the way path so all the targets stop moving. The next call of `play()` will start the movement from the beginning.
-         * @returns
-         * @deprecated Not implemented yet.
-         */
-        stop(): void
+        /** @deprecated Not implemented yet. */
+        stop: {
+            /**
+             * Stops the way path so all the targets stop moving. The next call of `play()` will start the movement from the beginning.
+             * @returns
+             */
+            (): void
+        }
     }
 }

@@ -2,284 +2,289 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.0 (2026-01-27)
+
+- Reformatted the code.
+- Rewrote all the function types.
+
 ## v1.6.3 (2025-11-28)
 
--   Added a new type `TipGuid` and exported it from `game:alias`. `levelManager.showTip()`, `levelManager.hideTip()` and `levelManager.hideTipDelay()` now relate to this type.
--   Made some generic types extend to readonly arrays.
+- Added a new type `TipGuid` and exported it from `game:alias`. `levelManager.showTip()`, `levelManager.hideTip()` and `levelManager.hideTipDelay()` now relate to this type.
+- Made some generic types extend to readonly arrays.
 
 ## v1.6.2 (2025-11-17)
 
--   Gave default generic type values to `SettingsComponent` and `ItemComponent`.
--   Exported `SettingsComponent`, `ItemComponent` and `SceneObject` from `editor:alias`.
--   Exported `Component` and `UIElement` from `game:alias`.
--   Optimized some templates and types.
--   Specified `lib` in `jsconfig.json`.
--   Made `OnTrigger`, `OnCollide` and `CollisionEvent` to be generic types.
--   Added a new game sample `transfer.js`.
--   Moved some types from `exportFuncs.d.ts` to `utils.d.ts`.
--   Added a global type `guid` whose actual type is `string`.
--   Added a new, not-implemented-yet function `levelManager.isCustomStatusBarExist()`.
+- Gave default generic type values to `SettingsComponent` and `ItemComponent`.
+- Exported `SettingsComponent`, `ItemComponent` and `SceneObject` from `editor:alias`.
+- Exported `Component` and `UIElement` from `game:alias`.
+- Optimized some templates and types.
+- Specified `lib` in `jsconfig.json`.
+- Made `OnTrigger`, `OnCollide` and `CollisionEvent` to be generic types.
+- Added a new game sample `transfer.js`.
+- Moved some types from `exportFuncs.d.ts` to `utils.d.ts`.
+- Added a global type `guid` whose actual type is `string`.
+- Added a new, not-implemented-yet function `levelManager.isCustomStatusBarExist()`.
 
 ## v1.6.1 (2025-11-15)
 
--   Optimized the message type of `Events`. Once some of the events are triggered, the corresponding message must contain at least one item.
--   Added `Collection` type and exported it as `CollectionName` from `game:alias`.
--   Exported `BuiltinCollection` from `game:alias`.
--   Optimized `variables.get()` and `variables.set()`. Now they can infer `BuiltinCollection` first.
+- Optimized the message type of `Events`. Once some of the events are triggered, the corresponding message must contain at least one item.
+- Added `Collection` type and exported it as `CollectionName` from `game:alias`.
+- Exported `BuiltinCollection` from `game:alias`.
+- Optimized `variables.get()` and `variables.set()`. Now they can infer `BuiltinCollection` first.
 
 ## v1.6.0 (2025-11-14)
 
--   Added some types in `__future__` module for future use. These types or features may not be really implemented in the future.
--   Now `variables.get()` and `variables.set()` can take generic type values.
+- Added some types in `__future__` module for future use. These types or features may not be really implemented in the future.
+- Now `variables.get()` and `variables.set()` can take generic type values.
 
 ## v1.5.7 (2025-11-12)
 
--   Enhanced some descriptions and types and fixed some typos and grammar errors.
--   Added `play()`, `pause()` and `stop()` methods to `wayPath`. These methods are not implemented yet and may change in the future.
+- Enhanced some descriptions and types and fixed some typos and grammar errors.
+- Added `play()`, `pause()` and `stop()` methods to `wayPath`. These methods are not implemented yet and may change in the future.
 
 ## v1.5.6 (2025-11-03)
 
--   `dialogWindowManager.openConfirmDialog()` has been implemented.
--   Added `saveMesh()` method to `RoadGeneratorMethod`.
+- `dialogWindowManager.openConfirmDialog()` has been implemented.
+- Added `saveMesh()` method to `RoadGeneratorMethod`.
 
 ## v1.5.5 (2025-10-30)
 
--   Added `levelManager.spawnBallType`.
--   Marked `levelManager.spawnBallType` and `dialogWindowManager.openConfirmDialog()` as `Not Implemented`.
--   Marked `SceneFolder` as `deprecated`.
+- Added `levelManager.spawnBallType`.
+- Marked `levelManager.spawnBallType` and `dialogWindowManager.openConfirmDialog()` as `Not Implemented`.
+- Marked `SceneFolder` as `deprecated`.
 
 ## v1.5.4 (2025-10-29)
 
--   Optimized the return type of `scene.getPlayer()`.
--   Gave default generic type values to `UIElement`, `SceneObject` and `Component`.
+- Optimized the return type of `scene.getPlayer()`.
+- Gave default generic type values to `UIElement`, `SceneObject` and `Component`.
 
 ## v1.5.3 (2025-10-26)
 
--   Temporarily prohibited assigning non-builtin ball types to `player.ballType`.
--   Defined a new type `BuiltinBallType` and exported it from `game:alias`.
+- Temporarily prohibited assigning non-builtin ball types to `player.ballType`.
+- Defined a new type `BuiltinBallType` and exported it from `game:alias`.
 
 ## v1.5.2 (2025-10-22)
 
--   Removed type `CancelableEvent`.
--   Use `interface` to define `ColorRGBA` and `ColorRGBAConstructor` instead of `type`.
--   Added default generic type values to `new ColorRGBA()`.
--   Now `BallType` can be any string.
+- Removed type `CancelableEvent`.
+- Use `interface` to define `ColorRGBA` and `ColorRGBAConstructor` instead of `type`.
+- Added default generic type values to `new ColorRGBA()`.
+- Now `BallType` can be any string.
 
 ## v1.5.1 (2025-10-20)
 
--   Rewrote the logic of class `ColorRGBA`.
--   Optimized the description of `player.ballType`.
+- Rewrote the logic of class `ColorRGBA`.
+- Optimized the description of `player.ballType`.
 
 ## v1.5.0 (2025-10-17)
 
--   Removed `Float2`, `Float3`, `Float4`, `Quaternion`, `Bool3`, `Trans` and `ColorRGBA` from `global`.
--   Modified some files to adapt to the changes.
+- Removed `Float2`, `Float3`, `Float4`, `Quaternion`, `Bool3`, `Trans` and `ColorRGBA` from `global`.
+- Modified some files to adapt to the changes.
 
 ## v1.4.4 (2025-10-17)
 
--   Now the in-game `console.log()` should take exactly one parameter. (Errors can be correctly caught if no parameter is passed.)
+- Now the in-game `console.log()` should take exactly one parameter. (Errors can be correctly caught if no parameter is passed.)
 
 ## v1.4.3 (2025-10-08)
 
--   Removed type `Player` from `global`; exported it from `game:alias`.
--   Optimized `gameTemplate.js` and `gameApi.d.ts`. Now `player` can be directly imported from `gameApi`.
--   The type of `triggeredItem` of `OnTrigger`, `itemA` and `itemB` of `CollisionEvent` and `item` of `RaycastResult` are now back to `Item`.
+- Removed type `Player` from `global`; exported it from `game:alias`.
+- Optimized `gameTemplate.js` and `gameApi.d.ts`. Now `player` can be directly imported from `gameApi`.
+- The type of `triggeredItem` of `OnTrigger`, `itemA` and `itemB` of `CollisionEvent` and `item` of `RaycastResult` are now back to `Item`.
 
 ## v1.4.2 (2025-09-21)
 
--   Added `Includes`, `IsUnique` and `ExpectTrue` types in `utils.d.ts`.
--   Optimized `gameTemplate.js`. Now it can check if there are repeated events in `registerEvents`.
--   Updated files in `Samples` to adapt to the changes.
+- Added `Includes`, `IsUnique` and `ExpectTrue` types in `utils.d.ts`.
+- Optimized `gameTemplate.js`. Now it can check if there are repeated events in `registerEvents`.
+- Updated files in `Samples` to adapt to the changes.
 
 ## v1.4.1 (2025-09-20)
 
--   Added `dialogWindowManager.openConfirmDialog()`.
--   Added type `NonNoneKey` which represents `Exclude<KeyboardKey, "None">` and exported it from `game:alias`.
--   Added generic type `RegisterEvents` and exported it from `game:alias`.
--   Optimized `gameTemplate.js`.
+- Added `dialogWindowManager.openConfirmDialog()`.
+- Added type `NonNoneKey` which represents `Exclude<KeyboardKey, "None">` and exported it from `game:alias`.
+- Added generic type `RegisterEvents` and exported it from `game:alias`.
+- Optimized `gameTemplate.js`.
 
 ## v1.4.0 (2025-09-16)
 
--   Optimized some descriptions of functions.
--   Now most methods are readonly.
--   Now the `registerEvents` in `gameTemplate.ts` is **satisfied** to `RegisterEvent[]` instead of **typed** to `RegisterEvent[]`, which provides better type hints for parameter `events` in `onEvents`.
--   Changed `never[]` types in `Events` to `[null]`.
--   Updated files in `Samples` and `Templates` to adapt to the changes.
+- Optimized some descriptions of functions.
+- Now most methods are readonly.
+- Now the `registerEvents` in `gameTemplate.ts` is **satisfied** to `RegisterEvent[]` instead of **typed** to `RegisterEvent[]`, which provides better type hints for parameter `events` in `onEvents`.
+- Changed `never[]` types in `Events` to `[null]`.
+- Updated files in `Samples` and `Templates` to adapt to the changes.
 
 ## v1.3.1 (2025-09-14)
 
--   Added `RepeatStr`, `PadEnd`, `NumToStr`, `GetStrLen` and `Compare` in `utils.d.ts` for future use.
+- Added `RepeatStr`, `PadEnd`, `NumToStr`, `GetStrLen` and `Compare` in `utils.d.ts` for future use.
 
 ## v1.3.0 (2025-09-02)
 
--   Rewrote the logic of `ValidateGuidParts`, `AssertGuid`, `AssertGuids`, `AssertFolder`, `AssertPath`, `AssertFolders`, `AssertPaths`, `Assert0To1` and `Assert0To1s`.
--   Rewrote the return type of the functions that originally returned the `Tuple` type.
+- Rewrote the logic of `ValidateGuidParts`, `AssertGuid`, `AssertGuids`, `AssertFolder`, `AssertPath`, `AssertFolders`, `AssertPaths`, `Assert0To1` and `Assert0To1s`.
+- Rewrote the return type of the functions that originally returned the `Tuple` type.
 
 ## v1.2.6 (2025-08-18)
 
--   Gave default values to the parameters of path-related types, and modified some files to adapt to this change.
--   Now `Path` and `Folder` can be imported from `game:alias` and `editor:alias`.
+- Gave default values to the parameters of path-related types, and modified some files to adapt to this change.
+- Now `Path` and `Folder` can be imported from `game:alias` and `editor:alias`.
 
 ## v1.2.5 (2025-08-06)
 
--   Added a new file `path.d.ts`, where `Folder`, `Path`, `AssertFolder`, `AssertPath`, `AssertFolders` and `AssertPaths` are defined, and applied them to wherever needed.
--   Now `Path` alias can import from `game:alias` and `editor:alias`.
+- Added a new file `path.d.ts`, where `Folder`, `Path`, `AssertFolder`, `AssertPath`, `AssertFolders` and `AssertPaths` are defined, and applied them to wherever needed.
+- Now `Path` alias can import from `game:alias` and `editor:alias`.
 
 ## v1.2.4 (2025-08-06)
 
--   Renamed type `IntRange` to `NonNegIntRange`.
--   Rewrote the logic of `AssertInt`.
--   Added new types `AssertNeg`, `AssertNonNeg`, `AssertNegInt`, `AssertNonNegInt`, `Assert0To1` and `Assert0To1s`, and applied them to wherever needed.
--   Added some descriptions to some functions.
--   Fixed a bug that `settings.getData()` should return the exact type of the data, not a `json` string.
--   Substituted `[key: string | symbol]: never` with `[key: PropertyKey]: never`.
+- Renamed type `IntRange` to `NonNegIntRange`.
+- Rewrote the logic of `AssertInt`.
+- Added new types `AssertNeg`, `AssertNonNeg`, `AssertNegInt`, `AssertNonNegInt`, `Assert0To1` and `Assert0To1s`, and applied them to wherever needed.
+- Added some descriptions to some functions.
+- Fixed a bug that `settings.getData()` should return the exact type of the data, not a `json` string.
+- Substituted `[key: string | symbol]: never` with `[key: PropertyKey]: never`.
 
 ## v1.2.3 (2025-08-05)
 
--   Added `scene.createObjectsFromAssets()`.
--   Rewrote some descriptions of functions.
+- Added `scene.createObjectsFromAssets()`.
+- Rewrote some descriptions of functions.
 
 ## v1.2.2 (2025-08-04)
 
--   Added `levelManager.getConfigInputKey()` and `levelManager.getConfig()`.
--   Added a new file `keys.d.ts`, moved `KeyboardKey`, `MouseButton`, `GamePadButton` and `PlayerKey` from `inputManager.d.ts` to it, and modified some files to adapt to this change.
--   Added `enum KeyboardKeyEnum`, `enum MouseButtonEnum`, `enum GamePadButtonEnum`, and `enum PlayerKeyEnum` to `keys.d.ts`, and `KeyboardKey`, `MouseButton`, `GamePadButton` and `PlayerKey` are now computed by these enums.
--   Added `None` to `KeyboardKeyEnum`.
--   Now `inputManager.getPlayerKey()` returns `Exclude<KeyboardKey, "Enter" | "Escape">` instead of `KeyboardKey | "None"`.
--   Added a new file `localize.d.ts` where `LocalizedString` is defined.
--   Modified `CustomBallSettings` using `LocalizedString`.
--   Added new parameter `Configurations` to type `MapInfo`.
+- Added `levelManager.getConfigInputKey()` and `levelManager.getConfig()`.
+- Added a new file `keys.d.ts`, moved `KeyboardKey`, `MouseButton`, `GamePadButton` and `PlayerKey` from `inputManager.d.ts` to it, and modified some files to adapt to this change.
+- Added `enum KeyboardKeyEnum`, `enum MouseButtonEnum`, `enum GamePadButtonEnum`, and `enum PlayerKeyEnum` to `keys.d.ts`, and `KeyboardKey`, `MouseButton`, `GamePadButton` and `PlayerKey` are now computed by these enums.
+- Added `None` to `KeyboardKeyEnum`.
+- Now `inputManager.getPlayerKey()` returns `Exclude<KeyboardKey, "Enter" | "Escape">` instead of `KeyboardKey | "None"`.
+- Added a new file `localize.d.ts` where `LocalizedString` is defined.
+- Modified `CustomBallSettings` using `LocalizedString`.
+- Added new parameter `Configurations` to type `MapInfo`.
 
 ## v1.2.1 (2025-08-03)
 
--   Now all the components data can be imported from `editor:alias` and `game:alias`.
--   Fixed some typos.
+- Now all the components data can be imported from `editor:alias` and `game:alias`.
+- Fixed some typos.
 
 ## v1.2.0 (2025-07-31)
 
--   Rewrote all the descriptions of functions and some properties and types.
+- Rewrote all the descriptions of functions and some properties and types.
 
 ## v1.1.9 (2025-07-29)
 
--   Added a new type `AssertInt` and applied it to wherever needed.
+- Added a new type `AssertInt` and applied it to wherever needed.
 
 ## v1.1.8 (2025-07-28)
 
--   Fixed a bug that `math.angleQuaternion()` should take `Quaternion` instead of `Float3` as its parameter.
+- Fixed a bug that `math.angleQuaternion()` should take `Quaternion` instead of `Float3` as its parameter.
 
 ## v1.1.7 (2025-07-19)
 
--   Changed all `const enum` to `enum`.
+- Changed all `const enum` to `enum`.
 
 ## v1.1.6 (2025-07-16)
 
--   Added `"DeathTransfer"` to `VfxType`.
--   Fixed a bug that the type of `TransformOffset` in editor should be `Transform` instead of `Trans`.
+- Added `"DeathTransfer"` to `VfxType`.
+- Fixed a bug that the type of `TransformOffset` in editor should be `Transform` instead of `Trans`.
 
 ## v1.1.5 (2025-07-15)
 
--   Added `levelManager.skin`.
+- Added `levelManager.skin`.
 
 ## v1.1.4 (2025-07-05)
 
--   Added `LICENSE` and `NOTICE` files.
+- Added `LICENSE` and `NOTICE` files.
 
 ## v1.1.3 (2025-07-04)
 
--   Merged `editorApi/modules/math.d.ts` and `gameApi/modules/math.d.ts` into `utils/math.d.ts`.
--   Now type `KeyboardKey`, `MouseButton`, `GamePadButton`, `PlayerKey`, `CancelableEvent`, `VfxType` can be imported from `game:alias`.
+- Merged `editorApi/modules/math.d.ts` and `gameApi/modules/math.d.ts` into `utils/math.d.ts`.
+- Now type `KeyboardKey`, `MouseButton`, `GamePadButton`, `PlayerKey`, `CancelableEvent`, `VfxType` can be imported from `game:alias`.
 
 ## v1.1.2 (2025-07-02)
 
--   Renamed type `builtInCollections` to `BuiltinCollection`, and moved it to a new file `builtin.d.ts`, where another type `BuiltinVariable` is defined.
--   Moved type `BallType` to `player.d.ts`.
--   Fixed a bug that the type of `Events.OnPreGetCollection` and `Events.OnPostGetCollection` should be `string[]` instead of `` `C_${string}`[] ``.
--   Fixed some wrong descriptions.
--   Added `dialogWindowManager.openMessageDialog()` and `dialogWindowManager.openSubWindow()`.
--   Changed the type of `editor.version` from `int` to `string`.
--   Added some badges in `README.md`.
+- Renamed type `builtInCollections` to `BuiltinCollection`, and moved it to a new file `builtin.d.ts`, where another type `BuiltinVariable` is defined.
+- Moved type `BallType` to `player.d.ts`.
+- Fixed a bug that the type of `Events.OnPreGetCollection` and `Events.OnPostGetCollection` should be `string[]` instead of `` `C_${string}`[] ``.
+- Fixed some wrong descriptions.
+- Added `dialogWindowManager.openMessageDialog()` and `dialogWindowManager.openSubWindow()`.
+- Changed the type of `editor.version` from `int` to `string`.
+- Added some badges in `README.md`.
 
 ## v1.1.1 (2025-06-30)
 
--   Added `levelManager.spawnVfxPRS()`.
--   Renamed `gameApi/alias/item.d.ts` to `gameApi/alias/utils.d.ts`, and more types are exported from this file.
--   Fixed a typo that `CustomBallSettings.switcherLightColor` should be `CustomBallSettings.SwitcherLightColor`.
--   Temporarily removed `TerrainStamp` from `HierarchyIcon`.
--   Added `ExecutorVariables` property to `ExecutorData`.
--   Added a new file `Transform.d.ts`, where the type `Transform` is defined. This is a different type from class `Trans` and is used in the editor.
--   Now some object-array properties are marked as optional.
--   Added some descriptions.
--   Added `const` before some type variables to prevent type-widening.
+- Added `levelManager.spawnVfxPRS()`.
+- Renamed `gameApi/alias/item.d.ts` to `gameApi/alias/utils.d.ts`, and more types are exported from this file.
+- Fixed a typo that `CustomBallSettings.switcherLightColor` should be `CustomBallSettings.SwitcherLightColor`.
+- Temporarily removed `TerrainStamp` from `HierarchyIcon`.
+- Added `ExecutorVariables` property to `ExecutorData`.
+- Added a new file `Transform.d.ts`, where the type `Transform` is defined. This is a different type from class `Trans` and is used in the editor.
+- Now some object-array properties are marked as optional.
+- Added some descriptions.
+- Added `const` before some type variables to prevent type-widening.
 
 ## v1.1.0 (2025-06-21)
 
--   Changed the type of `settings.language` to `"English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"`.
--   Added `levelManager.createCustomStatusBar()`, `levelManager.setCustomStatusBarValue()` and `levelManager.destroyCustomStatusBar()`.
+- Changed the type of `settings.language` to `"English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"`.
+- Added `levelManager.createCustomStatusBar()`, `levelManager.setCustomStatusBarValue()` and `levelManager.destroyCustomStatusBar()`.
 
 ## v1.0.8 (2025-06-18)
 
--   Fixed a bug that class `Trans` should take `Float3` instead of `Quaternion` as its `rot` parameter.
--   Added a private parameter `_brand` to all basic data types to prevent type-widening.
--   Now the in-game `console.log()`, `console.error()` and `console.message()` functions only take one parameter.
--   ~~Now the type of `item` of `RaycastResult` is `Item | Player` instead of `Item`.~~
--   Fixed some edge cases and bugs about raycast functions.
--   Added a `bool` property `DisableCollisionDamage` to type `PhysicsObjectData`.
--   Changed the type of `Events.OnReceiveCustomEvent` from `any[]` to `[any]`.
--   Now the type of `func` parameter in `levelManager.invoke()` is `() => void` instead of `(...args: any[]) => any`.
--   Removed `item.addComponent()` and `item.removeComponent()`, modified `scene.createItem()`.
--   Added `alias` files, where `game:alias` module is defined, for convenient importing.
--   Imported some commonly used types in `editorTemplate.js` and `gameTemplate.js`.
--   Rename type `ElementTypeMap` to `UIElementTypeMap`.
+- Fixed a bug that class `Trans` should take `Float3` instead of `Quaternion` as its `rot` parameter.
+- Added a private parameter `_brand` to all basic data types to prevent type-widening.
+- Now the in-game `console.log()`, `console.error()` and `console.message()` functions only take one parameter.
+- ~~Now the type of `item` of `RaycastResult` is `Item | Player` instead of `Item`.~~
+- Fixed some edge cases and bugs about raycast functions.
+- Added a `bool` property `DisableCollisionDamage` to type `PhysicsObjectData`.
+- Changed the type of `Events.OnReceiveCustomEvent` from `any[]` to `[any]`.
+- Now the type of `func` parameter in `levelManager.invoke()` is `() => void` instead of `(...args: any[]) => any`.
+- Removed `item.addComponent()` and `item.removeComponent()`, modified `scene.createItem()`.
+- Added `alias` files, where `game:alias` module is defined, for convenient importing.
+- Imported some commonly used types in `editorTemplate.js` and `gameTemplate.js`.
+- Rename type `ElementTypeMap` to `UIElementTypeMap`.
 
 ## v1.0.7 (2025-06-09)
 
--   Reformatted the code to conform to the Prettier code style.
--   Fixed mounts of typos.
--   Added a new type `IntRange` in `utils.d.ts` and applied it to those parameters that accept a range of integers.
--   Restricted the value range of `levelManager.cameraMode` to `0 | 1 | 2`.
--   Restricted the value range of `levelManager.cameraDirection` to `0 | 1 | 2 | 3`.
--   Restricted the value range of the parameter `which` of `uiElement.onPointerClick()` to `0 | 1 | 2`.
--   let `AssertGuid` accept `string` as a valid value when the type parameter is not `const`.
--   Now `getTransform()` returns `[Float3, Float3, Float3]` instead of `Float3[]`.
--   Added a new type `Tuple` in `utils.d.ts` and applied it where needed.
--   ~~Now the type of `triggeredItem` of `OnTrigger` is `Item | Player` instead of `Item`.~~
--   ~~Now the type of `itemA` and `itemB` of `CollisionEvent` is `Item | Player` instead of `Item`.~~
--   Optimized the logic of `uiElement`, `component` and `sceneObject`.
+- Reformatted the code to conform to the Prettier code style.
+- Fixed mounts of typos.
+- Added a new type `IntRange` in `utils.d.ts` and applied it to those parameters that accept a range of integers.
+- Restricted the value range of `levelManager.cameraMode` to `0 | 1 | 2`.
+- Restricted the value range of `levelManager.cameraDirection` to `0 | 1 | 2 | 3`.
+- Restricted the value range of the parameter `which` of `uiElement.onPointerClick()` to `0 | 1 | 2`.
+- let `AssertGuid` accept `string` as a valid value when the type parameter is not `const`.
+- Now `getTransform()` returns `[Float3, Float3, Float3]` instead of `Float3[]`.
+- Added a new type `Tuple` in `utils.d.ts` and applied it where needed.
+- ~~Now the type of `triggeredItem` of `OnTrigger` is `Item | Player` instead of `Item`.~~
+- ~~Now the type of `itemA` and `itemB` of `CollisionEvent` is `Item | Player` instead of `Item`.~~
+- Optimized the logic of `uiElement`, `component` and `sceneObject`.
 
 ## v1.0.6 (2025-05-29)
 
--   Optimized the structure of the union types.
--   Roughly screened out the components' data that can be set during the game runtime.
--   Disallowed to add or remove a `Settings` component to an `Item`.
+- Optimized the structure of the union types.
+- Roughly screened out the components' data that can be set during the game runtime.
+- Disallowed to add or remove a `Settings` component to an `Item`.
 
 ## v1.0.5 (2025-05-28)
 
--   Renamed the property `GetGlobalUVMat` to `TryGetGlobalUVMat` in `RendererData` type.
--   Added a file `utils.d.ts`, in where a new type `Mutable` is defined for future use.
+- Renamed the property `GetGlobalUVMat` to `TryGetGlobalUVMat` in `RendererData` type.
+- Added a file `utils.d.ts`, in where a new type `Mutable` is defined for future use.
 
 ## v1.0.4 (2025-05-20)
 
--   Fixed a mistake that `hideTipDelay()` and `hideAllTipsDelay()` methods were in the wrong module `inputManager` instead of `levelManager`.
--   Now the methods that taken item guid(s) as a parameter can check if the guid(s) conform(s) to the format.
+- Fixed a mistake that `hideTipDelay()` and `hideAllTipsDelay()` methods were in the wrong module `inputManager` instead of `levelManager`.
+- Now the methods that taken item guid(s) as a parameter can check if the guid(s) conform(s) to the format.
 
 ## v1.0.3 (2025-05-19)
 
--   Added `CustomBall` and `Place` enums to `HierarchyIcon`.
--   Renamed the `CustomBall` property in type `CustomBall` to `CustomBalls`.
--   Added `Landscaping` type.
--   Fixed the return type of the method `removeComponent()` (now returns `void`).
--   Optimized some descriptions of methods and properties.
+- Added `CustomBall` and `Place` enums to `HierarchyIcon`.
+- Renamed the `CustomBall` property in type `CustomBall` to `CustomBalls`.
+- Added `Landscaping` type.
+- Fixed the return type of the method `removeComponent()` (now returns `void`).
+- Optimized some descriptions of methods and properties.
 
 ## v1.0.2 (2025-05-18)
 
--   Added a `CHANGELOG` file.
--   Fixed the missing methods `play()` and `stop()` in `Tween` type.
+- Added a `CHANGELOG` file.
+- Fixed the missing methods `play()` and `stop()` in `Tween` type.
 
 ## v1.0.1 (2025-05-17)
 
--   Optimized the code structure.
--   Fixed some known bugs and typos.
+- Optimized the code structure.
+- Fixed some known bugs and typos.
 
 ## v1.0.0 (2025-05-16)
 
--   Initial release.
+- Initial release.

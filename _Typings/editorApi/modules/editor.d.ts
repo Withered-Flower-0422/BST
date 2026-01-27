@@ -6,58 +6,78 @@ declare module "editor:module" {
     import { Folder, Path } from "path"
 
     namespace editor {
-        /**
-         * @readonly
-         */
+        /** @readonly */
         const version: string
 
-        /**
-         * @readonly
-         */
+        /** @readonly */
         const language: "English" | "Chinese" | "Japanese"
 
-        /**
-         * Refreshes the editor's cache.
-         * @returns
-         */
-        const refreshCache: () => void
+        const refreshCache: {
+            /**
+             * Refreshes the editor's cache.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Reloads the editor's folder.
-         * @returns
-         */
-        const reloadFolder: () => void
+        const reloadFolder: {
+            /**
+             * Reloads the editor's folder.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Starts the editor's internal timer.
-         * @returns
-         */
-        const startTimer: () => void
+        const startTimer: {
+            /**
+             * Starts the editor's internal timer.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the editor's internal timer.
-         * @returns The time elapsed since the last `startTimer()` call, in milliseconds.
-         */
-        const stopTimer: () => float
+        const stopTimer: {
+            /**
+             * Stops the editor's internal timer.
+             * @returns The time elapsed since the last `startTimer()` call, in milliseconds.
+             */
+            (): float
+        }
 
-        /**
-         * Invokes a function after a specified delay.
-         * @param func - The function to be invoked.
-         * @param delayTime - The delay time in seconds. When set to 0, the delay is 1 frame.
-         * @returns
-         */
-        const invoke: <T extends float>(func: (...args: any[]) => void, delayTime: AssertNonNeg<T>) => void
+        const invoke: {
+            /**
+             * Invokes a function after a specified delay.
+             * @param func - The function to be invoked.
+             * @param delayTime - The delay time in seconds. When set to 0, the delay is 1 frame.
+             * @returns
+             */
+            <T extends float>(
+                func: {
+                    /**
+                     * The function to be invoked.
+                     * @param args - The arguments to be passed to the function.
+                     * @returns
+                     */
+                    (...args: any[]): void
+                },
+                delayTime: AssertNonNeg<T>,
+            ): void
+        }
 
-        /**
-         * Gets the editor's path to the selected asset.
-         * @returns The editor's path to the selected asset. If no asset is selected, an empty string is returned.
-         */
-        const getSelectedAsset: () => Path
+        const getSelectedAsset: {
+            /**
+             * Gets the editor's path to the selected asset.
+             * @returns The editor's path to the selected asset. If no asset is selected, an empty string is returned.
+             */
+            (): Path
+        }
 
-        /**
-         * Gets the editor's path to the selected asset's folder.
-         * @returns The editor's path to the selected asset's folder.
-         */
-        const getSelectedAssetFolder: () => Folder
+        const getSelectedAssetFolder: {
+            /**
+             * Gets the editor's path to the selected asset's folder.
+             * @returns The editor's path to the selected asset's folder.
+             */
+            (): Folder
+        }
     }
 }

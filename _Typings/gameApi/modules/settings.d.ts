@@ -47,30 +47,34 @@ declare module "game:module" {
          */
         const language: "English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"
 
-        /**
-         * Gets the data of a component's property.
-         * @param componentType - The type of the component.
-         * @param path - The property path of the component.
-         * @returns The data of the component's property.
-         * @NOTE -
-         * - Some components' data may not be accessible during game runtime.
-         */
-        const getData: <T extends keyof ComponentTypeMap, K extends keyof ComponentTypeMap[T]>(
-            componentType: T,
-            path: K,
-        ) => ComponentTypeMap[T][K]
+        const getData: {
+            /**
+             * Gets the data of a component's property.
+             * @param componentType - The type of the component.
+             * @param path - The property path of the component.
+             * @returns The data of the component's property.
+             * @NOTE -
+             * - Some components' data may not be accessible during game runtime.
+             */
+            <T extends keyof ComponentTypeMap, K extends keyof ComponentTypeMap[T]>(
+                componentType: T,
+                path: K,
+            ): ComponentTypeMap[T][K]
+        }
 
-        /**
-         * Sets data to a component.
-         * @param componentType - The type of the component.
-         * @param values - The data to be set, in the form of `{ [path]: value }`.
-         * @returns
-         * @NOTE -
-         * - Some components' data may not be settable during game runtime.
-         */
-        const setData: <T extends keyof ComponentTypeMap>(
-            componentType: T,
-            values: Mutable<{ [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }>,
-        ) => void
+        const setData: {
+            /**
+             * Sets data to a component.
+             * @param componentType - The type of the component.
+             * @param values - The data to be set, in the form of `{ [path]: value }`.
+             * @returns
+             * @NOTE -
+             * - Some components' data may not be settable during game runtime.
+             */
+            <T extends keyof ComponentTypeMap>(
+                componentType: T,
+                values: Mutable<{ [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }>,
+            ): void
+        }
     }
 }

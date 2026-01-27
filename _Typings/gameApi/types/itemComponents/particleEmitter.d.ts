@@ -50,22 +50,28 @@ declare module "game:type" {
     }
 
     type ParticleEmitterMethod = {
-        /**
-         * Starts playing the particle emitter.
-         * @returns
-         */
-        play: () => void
+        play: {
+            /**
+             * Starts playing the particle emitter.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Pauses the particle emitter. The next time it is played, it will continue from where it left off.
-         * @returns
-         */
-        pause: () => void
+        pause: {
+            /**
+             * Pauses the particle emitter. The next time it is played, it will continue from where it left off.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the particle emitter. The next time it is played, it will start from the beginning.
-         * @returns
-         */
-        stop: () => void
+        stop: {
+            /**
+             * Stops the particle emitter. The next time it is played, it will start from the beginning.
+             * @returns
+             */
+            (): void
+        }
     }
 }

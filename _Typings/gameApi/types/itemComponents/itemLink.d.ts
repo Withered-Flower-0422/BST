@@ -13,10 +13,12 @@ declare module "game:type" {
     }
 
     type ItemLinkMethod = {
-        /**
-         * Gets the internal items of the linked item.
-         * @returns The internal items of the linked item in an array.
-         */
-        getInternalItems: () => [Item, ...Item[]]
+        getInternalItems: {
+            /**
+             * Gets the internal items of the linked item.
+             * @returns The internal items of the linked item in an array.
+             */
+            (): [Item, ...Item[]]
+        }
     }
 }

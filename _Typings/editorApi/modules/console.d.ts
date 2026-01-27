@@ -3,24 +3,30 @@
 
 declare module "editor:module" {
     namespace console {
-        /**
-         * Logs a message to the console.
-         * @param data - The data to log.
-         * @returns
-         */
-        const log: (...data: any[]) => void
+        const log: {
+            /**
+             * Logs a message to the console.
+             * @param data - The data to log.
+             * @returns
+             */
+            (...data: any[]): void
+        }
 
-        /**
-         * Logs an error message to the console.
-         * @param data - The data to log.
-         * @returns
-         */
-        const error: (...data: any[]) => void
+        const error: {
+            /**
+             * Logs an error message to the console.
+             * @param data - The data to log.
+             * @returns
+             */
+            (...data: any[]): void
+        }
 
-        /**
-         * Clears the console.
-         * @returns
-         */
-        const clear: () => void
+        const clear: {
+            /**
+             * Clears the console.
+             * @returns
+             */
+            (): void
+        }
     }
 }

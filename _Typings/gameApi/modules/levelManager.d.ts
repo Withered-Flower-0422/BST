@@ -88,37 +88,47 @@ declare module "game:module" {
          */
         const timerEnabled: bool
 
-        /**
-         * Completes the level without the completion animation.
-         * @returns
-         */
-        const callLevelComplete: () => void
+        const callLevelComplete: {
+            /**
+             * Completes the level without the completion animation.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Completes the level with the completion animation.
-         * @param position - The position of the completion animation.
-         * @returns
-         */
-        const callLevelCompleteWithAnimation: (position: Float3) => void
+        const callLevelCompleteWithAnimation: {
+            /**
+             * Completes the level with the completion animation.
+             * @param position - The position of the completion animation.
+             * @returns
+             */
+            (position: Float3): void
+        }
 
-        /**
-         * Suicides the player ball.
-         * @returns
-         */
-        const callSuicide: () => void
+        const callSuicide: {
+            /**
+             * Suicides the player ball.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Restarts the level.
-         * @returns
-         */
-        const callRestart: () => void
+        const callRestart: {
+            /**
+             * Restarts the level.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Transfers the player ball to the specified position. The camera will jump to the position directly.
-         * @param targetPosition - The position to transfer the player ball to.
-         * @returns
-         */
-        const transferPlayer: (targetPosition: Float3) => void
+        const transferPlayer: {
+            /**
+             * Transfers the player ball to the specified position. The camera will jump to the position directly.
+             * @param targetPosition - The position to transfer the player ball to.
+             * @returns
+             */
+            (targetPosition: Float3): void
+        }
 
         const setCameraTarget: {
             /**
@@ -138,215 +148,260 @@ declare module "game:module" {
             (guid: null, displayName: null): void
         }
 
-        /**
-         * Shows a tip with the specified content.
-         * @param content - The content of the tip to be shown.
-         * @returns The shown tip's guid.
-         */
-        const showTip: (content: string) => TipGuid
+        const showTip: {
+            /**
+             * Shows a tip with the specified content.
+             * @param content - The content of the tip to be shown.
+             * @returns The shown tip's guid.
+             */
+            (content: string): TipGuid
+        }
 
-        /**
-         * Hides the tip with the specified guid.
-         * @param guid - The guid of the tip to be hidden.
-         * @returns
-         */
-        const hideTip: (guid: TipGuid) => void
+        const hideTip: {
+            /**
+             * Hides the tip with the specified guid.
+             * @param guid - The guid of the tip to be hidden.
+             * @returns
+             */
+            (guid: TipGuid): void
+        }
 
-        /**
-         * Hides all tips.
-         * @returns
-         */
-        const hideAllTips: () => void
+        const hideAllTips: {
+            /**
+             * Hides all tips.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Hides the tip with the specified guid after a specified number of frames.
-         * @param guid - The guid of the tip to be hidden.
-         * @param frame - The number of frames to wait before hiding the tip.
-         * @returns
-         */
-        const hideTipDelay: <T extends int>(guid: TipGuid, frame: AssertNonNegInt<T>) => void
+        const hideTipDelay: {
+            /**
+             * Hides the tip with the specified guid after a specified number of frames.
+             * @param guid - The guid of the tip to be hidden.
+             * @param frame - The number of frames to wait before hiding the tip.
+             * @returns
+             */
+            <T extends int>(guid: TipGuid, frame: AssertNonNegInt<T>): void
+        }
 
-        /**
-         * Hides all tips after a specified number of frames.
-         * @param frame - The number of frames to wait before hiding all tips.
-         * @returns
-         */
-        const hideAllTipsDelay: <T extends int>(frame: AssertNonNegInt<T>) => void
+        const hideAllTipsDelay: {
+            /**
+             * Hides all tips after a specified number of frames.
+             * @param frame - The number of frames to wait before hiding all tips.
+             * @returns
+             */
+            <T extends int>(frame: AssertNonNegInt<T>): void
+        }
 
-        /**
-         * Saves data to the local storage.
-         * @param data - A `json` string to save.
-         * @returns Whether the data is saved successfully.
-         * @NOTE -
-         * - **NOT** a JSON object, needs to be stringified first.
-         */
-        const save: (data: json) => bool
+        const save: {
+            /**
+             * Saves data to the local storage.
+             * @param data - A `json` string to save.
+             * @returns Whether the data is saved successfully.
+             * @NOTE -
+             * - **NOT** a JSON object, needs to be stringified first.
+             */
+            (data: json): bool
+        }
 
-        /**
-         * Loads data from the local storage.
-         * @returns A `json` string of the saved data.
-         * @NOTE -
-         * - **NOT** a JSON object, needs to be parsed before use.
-         */
-        const load: () => json
+        const load: {
+            /**
+             * Loads data from the local storage.
+             * @returns A `json` string of the saved data.
+             * @NOTE -
+             * - **NOT** a JSON object, needs to be parsed before use.
+             */
+            (): json
+        }
 
-        /**
-         * Cancels the specified event. The event must be cancelable (i.e. starts with `OnPre`).
-         * @param eventName - The name of the event to be canceled.
-         * @returns
-         */
-        const cancelEvent: <RE extends RegisterEvent[] = RegisterEvent[]>(
-            eventName: `OnPre${string}` & RE[number],
-        ) => void
+        const cancelEvent: {
+            /**
+             * Cancels the specified event. The event must be cancelable (i.e. starts with `OnPre`).
+             * @param eventName - The name of the event to be canceled.
+             * @returns
+             */
+            <RE extends RegisterEvent[] = RegisterEvent[]>(eventName: `OnPre${string}` & RE[number]): void
+        }
 
-        /**
-         * Sends a custom event with the specified message. Other scripts can listen to this event by registering `OnReceiveCustomEvent`.
-         * @param message - The message to be sent.
-         * @returns
-         */
-        const sendCustomEvent: (message: any) => void
+        const sendCustomEvent: {
+            /**
+             * Sends a custom event with the specified message. Other scripts can listen to this event by registering `OnReceiveCustomEvent`.
+             * @param message - The message to be sent.
+             * @returns
+             */
+            (message: any): void
+        }
 
-        /**
-         * Spawns a visual effect with the specified type at the specified position.
-         * @param type - The type of the visual effect to be spawned.
-         * @param position - The position to spawn the visual effect at.
-         * @returns
-         */
-        const spawnVfx: (type: VfxType, position: Float3) => void
+        const spawnVfx: {
+            /**
+             * Spawns a visual effect with the specified type at the specified position.
+             * @param type - The type of the visual effect to be spawned.
+             * @param position - The position to spawn the visual effect at.
+             * @returns
+             */
+            (type: VfxType, position: Float3): void
+        }
 
-        /**
-         * Spawns a visual effect with the specified type at the specified position, rotation, and scale.
-         * @param type - The type of the visual effect to be spawned.
-         * @param position - The position to spawn the visual effect at.
-         * @param rotation - The rotation of the visual effect.
-         * @param scale - The scale of the visual effect.
-         * @returns
-         */
-        const spawnVfxPRS: (type: VfxType, position: Float3, rotation: Float3, scale: Float3) => void
+        const spawnVfxPRS: {
+            /**
+             * Spawns a visual effect with the specified type at the specified position, rotation, and scale.
+             * @param type - The type of the visual effect to be spawned.
+             * @param position - The position to spawn the visual effect at.
+             * @param rotation - The rotation of the visual effect.
+             * @param scale - The scale of the visual effect.
+             * @returns
+             */
+            (type: VfxType, position: Float3, rotation: Float3, scale: Float3): void
+        }
 
-        /**
-         * Uses a custom camera. If `null` is passed, default camera will be used.
-         * @param camera - The camera component to be used as custom camera. If `null` is passed, default camera will be used.
-         * @returns
-         */
-        const setCustomCamera: (camera: Component<"Camera"> | null) => void
+        const setCustomCamera: {
+            /**
+             * Uses a custom camera. If `null` is passed, default camera will be used.
+             * @param camera - The camera component to be used as custom camera. If `null` is passed, default camera will be used.
+             * @returns
+             */
+            (camera: Component<"Camera"> | null): void
+        }
 
-        /**
-         * Invokes a function after a specified number of frames.
-         * @param func - The function to be invoked.
-         * @param delayFrame - The number of frames to wait before invoking the function.
-         * @returns
-         */
-        const invoke: <T extends int>(func: () => void, delayFrame: AssertNonNegInt<T>) => void
+        const invoke: {
+            /**
+             * Invokes a function after a specified number of frames.
+             * @param func - The function to be invoked.
+             * @param delayFrame - The number of frames to wait before invoking the function.
+             * @returns
+             */
+            <T extends int>(func: { (): void }, delayFrame: AssertNonNegInt<T>): void
+        }
 
-        /**
-         * Starts the game's internal timer.
-         * @returns
-         */
-        const startTimer: () => void
+        const startTimer: {
+            /**
+             * Starts the game's internal timer.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the game's internal timer.
-         * @returns The time elapsed since the last `startTimer()` call, in milliseconds.
-         */
-        const stopTimer: () => float
+        const stopTimer: {
+            /**
+             * Stops the game's internal timer.
+             * @returns The time elapsed since the last `startTimer()` call, in milliseconds.
+             */
+            (): float
+        }
 
-        /**
-         * Gets the default camera position.
-         * @returns The default camera position.
-         */
-        const getDefaultCameraPosition: () => Float3
+        const getDefaultCameraPosition: {
+            /**
+             * Gets the default camera position.
+             * @returns The default camera position.
+             */
+            (): Float3
+        }
 
-        /**
-         * Gets the default camera rotation.
-         * @returns The default camera rotation.
-         */
-        const getDefaultCameraRotation: () => float
+        const getDefaultCameraRotation: {
+            /**
+             * Gets the default camera rotation.
+             * @returns The default camera rotation.
+             */
+            (): float
+        }
 
-        /**
-         * Gets the default camera fov.
-         * @returns The default camera fov.
-         */
-        const getDefaultCameraFov: () => float
+        const getDefaultCameraFov: {
+            /**
+             * Gets the default camera fov.
+             * @returns The default camera fov.
+             */
+            (): float
+        }
 
-        /**
-         * Gets the default camera's offset smoothness value.
-         * @returns The default camera's offset smoothness value.
-         */
-        const getCameraOffsetSmooth: () => float
+        const getCameraOffsetSmooth: {
+            /**
+             * Gets the default camera's offset smoothness value.
+             * @returns The default camera's offset smoothness value.
+             */
+            (): float
+        }
 
-        /**
-         * Sets a value to the default camera's offset smoothness.
-         * @param value - The value to be set to the default camera's offset smoothness.
-         * @returns
-         */
-        const setCameraOffsetSmooth: <T extends float>(value: AssertNonNeg<T>) => void
+        const setCameraOffsetSmooth: {
+            /**
+             * Sets a value to the default camera's offset smoothness.
+             * @param value - The value to be set to the default camera's offset smoothness.
+             * @returns
+             */
+            <T extends float>(value: AssertNonNeg<T>): void
+        }
 
-        /**
-         * Creates a custom status bar which will show on the bottom of the screen.
-         * @param statusBarName - The unique name of the status bar to be created.
-         * @param iconPath - The path of the icon to be shown on the left side of the status bar.
-         * @param marks - The marks to be shown on the status bar, range from `0` to `1`.
-         * @param value - The value of the status bar to be shown, range from `0` to `1`.
-         * @param valueString - The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
-         * @param color - The color of the status bar.
-         * @returns
-         */
-        const createCustomStatusBar: <const T extends readonly float[], U extends float, V extends string>(
-            statusBarName: string,
-            iconPath: AssertPath<V, "Textures">,
-            marks: T & Assert0To1s<T>,
-            value: Assert0To1<U>,
-            valueString: string,
-            color: ColorRGBA,
-        ) => void
+        const createCustomStatusBar: {
+            /**
+             * Creates a custom status bar which will show on the bottom of the screen.
+             * @param statusBarName - The unique name of the status bar to be created.
+             * @param iconPath - The path of the icon to be shown on the left side of the status bar.
+             * @param marks - The marks to be shown on the status bar, range from `0` to `1`.
+             * @param value - The value of the status bar to be shown, range from `0` to `1`.
+             * @param valueString - The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
+             * @param color - The color of the status bar.
+             * @returns
+             */
+            <const T extends readonly float[], U extends float, V extends string>(
+                statusBarName: string,
+                iconPath: AssertPath<V, "Textures">,
+                marks: T & Assert0To1s<T>,
+                value: Assert0To1<U>,
+                valueString: string,
+                color: ColorRGBA,
+            ): void
+        }
 
-        /**
-         * Sets the value of the custom status bar with the specified name.
-         * @param statusBarName - The unique name of the status bar to be set.
-         * @param value - The value of the status bar to be shown, range from `0` to `1`.
-         * @param valueString - The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
-         * @param color - The color of the status bar.
-         * @returns
-         */
-        const setCustomStatusBarValue: <T extends float>(
-            statusBarName: string,
-            value: Assert0To1<T>,
-            valueString: string,
-            color: ColorRGBA,
-        ) => void
+        const setCustomStatusBarValue: {
+            /**
+             * Sets the value of the custom status bar with the specified name.
+             * @param statusBarName - The unique name of the status bar to be set.
+             * @param value - The value of the status bar to be shown, range from `0` to `1`.
+             * @param valueString - The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
+             * @param color - The color of the status bar.
+             * @returns
+             */
+            <T extends float>(statusBarName: string, value: Assert0To1<T>, valueString: string, color: ColorRGBA): void
+        }
 
-        /**
-         * Destroys the custom status bar with the specified name.
-         * @param statusBarName - The unique name of the status bar to be destroyed.
-         * @returns
-         */
-        const destroyCustomStatusBar: (statusBarName: string) => void
+        const destroyCustomStatusBar: {
+            /**
+             * Destroys the custom status bar with the specified name.
+             * @param statusBarName - The unique name of the status bar to be destroyed.
+             * @returns
+             */
+            (statusBarName: string): void
+        }
 
-        /**
-         * Checks if the custom status bar with the specified name exists.
-         * @param statusBarName - The unique name of the status bar to be checked.
-         * @returns Whether the custom status bar with the specified name exists.
-         * @deprecated Not implemented yet.
-         */
-        const isCustomStatusBarExist: (statusBarName: string) => bool
+        /** @deprecated Not implemented yet. */
+        const isCustomStatusBarExist: {
+            /**
+             * Checks if the custom status bar with the specified name exists.
+             * @param statusBarName - The unique name of the status bar to be checked.
+             * @returns Whether the custom status bar with the specified name exists.
+             */
+            (statusBarName: string): bool
+        }
 
-        /**
-         * Gets the index of the custom value that selected by the player.
-         * @param name - The name of the custom value.
-         * @returns The index of the custom value that selected by the player.
-         * @NOTE -
-         * - If the custom value is a keyboard key, returns the index of the key in the {@link KeyboardKeyEnum | `KeyboardKey` enum}.
-         */
-        const getConfig: (name: string) => int
+        const getConfig: {
+            /**
+             * Gets the index of the custom value that selected by the player.
+             * @param name - The name of the custom value.
+             * @returns The index of the custom value that selected by the player.
+             * @NOTE -
+             * - If the custom value is a keyboard key, returns the index of the key in the {@link KeyboardKeyEnum | `KeyboardKey` enum}.
+             */
+            (name: string): int
+        }
 
-        /**
-         * Gets the custom keyboard key that selected by the player.
-         * @param key - The name of the key.
-         * @returns The custom keyboard key that selected by the player.
-         * @NOTE -
-         * - If the key is not set or valid, or the custom value is not a keyboard key, returns `"None"`.
-         */
-        const getConfigInputKey: (key: string) => KeyboardKey
+        const getConfigInputKey: {
+            /**
+             * Gets the custom keyboard key that selected by the player.
+             * @param key - The name of the key.
+             * @returns The custom keyboard key that selected by the player.
+             * @NOTE -
+             * - If the key is not set or valid, or the custom value is not a keyboard key, returns `"None"`.
+             */
+            (key: string): KeyboardKey
+        }
     }
 }

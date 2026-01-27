@@ -5,58 +5,74 @@ declare module "game:module" {
     import { AssertNonNegInt, Assert0To1 } from "utils"
 
     namespace audioManager {
-        /**
-         * Plays a background music by index from the list of background music in the `BGM` component of the `Scene Settings`.
-         * @param index - The index of the background music to play.
-         * @param volume - The volume of the background music. The range is 0 to 1.
-         * @returns
-         */
-        const playBgm: <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>) => void
+        const playBgm: {
+            /**
+             * Plays a background music by index from the list of background music in the `BGM` component of the `Scene Settings`.
+             * @param index - The index of the background music to play.
+             * @param volume - The volume of the background music. The range is 0 to 1.
+             * @returns
+             */
+            <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>): void
+        }
 
-        /**
-         * Pauses the background music. The next call of `playBgm()` will resume the music from the point where it was paused.
-         * @returns
-         */
-        const pauseBgm: () => void
+        const pauseBgm: {
+            /**
+             * Pauses the background music. The next call of `playBgm()` will resume the music from the point where it was paused.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the background music. The next call of `playBgm()` will start the music from the beginning.
-         * @returns
-         */
-        const stopBgm: () => void
+        const stopBgm: {
+            /**
+             * Stops the background music. The next call of `playBgm()` will start the music from the beginning.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Sets the volume of the background music.
-         * @param volume - The volume of the background music. The range is 0 to 1.
-         * @returns
-         */
-        const setBgmVolume: <T extends float>(volume: Assert0To1<T>) => void
+        const setBgmVolume: {
+            /**
+             * Sets the volume of the background music.
+             * @param volume - The volume of the background music. The range is 0 to 1.
+             * @returns
+             */
+            <T extends float>(volume: Assert0To1<T>): void
+        }
 
-        /**
-         * Plays a sound effect by index from the list of sound effects in the `BGM` component of the `Scene Settings`.
-         * @param index - The index of the sound effect to play.
-         * @param volume - The volume of the sound effect. The range is 0 to 1.
-         * @returns
-         */
-        const playSfx: <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>) => void
+        const playSfx: {
+            /**
+             * Plays a sound effect by index from the list of sound effects in the `BGM` component of the `Scene Settings`.
+             * @param index - The index of the sound effect to play.
+             * @param volume - The volume of the sound effect. The range is 0 to 1.
+             * @returns
+             */
+            <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>): void
+        }
 
-        /**
-         * Pauses the sound effect. The next call of `playSfx()` will resume the sound effect from the point where it was paused.
-         * @returns
-         */
-        const pauseSfx: () => void
+        const pauseSfx: {
+            /**
+             * Pauses the sound effect. The next call of `playSfx()` will resume the sound effect from the point where it was paused.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Stops the sound effect. The next call of `playSfx()` will start the sound effect from the beginning.
-         * @returns
-         */
-        const stopSfx: () => void
+        const stopSfx: {
+            /**
+             * Stops the sound effect. The next call of `playSfx()` will start the sound effect from the beginning.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Sets the volume of the sound effect.
-         * @param volume - The volume of the sound effect. The range is 0 to 1.
-         * @returns
-         */
-        const setSfxVolume: <T extends float>(volume: Assert0To1<T>) => void
+        const setSfxVolume: {
+            /**
+             * Sets the volume of the sound effect.
+             * @param volume - The volume of the sound effect. The range is 0 to 1.
+             * @returns
+             */
+            <T extends float>(volume: Assert0To1<T>): void
+        }
     }
 }

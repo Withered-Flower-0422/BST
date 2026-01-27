@@ -66,46 +66,55 @@ declare module "game:type" {
          */
         scale: float
 
-        /**
-         * Recovers all properties of the player.
-         * @returns
-         */
-        readonly recoverAll: () => void
+        readonly recoverAll: {
+            /**
+             * Recovers all properties of the player.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Transfers the player to a new position. The camera will jump to the new position directly.
-         * @param targetPosition - The position to transfer the player to.
-         * @returns
-         */
-        readonly transfer: (targetPosition: Float3) => void
+        readonly transfer: {
+            /**
+             * Transfers the player to a new position. The camera will jump to the new position directly.
+             * @param targetPosition - The position to transfer the player to.
+             * @returns
+             */
+            (targetPosition: Float3): void
+        }
 
-        /**
-         * Sets the player's renderer mesh.
-         * @param path - The path of the mesh to set as the player's renderer mesh.
-         * @returns
-         */
-        readonly setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
+        readonly setRendererMesh: {
+            /**
+             * Sets the player's renderer mesh.
+             * @param path - The path of the mesh to set as the player's renderer mesh.
+             * @returns
+             */
+            <T extends string>(path: AssertPath<T, "Meshes">): void
+        }
 
-        /**
-         * Sets the player's renderer materials.
-         * @param paths - The paths of the materials to set as the player's renderer materials.
-         * @returns
-         */
-        readonly setRendererMaterials: <const T extends readonly string[]>(
-            paths: T & AssertPaths<T, "Materials">,
-        ) => void
+        readonly setRendererMaterials: {
+            /**
+             * Sets the player's renderer materials.
+             * @param paths - The paths of the materials to set as the player's renderer materials.
+             * @returns
+             */
+            <const T extends readonly string[]>(paths: T & AssertPaths<T, "Materials">): void
+        }
 
-        /**
-         * Sets the player's renderer opacity.
-         * @param opacity - The opacity of the player's renderer.
-         * @returns
-         * @deprecated Not implemented yet.
-         */
-        readonly setRendererOpacity: <T extends float>(opacity: Assert0To1<T>) => void
+        /** @deprecated Not implemented yet. */
+        readonly setRendererOpacity: {
+            /**
+             * Sets the player's renderer opacity.
+             * @param opacity - The opacity of the player's renderer.
+             * @returns
+             */
+            <T extends float>(opacity: Assert0To1<T>): void
+        }
     }
 }
 
 declare module "__future__" {
+    import { Assert0To1 } from "utils"
     import { AssertPath, AssertPaths } from "path"
     import { Float3, Quaternion } from "basicData"
     import { BallType, Component } from "game:type"
@@ -156,33 +165,49 @@ declare module "__future__" {
          */
         scale: float
 
-        /**
-         * Recovers all properties of the player.
-         * @returns
-         */
-        readonly recoverAll: () => void
+        readonly recoverAll: {
+            /**
+             * Recovers all properties of the player.
+             * @returns
+             */
+            (): void
+        }
 
-        /**
-         * Transfers the player to a new position. The camera will jump to the new position directly.
-         * @param targetPosition - The position to transfer the player to.
-         * @returns
-         */
-        readonly transfer: (targetPosition: Float3) => void
+        readonly transfer: {
+            /**
+             * Transfers the player to a new position. The camera will jump to the new position directly.
+             * @param targetPosition - The position to transfer the player to.
+             * @returns
+             */
+            (targetPosition: Float3): void
+        }
 
-        /**
-         * Sets the player's renderer mesh.
-         * @param path - The path of the mesh to set as the player's renderer mesh.
-         * @returns
-         */
-        readonly setRendererMesh: <T extends string>(path: AssertPath<T, "Meshes">) => void
+        readonly setRendererMesh: {
+            /**
+             * Sets the player's renderer mesh.
+             * @param path - The path of the mesh to set as the player's renderer mesh.
+             * @returns
+             */
+            <T extends string>(path: AssertPath<T, "Meshes">): void
+        }
 
-        /**
-         * Sets the player's renderer materials.
-         * @param paths - The paths of the materials to set as the player's renderer materials.
-         * @returns
-         */
-        readonly setRendererMaterials: <const T extends readonly string[]>(
-            paths: T & AssertPaths<T, "Materials">,
-        ) => void
+        readonly setRendererMaterials: {
+            /**
+             * Sets the player's renderer materials.
+             * @param paths - The paths of the materials to set as the player's renderer materials.
+             * @returns
+             */
+            <const T extends readonly string[]>(paths: T & AssertPaths<T, "Materials">): void
+        }
+
+        /** @deprecated Not implemented yet. */
+        readonly setRendererOpacity: {
+            /**
+             * Sets the player's renderer opacity.
+             * @param opacity - The opacity of the player's renderer.
+             * @returns
+             */
+            <T extends float>(opacity: Assert0To1<T>): void
+        }
     }
 }
