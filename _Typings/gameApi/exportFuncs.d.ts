@@ -176,50 +176,60 @@ declare module "game:type" {
     type RegisterEvents<RE extends RegisterEvent[] = RegisterEvent[]> = Pick<Events, RE[number]>
 
     global {
-        /**
-         * Executed when the executor loads the script. It executes before all other events and only executes once.
-         * @param self - A reference to the item where the executor component is located.
-         * @param vars - The variables set on the executor, passed in as key-value pairs.
-         * @returns
-         */
-        type Init<ExecVar = $> = (self: Item, vars: ExecVar) => void
+        type Init<ExecVar = $> = {
+            /**
+             * Executed when the executor loads the script. It executes before all other events and only executes once.
+             * @param self - A reference to the item where the executor component is located.
+             * @param vars - The variables set on the executor, passed in as key-value pairs.
+             * @returns
+             */
+            (self: Item, vars: ExecVar): void
+        }
 
-        /**
-         * Executed when `execute()` is called by another executor in the game.
-         * @param args - The arguments passed in by the executor that called `execute()`.
-         * @returns
-         */
-        type GameExecute = (...args: any[]) => void
+        type GameExecute = {
+            /**
+             * Executed when `execute()` is called by another executor in the game.
+             * @param args - The arguments passed in by the executor that called `execute()`.
+             * @returns
+             */
+            (...args: any[]): void
+        }
 
         /**
          * Click to see all {@link Events}.
          */
         type RegisterEvent = keyof Events
 
-        /**
-         * Executed when a registered event is triggered.
-         * @param self - A reference to the item where the executor component is located.
-         * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
-         * @returns
-         */
-        type OnEvents<RE extends RegisterEvent[] = RegisterEvent[]> = (self: Item, events: RegisterEvents<RE>) => void
+        type OnEvents<RE extends RegisterEvent[] = RegisterEvent[]> = {
+            /**
+             * Executed when a registered event is triggered.
+             * @param self - A reference to the item where the executor component is located.
+             * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
+             * @returns
+             */
+            (self: Item, events: RegisterEvents<RE>): void
+        }
 
-        /**
-         * Executed when the trigger is activated.
-         * @param self - A reference to the item where the trigger component is located.
-         * @param triggeredItem - A reference to the item or player that activated the trigger.
-         * @param type - The type of trigger event.
-         * @returns
-         */
-        type OnTrigger<ET extends EventType = EventType> = (self: Item, triggeredItem: Item, type: ET) => void
+        type OnTrigger<ET extends EventType = EventType> = {
+            /**
+             * Executed when the trigger is activated.
+             * @param self - A reference to the item where the trigger component is located.
+             * @param triggeredItem - A reference to the item or player that activated the trigger.
+             * @param type - The type of trigger event.
+             * @returns
+             */
+            (self: Item, triggeredItem: Item, type: ET): void
+        }
 
-        /**
-         * Executed when an object collides.
-         * @param self - A reference to the item where the collider component is located.
-         * @param collisionEvent - The collision event object, which contains information about the colliding object, the type of collision, the position of the collision, etc.
-         * @returns
-         */
-        type OnCollide<ET extends EventType = EventType> = (self: Item, collisionEvent: CollisionEvent<ET>) => void
+        type OnCollide<ET extends EventType = EventType> = {
+            /**
+             * Executed when an object collides.
+             * @param self - A reference to the item where the collider component is located.
+             * @param collisionEvent - The collision event object, which contains information about the colliding object, the type of collision, the position of the collision, etc.
+             * @returns
+             */
+            (self: Item, collisionEvent: CollisionEvent<ET>): void
+        }
     }
 }
 
