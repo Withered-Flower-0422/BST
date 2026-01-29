@@ -16,7 +16,10 @@ declare module "game:type" {
         WayPath: { data: WayPathData; method: WayPathMethod }
         Collection: { data: CollectionData; method: CollectionMethod }
         Light: { data: LightData; method: LightMethod }
-        ParticleEmitter: { data: ParticleEmitterData; method: ParticleEmitterMethod }
+        ParticleEmitter: {
+            data: ParticleEmitterData
+            method: ParticleEmitterMethod
+        }
         AudioPlayer: { data: AudioPlayerData; method: AudioPlayerMethod }
         Decal: { data: DecalData; method: DecalMethod }
         TerrainStamp: { data: TerrainStampData; method: TerrainStampMethod }
@@ -24,30 +27,37 @@ declare module "game:type" {
         Executor: { data: ExecutorData; method: ExecutorMethod }
     }
 
-    type Component<T extends keyof ComponentTypeMap = keyof ComponentTypeMap> = {
-        /**
-         * @readonly
-         */
-        readonly type: T
-
-        readonly getData: {
+    type Component<T extends keyof ComponentTypeMap = keyof ComponentTypeMap> =
+        {
             /**
-             * Gets the specified data of the component.
-             * @param path - The path of the property to get.
-             * @returns The value of the property.
+             * @readonly
              */
-            <K extends keyof ComponentTypeMap[T]["data"]>(path: K): ComponentTypeMap[T]["data"][K]
-        }
+            readonly type: T
 
-        readonly setData: {
-            /**
-             * Sets data to the component.
-             * @param data - The data to set. In the form of `{ [path]: value }`.
-             * @returns
-             * @NOTE -
-             * - Some properties may not be allowed to be set during game runtime.
-             */
-            (data: Mutable<{ [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K] }>): void
-        }
-    } & Readonly<ComponentTypeMap[T]["method"]>
+            readonly getData: {
+                /**
+                 * Gets the specified data of the component.
+                 * @param path - The path of the property to get.
+                 * @returns The value of the property.
+                 */
+                <K extends keyof ComponentTypeMap[T]["data"]>(
+                    path: K,
+                ): ComponentTypeMap[T]["data"][K]
+            }
+
+            readonly setData: {
+                /**
+                 * Sets data to the component.
+                 * @param data - The data to set. In the form of `{ [path]: value }`.
+                 * @returns
+                 * @NOTE -
+                 * - Some properties may not be allowed to be set during game runtime.
+                 */
+                (
+                    data: Mutable<{
+                        [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K]
+                    }>,
+                ): void
+            }
+        } & Readonly<ComponentTypeMap[T]["method"]>
 }

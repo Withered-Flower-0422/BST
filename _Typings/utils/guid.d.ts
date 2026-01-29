@@ -12,12 +12,35 @@ declare module "guid" {
             ? true
             : false
         : S extends `${
-                | ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "a" | "b" | "c" | "d" | "e" | "f")
-                | (B extends true ? "A" | "B" | "C" | "D" | "E" | "F" : never)}${infer R}`
+                | (
+                      | "0"
+                      | "1"
+                      | "2"
+                      | "3"
+                      | "4"
+                      | "5"
+                      | "6"
+                      | "7"
+                      | "8"
+                      | "9"
+                      | "a"
+                      | "b"
+                      | "c"
+                      | "d"
+                      | "e"
+                      | "f"
+                  )
+                | (B extends true
+                      ? "A" | "B" | "C" | "D" | "E" | "F"
+                      : never)}${infer R}`
           ? _IsHexStringOfExactLength<R, L, B, [...C, 0]>
           : false
 
-    type IsHexStringOfExactLength<S extends string, L extends number, B extends boolean = false> = {
+    type IsHexStringOfExactLength<
+        S extends string,
+        L extends number,
+        B extends boolean = false,
+    > = {
         [I in L]: _IsHexStringOfExactLength<S, I, B>
     }[L] extends false
         ? false

@@ -81,7 +81,9 @@ declare module "game:type" {
              */
             <T extends keyof ComponentTypeMap>(
                 componentType: T,
-            ): T extends "Settings" ? Component<"Settings"> : Component<T> | null
+            ): T extends "Settings"
+                ? Component<"Settings">
+                : Component<T> | null
         }
 
         readonly moveTo: {
@@ -92,7 +94,11 @@ declare module "game:type" {
              * @param duration - The duration of the movement in frames.
              * @returns
              */
-            <T extends int>(targetTransform: Trans, easeType: EaseType, duration: AssertNonNegInt<T>): void
+            <T extends int>(
+                targetTransform: Trans,
+                easeType: EaseType,
+                duration: AssertNonNegInt<T>,
+            ): void
         }
 
         readonly stopMove: {

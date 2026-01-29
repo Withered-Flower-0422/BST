@@ -31,7 +31,9 @@ declare module "game:module" {
              * @param guids - The guid strings in an array of the items to get.
              * @returns An array of the items (or `null` if the item does not exist) with the given guids.
              */
-            <const S extends readonly guid[]>(guids: S & AssertGuids<S>): { [P in keyof S]: Item | null }
+            <const S extends readonly guid[]>(
+                guids: S & AssertGuids<S>,
+            ): { [P in keyof S]: Item | null }
         }
 
         const getPlayer: {
@@ -69,7 +71,12 @@ declare module "game:module" {
              * @param scl - The scale of the item.
              * @returns The created item, or `null` if the template does not exist.
              */
-            (templateName: string, pos: Float3, rot: Float3, scl: Float3): Item | null
+            (
+                templateName: string,
+                pos: Float3,
+                rot: Float3,
+                scl: Float3,
+            ): Item | null
         }
 
         const raycast: {
@@ -98,7 +105,9 @@ declare module "game:module" {
              * @param maxDistance - The maximum distance of the ray.
              * @returns The first item or player it hits or `null` if it hits nothing.
              */
-            <T extends float>(maxDistance: AssertNonNeg<T>): RaycastResult | null
+            <T extends float>(
+                maxDistance: AssertNonNeg<T>,
+            ): RaycastResult | null
         }
 
         const mouseRaycastAll: {
@@ -120,7 +129,11 @@ declare module "game:module" {
             <T extends float>(
                 center: Float3,
                 radius: AssertNonNeg<T>,
-            ): { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: [Item, ...Item[]] }
+            ): {
+                [key in keyof typeof CollisionLayer as key extends string
+                    ? key
+                    : never]?: [Item, ...Item[]]
+            }
         }
 
         const boxCastAll: {
@@ -135,7 +148,11 @@ declare module "game:module" {
                 center: Float3,
                 size: Float3,
                 rotation: Quaternion,
-            ): { [key in keyof typeof CollisionLayer as key extends string ? key : never]?: [Item, ...Item[]] }
+            ): {
+                [key in keyof typeof CollisionLayer as key extends string
+                    ? key
+                    : never]?: [Item, ...Item[]]
+            }
         }
     }
 }

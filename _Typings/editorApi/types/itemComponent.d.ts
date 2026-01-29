@@ -14,7 +14,10 @@ declare module "editor:type" {
         WayPath: { data: WayPathData; method: WayPathMethod }
         Collection: { data: CollectionData; method: CollectionMethod }
         Light: { data: LightData; method: LightMethod }
-        ParticleEmitter: { data: ParticleEmitterData; method: ParticleEmitterMethod }
+        ParticleEmitter: {
+            data: ParticleEmitterData
+            method: ParticleEmitterMethod
+        }
         AudioPlayer: { data: AudioPlayerData; method: AudioPlayerMethod }
         Decal: { data: DecalData; method: DecalMethod }
         TerrainStamp: { data: TerrainStampData; method: TerrainStampMethod }
@@ -22,7 +25,9 @@ declare module "editor:type" {
         Executor: { data: ExecutorData; method: ExecutorMethod }
     }
 
-    type ItemComponent<T extends keyof ItemComponentTypeMap = keyof ItemComponentTypeMap> = {
+    type ItemComponent<
+        T extends keyof ItemComponentTypeMap = keyof ItemComponentTypeMap,
+    > = {
         /** @readonly */
         readonly type: T
 

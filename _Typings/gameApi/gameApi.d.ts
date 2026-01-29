@@ -23,5 +23,13 @@ declare module "gameApi" {
 
     export { math } from "math"
 
-    export { Float2, Float3, Float4, Quaternion, Bool3, Trans, ColorRGBA } from "basicData"
+    export {
+        Float2,
+        Float3,
+        Float4,
+        Quaternion,
+        Bool3,
+        Trans,
+        ColorRGBA,
+    } from "basicData"
 }

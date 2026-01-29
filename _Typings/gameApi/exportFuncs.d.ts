@@ -146,19 +146,28 @@ declare module "game:type" {
          * On player starting to collide with other item.
          * @Message The collision events, wrapped in an array. `itemA` is player, `itemB` is the other item.
          */
-        OnPlayerCollideEnter?: [CollisionEvent<"Enter">, ...CollisionEvent<"Enter">[]]
+        OnPlayerCollideEnter?: [
+            CollisionEvent<"Enter">,
+            ...CollisionEvent<"Enter">[],
+        ]
 
         /**
          * On player staying in collision with other item.
          * @Message The collision events, wrapped in an array. `itemA` is player, `itemB` is the other item.
          */
-        OnPlayerCollideStay?: [CollisionEvent<"Stay">, ...CollisionEvent<"Stay">[]]
+        OnPlayerCollideStay?: [
+            CollisionEvent<"Stay">,
+            ...CollisionEvent<"Stay">[],
+        ]
 
         /**
          * On player leaving collision with other item.
          * @Message The collision events, wrapped in an array. `itemA` is player, `itemB` is the other item.
          */
-        OnPlayerCollideExit?: [CollisionEvent<"Exit">, ...CollisionEvent<"Exit">[]]
+        OnPlayerCollideExit?: [
+            CollisionEvent<"Exit">,
+            ...CollisionEvent<"Exit">[],
+        ]
 
         /**
          * On Receiving custom event.
@@ -173,7 +182,10 @@ declare module "game:type" {
         OnTntExploded?: [Float3, ...Float3[]]
     }
 
-    type RegisterEvents<RE extends RegisterEvent[] = RegisterEvent[]> = Pick<Events, RE[number]>
+    type RegisterEvents<RE extends RegisterEvent[] = RegisterEvent[]> = Pick<
+        Events,
+        RE[number]
+    >
 
     global {
         type Init<ExecVar = $> = {

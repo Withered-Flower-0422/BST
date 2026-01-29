@@ -69,7 +69,10 @@ declare module "game:module" {
              * @param value - The value to set.
              * @returns
              */
-            <T extends string, U extends int>(name: T, value: T extends `C_${string}` ? AssertInt<U> : any): void
+            <T extends string, U extends int>(
+                name: T,
+                value: T extends `C_${string}` ? AssertInt<U> : any,
+            ): void
 
             /**
              * Sets the value of a variable.
@@ -171,7 +174,11 @@ declare module "__future__" {
              */
             <T extends string, U extends int>(
                 name: T extends `K_${string}` ? never : T,
-                value: T extends `C_${string}` ? AssertInt<U> : T extends `K_${string}` ? never : any,
+                value: T extends `C_${string}`
+                    ? AssertInt<U>
+                    : T extends `K_${string}`
+                      ? never
+                      : any,
             ): void
 
             /**

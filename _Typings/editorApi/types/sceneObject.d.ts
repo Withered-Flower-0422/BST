@@ -16,7 +16,9 @@ declare module "editor:type" {
              */
             <U extends keyof ItemComponentTypeMap>(
                 componentType: U,
-            ): U extends "Settings" ? ItemComponent<"Settings"> : ItemComponent<U> | null
+            ): U extends "Settings"
+                ? ItemComponent<"Settings">
+                : ItemComponent<U> | null
         }
 
         readonly addComponent: {
@@ -25,7 +27,9 @@ declare module "editor:type" {
              * @param componentType - The type of the component to add.
              * @returns The added component of the specified type.
              */
-            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U): ItemComponent<U>
+            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(
+                componentType: U,
+            ): ItemComponent<U>
         }
 
         readonly removeComponent: {
@@ -34,7 +38,9 @@ declare module "editor:type" {
              * @param componentType - The type of the component to remove.
              * @returns
              */
-            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(componentType: U): void
+            <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(
+                componentType: U,
+            ): void
         }
     }
 
@@ -48,7 +54,9 @@ declare module "editor:type" {
              * @param componentType - The type of the component to get.
              * @returns The component of the specified type.
              */
-            <U extends keyof SettingsComponentTypeMap>(componentType: U): SettingsComponent<U>
+            <U extends keyof SettingsComponentTypeMap>(
+                componentType: U,
+            ): SettingsComponent<U>
         }
     }
 

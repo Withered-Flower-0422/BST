@@ -31,7 +31,9 @@ declare module "editor:module" {
              * @param guids - The guid strings in an array of the objects to get.
              * @returns An array of the objects (or `null` if the object does not exist) with the given guids.
              */
-            <const S extends readonly guid[]>(guids: S & AssertGuids<S>): { [P in keyof S]: SceneObject | null }
+            <const S extends readonly guid[]>(
+                guids: S & AssertGuids<S>,
+            ): { [P in keyof S]: SceneObject | null }
         }
 
         const destroyObject: {
@@ -79,7 +81,9 @@ declare module "editor:module" {
              * @param guids - The guid strings in an array of the objects to duplicate.
              * @returns An array of the duplicated objects.
              */
-            <const S extends readonly guid[]>(guids: S & AssertGuids<S>): { [P in keyof S]: SceneObject }
+            <const S extends readonly guid[]>(
+                guids: S & AssertGuids<S>,
+            ): { [P in keyof S]: SceneObject }
         }
 
         const getSelectedObject: {
@@ -144,7 +148,9 @@ declare module "editor:module" {
              * @param path - The path to the item assets, in the format of `` `Items/${folder}/${name}.item` `` or `` `Meshes/${folder}/${name}.mesh` ``.
              * @returns The main object created from the assets.
              */
-            <T extends string>(path: AssertPath<T, "Items" | "Meshes", true, false>): SceneObject<"Item">
+            <T extends string>(
+                path: AssertPath<T, "Items" | "Meshes", true, false>,
+            ): SceneObject<"Item">
         }
     }
 }

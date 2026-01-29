@@ -98,7 +98,9 @@ declare module "game:type" {
              * @param paths - The paths of the materials to set as the player's renderer materials.
              * @returns
              */
-            <const T extends readonly string[]>(paths: T & AssertPaths<T, "Materials">): void
+            <const T extends readonly string[]>(
+                paths: T & AssertPaths<T, "Materials">,
+            ): void
         }
 
         /** @deprecated Not implemented yet. */
@@ -197,7 +199,9 @@ declare module "__future__" {
              * @param paths - The paths of the materials to set as the player's renderer materials.
              * @returns
              */
-            <const T extends readonly string[]>(paths: T & AssertPaths<T, "Materials">): void
+            <const T extends readonly string[]>(
+                paths: T & AssertPaths<T, "Materials">,
+            ): void
         }
 
         /** @deprecated Not implemented yet. */

@@ -41,7 +41,9 @@ declare module "game:type" {
              * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
              * @returns The point information of the given points.
              */
-            <const T extends readonly float[]>(points: T & Assert0To1s<T>): { [P in keyof T]: PointInfo<T[P]> }
+            <const T extends readonly float[]>(
+                points: T & Assert0To1s<T>,
+            ): { [P in keyof T]: PointInfo<T[P]> }
         }
 
         /** @deprecated Not implemented yet. */

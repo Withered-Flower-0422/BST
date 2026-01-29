@@ -12,7 +12,8 @@ declare module "path" {
         Scripts: "js"
     }
 
-    type Folder<T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = `${T}/${string}`
+    type Folder<T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> =
+        `${T}/${string}`
 
     type Path<
         T extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
@@ -24,7 +25,10 @@ declare module "path" {
           }[T]
         | (E extends true ? "" : never)
 
-    type AssertFolder<T extends string, P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = string extends T
+    type AssertFolder<
+        T extends string,
+        P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
+    > = string extends T
         ? T
         : T extends `${P}/${infer A}`
           ? A extends ""
@@ -55,7 +59,10 @@ declare module "path" {
             ? never
             : T
 
-    type AssertFolders<T extends readonly string[], P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap> = {
+    type AssertFolders<
+        T extends readonly string[],
+        P extends keyof AssetsSuffixMap = keyof AssetsSuffixMap,
+    > = {
         [K in keyof T]: AssertFolder<T[K], P>
     }
 

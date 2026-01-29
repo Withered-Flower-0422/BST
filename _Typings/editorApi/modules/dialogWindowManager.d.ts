@@ -99,7 +99,14 @@ declare module "editor:module" {
                      * @param assetPath - The picked asset path.
                      * @returns
                      */
-                    (assetPath: Exclude<T extends "All" ? Path : Path<T & keyof AssetsSuffixMap>, "">): void
+                    (
+                        assetPath: Exclude<
+                            T extends "All"
+                                ? Path
+                                : Path<T & keyof AssetsSuffixMap>,
+                            ""
+                        >,
+                    ): void
                 },
                 assetType: T,
             ): void
@@ -172,7 +179,10 @@ declare module "editor:module" {
              * @param onCloseWindowClick - The function to be called when the close button is clicked.
              * @returns
              */
-            <const T extends readonly string[], const U extends readonly string[]>(
+            <
+                const T extends readonly string[],
+                const U extends readonly string[],
+            >(
                 windowTitle: string,
                 contentTexts: T,
                 defaultInputTexts: { [P in keyof T]: string },

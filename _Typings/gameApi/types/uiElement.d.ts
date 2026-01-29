@@ -36,7 +36,12 @@ declare module "game:type" {
         /**
          * @default "None"
          */
-        aspectRatioMode: "None" | "WidthControlsHeight" | "HeightControlsWidth" | "FitInParent" | "EnvelopeParent"
+        aspectRatioMode:
+            | "None"
+            | "WidthControlsHeight"
+            | "HeightControlsWidth"
+            | "FitInParent"
+            | "EnvelopeParent"
         /**
          * @default 1
          */
@@ -75,11 +80,23 @@ declare module "game:type" {
         /**
          * @default "Center"
          */
-        horizontalAlignment: "Left" | "Center" | "Right" | "Justified" | "Flush" | "Geometry"
+        horizontalAlignment:
+            | "Left"
+            | "Center"
+            | "Right"
+            | "Justified"
+            | "Flush"
+            | "Geometry"
         /**
          * @default "Middle"
          */
-        verticalAlignment: "Top" | "Middle" | "Bottom" | "Baseline" | "Geometry" | "Capline"
+        verticalAlignment:
+            | "Top"
+            | "Middle"
+            | "Bottom"
+            | "Baseline"
+            | "Geometry"
+            | "Capline"
         /**
          * @default false
          */
@@ -116,70 +133,71 @@ declare module "game:type" {
         Panel: Panel
     }
 
-    type UIElement<T extends keyof UIElementTypeMap = keyof UIElementTypeMap> = {
-        /**
-         * @default true
-         */
-        enabled: bool
-        /**
-         * @default null
-         */
-        parent: UIElement | null
-        /**
-         * @default new Float2(0, 0)
-         */
-        position: Float2
-        /**
-         * @default 0
-         */
-        rotation: float
-        /**
-         * @default new Float2(1, 1)
-         */
-        scale: Float2
-        /**
-         * @default new Float2(0.5, 0.5)
-         */
-        anchorMin: Float2
-        /**
-         * @default new Float2(0.5, 0.5)
-         */
-        anchorMax: Float2
-        /**
-         * @default new Float2(0.5, 0.5)
-         */
-        pivot: Float2
-        /**
-         * @default false
-         */
-        raycastEvent: bool
+    type UIElement<T extends keyof UIElementTypeMap = keyof UIElementTypeMap> =
+        {
+            /**
+             * @default true
+             */
+            enabled: bool
+            /**
+             * @default null
+             */
+            parent: UIElement | null
+            /**
+             * @default new Float2(0, 0)
+             */
+            position: Float2
+            /**
+             * @default 0
+             */
+            rotation: float
+            /**
+             * @default new Float2(1, 1)
+             */
+            scale: Float2
+            /**
+             * @default new Float2(0.5, 0.5)
+             */
+            anchorMin: Float2
+            /**
+             * @default new Float2(0.5, 0.5)
+             */
+            anchorMax: Float2
+            /**
+             * @default new Float2(0.5, 0.5)
+             */
+            pivot: Float2
+            /**
+             * @default false
+             */
+            raycastEvent: bool
 
-        /**
-         * Invoked when the pointer enters the UI element.
-         * @returns
-         */
-        onPointerEnter: () => void
+            /**
+             * Invoked when the pointer enters the UI element.
+             * @returns
+             */
+            onPointerEnter: () => void
 
-        /**
-         * Invoked when the pointer leaves the UI element.
-         * @returns
-         */
-        onPointerExit: () => void
+            /**
+             * Invoked when the pointer leaves the UI element.
+             * @returns
+             */
+            onPointerExit: () => void
 
-        /**
-         * Invoked when the pointer clicks the UI element.
-         * @param mouseButton - Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
-         * @returns
-         */
-        onPointerClick: (mouseButton: MouseButton) => void
+            /**
+             * Invoked when the pointer clicks the UI element.
+             * @param mouseButton - Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
+             * @returns
+             */
+            onPointerClick: (mouseButton: MouseButton) => void
 
-        /**
-         * @default true
-         */
-        raycastTarget: bool
-        /**
-         * @default false
-         */
-        mask: bool
-    } & UIElementTypeMap[T]
+            /**
+             * @default true
+             */
+            raycastTarget: bool
+            /**
+             * @default false
+             */
+            mask: bool
+        } & UIElementTypeMap[T]
 }

@@ -45,7 +45,12 @@ declare module "game:module" {
         /**
          * @readonly
          */
-        const language: "English" | "简体中文" | "日本語" | "Spanish" | "繁體中文"
+        const language:
+            | "English"
+            | "简体中文"
+            | "日本語"
+            | "Spanish"
+            | "繁體中文"
 
         const getData: {
             /**
@@ -56,7 +61,10 @@ declare module "game:module" {
              * @NOTE -
              * - Some components' data may not be accessible during game runtime.
              */
-            <T extends keyof ComponentTypeMap, K extends keyof ComponentTypeMap[T]>(
+            <
+                T extends keyof ComponentTypeMap,
+                K extends keyof ComponentTypeMap[T],
+            >(
                 componentType: T,
                 path: K,
             ): ComponentTypeMap[T][K]
@@ -73,7 +81,9 @@ declare module "game:module" {
              */
             <T extends keyof ComponentTypeMap>(
                 componentType: T,
-                values: Mutable<{ [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K] }>,
+                values: Mutable<{
+                    [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K]
+                }>,
             ): void
         }
     }

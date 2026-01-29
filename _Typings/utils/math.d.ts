@@ -97,7 +97,11 @@ declare module "math" {
              * @param t - The interpolation value, between 0 and 1.
              * @returns The interpolated Quaternion value.
              */
-            <T extends float>(a: Quaternion, b: Quaternion, t: Assert0To1<T>): Quaternion
+            <T extends float>(
+                a: Quaternion,
+                b: Quaternion,
+                t: Assert0To1<T>,
+            ): Quaternion
         }
 
         const slerpFloat3: {

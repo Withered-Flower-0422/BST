@@ -4,7 +4,12 @@
 declare module "game:module" {
     import { BallType, Component } from "game:type"
     import { AssertGuid } from "guid"
-    import { Assert0To1, Assert0To1s, AssertNonNeg, AssertNonNegInt } from "utils"
+    import {
+        Assert0To1,
+        Assert0To1s,
+        AssertNonNeg,
+        AssertNonNegInt,
+    } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
     import { AssertPath } from "path"
     import { Float3, ColorRGBA } from "basicData"
@@ -220,7 +225,9 @@ declare module "game:module" {
              * @param eventName - The name of the event to be canceled.
              * @returns
              */
-            <RE extends RegisterEvent[] = RegisterEvent[]>(eventName: `OnPre${string}` & RE[number]): void
+            <RE extends RegisterEvent[] = RegisterEvent[]>(
+                eventName: `OnPre${string}` & RE[number],
+            ): void
         }
 
         const sendCustomEvent: {
@@ -251,7 +258,12 @@ declare module "game:module" {
              * @param scale - The scale of the visual effect.
              * @returns
              */
-            (type: VfxType, position: Float3, rotation: Float3, scale: Float3): void
+            (
+                type: VfxType,
+                position: Float3,
+                rotation: Float3,
+                scale: Float3,
+            ): void
         }
 
         const setCustomCamera: {
@@ -270,7 +282,10 @@ declare module "game:module" {
              * @param delayFrame - The number of frames to wait before invoking the function.
              * @returns
              */
-            <T extends int>(func: { (): void }, delayFrame: AssertNonNegInt<T>): void
+            <T extends int>(
+                func: { (): void },
+                delayFrame: AssertNonNegInt<T>,
+            ): void
         }
 
         const startTimer: {
@@ -341,7 +356,11 @@ declare module "game:module" {
              * @param color - The color of the status bar.
              * @returns
              */
-            <const T extends readonly float[], U extends float, V extends string>(
+            <
+                const T extends readonly float[],
+                U extends float,
+                V extends string,
+            >(
                 statusBarName: string,
                 iconPath: AssertPath<V, "Textures">,
                 marks: T & Assert0To1s<T>,
@@ -360,7 +379,12 @@ declare module "game:module" {
              * @param color - The color of the status bar.
              * @returns
              */
-            <T extends float>(statusBarName: string, value: Assert0To1<T>, valueString: string, color: ColorRGBA): void
+            <T extends float>(
+                statusBarName: string,
+                value: Assert0To1<T>,
+                valueString: string,
+                color: ColorRGBA,
+            ): void
         }
 
         const destroyCustomStatusBar: {

@@ -2,9 +2,11 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "utils" {
-    type _GreaterThan<T extends number, U extends number> = Tuple<0, U> extends [...Tuple<0, T>, ...0[]] ? false : true
+    type _GreaterThan<T extends number, U extends number> =
+        Tuple<0, U> extends [...Tuple<0, T>, ...0[]] ? false : true
 
-    type _Max<T extends number, U extends number> = _GreaterThan<T, U> extends true ? T : U
+    type _Max<T extends number, U extends number> =
+        _GreaterThan<T, U> extends true ? T : U
 
     type _Minus<T extends number, U extends number> =
         Tuple<0, T> extends [...Tuple<0, U>, ...infer R] ? R["length"] : never
@@ -39,31 +41,54 @@ declare module "utils" {
                 ? _CompareStrWithSameLen<I1, I2>
                 : _CompareStrWithSameLen<PadEnd<D1, M, "0">, PadEnd<D2, M, "0">>
 
-    type Equal<T, U> = (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2 ? true : false
+    type Equal<T, U> =
+        (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U ? 1 : 2
+            ? true
+            : false
 
     type Mutable<
         T,
         M = {
-            [P in keyof T as Equal<{ [K in P]: T[K] }, { -readonly [K in P]: T[K] }> extends true ? P : never]: T[P]
+            [P in keyof T as Equal<
+                { [K in P]: T[K] },
+                { -readonly [K in P]: T[K] }
+            > extends true
+                ? P
+                : never]: T[P]
         },
     > = Equal<M, {}> extends true ? never : M
 
-    type TupleToExactLength<L extends int, T extends int[] = []> = T["length"] extends L
-        ? T
-        : TupleToExactLength<L, [...T, T["length"]]>
+    type TupleToExactLength<
+        L extends int,
+        T extends int[] = [],
+    > = T["length"] extends L ? T : TupleToExactLength<L, [...T, T["length"]]>
 
     type NonNegIntRange<L extends int, H extends int> =
-        TupleToExactLength<H> extends [...TupleToExactLength<L>, ...infer R] ? [...R, H][number] : never
+        TupleToExactLength<H> extends [...TupleToExactLength<L>, ...infer R]
+            ? [...R, H][number]
+            : never
 
-    type Tuple<T, L extends number = number, C extends T[] = []> = number extends L
+    type Tuple<
+        T,
+        L extends number = number,
+        C extends T[] = [],
+    > = number extends L
         ? T[]
         : C["length"] extends L
           ? C
           : Tuple<T, L, [...C, T]>
 
-    type AssertNeg<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? T : never
+    type AssertNeg<T extends number> = number extends T
+        ? T
+        : `${T}` extends `-${string}`
+          ? T
+          : never
 
-    type AssertNonNeg<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? never : T
+    type AssertNonNeg<T extends number> = number extends T
+        ? T
+        : `${T}` extends `-${string}`
+          ? never
+          : T
 
     type ValidateIntString<T extends string> = T extends `${string}e+${string}`
         ? true
@@ -73,7 +98,11 @@ declare module "utils" {
             ? false
             : true
 
-    type AssertInt<T extends number> = number extends T ? T : ValidateIntString<`${T}`> extends true ? T : never
+    type AssertInt<T extends number> = number extends T
+        ? T
+        : ValidateIntString<`${T}`> extends true
+          ? T
+          : never
 
     type AssertNegInt<T extends number> = number extends T
         ? T
@@ -83,7 +112,11 @@ declare module "utils" {
               : never
           : never
 
-    type AssertNonNegInt<T extends number> = number extends T ? T : `${T}` extends `-${string}` ? never : AssertInt<T>
+    type AssertNonNegInt<T extends number> = number extends T
+        ? T
+        : `${T}` extends `-${string}`
+          ? never
+          : AssertInt<T>
 
     type Assert0To1<T extends number> = number extends T
         ? T
@@ -103,7 +136,12 @@ declare module "utils" {
         [K in keyof T]: Assert0To1<T[K]>
     }
 
-    type RepeatStr<S extends string, N extends number, R extends string = "", C extends 0[] = []> = string extends S
+    type RepeatStr<
+        S extends string,
+        N extends number,
+        R extends string = "",
+        C extends 0[] = [],
+    > = string extends S
         ? string
         : number extends N
           ? string
@@ -116,11 +154,21 @@ declare module "utils" {
         L extends number,
         P extends string = " ",
         M extends number = _Minus<L, GetStrLen<S>>,
-    > = string extends S ? string : number extends L ? string : [M] extends [never] ? S : `${S}${RepeatStr<P, M>}`
+    > = string extends S
+        ? string
+        : number extends L
+          ? string
+          : [M] extends [never]
+            ? S
+            : `${S}${RepeatStr<P, M>}`
 
     type NumToStr<T extends number> = number extends T
         ? "number"
-        : `${T}` extends "Infinity" | "-Infinity" | `${string}e${string}` | `${string}.${string}`
+        : `${T}` extends
+                | "Infinity"
+                | "-Infinity"
+                | `${string}e${string}`
+                | `${string}.${string}`
           ? `${T}`
           : `${T}.0`
 
@@ -176,7 +224,10 @@ declare module "utils" {
             : Includes<R, U>
         : false
 
-    type IsUnique<T extends readonly any[], AllowAny extends boolean = true> = AllowAny extends false
+    type IsUnique<
+        T extends readonly any[],
+        AllowAny extends boolean = true,
+    > = AllowAny extends false
         ? Includes<T, any> extends true
             ? false
             : IsUnique<T>

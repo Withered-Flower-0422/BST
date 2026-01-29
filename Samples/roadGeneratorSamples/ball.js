@@ -46,7 +46,10 @@ export const generate = () => {
             const first = lat * (s + 1) + lon
             const second = first + s + 1
 
-            triangles.push([first + 1, second, first], [first + 1, second + 1, second])
+            triangles.push(
+                [first + 1, second, first],
+                [first + 1, second + 1, second],
+            )
         }
     }
 

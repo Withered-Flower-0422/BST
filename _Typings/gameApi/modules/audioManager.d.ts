@@ -12,7 +12,10 @@ declare module "game:module" {
              * @param volume - The volume of the background music. The range is 0 to 1.
              * @returns
              */
-            <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>): void
+            <T extends int, U extends float>(
+                index: AssertNonNegInt<T>,
+                volume: Assert0To1<U>,
+            ): void
         }
 
         const pauseBgm: {
@@ -47,7 +50,10 @@ declare module "game:module" {
              * @param volume - The volume of the sound effect. The range is 0 to 1.
              * @returns
              */
-            <T extends int, U extends float>(index: AssertNonNegInt<T>, volume: Assert0To1<U>): void
+            <T extends int, U extends float>(
+                index: AssertNonNegInt<T>,
+                volume: Assert0To1<U>,
+            ): void
         }
 
         const pauseSfx: {
