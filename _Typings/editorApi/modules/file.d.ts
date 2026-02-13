@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "editor:module" {
+    import { AssertPath } from "path"
+
     namespace file {
         /**
          * The system path to the folder where the BME assets / settings / etc. are stored.
@@ -41,6 +43,7 @@ declare module "editor:module" {
              * Writes the given text to the file at the given path.
              * @param path - The path to the file to write.
              * @param text - The text to write to the file.
+             * @returns
              */
             (path: string, text: string): void
         }
@@ -50,8 +53,22 @@ declare module "editor:module" {
              * Writes the given base64-encoded string to the file at the given path.
              * @param path - The path to the file to write.
              * @param base64 - The base64-encoded string to write to the file.
+             * @returns
              */
             (path: string, base64: string): void
+        }
+
+        /** @deprecated Not implemented yet. */
+        const savePreview: {
+            /**
+             * Saves a png preview of the item at the given path to the given path.
+             * @param itemPath - The path to the item to save the preview for.
+             * @param saveToPath - The path to save the preview to.
+             */
+            <T extends string>(
+                itemPath: AssertPath<T, "Items", true, false>,
+                saveToPath: string,
+            ): void
         }
     }
 }
