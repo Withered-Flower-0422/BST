@@ -238,6 +238,8 @@ declare module "utils" {
           : true
 
     type ExpectTrue<T extends true> = T
+
+    type EmptyObject = { [key: PropertyKey]: never }
 }
 
 declare module "global" {
