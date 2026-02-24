@@ -6,7 +6,7 @@
         "noFallthroughCasesInSwitch": true,
         "noEmit": true,
         "target": "es2024",
-        "module": "nodenext",
+        "module": "node20",
         "lib": ["ESNext"],
         "checkJs": true
     },
