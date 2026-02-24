@@ -5,7 +5,8 @@
         "noUncheckedIndexedAccess": true,
         "noFallthroughCasesInSwitch": true,
         "noEmit": true,
-        "target": "esnext",
+        "target": "es2024",
+        "module": "nodenext",
         "lib": ["ESNext"],
         "checkJs": true
     },

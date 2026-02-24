@@ -2,7 +2,8 @@
     "compilerOptions": {
         // "strict": true,
         "lib": ["ESNext"],
-        "target": "esnext",
+        "target": "es2024",
+        "module": "nodenext",
         "allowSyntheticDefaultImports": false,
         "checkJs": true
     }
