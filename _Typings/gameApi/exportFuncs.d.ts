@@ -188,7 +188,7 @@ declare module "game:type" {
     >
 
     global {
-        type Init<ExecVar = $> = {
+        type Init<ExecVar extends $ = $> = {
             /**
              * Executed when the executor loads the script. It executes before all other events and only executes once.
              * @param self - A reference to the item where the executor component is located.

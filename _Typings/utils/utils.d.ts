@@ -260,6 +260,6 @@ declare module "global" {
          * Default type for executor or road generator variables `$`.
          * Override this type to define variable types set on the executor.
          */
-        type $ = { [key: string]: any; [key: symbol]: never }
+        type $ = { [key: string]: Any; [key: symbol]: never }
     }
 }

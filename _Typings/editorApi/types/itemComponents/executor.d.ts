@@ -46,7 +46,7 @@ declare module "editor:type" {
         ColorRGBAVar: ColorRGBA
         TransformVar: Transform
         AssetReferenceVar: Path
-        ObjectReferenceVar: string
+        ObjectReferenceVar: guid
         StringArrayVar: string[]
         IntArrayVar: int[]
         BoolArrayVar: bool[]
@@ -58,7 +58,7 @@ declare module "editor:type" {
         ColorRGBAArrayVar: ColorRGBA[]
         TransformArrayVar: Transform[]
         AssetReferenceArrayVar: Path[]
-        ObjectReferenceArrayVar: string[]
+        ObjectReferenceArrayVar: guid[]
     }
 
     type ExecutorData = {

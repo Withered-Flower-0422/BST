@@ -11,6 +11,6 @@ declare module "roadGenerator:type" {
         type SubMesh = [Vertex[], UV[], Normal[], Triangle[]]
         type Mesh = SubMesh[]
 
-        type Generate<ExecVar = $> = (vars: ExecVar) => Mesh
+        type Generate<ExecVar extends $ = $> = (vars: ExecVar) => Mesh
     }
 }

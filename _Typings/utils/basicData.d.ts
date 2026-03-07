@@ -2,14 +2,22 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "basicData" {
+    import { ExecutorVariable } from "editor:type"
     import { Assert0To1 } from "utils"
 
     global {
         type int = number
         type float = number
         type bool = boolean
+        /** A string which can be any valid JSON value. */
         type json = string
+        /** A string formatted as `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`, where each `x` is a hexadecimal digit in lower case. */
         type guid = string
+        /** All types that provided by BME. */
+        type Any = ExecutorVariable[Exclude<
+            keyof ExecutorVariable,
+            "VariableName" | "VariableType"
+        >]
     }
 
     class Float2 {

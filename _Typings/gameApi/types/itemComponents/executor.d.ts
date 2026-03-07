@@ -46,7 +46,7 @@ declare module "game:type" {
         ColorRGBAVar: ColorRGBA
         TransVar: Trans
         AssetReferenceVar: Path
-        ObjectReferenceVar: string
+        ObjectReferenceVar: guid
         StringArrayVar: string[]
         IntArrayVar: int[]
         BoolArrayVar: bool[]
@@ -58,7 +58,7 @@ declare module "game:type" {
         ColorRGBAArrayVar: ColorRGBA[]
         TransArrayVar: Trans[]
         AssetReferenceArrayVar: Path[]
-        ObjectReferenceArrayVar: string[]
+        ObjectReferenceArrayVar: guid[]
     }
 
     type ExecutorData = {

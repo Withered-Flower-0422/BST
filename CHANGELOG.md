@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.1 (2026-03-07)
+
+- Added a new type `Any`, which represents all the types provided by BME.
+- Generic type in `Generate` and `Init` now extends to `$`.
+- `ObjectReferenceVar` now is `guid` instead of `string` which makes it more readable.
+
 ## v1.7.0 (2026-01-27)
 
 - Reformatted the code.
