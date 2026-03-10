@@ -14,10 +14,7 @@ declare module "basicData" {
         /** A string formatted as `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`, where each `x` is a hexadecimal digit in lower case. */
         type guid = string
         /** All basic types that provided by BME. */
-        type Any = ExecutorVariable[Exclude<
-            keyof ExecutorVariable,
-            "VariableName" | "VariableType"
-        >]
+        type Any = ExecutorVariable[keyof ExecutorVariable & `${string}Var`]
     }
 
     class Float2 {
