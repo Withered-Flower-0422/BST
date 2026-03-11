@@ -9,10 +9,10 @@ declare module "basicData" {
         type int = number
         type float = number
         type bool = boolean
-        /** A string which can be any valid JSON value. */
+        /** A string which can be parsed as a JSON object. */
         type json = string
         /** A string formatted as `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`, where each `x` is a hexadecimal digit in lower case. */
-        type guid = string
+        type guid = `${string}-${string}-${string}-${string}-${string}`
         /** All basic types that provided by BME. */
         type Any = ExecutorVariable[keyof ExecutorVariable & `${string}Var`]
     }
