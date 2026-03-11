@@ -46,7 +46,7 @@ declare module "guid" {
         ? false
         : true
 
-    type AssertGuid<S extends string> = string extends S
+    type AssertGuid<S extends string> = guid extends S
         ? S
         : S extends `${infer P1}-${infer P2}-${infer P3}-${infer P4}-${infer P5}`
           ? [
