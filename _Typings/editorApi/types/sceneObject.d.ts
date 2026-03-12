@@ -16,9 +16,7 @@ declare module "editor:type" {
              */
             <U extends keyof ItemComponentTypeMap>(
                 componentType: U,
-            ): U extends "Settings"
-                ? ItemComponent<"Settings">
-                : ItemComponent<U> | null
+            ): ItemComponent<U> | (U extends "Settings" ? never : null)
         }
 
         readonly addComponent: {

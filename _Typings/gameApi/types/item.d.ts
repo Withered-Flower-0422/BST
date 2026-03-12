@@ -81,9 +81,7 @@ declare module "game:type" {
              */
             <T extends keyof ComponentTypeMap>(
                 componentType: T,
-            ): T extends "Settings"
-                ? Component<"Settings">
-                : Component<T> | null
+            ): Component<T> | (T extends "Settings" ? never : null)
         }
 
         readonly moveTo: {
