@@ -1,6 +1,8 @@
 // Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
+declare const _ColorRGBABrand: unique symbol
+
 declare module "basicData" {
     import { ExecutorVariable } from "editor:type"
     import { Assert0To1 } from "utils"
@@ -9,8 +11,6 @@ declare module "basicData" {
         type int = number
         type float = number
         type bool = boolean
-        /** A string which can be parsed as a JSON object. */
-        type json = string
         /** A string formatted as `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`, where each `x` is a hexadecimal digit in lower case. */
         type guid = `${string}-${string}-${string}-${string}-${string}`
         /** All basic types that provided by BME. */
@@ -108,8 +108,6 @@ declare module "basicData" {
          */
         constructor(pos: Float3, rot: Float3, scl: Float3)
     }
-
-    const _ColorRGBABrand: unique symbol
 
     interface ColorRGBA {
         [_ColorRGBABrand]: never

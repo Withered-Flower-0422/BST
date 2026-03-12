@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.0 (2026-03-12)
+
+- Added a file `JSONExtension.d.ts`, which helps solve the problem of type hinting with `getData()` and `setData()` methods in `editorApi`.
+- Made `json` a generic type, moved it to `JSONExtension.d.ts`.
+- Hoisted `_ColorRGBABrand` to the top of the file to make it unreachable.
+- Rewrote `levelManager.save()` and `levelManager.load()`.
+- Now `getData()` and `setData()` of components have more specific types.
+
 ## v1.7.1 (2026-03-07)
 
 - Added a new type `Any`, which represents all basic types provided by BME.

@@ -31,10 +31,8 @@ declare module "editor:type" {
              * @returns The data of the component as a JSON string.
              * @NOTE -
              * - The returned data is **not** a JSON object, needs to parse it before use.
-             * - Because the returned data is a string, no type hint here,
-             *   you may set specified type to it manually if you want type hint
              */
-            (): json
+            (): json<SettingsComponentTypeMap[T]>
         }
 
         readonly setData: {
@@ -45,7 +43,7 @@ declare module "editor:type" {
              * @NOTE -
              * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
              */
-            (data: json): void
+            (data: json<SettingsComponentTypeMap[T]>): void
         }
     }
 }

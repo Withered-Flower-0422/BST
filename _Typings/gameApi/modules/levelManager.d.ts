@@ -206,7 +206,7 @@ declare module "game:module" {
              * @NOTE -
              * - **NOT** a JSON object, needs to be stringified first.
              */
-            (data: json): bool
+            (data: json | string): bool
         }
 
         const load: {
@@ -216,7 +216,7 @@ declare module "game:module" {
              * @NOTE -
              * - **NOT** a JSON object, needs to be parsed before use.
              */
-            (): json
+            <T = any>(): json<T>
         }
 
         const cancelEvent: {
