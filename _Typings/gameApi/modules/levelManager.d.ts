@@ -214,7 +214,7 @@ declare module "game:module" {
              * @returns A string of the saved data.
              */
             (): string
-            <T = any>(): json<T>
+            <T>(): json<T>
         }
 
         const cancelEvent: {
