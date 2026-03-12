@@ -6,7 +6,7 @@ export {}
 declare const _jsonDataType: unique symbol
 
 declare global {
-    /** A string which can be parsed as a JSON object. */
+    /** A valid JSON string. */
     type json<T = any> = string & { [_jsonDataType]: T }
 
     interface JSON {
