@@ -81,9 +81,7 @@ declare module "game:module" {
              */
             <T extends keyof ComponentTypeMap>(
                 componentType: T,
-                values: Mutable<{
-                    [K in keyof ComponentTypeMap[T]]?: ComponentTypeMap[T][K]
-                }>,
+                values: Mutable<Partial<ComponentTypeMap[T]>>,
             ): void
         }
     }

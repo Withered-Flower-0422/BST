@@ -53,11 +53,7 @@ declare module "game:type" {
                  * @NOTE -
                  * - Some properties may not be allowed to be set during game runtime.
                  */
-                (
-                    data: Mutable<{
-                        [K in keyof ComponentTypeMap[T]["data"]]?: ComponentTypeMap[T]["data"][K]
-                    }>,
-                ): void
+                (data: Mutable<Partial<ComponentTypeMap[T]["data"]>>): void
             }
         } & Readonly<ComponentTypeMap[T]["method"]>
 }
