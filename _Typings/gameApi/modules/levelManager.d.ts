@@ -201,21 +201,19 @@ declare module "game:module" {
         const save: {
             /**
              * Saves data to the local storage.
-             * @param data - A `json` string to save.
+             * @param data - A string to save. Recommended to be a JSON string.
              * @returns Whether the data is saved successfully.
-             * @NOTE -
-             * - **NOT** a JSON object, needs to be stringified first.
              */
-            (data: json | string): bool
+            <T>(data: json<T>): bool
+            (data: string): bool
         }
 
         const load: {
             /**
              * Loads data from the local storage.
-             * @returns A `json` string of the saved data.
-             * @NOTE -
-             * - **NOT** a JSON object, needs to be parsed before use.
+             * @returns A string of the saved data.
              */
+            (): string
             <T = any>(): json<T>
         }
 
