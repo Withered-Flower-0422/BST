@@ -1,11 +1,28 @@
 // Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
-declare const _ColorRGBABrand: unique symbol
+declare module "brand" {
+    const Float2Brand: unique symbol
+    const Float3Brand: unique symbol
+    const Float4Brand: unique symbol
+    const QuaternionBrand: unique symbol
+    const Bool3Brand: unique symbol
+    const TransBrand: unique symbol
+    const ColorRGBABrand: unique symbol
+}
 
 declare module "basicData" {
     import { ExecutorVariable } from "editor:type"
     import { Assert0To1 } from "utils"
+    import {
+        Float2Brand,
+        Float3Brand,
+        Float4Brand,
+        QuaternionBrand,
+        Bool3Brand,
+        TransBrand,
+        ColorRGBABrand,
+    } from "brand"
 
     global {
         type int = number
@@ -18,7 +35,7 @@ declare module "basicData" {
     }
 
     class Float2 {
-        private _brand: never
+        private [Float2Brand]: never
 
         x: float
         y: float
@@ -31,7 +48,7 @@ declare module "basicData" {
     }
 
     class Float3 {
-        private _brand: never
+        private [Float3Brand]: never
 
         x: float
         y: float
@@ -46,7 +63,7 @@ declare module "basicData" {
     }
 
     class Float4 {
-        private _brand: never
+        private [Float4Brand]: never
 
         x: float
         y: float
@@ -63,7 +80,7 @@ declare module "basicData" {
     }
 
     class Quaternion {
-        private _brand: never
+        private [QuaternionBrand]: never
 
         x: float
         y: float
@@ -80,7 +97,7 @@ declare module "basicData" {
     }
 
     class Bool3 {
-        private _brand: never
+        private [Bool3Brand]: never
 
         x: bool
         y: bool
@@ -95,7 +112,7 @@ declare module "basicData" {
     }
 
     class Trans {
-        private _brand: never
+        private [TransBrand]: never
 
         pos: Float3
         rot: Float3
@@ -110,7 +127,7 @@ declare module "basicData" {
     }
 
     interface ColorRGBA {
-        [_ColorRGBABrand]: never
+        [ColorRGBABrand]: never
 
         r: float
         g: float

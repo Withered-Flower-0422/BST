@@ -3,11 +3,11 @@
 
 export {}
 
-declare const _jsonDataType: unique symbol
+declare const jsonDataType: unique symbol
 
 declare global {
     /** A valid JSON string. */
-    type json<T = any> = string & { [_jsonDataType]: T }
+    type json<T = any> = string & { [jsonDataType]: T }
 
     interface JSON {
         parse<T extends json>(
