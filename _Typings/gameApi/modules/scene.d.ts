@@ -130,9 +130,10 @@ declare module "game:module" {
                 center: Float3,
                 radius: AssertNonNeg<T>,
             ): {
-                [key in keyof typeof CollisionLayer as key extends string
-                    ? key
-                    : never]?: [Item, ...Item[]]
+                [key in keyof typeof CollisionLayer & string]?: [
+                    Item,
+                    ...Item[],
+                ]
             }
         }
 
@@ -149,9 +150,10 @@ declare module "game:module" {
                 size: Float3,
                 rotation: Quaternion,
             ): {
-                [key in keyof typeof CollisionLayer as key extends string
-                    ? key
-                    : never]?: [Item, ...Item[]]
+                [key in keyof typeof CollisionLayer & string]?: [
+                    Item,
+                    ...Item[],
+                ]
             }
         }
     }
