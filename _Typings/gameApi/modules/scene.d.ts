@@ -129,12 +129,7 @@ declare module "game:module" {
             <T extends float>(
                 center: Float3,
                 radius: AssertNonNeg<T>,
-            ): {
-                [key in keyof typeof CollisionLayer & string]?: [
-                    Item,
-                    ...Item[],
-                ]
-            }
+            ): Partial<Record<keyof typeof CollisionLayer, [Item, ...Item[]]>>
         }
 
         const boxCastAll: {
@@ -149,12 +144,7 @@ declare module "game:module" {
                 center: Float3,
                 size: Float3,
                 rotation: Quaternion,
-            ): {
-                [key in keyof typeof CollisionLayer & string]?: [
-                    Item,
-                    ...Item[],
-                ]
-            }
+            ): Partial<Record<keyof typeof CollisionLayer, [Item, ...Item[]]>>
         }
     }
 }
