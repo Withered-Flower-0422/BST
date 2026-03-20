@@ -4,6 +4,7 @@
         "noImplicitReturns": true,
         "noUncheckedIndexedAccess": true,
         "noFallthroughCasesInSwitch": true,
+        "exactOptionalPropertyTypes": true,
         "noEmit": true,
         "target": "es2024",
         "module": "node20",
