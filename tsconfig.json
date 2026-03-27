@@ -10,7 +10,10 @@
         "target": "es2024",
         "module": "node20",
         "lib": ["ESNext"],
-        "checkJs": true
+        "checkJs": true,
+        "paths": {
+            "Scripts/*": ["./*"]
+        }
     },
     "include": [
         // "Samples/**/*",

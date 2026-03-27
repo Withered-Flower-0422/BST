@@ -6,6 +6,9 @@
         "module": "node20",
         "isolatedModules": true,
         "allowSyntheticDefaultImports": false,
-        "checkJs": true
+        "checkJs": true,
+        "paths": {
+            "Scripts/*": ["./*"]
+        }
     }
 }
