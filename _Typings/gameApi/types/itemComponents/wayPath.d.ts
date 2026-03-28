@@ -29,7 +29,7 @@ declare module "game:type" {
         getPointInfo: {
             /**
              * Gets the point information of the given point.
-             * @param point - The point proportion of the way path, ranging from 0 to 1.
+             * @param point The point proportion of the way path, ranging from 0 to 1.
              * @returns The point information of the given point.
              */
             <T extends float>(point: Assert0To1<T>): PointInfo<T>
@@ -38,7 +38,7 @@ declare module "game:type" {
         getPointsInfo: {
             /**
              * Gets the point information of the given points.
-             * @param points - The points proportion of the way path in an array, ranging from 0 to 1.
+             * @param points The points proportion of the way path in an array, ranging from 0 to 1.
              * @returns The point information of the given points.
              */
             <const T extends readonly float[]>(
@@ -50,7 +50,6 @@ declare module "game:type" {
         play: {
             /**
              * Plays the way path so all the targets move along the path.
-             * @returns
              */
             (): void
         }
@@ -59,7 +58,6 @@ declare module "game:type" {
         pause: {
             /**
              * Pauses the way path so all the targets stop moving. The next call of `play()` will resume the movement from the paused point.
-             * @returns
              */
             (): void
         }
@@ -68,7 +66,6 @@ declare module "game:type" {
         stop: {
             /**
              * Stops the way path so all the targets stop moving. The next call of `play()` will start the movement from the beginning.
-             * @returns
              */
             (): void
         }

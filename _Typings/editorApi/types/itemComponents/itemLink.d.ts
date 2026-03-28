@@ -17,7 +17,6 @@ declare module "editor:type" {
         replace: {
             /**
              * Replaces the current item with the linked item.
-             * @returns
              */
             (): void
         }
@@ -25,7 +24,6 @@ declare module "editor:type" {
         saveMesh: {
             /**
              * Saves all meshes within the linked item to `Assets/Meshes/Default`.
-             * @returns
              */
             (): void
         }

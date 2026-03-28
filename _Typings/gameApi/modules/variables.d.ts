@@ -9,7 +9,7 @@ declare module "game:module" {
         const get: {
             /**
              * Gets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
+             * @param name The name of the `Collection`.
              * @returns The number of the `Collection`.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
@@ -17,7 +17,7 @@ declare module "game:module" {
 
             /**
              * Gets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
+             * @param name The name of the `Collection`.
              * @returns The number of the `Collection`.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
@@ -25,14 +25,14 @@ declare module "game:module" {
 
             /**
              * Gets the value of a variable.
-             * @param name - The name of the variable to get.
+             * @param name The name of the variable to get.
              * @returns The value of the variable.
              */
             (name: string): any
 
             /**
              * Gets the value of a variable.
-             * @param name - The name of the variable to get.
+             * @param name The name of the variable to get.
              * @returns The value of the variable.
              */
             <O extends object, T extends keyof O>(name: T): O[T]
@@ -41,9 +41,8 @@ declare module "game:module" {
         const set: {
             /**
              * Sets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the `Collection`.
+             * @param value The value to set.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
              * @NOTE -
              * - **NEVER** name a variable starting with `C_` manually.
@@ -53,9 +52,8 @@ declare module "game:module" {
 
             /**
              * Sets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the `Collection`.
+             * @param value The value to set.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
              * @NOTE -
              * - **NEVER** name a variable starting with `C_` manually.
@@ -65,9 +63,8 @@ declare module "game:module" {
 
             /**
              * Sets the value of a variable.
-             * @param name - The name of the variable to set.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the variable to set.
+             * @param value The value to set.
              */
             <T extends string, U extends int>(
                 name: T,
@@ -76,9 +73,8 @@ declare module "game:module" {
 
             /**
              * Sets the value of a variable.
-             * @param name - The name of the variable to set.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the variable to set.
+             * @param value The value to set.
              */
             <O extends object, T extends keyof O>(name: T, value: O[T]): void
         }
@@ -86,7 +82,6 @@ declare module "game:module" {
         const clear: {
             /**
              * Clears all variables except those starting with `C_`.
-             * @returns
              */
             (): void
         }
@@ -102,7 +97,7 @@ declare module "__future__" {
         const get: {
             /**
              * Gets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
+             * @param name The name of the `Collection`.
              * @returns The number of the `Collection`.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
@@ -110,7 +105,7 @@ declare module "__future__" {
 
             /**
              * Gets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
+             * @param name The name of the `Collection`.
              * @returns The number of the `Collection`.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
@@ -118,7 +113,7 @@ declare module "__future__" {
 
             /**
              * Gets the key of a keyboard key.
-             * @param name - The name of the keyboard key.
+             * @param name The name of the keyboard key.
              * @returns The key of the keyboard key.
              * @KeyBoardKey Click to see {@link KeyboardKeyEnum | all keyboard keys}.
              */
@@ -126,14 +121,14 @@ declare module "__future__" {
 
             /**
              * Gets the value of a variable.
-             * @param name - The name of the variable to get.
+             * @param name The name of the variable to get.
              * @returns The value of the variable.
              */
             (name: string): any
 
             /**
              * Gets the value of a variable.
-             * @param name - The name of the variable to get.
+             * @param name The name of the variable to get.
              * @returns The value of the variable.
              */
             <O extends object, T extends keyof O>(name: T): O[T]
@@ -142,9 +137,8 @@ declare module "__future__" {
         const set: {
             /**
              * Sets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the `Collection`.
+             * @param value The value to set.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
              * @NOTE -
              * - **NEVER** name a variable starting with `C_` manually.
@@ -154,9 +148,8 @@ declare module "__future__" {
 
             /**
              * Sets the number of the `Collection`.
-             * @param name - The name of the `Collection`.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the `Collection`.
+             * @param value The value to set.
              * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
              * @NOTE -
              * - **NEVER** name a variable starting with `C_` manually.
@@ -166,9 +159,8 @@ declare module "__future__" {
 
             /**
              * Sets the value of a variable.
-             * @param name - The name of the variable to set.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the variable to set.
+             * @param value The value to set.
              * @NOTE -
              * - Custom key values are not settable.
              */
@@ -183,9 +175,8 @@ declare module "__future__" {
 
             /**
              * Sets the value of a variable.
-             * @param name - The name of the variable to set.
-             * @param value - The value to set.
-             * @returns
+             * @param name The name of the variable to set.
+             * @param value The value to set.
              * @NOTE -
              * - Custom key values are not settable.
              */
@@ -195,7 +186,6 @@ declare module "__future__" {
         const clear: {
             /**
              * Clears all variables except those starting with `C_` and `K_`.
-             * @returns
              */
             (): void
         }

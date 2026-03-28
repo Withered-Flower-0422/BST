@@ -10,12 +10,12 @@ declare module "game:module" {
         const createFloatTween: {
             /**
              * Creates a tween that can interpolate a float from a start value to an end value.
-             * @param from - The start value.
-             * @param to - The end value.
-             * @param easeType - The easing type to use.
-             * @param duration - The duration from the start value to the end value in frames.
-             * @param onUpdate - A callback function that is called every frame with the current value.
-             * @param onFinish - A callback function that is called when the tween finishes.
+             * @param from The start value.
+             * @param to The end value.
+             * @param easeType The easing type to use.
+             * @param duration The duration from the start value to the end value in frames.
+             * @param onUpdate A callback function that is called every frame with the current value.
+             * @param onFinish A callback function that is called when the tween finishes.
              * @returns A tween object that can be played, stopped, or paused.
              */
             <T extends int>(
@@ -26,15 +26,13 @@ declare module "game:module" {
                 onUpdate: {
                     /**
                      * A callback function that is called every frame with the current value.
-                     * @param curValue - The current value of the tween.
-                     * @returns
+                     * @param curValue The current value of the tween.
                      */
                     (curValue: float): void
                 },
                 onFinish: {
                     /**
                      * A callback function that is called when the tween finishes.
-                     * @returns
                      */
                     (): void
                 },
@@ -44,12 +42,12 @@ declare module "game:module" {
         const createFloat3Tween: {
             /**
              * Creates a tween that can interpolate a Float3 from a start value to an end value.
-             * @param from - The start value.
-             * @param to - The end value.
-             * @param easeType - The easing type to use.
-             * @param duration - The duration from the start value to the end value in frames.
-             * @param onUpdate - A callback function that is called every frame with the current value.
-             * @param onFinish - A callback function that is called when the tween finishes.
+             * @param from The start value.
+             * @param to The end value.
+             * @param easeType The easing type to use.
+             * @param duration The duration from the start value to the end value in frames.
+             * @param onUpdate A callback function that is called every frame with the current value.
+             * @param onFinish A callback function that is called when the tween finishes.
              * @returns A tween object that can be played, stopped, or paused.
              */
             <T extends int>(
@@ -60,15 +58,13 @@ declare module "game:module" {
                 onUpdate: {
                     /**
                      * A callback function that is called every frame with the current value.
-                     * @param curValue - The current value of the tween.
-                     * @returns
+                     * @param curValue The current value of the tween.
                      */
                     (curValue: Float3): void
                 },
                 onFinish: {
                     /**
                      * A callback function that is called when the tween finishes.
-                     * @returns
                      */
                     (): void
                 },
@@ -78,12 +74,12 @@ declare module "game:module" {
         const createQuaternionTween: {
             /**
              * Creates a tween that can interpolate a Quaternion from a start value to an end value.
-             * @param from - The start value.
-             * @param to - The end value.
-             * @param easeType - The easing type to use.
-             * @param duration - The duration from the start value to the end value in frames.
-             * @param onUpdate - A callback function that is called every frame with the current value.
-             * @param onFinish - A callback function that is called when the tween finishes.
+             * @param from The start value.
+             * @param to The end value.
+             * @param easeType The easing type to use.
+             * @param duration The duration from the start value to the end value in frames.
+             * @param onUpdate A callback function that is called every frame with the current value.
+             * @param onFinish A callback function that is called when the tween finishes.
              * @returns A tween object that can be played, stopped, or paused.
              */
             <T extends int>(
@@ -94,15 +90,13 @@ declare module "game:module" {
                 onUpdate: {
                     /**
                      * A callback function that is called every frame with the current value.
-                     * @param curValue - The current value of the tween.
-                     * @returns
+                     * @param curValue The current value of the tween.
                      */
                     (curValue: Quaternion): void
                 },
                 onFinish: {
                     /**
                      * A callback function that is called when the tween finishes.
-                     * @returns
                      */
                     (): void
                 },
@@ -112,12 +106,12 @@ declare module "game:module" {
         const createColorTween: {
             /**
              * Creates a tween that can interpolate a ColorRGBA from a start value to an end value.
-             * @param from - The start value.
-             * @param to - The end value.
-             * @param easeType - The easing type to use.
-             * @param duration - The duration from the start value to the end value in frames.
-             * @param onUpdate - A callback function that is called every frame with the current value.
-             * @param onFinish - A callback function that is called when the tween finishes.
+             * @param from The start value.
+             * @param to The end value.
+             * @param easeType The easing type to use.
+             * @param duration The duration from the start value to the end value in frames.
+             * @param onUpdate A callback function that is called every frame with the current value.
+             * @param onFinish A callback function that is called when the tween finishes.
              * @returns A tween object that can be played, stopped, or paused.
              */
             <T extends int>(
@@ -128,15 +122,13 @@ declare module "game:module" {
                 onUpdate: {
                     /**
                      * A callback function that is called every frame with the current value.
-                     * @param curValue - The current value of the tween.
-                     * @returns
+                     * @param curValue The current value of the tween.
                      */
                     (curValue: ColorRGBA): void
                 },
                 onFinish: {
                     /**
                      * A callback function that is called when the tween finishes.
-                     * @returns
                      */
                     (): void
                 },

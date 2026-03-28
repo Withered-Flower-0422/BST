@@ -44,8 +44,7 @@ declare module "editor:type" {
         readonly setData: {
             /**
              * Sets data to the component.
-             * @param data - The data of the component to set, as a JSON string.
-             * @returns
+             * @param data The data of the component to set, as a JSON string.
              * @NOTE -
              * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
              */
@@ -58,7 +57,6 @@ declare module "editor:type" {
                   readonly copyData: {
                       /**
                        * Copies all data from this component to the editor's internal clipboard.
-                       * @returns
                        */
                       (): void
                   }
@@ -66,7 +64,6 @@ declare module "editor:type" {
                   readonly pasteData: {
                       /**
                        * Pastes component data from the editor's internal clipboard to this component.
-                       * @returns
                        */
                       (): void
                   }

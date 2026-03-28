@@ -10,7 +10,7 @@ declare module "game:module" {
             const checkKeyDown: {
                 /**
                  * Checks if a key is currently down.
-                 * @param key - The key to check.
+                 * @param key The key to check.
                  * @returns Whether the key is currently down.
                  * @NOTE -
                  * - Passing in `"None"` will always return `false`.
@@ -23,7 +23,7 @@ declare module "game:module" {
             const checkKeyUp: {
                 /**
                  * Checks if a key is currently up.
-                 * @param key - The key to check.
+                 * @param key The key to check.
                  * @returns Whether the key is currently up.
                  * @NOTE -
                  * - Passing in `"None"` will always return `false`.
@@ -36,7 +36,7 @@ declare module "game:module" {
             const checkKeyHold: {
                 /**
                  * Checks if a key is currently being held down.
-                 * @param key - The key to check.
+                 * @param key The key to check.
                  * @returns Whether the key is currently being held down.
                  * @NOTE -
                  * - Passing in `"None"` will always return `false`.
@@ -51,7 +51,7 @@ declare module "game:module" {
             const checkButtonDown: {
                 /**
                  * Checks if a mouse button is currently down.
-                 * @param button - The mouse button to check.
+                 * @param button The mouse button to check.
                  * @returns Whether the mouse button is currently down.
                  */
                 (button: MouseButton): bool
@@ -60,7 +60,7 @@ declare module "game:module" {
             const checkButtonUp: {
                 /**
                  * Checks if a mouse button is currently up.
-                 * @param button - The mouse button to check.
+                 * @param button The mouse button to check.
                  * @returns Whether the mouse button is currently up.
                  */
                 (button: MouseButton): bool
@@ -69,7 +69,7 @@ declare module "game:module" {
             const checkButtonHold: {
                 /**
                  * Checks if a mouse button is currently being held down.
-                 * @param button - The mouse button to check.
+                 * @param button The mouse button to check.
                  * @returns Whether the mouse button is currently being held down.
                  */
                 (button: MouseButton): bool
@@ -96,7 +96,7 @@ declare module "game:module" {
             const checkButtonDown: {
                 /**
                  * Checks if a game pad button is currently down.
-                 * @param button - The game pad button to check.
+                 * @param button The game pad button to check.
                  * @returns Whether the game pad button is currently down.
                  */
                 (button: GamePadButton): bool
@@ -105,7 +105,7 @@ declare module "game:module" {
             const checkButtonUp: {
                 /**
                  * Checks if a game pad button is currently up.
-                 * @param button - The game pad button to check.
+                 * @param button The game pad button to check.
                  * @returns Whether the game pad button is currently up.
                  */
                 (button: GamePadButton): bool
@@ -114,7 +114,7 @@ declare module "game:module" {
             const checkButtonHold: {
                 /**
                  * Checks if a game pad button is currently being held down.
-                 * @param button - The game pad button to check.
+                 * @param button The game pad button to check.
                  * @returns Whether the game pad button is currently being held down.
                  */
                 (button: GamePadButton): bool
@@ -148,8 +148,7 @@ declare module "game:module" {
         const disablePlayerKey: {
             /**
              * Disables a player key, as known as a key that can be used to control the player ball.
-             * @param playerKeyName - The player key to disable.
-             * @returns
+             * @param playerKeyName The player key to disable.
              */
             (playerKeyName: PlayerKey): void
         }
@@ -157,8 +156,7 @@ declare module "game:module" {
         const enablePlayerKey: {
             /**
              * Enables a player key, as known as a key that can be used to control the player ball.
-             * @param playerKeyName - The player key to enable.
-             * @returns
+             * @param playerKeyName The player key to enable.
              */
             (playerKeyName: PlayerKey): void
         }
@@ -166,7 +164,7 @@ declare module "game:module" {
         const getPlayerKey: {
             /**
              * Gets the keyboard key associated with a player key, as known as a key that can be used to control the player ball.
-             * @param playerKeyName - The player key to get the keyboard key for.
+             * @param playerKeyName The player key to get the keyboard key for.
              * @returns The keyboard key associated with the player key. If there is no keyboard key associated with the player key, returns `"None"`.
              */
             (playerKeyName: PlayerKey): Exclude<KeyboardKey, "Enter" | "Escape">

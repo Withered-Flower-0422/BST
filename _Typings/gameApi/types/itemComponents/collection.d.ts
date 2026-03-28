@@ -15,7 +15,6 @@ declare module "game:type" {
         resetCollection: {
             /**
              * Resets the collection.
-             * @returns
              */
             (): void
         }

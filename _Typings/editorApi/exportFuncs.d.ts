@@ -5,7 +5,6 @@ declare module "editor:type" {
     global {
         /**
          * Executed when button is pressed.
-         * @returns
          */
         type EditorExecute = () => void
 

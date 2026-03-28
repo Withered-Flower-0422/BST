@@ -37,7 +37,7 @@ declare module "game:type" {
             readonly getData: {
                 /**
                  * Gets the specified data of the component.
-                 * @param path - The path of the property to get.
+                 * @param path The path of the property to get.
                  * @returns The value of the property.
                  */
                 <K extends keyof ComponentTypeMap[T]["data"]>(
@@ -48,8 +48,7 @@ declare module "game:type" {
             readonly setData: {
                 /**
                  * Sets data to the component.
-                 * @param data - The data to set. In the form of `{ [path]: value }`.
-                 * @returns
+                 * @param data The data to set. In the form of `{ [path]: value }`.
                  * @NOTE -
                  * - Some properties may not be allowed to be set during game runtime.
                  */

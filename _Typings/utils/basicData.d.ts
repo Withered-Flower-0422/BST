@@ -41,8 +41,8 @@ declare module "basicData" {
         y: float
 
         /**
-         * @param x - The x component of the float2.
-         * @param y - The y component of the float2.
+         * @param x The x component of the float2.
+         * @param y The y component of the float2.
          */
         constructor(x: float, y: float)
     }
@@ -55,9 +55,9 @@ declare module "basicData" {
         z: float
 
         /**
-         * @param x - The x component of the float3.
-         * @param y - The y component of the float3.
-         * @param z - The z component of the float3.
+         * @param x The x component of the float3.
+         * @param y The y component of the float3.
+         * @param z The z component of the float3.
          */
         constructor(x: float, y: float, z: float)
     }
@@ -71,10 +71,10 @@ declare module "basicData" {
         w: float
 
         /**
-         * @param x - The x component of the float4.
-         * @param y - The y component of the float4.
-         * @param z - The z component of the float4.
-         * @param w - The w component of the float4.
+         * @param x The x component of the float4.
+         * @param y The y component of the float4.
+         * @param z The z component of the float4.
+         * @param w The w component of the float4.
          */
         constructor(x: float, y: float, z: float, w: float)
     }
@@ -88,10 +88,10 @@ declare module "basicData" {
         w: float
 
         /**
-         * @param x - The x component of the quaternion.
-         * @param y - The y component of the quaternion.
-         * @param z - The z component of the quaternion.
-         * @param w - The w component of the quaternion.
+         * @param x The x component of the quaternion.
+         * @param y The y component of the quaternion.
+         * @param z The z component of the quaternion.
+         * @param w The w component of the quaternion.
          */
         constructor(x: float, y: float, z: float, w: float)
     }
@@ -104,9 +104,9 @@ declare module "basicData" {
         z: bool
 
         /**
-         * @param x - The x component of the bool3.
-         * @param y - The y component of the bool3.
-         * @param z - The z component of the bool3.
+         * @param x The x component of the bool3.
+         * @param y The y component of the bool3.
+         * @param z The z component of the bool3.
          */
         constructor(x: bool, y: bool, z: bool)
     }
@@ -119,9 +119,9 @@ declare module "basicData" {
         scl: Float3
 
         /**
-         * @param pos - The position component of the transform.
-         * @param rot - The rotation component of the transform.
-         * @param scl - The scale component of the transform.
+         * @param pos The position component of the transform.
+         * @param rot The rotation component of the transform.
+         * @param scl The scale component of the transform.
          */
         constructor(pos: Float3, rot: Float3, scl: Float3)
     }
@@ -137,10 +137,10 @@ declare module "basicData" {
 
     interface ColorRGBAConstructor {
         /**
-         * @param r - The red component of the color, between 0 and 1.
-         * @param g - The green component of the color, between 0 and 1.
-         * @param b - The blue component of the color, between 0 and 1.
-         * @param a - The alpha component of the color, between 0 and 1.
+         * @param r The red component of the color, between 0 and 1.
+         * @param g The green component of the color, between 0 and 1.
+         * @param b The blue component of the color, between 0 and 1.
+         * @param a The alpha component of the color, between 0 and 1.
          */
         new <
             R extends float = float,

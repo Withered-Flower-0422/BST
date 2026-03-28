@@ -53,7 +53,6 @@ declare module "editor:type" {
         refresh: {
             /**
              * Refresh the particle emitter animation in the editor.
-             * @returns
              */
             (): void
         }
@@ -61,7 +60,6 @@ declare module "editor:type" {
         play: {
             /**
              * Start playing the particle emitter animation in the editor.
-             * @returns
              */
             (): void
         }
@@ -70,7 +68,6 @@ declare module "editor:type" {
             /**
              * Pause the particle emitter animation in the editor.
              * The next time you call `play()`, the animation will resume from the paused point.
-             * @returns
              */
             (): void
         }
@@ -79,7 +76,6 @@ declare module "editor:type" {
             /**
              * Stop the particle emitter animation in the editor.
              * The next time you call `play()`, the animation will start from the beginning.
-             * @returns
              */
             (): void
         }

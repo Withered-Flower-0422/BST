@@ -17,7 +17,6 @@ declare module "game:module" {
         const hideGameUI: {
             /**
              * Hides the game UI.
-             * @returns
              */
             (): void
         }
@@ -25,7 +24,6 @@ declare module "game:module" {
         const showGameUI: {
             /**
              * Shows the game UI.
-             * @returns
              */
             (): void
         }
@@ -33,7 +31,7 @@ declare module "game:module" {
         const createUI: {
             /**
              * Creates a new UI element of the specified type.
-             * @param elementType - The type of UI element to create.
+             * @param elementType The type of UI element to create.
              * @returns The new UI element.
              */
             <T extends keyof UIElementTypeMap>(elementType: T): UIElement<T>
@@ -42,8 +40,7 @@ declare module "game:module" {
         const destroyUI: {
             /**
              * Destroys the specified UI element.
-             * @param element - The UI element to destroy.
-             * @returns
+             * @param element The UI element to destroy.
              */
             (element: UIElement): void
         }

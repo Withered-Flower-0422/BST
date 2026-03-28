@@ -6,7 +6,6 @@ declare module "game:type" {
         readonly next: {
             /**
              * Plays the tween for one step.
-             * @returns
              */
             (): void
         }
@@ -14,7 +13,6 @@ declare module "game:type" {
         readonly play: {
             /**
              * Plays the tween until it is completed.
-             * @returns
              */
             (): void
         }
@@ -22,7 +20,6 @@ declare module "game:type" {
         readonly stop: {
             /**
              * Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning.
-             * @returns
              */
             (): void
         }

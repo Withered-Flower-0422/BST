@@ -174,20 +174,17 @@ declare module "game:type" {
 
             /**
              * Invoked when the pointer enters the UI element.
-             * @returns
              */
             onPointerEnter: () => void
 
             /**
              * Invoked when the pointer leaves the UI element.
-             * @returns
              */
             onPointerExit: () => void
 
             /**
              * Invoked when the pointer clicks the UI element.
-             * @param mouseButton - Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
-             * @returns
+             * @param mouseButton Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
              */
             onPointerClick: (mouseButton: MouseButton) => void
 

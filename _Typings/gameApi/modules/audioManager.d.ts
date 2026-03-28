@@ -8,9 +8,8 @@ declare module "game:module" {
         const playBgm: {
             /**
              * Plays a background music by index from the list of background music in the `BGM` component of the `Scene Settings`.
-             * @param index - The index of the background music to play.
-             * @param volume - The volume of the background music. The range is 0 to 1.
-             * @returns
+             * @param index The index of the background music to play.
+             * @param volume The volume of the background music. The range is 0 to 1.
              */
             <T extends int, U extends float>(
                 index: AssertNonNegInt<T>,
@@ -21,7 +20,6 @@ declare module "game:module" {
         const pauseBgm: {
             /**
              * Pauses the background music. The next call of `playBgm()` will resume the music from the point where it was paused.
-             * @returns
              */
             (): void
         }
@@ -29,7 +27,6 @@ declare module "game:module" {
         const stopBgm: {
             /**
              * Stops the background music. The next call of `playBgm()` will start the music from the beginning.
-             * @returns
              */
             (): void
         }
@@ -37,8 +34,7 @@ declare module "game:module" {
         const setBgmVolume: {
             /**
              * Sets the volume of the background music.
-             * @param volume - The volume of the background music. The range is 0 to 1.
-             * @returns
+             * @param volume The volume of the background music. The range is 0 to 1.
              */
             <T extends float>(volume: Assert0To1<T>): void
         }
@@ -46,9 +42,8 @@ declare module "game:module" {
         const playSfx: {
             /**
              * Plays a sound effect by index from the list of sound effects in the `BGM` component of the `Scene Settings`.
-             * @param index - The index of the sound effect to play.
-             * @param volume - The volume of the sound effect. The range is 0 to 1.
-             * @returns
+             * @param index The index of the sound effect to play.
+             * @param volume The volume of the sound effect. The range is 0 to 1.
              */
             <T extends int, U extends float>(
                 index: AssertNonNegInt<T>,
@@ -59,7 +54,6 @@ declare module "game:module" {
         const pauseSfx: {
             /**
              * Pauses the sound effect. The next call of `playSfx()` will resume the sound effect from the point where it was paused.
-             * @returns
              */
             (): void
         }
@@ -67,7 +61,6 @@ declare module "game:module" {
         const stopSfx: {
             /**
              * Stops the sound effect. The next call of `playSfx()` will start the sound effect from the beginning.
-             * @returns
              */
             (): void
         }
@@ -75,8 +68,7 @@ declare module "game:module" {
         const setSfxVolume: {
             /**
              * Sets the volume of the sound effect.
-             * @param volume - The volume of the sound effect. The range is 0 to 1.
-             * @returns
+             * @param volume The volume of the sound effect. The range is 0 to 1.
              */
             <T extends float>(volume: Assert0To1<T>): void
         }

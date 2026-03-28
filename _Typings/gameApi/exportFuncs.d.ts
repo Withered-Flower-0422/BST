@@ -191,9 +191,8 @@ declare module "game:type" {
         type Init<ExecVar extends $ = $> = {
             /**
              * Executed when the executor loads the script. It executes before all other events and only executes once.
-             * @param self - A reference to the item where the executor component is located.
-             * @param vars - The variables set on the executor, passed in as key-value pairs.
-             * @returns
+             * @param self A reference to the item where the executor component is located.
+             * @param vars The variables set on the executor, passed in as key-value pairs.
              */
             (self: Item, vars: ExecVar): void
         }
@@ -201,8 +200,7 @@ declare module "game:type" {
         type GameExecute = {
             /**
              * Executed when `execute()` is called by another executor in the game.
-             * @param args - The arguments passed in by the executor that called `execute()`.
-             * @returns
+             * @param args The arguments passed in by the executor that called `execute()`.
              */
             (...args: any[]): void
         }
@@ -215,9 +213,8 @@ declare module "game:type" {
         type OnEvents<RE extends RegisterEvent[] = RegisterEvent[]> = {
             /**
              * Executed when a registered event is triggered.
-             * @param self - A reference to the item where the executor component is located.
-             * @param events - The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
-             * @returns
+             * @param self A reference to the item where the executor component is located.
+             * @param events The triggered events and their passed messages, passed in as key-value pairs. The key is the event name, and the value is the passed message **array**.
              */
             (self: Item, events: RegisterEvents<RE>): void
         }
@@ -225,10 +222,9 @@ declare module "game:type" {
         type OnTrigger<ET extends EventType = EventType> = {
             /**
              * Executed when the trigger is activated.
-             * @param self - A reference to the item where the trigger component is located.
-             * @param triggeredItem - A reference to the item or player that activated the trigger.
-             * @param type - The type of trigger event.
-             * @returns
+             * @param self A reference to the item where the trigger component is located.
+             * @param triggeredItem A reference to the item or player that activated the trigger.
+             * @param type The type of trigger event.
              */
             (self: Item, triggeredItem: Item, type: ET): void
         }
@@ -236,9 +232,8 @@ declare module "game:type" {
         type OnCollide<ET extends EventType = EventType> = {
             /**
              * Executed when an object collides.
-             * @param self - A reference to the item where the collider component is located.
-             * @param collisionEvent - The collision event object, which contains information about the colliding object, the type of collision, the position of the collision, etc.
-             * @returns
+             * @param self A reference to the item where the collider component is located.
+             * @param collisionEvent The collision event object, which contains information about the colliding object, the type of collision, the position of the collision, etc.
              */
             (self: Item, collisionEvent: CollisionEvent<ET>): void
         }

@@ -13,10 +13,9 @@ declare module "game:type" {
         readonly setTransform: {
             /**
              * Sets a specified transform for the item.
-             * @param position - The position to set.
-             * @param rotation - The rotation to set.
-             * @param scale - The scale to set.
-             * @returns
+             * @param position The position to set.
+             * @param rotation The rotation to set.
+             * @param scale The scale to set.
              */
             (position: Float3, rotation: Float3, scale: Float3): void
         }
@@ -24,8 +23,7 @@ declare module "game:type" {
         readonly setPosition: {
             /**
              * Sets a specified position for the item without changing the rotation or scale.
-             * @param position - The position to set.
-             * @returns
+             * @param position The position to set.
              */
             (position: Float3): void
         }
@@ -33,8 +31,7 @@ declare module "game:type" {
         readonly setRotation: {
             /**
              * Sets a specified euler angle format rotation for the item without changing the position or scale.
-             * @param rotation - The rotation to set, in euler angle format.
-             * @returns
+             * @param rotation The rotation to set, in euler angle format.
              */
             (rotation: Float3): void
         }
@@ -42,8 +39,7 @@ declare module "game:type" {
         readonly setRotationQuaternion: {
             /**
              * Sets a specified quaternion format rotation for the item without changing the position or scale.
-             * @param rotation - The rotation to set, in quaternion format.
-             * @returns
+             * @param rotation The rotation to set, in quaternion format.
              */
             (rotation: Quaternion): void
         }
@@ -51,8 +47,7 @@ declare module "game:type" {
         readonly setScale: {
             /**
              * Sets a specified scale for the item without changing the position or rotation.
-             * @param scale - The scale to set.
-             * @returns
+             * @param scale The scale to set.
              */
             (scale: Float3): void
         }
@@ -76,7 +71,7 @@ declare module "game:type" {
         readonly getComponent: {
             /**
              * Gets the specified component of the item. If the item doesn't have the component, returns `null`.
-             * @param componentType - The type of the component to get.
+             * @param componentType The type of the component to get.
              * @returns The specified component of the item, or `null` if the item doesn't have the specified component.
              */
             <T extends keyof ComponentTypeMap>(
@@ -87,10 +82,9 @@ declare module "game:type" {
         readonly moveTo: {
             /**
              * Moves the item to a specified transform.
-             * @param targetTransform - The target transform to move to.
-             * @param easeType - The ease type to use for the movement.
-             * @param duration - The duration of the movement in frames.
-             * @returns
+             * @param targetTransform The target transform to move to.
+             * @param easeType The ease type to use for the movement.
+             * @param duration The duration of the movement in frames.
              */
             <T extends int>(
                 targetTransform: Trans,
@@ -102,7 +96,6 @@ declare module "game:type" {
         readonly stopMove: {
             /**
              * Stops the movement of the item cased by `item.moveTo()`
-             * @returns
              * @NOTE -
              * - Only to interrupt `item.moveTo()`, no effect for physical objects.
              */

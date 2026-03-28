@@ -11,7 +11,7 @@ declare module "editor:type" {
         readonly getComponent: {
             /**
              * Gets a component of the item.
-             * @param componentType - The type of the component to get.
+             * @param componentType The type of the component to get.
              * @returns The component of the specified type, or `null` if the item does not have a component of that type.
              */
             <U extends keyof ItemComponentTypeMap>(
@@ -22,7 +22,7 @@ declare module "editor:type" {
         readonly addComponent: {
             /**
              * Adds a component to the item. `Settings` component cannot be added.
-             * @param componentType - The type of the component to add.
+             * @param componentType The type of the component to add.
              * @returns The added component of the specified type.
              */
             <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(
@@ -33,8 +33,7 @@ declare module "editor:type" {
         readonly removeComponent: {
             /**
              * Removes a component from the item. `Settings` component cannot be removed.
-             * @param componentType - The type of the component to remove.
-             * @returns
+             * @param componentType The type of the component to remove.
              */
             <U extends Exclude<keyof ItemComponentTypeMap, "Settings">>(
                 componentType: U,
@@ -49,7 +48,7 @@ declare module "editor:type" {
         readonly getComponent: {
             /**
              * Gets a component of the `Scene Settings`.
-             * @param componentType - The type of the component to get.
+             * @param componentType The type of the component to get.
              * @returns The component of the specified type.
              */
             <U extends keyof SettingsComponentTypeMap>(
@@ -90,10 +89,9 @@ declare module "editor:type" {
         readonly setTransform: {
             /**
              * Sets a specified local transform to the object.
-             * @param position - The local position to set.
-             * @param rotation - The local rotation to set.
-             * @param scale - The local scale to set.
-             * @returns
+             * @param position The local position to set.
+             * @param rotation The local rotation to set.
+             * @param scale The local scale to set.
              */
             (position: Float3, rotation: Float3, scale: Float3): void
         }
@@ -101,8 +99,7 @@ declare module "editor:type" {
         readonly setPosition: {
             /**
              * Sets a specified local position to the object without changing the rotation or scale.
-             * @param position - The local position to set.
-             * @returns
+             * @param position The local position to set.
              */
             (position: Float3): void
         }
@@ -110,8 +107,7 @@ declare module "editor:type" {
         readonly setRotation: {
             /**
              * Sets a specified local rotation to the object without changing the position or scale.
-             * @param rotation - The local rotation to set.
-             * @returns
+             * @param rotation The local rotation to set.
              */
             (rotation: Float3): void
         }
@@ -119,8 +115,7 @@ declare module "editor:type" {
         readonly setScale: {
             /**
              * Sets a specified local scale to the object without changing the position or rotation.
-             * @param scale - The local scale to set.
-             * @returns
+             * @param scale The local scale to set.
              */
             (scale: Float3): void
         }
@@ -168,8 +163,7 @@ declare module "editor:type" {
         readonly setParent: {
             /**
              * Sets the parent of the object. If `null` is passed, the object will be removed from its parent.
-             * @param parent - The parent to set. If `null`, the object will be removed from its parent.
-             * @returns
+             * @param parent The parent to set. If `null`, the object will be removed from its parent.
              */
             (parent: SceneObject | null): void
         }

@@ -28,7 +28,6 @@ declare module "game:type" {
         play: {
             /**
              * Plays the audio.
-             * @returns
              */
             (): void
         }
@@ -36,7 +35,6 @@ declare module "game:type" {
         pause: {
             /**
              * Pauses the audio. The next call of `play()` will resume the audio from the paused position.
-             * @returns
              */
             (): void
         }
@@ -44,7 +42,6 @@ declare module "game:type" {
         stop: {
             /**
              * Stops the audio. The next call of `play()` will start the audio from the beginning.
-             * @returns
              */
             (): void
         }

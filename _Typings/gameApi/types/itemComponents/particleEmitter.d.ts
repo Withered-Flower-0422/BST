@@ -53,7 +53,6 @@ declare module "game:type" {
         play: {
             /**
              * Starts playing the particle emitter.
-             * @returns
              */
             (): void
         }
@@ -61,7 +60,6 @@ declare module "game:type" {
         pause: {
             /**
              * Pauses the particle emitter. The next time it is played, it will continue from where it left off.
-             * @returns
              */
             (): void
         }
@@ -69,7 +67,6 @@ declare module "game:type" {
         stop: {
             /**
              * Stops the particle emitter. The next time it is played, it will start from the beginning.
-             * @returns
              */
             (): void
         }

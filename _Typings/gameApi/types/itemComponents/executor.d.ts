@@ -12,8 +12,7 @@ declare module "game:type" {
     type ExecutorMethod = {
         /**
          * Executed when `execute()` is called by another executor in the game.
-         * @param args - The arguments passed in by the executor that called `execute()`.
-         * @returns
+         * @param args The arguments passed in by the executor that called `execute()`.
          */
         execute: GameExecute
     }

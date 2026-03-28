@@ -38,8 +38,7 @@ declare module "editor:type" {
         readonly setData: {
             /**
              * Sets data to the component.
-             * @param data - The data of the component to set, as a JSON string.
-             * @returns
+             * @param data The data of the component to set, as a JSON string.
              * @NOTE -
              * - The data to set is **not** a JSON object, needs to stringify it before pass it in.
              */

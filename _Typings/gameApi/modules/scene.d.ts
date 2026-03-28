@@ -19,7 +19,7 @@ declare module "game:module" {
         const getItem: {
             /**
              * Gets the item by its guid.
-             * @param guid - The guid string of the item to get.
+             * @param guid The guid string of the item to get.
              * @returns The item with the given guid, or `null` if the item does not exist.
              */
             <S extends guid>(guid: AssertGuid<S>): Item | null
@@ -28,7 +28,7 @@ declare module "game:module" {
         const getItems: {
             /**
              * Gets the items by their guids.
-             * @param guids - The guid strings in an array of the items to get.
+             * @param guids The guid strings in an array of the items to get.
              * @returns An array of the items (or `null` if the item does not exist) with the given guids.
              */
             <const S extends readonly guid[]>(
@@ -47,8 +47,7 @@ declare module "game:module" {
         const destroyItem: {
             /**
              * Destroys the item by its guid.
-             * @param guid - The guid string of the item to destroy.
-             * @returns
+             * @param guid The guid string of the item to destroy.
              */
             <S extends guid>(guid: AssertGuid<S>): void
         }
@@ -56,8 +55,7 @@ declare module "game:module" {
         const destroyItems: {
             /**
              * Destroys the items by their guids.
-             * @param guids - The guid strings in an array of the items to destroy.
-             * @returns
+             * @param guids The guid strings in an array of the items to destroy.
              */
             <const S extends readonly guid[]>(guids: S & AssertGuids<S>): void
         }
@@ -65,10 +63,10 @@ declare module "game:module" {
         const createItem: {
             /**
              * Creates an item based on a template.
-             * @param templateName - The name of the template to create the item from.
-             * @param pos - The position of the item.
-             * @param rot - The rotation of the item.
-             * @param scl - The scale of the item.
+             * @param templateName The name of the template to create the item from.
+             * @param pos The position of the item.
+             * @param rot The rotation of the item.
+             * @param scl The scale of the item.
              * @returns The created item, or `null` if the template does not exist.
              */
             (
@@ -82,8 +80,8 @@ declare module "game:module" {
         const raycast: {
             /**
              * Casts a ray from the start position to the end position and returns the first item or player it hits.
-             * @param start - The start position of the ray.
-             * @param end - The end position of the ray.
+             * @param start The start position of the ray.
+             * @param end The end position of the ray.
              * @returns The first item or player it hits or `null` if it hits nothing.
              */
             (start: Float3, end: Float3): RaycastResult | null
@@ -92,8 +90,8 @@ declare module "game:module" {
         const raycastAll: {
             /**
              * Casts a ray from the start position to the end position and returns all the items or player it hits.
-             * @param start - The start position of the ray.
-             * @param end - The end position of the ray.
+             * @param start The start position of the ray.
+             * @param end The end position of the ray.
              * @returns An array of all the items or player it hits.
              */
             (start: Float3, end: Float3): RaycastResult[]
@@ -102,7 +100,7 @@ declare module "game:module" {
         const mouseRaycast: {
             /**
              * Casts a ray from the mouse position with the given maximum distance and returns the first item or player it hits.
-             * @param maxDistance - The maximum distance of the ray.
+             * @param maxDistance The maximum distance of the ray.
              * @returns The first item or player it hits or `null` if it hits nothing.
              */
             <T extends float>(
@@ -113,7 +111,7 @@ declare module "game:module" {
         const mouseRaycastAll: {
             /**
              * Casts a ray from the mouse position with the given maximum distance and returns all the items or player it hits.
-             * @param maxDistance - The maximum distance of the ray.
+             * @param maxDistance The maximum distance of the ray.
              * @returns An array of all the items or player it hits.
              */
             <T extends float>(maxDistance: AssertNonNeg<T>): RaycastResult[]
@@ -122,8 +120,8 @@ declare module "game:module" {
         const sphereCastAll: {
             /**
              * Casts a sphere from the center position with the given radius and returns all the items or player it hits by their collision layers.
-             * @param center - The center position of the sphere.
-             * @param radius - The radius of the sphere.
+             * @param center The center position of the sphere.
+             * @param radius The radius of the sphere.
              * @returns An object with the items or player it hits by their collision layers.
              */
             <T extends float>(
@@ -135,9 +133,9 @@ declare module "game:module" {
         const boxCastAll: {
             /**
              * Casts a box from the center position with the given size and rotation and returns all the items or player it hits by their collision layers.
-             * @param center - The center position of the box.
-             * @param size - The size of the box.
-             * @param rotation - The rotation of the box.
+             * @param center The center position of the box.
+             * @param size The size of the box.
+             * @param rotation The rotation of the box.
              * @returns An object with the items or player it hits by their collision layers.
              */
             (

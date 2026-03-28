@@ -15,7 +15,6 @@ declare module "editor:module" {
         const refreshCache: {
             /**
              * Refreshes the editor's cache.
-             * @returns
              */
             (): void
         }
@@ -23,7 +22,6 @@ declare module "editor:module" {
         const reloadFolder: {
             /**
              * Reloads the editor's folder.
-             * @returns
              */
             (): void
         }
@@ -31,7 +29,6 @@ declare module "editor:module" {
         const startTimer: {
             /**
              * Starts the editor's internal timer.
-             * @returns
              */
             (): void
         }
@@ -47,16 +44,14 @@ declare module "editor:module" {
         const invoke: {
             /**
              * Invokes a function after a specified delay.
-             * @param func - The function to be invoked.
-             * @param delayTime - The delay time in seconds. When set to 0, the delay is 1 frame.
-             * @returns
+             * @param func The function to be invoked.
+             * @param delayTime The delay time in seconds. When set to 0, the delay is 1 frame.
              */
             <T extends float>(
                 func: {
                     /**
                      * The function to be invoked.
-                     * @param args - The arguments to be passed to the function.
-                     * @returns
+                     * @param args The arguments to be passed to the function.
                      */
                     (...args: any[]): void
                 },
@@ -84,8 +79,8 @@ declare module "editor:module" {
         const getAllAssetsInFolder: {
             /**
              * Gets all assets in a specified folder.
-             * @param category - The category of assets to search for.
-             * @param folderName - The folder to search for assets.
+             * @param category The category of assets to search for.
+             * @param folderName The folder to search for assets.
              * @returns An array of editor's paths to the assets in the specified folder.
              * @NOTE -
              * Only custom assets are returned. Link-typed assets are ignored.

@@ -160,7 +160,6 @@ declare module "editor:type" {
         clone: {
             /**
              * Creates an identical road at the end of the current road and automatically sets its rotation and other properties.
-             * @returns
              */
             (): void
         }
@@ -169,7 +168,6 @@ declare module "editor:type" {
             /**
              * Forcibly refreshes the current road generator.
              * For a `Custom Script` road generator, you can call this method to refresh the generated result after modifying the script.
-             * @returns
              */
             (): void
         }
@@ -177,7 +175,6 @@ declare module "editor:type" {
         saveMesh: {
             /**
              * Saves the road as mesh to `Assets/Meshes/Default`.
-             * @returns
              */
             (): void
         }
@@ -185,7 +182,6 @@ declare module "editor:type" {
         createWayPoint: {
             /**
              * Creates `Way Point` at the corresponding positions based on the current road generator's segments.
-             * @returns
              */
             (): void
         }

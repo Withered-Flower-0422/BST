@@ -104,9 +104,8 @@ declare module "game:type" {
         setVelocity: {
             /**
              * Sets both linear and angular velocity of the physics object.
-             * @param linear - The linear velocity to set.
-             * @param angular - The angular velocity to set.
-             * @returns
+             * @param linear The linear velocity to set.
+             * @param angular The angular velocity to set.
              */
             (linear: Float3, angular: Float3): void
         }
@@ -114,8 +113,7 @@ declare module "game:type" {
         setLinearVelocity: {
             /**
              * Sets the linear velocity of the physics object without affecting the angular velocity.
-             * @param velocity - The linear velocity to set.
-             * @returns
+             * @param velocity The linear velocity to set.
              */
             (velocity: Float3): void
         }
@@ -123,8 +121,7 @@ declare module "game:type" {
         setAngularVelocity: {
             /**
              * Sets the angular velocity of the physics object without affecting the linear velocity.
-             * @param velocity - The angular velocity to set.
-             * @returns
+             * @param velocity The angular velocity to set.
              */
             (velocity: Float3): void
         }
@@ -132,7 +129,6 @@ declare module "game:type" {
         destroyPhysicsObject: {
             /**
              * Destroys the physics object.
-             * @returns
              * @NOTE -
              * - This method only destroys the physics object. It does not remove the item from the scene,
              * neither the `Renderer` component. So the item will still be rendered.
@@ -161,8 +157,7 @@ declare module "game:type" {
         setMass: {
             /**
              * Sets the mass of the physics object.
-             * @param mass - The mass to set.
-             * @returns
+             * @param mass The mass to set.
              */
             <T extends float>(mass: AssertNonNeg<T>): void
         }

@@ -55,8 +55,8 @@ declare module "game:module" {
         const getData: {
             /**
              * Gets the data of a component's property.
-             * @param componentType - The type of the component.
-             * @param path - The property path of the component.
+             * @param componentType The type of the component.
+             * @param path The property path of the component.
              * @returns The data of the component's property.
              * @NOTE -
              * - Some components' data may not be accessible during game runtime.
@@ -73,9 +73,8 @@ declare module "game:module" {
         const setData: {
             /**
              * Sets data to a component.
-             * @param componentType - The type of the component.
-             * @param values - The data to be set, in the form of `{ [path]: value }`.
-             * @returns
+             * @param componentType The type of the component.
+             * @param values The data to be set, in the form of `{ [path]: value }`.
              * @NOTE -
              * - Some components' data may not be settable during game runtime.
              */

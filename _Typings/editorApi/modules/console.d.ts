@@ -6,8 +6,7 @@ declare module "editor:module" {
         const log: {
             /**
              * Logs a message to the console.
-             * @param data - The data to log.
-             * @returns
+             * @param data The data to log.
              */
             (...data: any[]): void
         }
@@ -15,8 +14,7 @@ declare module "editor:module" {
         const error: {
             /**
              * Logs an error message to the console.
-             * @param data - The data to log.
-             * @returns
+             * @param data The data to log.
              */
             (...data: any[]): void
         }
@@ -24,7 +22,6 @@ declare module "editor:module" {
         const clear: {
             /**
              * Clears the console.
-             * @returns
              */
             (): void
         }

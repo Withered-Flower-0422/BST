@@ -59,7 +59,6 @@ declare module "game:type" {
         breakJoint: {
             /**
              * Breaks the joint.
-             * @returns
              */
             (): void
         }

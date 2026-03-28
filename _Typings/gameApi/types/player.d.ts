@@ -69,7 +69,6 @@ declare module "game:type" {
         readonly recoverAll: {
             /**
              * Recovers all properties of the player.
-             * @returns
              */
             (): void
         }
@@ -77,8 +76,7 @@ declare module "game:type" {
         readonly transfer: {
             /**
              * Transfers the player to a new position. The camera will jump to the new position directly.
-             * @param targetPosition - The position to transfer the player to.
-             * @returns
+             * @param targetPosition The position to transfer the player to.
              */
             (targetPosition: Float3): void
         }
@@ -86,8 +84,7 @@ declare module "game:type" {
         readonly setRendererMesh: {
             /**
              * Sets the player's renderer mesh.
-             * @param path - The path of the mesh to set as the player's renderer mesh.
-             * @returns
+             * @param path The path of the mesh to set as the player's renderer mesh.
              */
             <T extends string>(path: AssertPath<T, "Meshes">): void
         }
@@ -95,8 +92,7 @@ declare module "game:type" {
         readonly setRendererMaterials: {
             /**
              * Sets the player's renderer materials.
-             * @param paths - The paths of the materials to set as the player's renderer materials.
-             * @returns
+             * @param paths The paths of the materials to set as the player's renderer materials.
              */
             <const T extends readonly string[]>(
                 paths: T & AssertPaths<T, "Materials">,
@@ -107,8 +103,7 @@ declare module "game:type" {
         readonly setRendererOpacity: {
             /**
              * Sets the player's renderer opacity.
-             * @param opacity - The opacity of the player's renderer.
-             * @returns
+             * @param opacity The opacity of the player's renderer.
              */
             <T extends float>(opacity: Assert0To1<T>): void
         }
@@ -170,7 +165,6 @@ declare module "__future__" {
         readonly recoverAll: {
             /**
              * Recovers all properties of the player.
-             * @returns
              */
             (): void
         }
@@ -178,8 +172,7 @@ declare module "__future__" {
         readonly transfer: {
             /**
              * Transfers the player to a new position. The camera will jump to the new position directly.
-             * @param targetPosition - The position to transfer the player to.
-             * @returns
+             * @param targetPosition The position to transfer the player to.
              */
             (targetPosition: Float3): void
         }
@@ -187,8 +180,7 @@ declare module "__future__" {
         readonly setRendererMesh: {
             /**
              * Sets the player's renderer mesh.
-             * @param path - The path of the mesh to set as the player's renderer mesh.
-             * @returns
+             * @param path The path of the mesh to set as the player's renderer mesh.
              */
             <T extends string>(path: AssertPath<T, "Meshes">): void
         }
@@ -196,8 +188,7 @@ declare module "__future__" {
         readonly setRendererMaterials: {
             /**
              * Sets the player's renderer materials.
-             * @param paths - The paths of the materials to set as the player's renderer materials.
-             * @returns
+             * @param paths The paths of the materials to set as the player's renderer materials.
              */
             <const T extends readonly string[]>(
                 paths: T & AssertPaths<T, "Materials">,
@@ -208,8 +199,7 @@ declare module "__future__" {
         readonly setRendererOpacity: {
             /**
              * Sets the player's renderer opacity.
-             * @param opacity - The opacity of the player's renderer.
-             * @returns
+             * @param opacity The opacity of the player's renderer.
              */
             <T extends float>(opacity: Assert0To1<T>): void
         }

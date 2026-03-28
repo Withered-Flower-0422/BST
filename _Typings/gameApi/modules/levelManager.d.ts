@@ -96,7 +96,6 @@ declare module "game:module" {
         const callLevelComplete: {
             /**
              * Completes the level without the completion animation.
-             * @returns
              */
             (): void
         }
@@ -104,8 +103,7 @@ declare module "game:module" {
         const callLevelCompleteWithAnimation: {
             /**
              * Completes the level with the completion animation.
-             * @param position - The position of the completion animation.
-             * @returns
+             * @param position The position of the completion animation.
              */
             (position: Float3): void
         }
@@ -113,7 +111,6 @@ declare module "game:module" {
         const callSuicide: {
             /**
              * Suicides the player ball.
-             * @returns
              */
             (): void
         }
@@ -121,7 +118,6 @@ declare module "game:module" {
         const callRestart: {
             /**
              * Restarts the level.
-             * @returns
              */
             (): void
         }
@@ -129,8 +125,7 @@ declare module "game:module" {
         const transferPlayer: {
             /**
              * Transfers the player ball to the specified position. The camera will jump to the position directly.
-             * @param targetPosition - The position to transfer the player ball to.
-             * @returns
+             * @param targetPosition The position to transfer the player ball to.
              */
             (targetPosition: Float3): void
         }
@@ -138,17 +133,15 @@ declare module "game:module" {
         const setCameraTarget: {
             /**
              * Sets the camera to follow the specified item.
-             * @param guid - The guid string of the item to be followed by the camera.
-             * @param displayName - The name shown on the ui. This parameter only works when `guid` is **not** `null`.
-             * @returns
+             * @param guid The guid string of the item to be followed by the camera.
+             * @param displayName The name shown on the ui. This parameter only works when `guid` is **not** `null`.
              */
             <S extends guid>(guid: AssertGuid<S>, displayName: string): void
 
             /**
              * Sets the camera to follow the specified item.
-             * @param guid - If `null` is passed, the camera will follow back to the player ball.
-             * @param displayName - If `guid` is `null`, the name shown on the ui will always be the name of the player ball.
-             * @returns
+             * @param guid If `null` is passed, the camera will follow back to the player ball.
+             * @param displayName If `guid` is `null`, the name shown on the ui will always be the name of the player ball.
              */
             (guid: null, displayName: null): void
         }
@@ -156,7 +149,7 @@ declare module "game:module" {
         const showTip: {
             /**
              * Shows a tip with the specified content.
-             * @param content - The content of the tip to be shown.
+             * @param content The content of the tip to be shown.
              * @returns The shown tip's guid.
              */
             (content: string): TipGuid
@@ -165,8 +158,7 @@ declare module "game:module" {
         const hideTip: {
             /**
              * Hides the tip with the specified guid.
-             * @param guid - The guid of the tip to be hidden.
-             * @returns
+             * @param guid The guid of the tip to be hidden.
              */
             (guid: TipGuid): void
         }
@@ -174,7 +166,6 @@ declare module "game:module" {
         const hideAllTips: {
             /**
              * Hides all tips.
-             * @returns
              */
             (): void
         }
@@ -182,9 +173,8 @@ declare module "game:module" {
         const hideTipDelay: {
             /**
              * Hides the tip with the specified guid after a specified number of frames.
-             * @param guid - The guid of the tip to be hidden.
-             * @param frame - The number of frames to wait before hiding the tip.
-             * @returns
+             * @param guid The guid of the tip to be hidden.
+             * @param frame The number of frames to wait before hiding the tip.
              */
             <T extends int>(guid: TipGuid, frame: AssertNonNegInt<T>): void
         }
@@ -192,8 +182,7 @@ declare module "game:module" {
         const hideAllTipsDelay: {
             /**
              * Hides all tips after a specified number of frames.
-             * @param frame - The number of frames to wait before hiding all tips.
-             * @returns
+             * @param frame The number of frames to wait before hiding all tips.
              */
             <T extends int>(frame: AssertNonNegInt<T>): void
         }
@@ -201,7 +190,7 @@ declare module "game:module" {
         const save: {
             /**
              * Saves data to the local storage.
-             * @param data - A string to save. Recommended to be a JSON string.
+             * @param data A string to save. Recommended to be a JSON string.
              * @returns Whether the data is saved successfully.
              */
             <T>(data: json<T>): bool
@@ -220,8 +209,7 @@ declare module "game:module" {
         const cancelEvent: {
             /**
              * Cancels the specified event. The event must be cancelable (i.e. starts with `OnPre`).
-             * @param eventName - The name of the event to be canceled.
-             * @returns
+             * @param eventName The name of the event to be canceled.
              */
             <RE extends RegisterEvent[] = RegisterEvent[]>(
                 eventName: `OnPre${string}` & RE[number],
@@ -231,8 +219,7 @@ declare module "game:module" {
         const sendCustomEvent: {
             /**
              * Sends a custom event with the specified message. Other scripts can listen to this event by registering `OnReceiveCustomEvent`.
-             * @param message - The message to be sent.
-             * @returns
+             * @param message The message to be sent.
              */
             (message: any): void
         }
@@ -240,9 +227,8 @@ declare module "game:module" {
         const spawnVfx: {
             /**
              * Spawns a visual effect with the specified type at the specified position.
-             * @param type - The type of the visual effect to be spawned.
-             * @param position - The position to spawn the visual effect at.
-             * @returns
+             * @param type The type of the visual effect to be spawned.
+             * @param position The position to spawn the visual effect at.
              */
             (type: VfxType, position: Float3): void
         }
@@ -250,11 +236,10 @@ declare module "game:module" {
         const spawnVfxPRS: {
             /**
              * Spawns a visual effect with the specified type at the specified position, rotation, and scale.
-             * @param type - The type of the visual effect to be spawned.
-             * @param position - The position to spawn the visual effect at.
-             * @param rotation - The rotation of the visual effect.
-             * @param scale - The scale of the visual effect.
-             * @returns
+             * @param type The type of the visual effect to be spawned.
+             * @param position The position to spawn the visual effect at.
+             * @param rotation The rotation of the visual effect.
+             * @param scale The scale of the visual effect.
              */
             (
                 type: VfxType,
@@ -267,8 +252,7 @@ declare module "game:module" {
         const setCustomCamera: {
             /**
              * Uses a custom camera. If `null` is passed, default camera will be used.
-             * @param camera - The camera component to be used as custom camera. If `null` is passed, default camera will be used.
-             * @returns
+             * @param camera The camera component to be used as custom camera. If `null` is passed, default camera will be used.
              */
             (camera: Component<"Camera"> | null): void
         }
@@ -276,9 +260,8 @@ declare module "game:module" {
         const invoke: {
             /**
              * Invokes a function after a specified number of frames.
-             * @param func - The function to be invoked.
-             * @param delayFrame - The number of frames to wait before invoking the function.
-             * @returns
+             * @param func The function to be invoked.
+             * @param delayFrame The number of frames to wait before invoking the function.
              */
             <T extends int>(
                 func: { (): void },
@@ -289,7 +272,6 @@ declare module "game:module" {
         const startTimer: {
             /**
              * Starts the game's internal timer.
-             * @returns
              */
             (): void
         }
@@ -337,8 +319,7 @@ declare module "game:module" {
         const setCameraOffsetSmooth: {
             /**
              * Sets a value to the default camera's offset smoothness.
-             * @param value - The value to be set to the default camera's offset smoothness.
-             * @returns
+             * @param value The value to be set to the default camera's offset smoothness.
              */
             <T extends float>(value: AssertNonNeg<T>): void
         }
@@ -346,13 +327,12 @@ declare module "game:module" {
         const createCustomStatusBar: {
             /**
              * Creates a custom status bar which will show on the bottom of the screen.
-             * @param statusBarName - The unique name of the status bar to be created.
-             * @param iconPath - The path of the icon to be shown on the left side of the status bar.
-             * @param marks - The marks to be shown on the status bar, range from `0` to `1`.
-             * @param value - The value of the status bar to be shown, range from `0` to `1`.
-             * @param valueString - The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
-             * @param color - The color of the status bar.
-             * @returns
+             * @param statusBarName The unique name of the status bar to be created.
+             * @param iconPath The path of the icon to be shown on the left side of the status bar.
+             * @param marks The marks to be shown on the status bar, range from `0` to `1`.
+             * @param value The value of the status bar to be shown, range from `0` to `1`.
+             * @param valueString The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
+             * @param color The color of the status bar.
              */
             <
                 const T extends readonly float[],
@@ -371,11 +351,10 @@ declare module "game:module" {
         const setCustomStatusBarValue: {
             /**
              * Sets the value of the custom status bar with the specified name.
-             * @param statusBarName - The unique name of the status bar to be set.
-             * @param value - The value of the status bar to be shown, range from `0` to `1`.
-             * @param valueString - The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
-             * @param color - The color of the status bar.
-             * @returns
+             * @param statusBarName The unique name of the status bar to be set.
+             * @param value The value of the status bar to be shown, range from `0` to `1`.
+             * @param valueString The string to be shown on the right side of the status bar, no related logic with the value, can be any text.
+             * @param color The color of the status bar.
              */
             <T extends float>(
                 statusBarName: string,
@@ -388,8 +367,7 @@ declare module "game:module" {
         const destroyCustomStatusBar: {
             /**
              * Destroys the custom status bar with the specified name.
-             * @param statusBarName - The unique name of the status bar to be destroyed.
-             * @returns
+             * @param statusBarName The unique name of the status bar to be destroyed.
              */
             (statusBarName: string): void
         }
@@ -398,7 +376,7 @@ declare module "game:module" {
         const isCustomStatusBarExist: {
             /**
              * Checks if the custom status bar with the specified name exists.
-             * @param statusBarName - The unique name of the status bar to be checked.
+             * @param statusBarName The unique name of the status bar to be checked.
              * @returns Whether the custom status bar with the specified name exists.
              */
             (statusBarName: string): bool
@@ -407,7 +385,7 @@ declare module "game:module" {
         const getConfig: {
             /**
              * Gets the index of the custom value that selected by the player.
-             * @param name - The name of the custom value.
+             * @param name The name of the custom value.
              * @returns The index of the custom value that selected by the player.
              * @NOTE -
              * - If the custom value is a keyboard key, returns the index of the key in the {@link KeyboardKeyEnum | `KeyboardKey` enum}.
@@ -418,7 +396,7 @@ declare module "game:module" {
         const getConfigInputKey: {
             /**
              * Gets the custom keyboard key that selected by the player.
-             * @param key - The name of the key.
+             * @param key The name of the key.
              * @returns The custom keyboard key that selected by the player.
              * @NOTE -
              * - If the key is not set or valid, or the custom value is not a keyboard key, returns `"None"`.

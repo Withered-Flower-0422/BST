@@ -6,8 +6,7 @@ declare module "game:module" {
         const log: {
             /**
              * Logs a debug message to the console.
-             * @param data - The data to log.
-             * @returns
+             * @param data The data to log.
              * @NOTE -
              * - The message only shown in `Testmap Mode`.
              * - Unlike `console.log()` in *browser* or *node*, this function only takes one argument, and some data types may not be printed correctly.
@@ -18,8 +17,7 @@ declare module "game:module" {
         const error: {
             /**
              * Logs an error message to the console.
-             * @param data - The data to log.
-             * @returns
+             * @param data The data to log.
              * @NOTE -
              * - The message only shown in `Testmap Mode`.
              * - This function only takes one argument, and some data types may not be printed correctly.
@@ -30,8 +28,7 @@ declare module "game:module" {
         const message: {
             /**
              * Logs a message to the console.
-             * @param data - The data to log.
-             * @returns
+             * @param data The data to log.
              * @NOTE -
              * - The message always shown.
              * - This function only takes one argument, and some data types may not be printed correctly.
@@ -42,7 +39,6 @@ declare module "game:module" {
         const clear: {
             /**
              * Clears the console.
-             * @returns
              */
             (): void
         }
