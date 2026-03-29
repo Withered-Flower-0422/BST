@@ -13,8 +13,9 @@ declare module "game:module" {
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
     import { AssertPath } from "path"
     import { Float3, ColorRGBA } from "basicData"
+    import { TipGuidBrand } from "brand"
 
-    type TipGuid = string & { readonly _TipGuidBrand: unique symbol }
+    type TipGuid = guid & { [TipGuidBrand]: never }
 
     enum Skin {
         Default = 0,
