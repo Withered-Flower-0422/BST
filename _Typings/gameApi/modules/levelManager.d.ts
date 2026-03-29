@@ -261,11 +261,11 @@ declare module "game:module" {
             /**
              * Invokes a function after a specified number of frames.
              * @param func The function to be invoked.
-             * @param delayFrame The number of frames to wait before invoking the function.
+             * @param delayFrames The number of frames to wait before invoking the function.
              */
             <T extends int>(
                 func: { (): void },
-                delayFrame: AssertNonNegInt<T>,
+                delayFrames: AssertNonNegInt<T>,
             ): void
         }
 

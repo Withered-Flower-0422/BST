@@ -45,17 +45,11 @@ declare module "editor:module" {
             /**
              * Invokes a function after a specified delay.
              * @param func The function to be invoked.
-             * @param delayTime The delay time in seconds. When set to 0, the delay is 1 frame.
+             * @param delaySeconds The delay time in seconds.
              */
             <T extends float>(
-                func: {
-                    /**
-                     * The function to be invoked.
-                     * @param args The arguments to be passed to the function.
-                     */
-                    (...args: any[]): void
-                },
-                delayTime: AssertNonNeg<T>,
+                func: { (): void },
+                delaySeconds: AssertNonNeg<T>,
             ): void
         }
 
