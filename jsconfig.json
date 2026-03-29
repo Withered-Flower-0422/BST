@@ -5,7 +5,6 @@
         "target": "es2024",
         "module": "node20",
         "isolatedModules": true,
-        "allowSyntheticDefaultImports": false,
         "checkJs": true,
         "paths": {
             "Scripts/*": ["./*"]
