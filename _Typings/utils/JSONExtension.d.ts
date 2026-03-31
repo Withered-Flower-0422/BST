@@ -5,26 +5,27 @@ export {}
 
 declare const jsonDataType: unique symbol
 
+type AddNullToNumber<T> = T extends number
+    ? T | null
+    : T extends object
+      ? { [K in keyof T]: AddNullToNumber<T[K]> }
+      : T
+
+type StringifyReturnType<T> = T extends Function | undefined | symbol
+    ? undefined
+    : json<AddNullToNumber<T>> // JSON.stringify() returns `null` for `NaN` and `Infinity`.
+
 declare global {
     /** A valid JSON string. */
     type json<T = any> = string & { [jsonDataType]: T }
 
     interface JSON {
-        parse<T extends json>(
-            text: T,
-            reviver?: (this: any, key: string, value: any) => any,
-        ): T extends json<infer U> ? U : never
+        parse<T>(text: json<T>): T
 
         stringify<T>(
-            value: T,
-            replacer?: (this: any, key: string, value: any) => any,
-            space?: string | number,
-        ): json<T>
-
-        stringify<T>(
-            value: T,
-            replacer?: (number | string)[] | null,
-            space?: string | number,
-        ): json<T>
+            value: T extends bigint ? never : T,
+            replacer?: null,
+            space?: number,
+        ): StringifyReturnType<T>
     }
 }
