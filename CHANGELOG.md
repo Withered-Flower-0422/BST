@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## v1.8.1 (2026-04-01)
 
-- Added `AddTypeTo`, `TurnTypeTo` and `PickStringKey` in `utils.d.ts`.
+- Added `AddTypeTo`, `TurnTypeTo`, `PickStringKey` and `DeepPartial` in `utils.d.ts`.
+- Added `StringifyReturnType` in `JSONExtension.d.ts`.
 - Enhanced `JSONExtension`.
 
 ## v1.8.0 (2026-03-12)

@@ -250,6 +250,18 @@ declare module "utils" {
             }
           : O
 
+    type DeepPartial<T, AddUndefined extends boolean = false> = T extends
+        | any[]
+        | Function
+        ? T
+        : T extends object
+          ? {
+                [K in keyof T]?:
+                    | DeepPartial<T[K]>
+                    | (AddUndefined extends true ? undefined : never)
+            }
+          : T
+
     type IsUnique<
         T extends readonly any[],
         AllowAny extends boolean = true,
