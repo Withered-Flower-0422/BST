@@ -224,6 +224,32 @@ declare module "utils" {
             : Includes<R, U>
         : false
 
+    type AddTypeTo<O, Add, Addend> = O extends Addend
+        ? O | Add
+        : O extends object
+          ? { [K in keyof O]: AddTypeTo<O[K], Add, Addend> }
+          : O
+
+    type TurnTypeTo<O, TurnTo, Origin> = O extends Origin
+        ? TurnTo
+        : O extends object
+          ? { [K in keyof O]: TurnTypeTo<O[K], TurnTo, Origin> }
+          : O
+
+    type PickStringKey<O, AllowNumber extends boolean = true> = O extends
+        | any[]
+        | Function
+        ? O
+        : O extends object
+          ? {
+                [K in keyof O &
+                    (
+                        | string
+                        | (AllowNumber extends true ? number : never)
+                    )]: PickStringKey<O[K]>
+            }
+          : O
+
     type IsUnique<
         T extends readonly any[],
         AllowAny extends boolean = true,

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.1 (2026-04-01)
+
+- Added `AddTypeTo`, `TurnTypeTo` and `PickStringKey` in `utils.d.ts`.
+- Enhanced `JSONExtension`.
+
 ## v1.8.0 (2026-03-12)
 
 - Added a file `JSONExtension.d.ts`, which helps solve the problem of type hinting with `getData()` and `setData()` methods in `editorApi`.

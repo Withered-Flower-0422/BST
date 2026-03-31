@@ -10,7 +10,7 @@ A collection of TypeScript typings for BME Pro HDRP scripts.
 
 ## Current Version
 
-- v1.8.0
+- v1.8.1
 
 ## Usage
 
