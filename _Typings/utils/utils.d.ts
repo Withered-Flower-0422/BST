@@ -218,6 +218,23 @@ declare module "utils" {
                                 : never
                             : never
 
+    type AssertRange<
+        T extends number,
+        L extends number,
+        H extends number,
+        OnlyInt extends boolean = false,
+        IncludesL extends boolean = true,
+        IncludesH extends boolean = true,
+    > = number extends T
+        ? T
+        : Compare<T, L> extends 1 | (IncludesL extends true ? 0 : never)
+          ? Compare<T, H> extends -1 | (IncludesH extends true ? 0 : never)
+              ? OnlyInt extends true
+                  ? AssertInt<T>
+                  : T
+              : never
+          : never
+
     type Includes<T extends readonly any[], U> = T extends [infer F, ...infer R]
         ? Equal<F, U> extends true
             ? true
