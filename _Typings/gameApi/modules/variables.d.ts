@@ -59,11 +59,9 @@ declare module "game:module" {
              * @param name The name of the variable to set.
              * @param value The value to set.
              */
-            <T extends string, U extends int>(
+            <T extends string>(
                 name: T,
-                value: T extends `C_${string}`
-                    ? AssertRange<U, -2147483648, 2147483647, true>
-                    : any,
+                value: T extends `C_${string}` ? never : any,
             ): void
         }
 
@@ -147,13 +145,9 @@ declare module "__future__" {
              * @NOTE -
              * - Custom key values are not settable.
              */
-            <T extends string, U extends int>(
-                name: T extends `K_${string}` ? never : T,
-                value: T extends `C_${string}`
-                    ? AssertRange<U, -2147483648, 2147483647, true>
-                    : T extends `K_${string}`
-                      ? never
-                      : any,
+            <T extends string>(
+                name: T,
+                value: T extends `C_${string}` | `K_${string}` ? never : any,
             ): void
         }
 
