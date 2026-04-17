@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { BuiltinVariable } from "game:type"
+    import { CollectionVariable } from "game:type"
     import { AssertRange } from "utils"
 
     namespace variables {
@@ -21,7 +21,7 @@ declare module "game:module" {
              * @range `-2147483648` ~ `2147483647`
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
-            (name: BuiltinVariable | (`C_${string}` & {})): int | null
+            (name: CollectionVariable): int | null
 
             /**
              * Gets the value of a variable.
@@ -50,7 +50,7 @@ declare module "game:module" {
              * - The `Collection` values can be negative if you really need.
              */
             <T extends int>(
-                name: BuiltinVariable | (`C_${string}` & {}),
+                name: CollectionVariable,
                 value: AssertRange<T, -2147483648, 2147483647, true>,
             ): void
 
@@ -75,7 +75,7 @@ declare module "game:module" {
 }
 
 declare module "__future__" {
-    import { BuiltinVariable } from "game:type"
+    import { CollectionVariable } from "game:type"
     import { AssertRange } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
 
@@ -95,7 +95,7 @@ declare module "__future__" {
              * @range `-2147483648` ~ `2147483647`
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
-            (name: BuiltinVariable | (`C_${string}` & {})): int | null
+            (name: CollectionVariable): int | null
 
             /**
              * Gets the key of a keyboard key.
@@ -134,7 +134,7 @@ declare module "__future__" {
              * - The `Collection` values can be negative if you really need.
              */
             <T extends int>(
-                name: BuiltinVariable | (`C_${string}` & {}),
+                name: CollectionVariable,
                 value: AssertRange<T, -2147483648, 2147483647, true>,
             ): void
 

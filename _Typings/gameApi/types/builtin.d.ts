@@ -18,4 +18,6 @@ declare module "game:type" {
     type Collection = BuiltinCollection | (string & {})
 
     type BuiltinVariable = `C_${BuiltinCollection & `Key_${string}`}`
+
+    type CollectionVariable = BuiltinVariable | (`C_${string}` & {})
 }
