@@ -2,7 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:module" {
-    import { CollectionVariable } from "game:type"
+    import { BuiltinVariable, CollectionVariable } from "game:type"
     import { AssertRange } from "utils"
 
     namespace variables {
@@ -18,7 +18,7 @@ declare module "game:module" {
              * Gets the number of the `Collection`.
              * @param name The name of the `Collection`.
              * @returns The number of the `Collection`.
-             * @range `-2147483648` ~ `2147483647`
+             * @range `-2147483648 ~ 2147483647`
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
             (name: CollectionVariable): int | null
@@ -43,7 +43,7 @@ declare module "game:module" {
              * Sets the number of the `Collection`.
              * @param name The name of the `Collection`.
              * @param value The value to set.
-             * @range `-2147483648` ~ `2147483647`
+             * @range `-2147483648 ~ 2147483647`
              * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
              * @NOTE -
              * - **NEVER** name a variable starting with `C_` manually.
@@ -75,7 +75,7 @@ declare module "game:module" {
 }
 
 declare module "__future__" {
-    import { CollectionVariable } from "game:type"
+    import { BuiltinVariable, CollectionVariable } from "game:type"
     import { AssertRange } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
 
@@ -92,7 +92,7 @@ declare module "__future__" {
              * Gets the number of the `Collection`.
              * @param name The name of the `Collection`.
              * @returns The number of the `Collection`.
-             * @range `-2147483648` ~ `2147483647`
+             * @range `-2147483648 ~ 2147483647`
              * @BuiltinVariable Click to see {@link BuiltinVariable | all builtin variables}.
              */
             (name: CollectionVariable): int | null
@@ -127,7 +127,7 @@ declare module "__future__" {
              * Sets the number of the `Collection`.
              * @param name The name of the `Collection`.
              * @param value The value to set.
-             * @range `-2147483648` ~ `2147483647`
+             * @range `-2147483648 ~ 2147483647`
              * @BuiltinVariable Click to see {@link BuiltinVariable | all built-in variables}.
              * @NOTE -
              * - **NEVER** name a variable starting with `C_` manually.
