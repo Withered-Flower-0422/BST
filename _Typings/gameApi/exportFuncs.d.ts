@@ -188,6 +188,9 @@ declare module "game:type" {
     >
 
     global {
+        /**
+         * Do not use `scene` module in `init` function.
+         */
         type Init<ExecVar extends $ = $> = {
             /**
              * Executed when the executor loads the script. It executes before all other events and only executes once.
