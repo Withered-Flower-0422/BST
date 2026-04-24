@@ -33,5 +33,7 @@ declare module "gameApi" {
         ColorRGBA,
     } from "basicData"
 
-    export default undefined
+    /** @deprecated Never use this! */
+    const _default: never
+    export default _default
 }
