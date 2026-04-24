@@ -32,4 +32,6 @@ declare module "gameApi" {
         Trans,
         ColorRGBA,
     } from "basicData"
+
+    export default undefined
 }

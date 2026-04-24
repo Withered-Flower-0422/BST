@@ -21,4 +21,6 @@ declare module "editorApi" {
         Trans,
         ColorRGBA,
     } from "basicData"
+
+    export default undefined
 }
