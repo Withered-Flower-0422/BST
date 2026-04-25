@@ -31,9 +31,7 @@ declare module "game:module" {
                     (curValue: float): void
                 },
                 onFinish: {
-                    /**
-                     * A callback function that is called when the tween finishes.
-                     */
+                    /** A callback function that is called when the tween finishes. */
                     (): void
                 },
             ): Tween
@@ -63,9 +61,7 @@ declare module "game:module" {
                     (curValue: Float3): void
                 },
                 onFinish: {
-                    /**
-                     * A callback function that is called when the tween finishes.
-                     */
+                    /** A callback function that is called when the tween finishes. */
                     (): void
                 },
             ): Tween
@@ -95,9 +91,7 @@ declare module "game:module" {
                     (curValue: Quaternion): void
                 },
                 onFinish: {
-                    /**
-                     * A callback function that is called when the tween finishes.
-                     */
+                    /** A callback function that is called when the tween finishes. */
                     (): void
                 },
             ): Tween
@@ -127,9 +121,7 @@ declare module "game:module" {
                     (curValue: ColorRGBA): void
                 },
                 onFinish: {
-                    /**
-                     * A callback function that is called when the tween finishes.
-                     */
+                    /** A callback function that is called when the tween finishes. */
                     (): void
                 },
             ): Tween

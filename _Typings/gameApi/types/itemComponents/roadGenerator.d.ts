@@ -33,9 +33,7 @@ declare module "game:type" {
         "Road/Height": float
         "Road/Offset": float
         "Road/Thickness": float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         "Road/Segments": NonNegIntRange<1, 256>
         "Road/Bend": Float3
         "Road/CreateCap": bool
@@ -50,9 +48,7 @@ declare module "game:type" {
         "WoodenBoard/Height": float
         "WoodenBoard/Offset": float
         "WoodenBoard/Thickness": float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         "WoodenBoard/Segments": NonNegIntRange<1, 256>
         "WoodenBoard/Bend": Float3
         "WoodenBoard/CreateCap": bool
@@ -64,13 +60,9 @@ declare module "game:type" {
         "Rail/Offsets": Float2[]
         "Rail/Height": float
         "Rail/Offset": float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         "Rail/Segments": NonNegIntRange<1, 256>
-        /**
-         * @range `1 ~ 128`
-         */
+        /** @range `1 ~ 128` */
         "Rail/RotationSegments": NonNegIntRange<1, 128>
         "Rail/Bend": Float3
         "Rail/CreateCap": bool
@@ -84,13 +76,9 @@ declare module "game:type" {
         "Tube/EndRadius": float
         "Tube/Slice": Float2
         "Tube/Thickness": float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         "Tube/Segments": NonNegIntRange<1, 256>
-        /**
-         * @range `1 ~ 128`
-         */
+        /** @range `1 ~ 128` */
         "Tube/RotationSegments": NonNegIntRange<1, 128>
         "Tube/Bend": Float3
         "Tube/CreateCap": bool
@@ -113,9 +101,7 @@ declare module "game:type" {
         "CustomVertices/VerticesArray": VerticesArray[]
         "CustomVertices/Length": float
         "CustomVertices/Height": float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         "CustomVertices/Segments": NonNegIntRange<1, 256>
         "CustomVertices/Bend": Float3
         "CustomVertices/AccurateUVLength": bool

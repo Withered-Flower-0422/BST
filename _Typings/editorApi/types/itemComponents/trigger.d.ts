@@ -22,9 +22,7 @@ declare module "editor:type" {
 
     type TriggerMethod = {
         autoDetectBoxTrigger: {
-            /**
-             * Automatically sets the size of the minimum bounding box based on the mesh in the `Renderer` component.
-             */
+            /** Automatically sets the size of the minimum bounding box based on the mesh in the `Renderer` component. */
             (): void
         }
     }

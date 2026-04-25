@@ -6,29 +6,19 @@ declare module "game:type" {
     import { Float3 } from "basicData"
 
     type Events = {
-        /**
-         * On every physics updates. The physics frame rate of Ballex² is 100Hz.
-         */
+        /** On every physics updates. The physics frame rate of Ballex² is 100Hz. */
         OnPhysicsUpdate?: [null]
 
-        /**
-         * After level loaded, before level start.
-         */
+        /** After level loaded, before level start. */
         OnLoadLevel?: [null]
 
-        /**
-         * On level start, including the first entering and restarting.
-         */
+        /** On level start, including the first entering and restarting. */
         OnStartLevel?: [null]
 
-        /**
-         * On quitting level without completing it.
-         */
+        /** On quitting level without completing it. */
         OnQuitLevel?: [null]
 
-        /**
-         * On timer active, as well as when the player ball is generated.
-         */
+        /** On timer active, as well as when the player ball is generated. */
         OnTimerActive?: [null]
 
         /**
@@ -37,9 +27,7 @@ declare module "game:type" {
          */
         OnPreRestartLevel?: [null]
 
-        /**
-         * On post-restarting level.
-         */
+        /** On post-restarting level. */
         OnPostRestartLevel?: [null]
 
         /**
@@ -48,14 +36,10 @@ declare module "game:type" {
          */
         OnPrePlayerDeadStart?: [null]
 
-        /**
-         * On post player ball is dead. (falling into the death area / duration expired / suicide)
-         */
+        /** On post player ball is dead. (falling into the death area / duration expired / suicide) */
         OnPostPlayerDeadStart?: [null]
 
-        /**
-         * On player ball has already dead, after the death animation.
-         */
+        /** On player ball has already dead, after the death animation. */
         OnPlayerDeadEnd?: [null]
 
         /**
@@ -188,9 +172,7 @@ declare module "game:type" {
     >
 
     global {
-        /**
-         * Do not use `scene` module in `init` function.
-         */
+        /** Do not use `scene` module in `init` function. */
         type Init<ExecVar extends $ = $> = {
             /**
              * Executed when the executor loads the script. It executes before all other events and only executes once.
@@ -208,9 +190,7 @@ declare module "game:type" {
             (...args: any[]): void
         }
 
-        /**
-         * Click to see all {@link Events}.
-         */
+        /** Click to see all {@link Events}. */
         type RegisterEvent = keyof Events
 
         type OnEvents<RE extends RegisterEvent[] = RegisterEvent[]> = {

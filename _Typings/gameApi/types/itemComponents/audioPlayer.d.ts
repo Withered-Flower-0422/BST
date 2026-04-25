@@ -9,40 +9,28 @@ declare module "game:type" {
         TransformOffset: Trans
         AudioPath: Path<"Audios">
         Loop: bool
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         Volume: float
         SpatializeAudio: bool
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         MinDistance: float
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         MaxDistance: float
     }
 
     type AudioPlayerMethod = {
         play: {
-            /**
-             * Plays the audio.
-             */
+            /** Plays the audio. */
             (): void
         }
 
         pause: {
-            /**
-             * Pauses the audio. The next call of `play()` will resume the audio from the paused position.
-             */
+            /** Pauses the audio. The next call of `play()` will resume the audio from the paused position. */
             (): void
         }
 
         stop: {
-            /**
-             * Stops the audio. The next call of `play()` will start the audio from the beginning.
-             */
+            /** Stops the audio. The next call of `play()` will start the audio from the beginning. */
             (): void
         }
     }

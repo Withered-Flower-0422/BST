@@ -19,9 +19,7 @@ declare module "game:type" {
 
     type BallType = BuiltinBallType | (string & {})
 
-    /**
-     * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
-     */
+    /** If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`. */
     type Player<Scene extends bool = false> = {
         /**
          * - If the player ball is never created, the `ballType` will be `null`.
@@ -30,9 +28,7 @@ declare module "game:type" {
         get ballType(): BallType | (Scene extends false ? null : never)
         set ballType(ballType: BuiltinBallType)
 
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly guid: guid
         /**
          * - Assigning a value to this property will change the player's position with camera following smoothly.
@@ -41,35 +37,21 @@ declare module "game:type" {
         position: Float3
         rotation: Float3
         rotationQuaternion: Quaternion
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly physicsObject: Component<"PhysicsObject">
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         durability: float
-        /**
-         * @range `-273.15 ~ 1000`
-         */
+        /** @range `-273.15 ~ 1000` */
         temperature: float
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         wetness: float
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         power: float
-        /**
-         * @range `0.2 ~ 2.5`
-         */
+        /** @range `0.2 ~ 2.5` */
         scale: float
 
         readonly recoverAll: {
-            /**
-             * Recovers all properties of the player.
-             */
+            /** Recovers all properties of the player. */
             (): void
         }
 
@@ -116,19 +98,13 @@ declare module "__future__" {
     import { Float3, Quaternion } from "basicData"
     import { BallType, Component } from "game:type"
 
-    /**
-     * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
-     */
+    /** If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`. */
     type Player<Scene extends bool = false> = {
-        /**
-         * - If the player ball is never created, the `ballType` will be `null`.
-         */
+        /** - If the player ball is never created, the `ballType` will be `null`. */
         get ballType(): BallType | (Scene extends false ? null : never)
         set ballType(ballType: BallType)
 
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly guid: guid
         /**
          * - Assigning a value to this property will change the player's position with camera following smoothly.
@@ -137,35 +113,21 @@ declare module "__future__" {
         position: Float3
         rotation: Float3
         rotationQuaternion: Quaternion
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly physicsObject: Component<"PhysicsObject">
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         durability: float
-        /**
-         * @range `-273.15 ~ 1000`
-         */
+        /** @range `-273.15 ~ 1000` */
         temperature: float
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         wetness: float
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         power: float
-        /**
-         * @range `0.2 ~ 2.5`
-         */
+        /** @range `0.2 ~ 2.5` */
         scale: float
 
         readonly recoverAll: {
-            /**
-             * Recovers all properties of the player.
-             */
+            /** Recovers all properties of the player. */
             (): void
         }
 

@@ -3,9 +3,7 @@
 
 declare module "editor:type" {
     global {
-        /**
-         * Executed when button is pressed.
-         */
+        /** Executed when button is pressed. */
         type EditorExecute = () => void
 
         /**

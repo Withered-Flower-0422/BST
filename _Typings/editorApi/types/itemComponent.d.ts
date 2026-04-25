@@ -55,16 +55,12 @@ declare module "editor:type" {
             ? {}
             : {
                   readonly copyData: {
-                      /**
-                       * Copies all data from this component to the editor's internal clipboard.
-                       */
+                      /** Copies all data from this component to the editor's internal clipboard. */
                       (): void
                   }
 
                   readonly pasteData: {
-                      /**
-                       * Pastes component data from the editor's internal clipboard to this component.
-                       */
+                      /** Pastes component data from the editor's internal clipboard to this component. */
                       (): void
                   }
               })

@@ -35,26 +35,18 @@ declare module "game:type" {
         "PointLight/Intensity": float
         "PointLight/Range": float
         "PointLight/ShadowQuality": ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         "PointLight/ShadowNearClip": float
-        /**
-         * @range `0 ~ 179`
-         */
+        /** @range `0 ~ 179` */
         "SpotLight/InnerAngle": float
-        /**
-         * @range `1 ~ 179`
-         */
+        /** @range `1 ~ 179` */
         "SpotLight/OuterAngle": float
         "SpotLight/Temperature": float
         "SpotLight/Filter": ColorRGBA
         "SpotLight/Intensity": float
         "SpotLight/Range": float
         "SpotLight/ShadowQuality": ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         "SpotLight/ShadowNearClip": float
         "RectAreaLight/Size": Float2
         "RectAreaLight/Temperature": float
@@ -62,9 +54,7 @@ declare module "game:type" {
         "RectAreaLight/Intensity": float
         "RectAreaLight/Range": float
         "RectAreaLight/ShadowQuality": ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         "RectAreaLight/ShadowNearClip": float
         "CircleAreaLight/Radius": float
         "CircleAreaLight/Temperature": float
@@ -72,25 +62,19 @@ declare module "game:type" {
         "CircleAreaLight/Intensity": float
         "CircleAreaLight/Range": float
         "CircleAreaLight/ShadowQuality": ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         "CircleAreaLight/ShadowNearClip": float
         EnableVolumetricLight: bool
         "VolumetricLight/OnlyVolumetric": bool
         "VolumetricLight/AutoOptimize": bool
         "VolumetricLight/BlendMode": LightBlendMode
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         "VolumetricLight/Quality": NonNegIntRange<1, 256>
         "VolumetricLight/StepSize": float
         "VolumetricLight/MaxStep": int
         "VolumetricLight/Jitter": float
         "VolumetricLight/Dither": float
-        /**
-         * @range `0 ~ 3`
-         */
+        /** @range `0 ~ 3` */
         "VolumetricLight/NoiseStrength": float
         "VolumetricLight/NoiseScale": float
         "VolumetricLight/NoiseMultiplier": float
@@ -103,17 +87,11 @@ declare module "game:type" {
         "VolumetricLight/QuadraticFalloff": float
         "VolumetricLight/RangeFalloff": float
         "VolumetricLight/DiffusionIntensity": float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         "VolumetricLight/EdgeFade": float
-        /**
-         * @range `0 ~ 80`
-         */
+        /** @range `0 ~ 80` */
         "VolumetricLight/FrustumAngleCircleArea": float
-        /**
-         * @range `0 ~ 80`
-         */
+        /** @range `0 ~ 80` */
         "VolumetricLight/FrustumAngleRectArea": float
         "VolumetricLight/TipRadius": float
         "VolumetricLight/ProjectorTexture": Path<"Textures">

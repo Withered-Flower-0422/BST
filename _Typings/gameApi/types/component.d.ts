@@ -29,9 +29,7 @@ declare module "game:type" {
 
     type Component<T extends keyof ComponentTypeMap = keyof ComponentTypeMap> =
         {
-            /**
-             * @readonly
-             */
+            /** @readonly */
             readonly type: T
 
             readonly getData: {

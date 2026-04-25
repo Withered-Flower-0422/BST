@@ -7,21 +7,13 @@ declare module "game:type" {
     import { MouseButtonEnum as MouseButton } from "keys"
 
     type Image = {
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly elementType: "Image"
-        /**
-         * @default new Float2(100, 100)
-         */
+        /** @default new Float2(100, 100) */
         sizeDelta: Float2
-        /**
-         * @default new ColorRGBA(1, 1, 1, 1)
-         */
+        /** @default new ColorRGBA(1, 1, 1, 1) */
         color: ColorRGBA
-        /**
-         * Path of the texture.
-         */
+        /** Path of the texture. */
         texture: Path<"Textures">
         /**
          * Adjust the raycast range `(x, y, width, height)`.
@@ -33,53 +25,33 @@ declare module "game:type" {
          * @default new Float4(0, 0, 1, 1)
          */
         uvRect: Float4
-        /**
-         * @default "None"
-         */
+        /** @default "None" */
         aspectRatioMode:
             | "None"
             | "WidthControlsHeight"
             | "HeightControlsWidth"
             | "FitInParent"
             | "EnvelopeParent"
-        /**
-         * @default 1
-         */
+        /** @default 1 */
         aspectRatio: float
-        /**
-         * @default true
-         */
+        /** @default true */
         maskable: bool
-        /**
-         * @default true
-         */
+        /** @default true */
         showMaskElement: bool
     }
 
     type Text = {
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly elementType: "Text"
-        /**
-         * @default new Float2(200, 50)
-         */
+        /** @default new Float2(200, 50) */
         sizeDelta: Float2
-        /**
-         * @default new ColorRGBA(1, 1, 1, 1)
-         */
+        /** @default new ColorRGBA(1, 1, 1, 1) */
         color: ColorRGBA
-        /**
-         * Supports rich text tags.
-         */
+        /** Supports rich text tags. */
         text: string
-        /**
-         * @default 26
-         */
+        /** @default 26 */
         fontSize: float
-        /**
-         * @default "Center"
-         */
+        /** @default "Center" */
         horizontalAlignment:
             | "Left"
             | "Center"
@@ -87,9 +59,7 @@ declare module "game:type" {
             | "Justified"
             | "Flush"
             | "Geometry"
-        /**
-         * @default "Middle"
-         */
+        /** @default "Middle" */
         verticalAlignment:
             | "Top"
             | "Middle"
@@ -97,28 +67,18 @@ declare module "game:type" {
             | "Baseline"
             | "Geometry"
             | "Capline"
-        /**
-         * @default false
-         */
+        /** @default false */
         textWrapping: bool
-        /**
-         * @default true
-         */
+        /** @default true */
         maskable: bool
-        /**
-         * @default true
-         */
+        /** @default true */
         showMaskElement: bool
     }
 
     type Panel = {
-        /**
-         * @readonly
-         */
+        /** @readonly */
         readonly elementType: "Panel"
-        /**
-         * @default new Float2(100, 100)
-         */
+        /** @default new Float2(100, 100) */
         sizeDelta: Float2
         /**
          * Used for convenient control of transparency for all sub UIs.
@@ -135,51 +95,29 @@ declare module "game:type" {
 
     type UIElement<T extends keyof UIElementTypeMap = keyof UIElementTypeMap> =
         {
-            /**
-             * @default true
-             */
+            /** @default true */
             enabled: bool
-            /**
-             * @default null
-             */
+            /** @default null */
             parent: UIElement | null
-            /**
-             * @default new Float2(0, 0)
-             */
+            /** @default new Float2(0, 0) */
             position: Float2
-            /**
-             * @default 0
-             */
+            /** @default 0 */
             rotation: float
-            /**
-             * @default new Float2(1, 1)
-             */
+            /** @default new Float2(1, 1) */
             scale: Float2
-            /**
-             * @default new Float2(0.5, 0.5)
-             */
+            /** @default new Float2(0.5, 0.5) */
             anchorMin: Float2
-            /**
-             * @default new Float2(0.5, 0.5)
-             */
+            /** @default new Float2(0.5, 0.5) */
             anchorMax: Float2
-            /**
-             * @default new Float2(0.5, 0.5)
-             */
+            /** @default new Float2(0.5, 0.5) */
             pivot: Float2
-            /**
-             * @default false
-             */
+            /** @default false */
             raycastEvent: bool
 
-            /**
-             * Invoked when the pointer enters the UI element.
-             */
+            /** Invoked when the pointer enters the UI element. */
             onPointerEnter: () => void
 
-            /**
-             * Invoked when the pointer leaves the UI element.
-             */
+            /** Invoked when the pointer leaves the UI element. */
             onPointerExit: () => void
 
             /**
@@ -188,13 +126,9 @@ declare module "game:type" {
              */
             onPointerClick: (mouseButton: MouseButton) => void
 
-            /**
-             * @default true
-             */
+            /** @default true */
             raycastTarget: bool
-            /**
-             * @default false
-             */
+            /** @default false */
             mask: bool
         } & UIElementTypeMap[T]
 }

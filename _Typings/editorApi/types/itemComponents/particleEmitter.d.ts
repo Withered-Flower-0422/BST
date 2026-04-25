@@ -39,28 +39,20 @@ declare module "editor:type" {
         Gravity: float
         TurbulenceIntensity: float
         TurbulenceFrequency: float
-        /**
-         * @range `1 ~ 32`
-         */
+        /** @range `1 ~ 32` */
         AnimationTilesX: NonNegIntRange<1, 32>
-        /**
-         * @range `1 ~ 32`
-         */
+        /** @range `1 ~ 32` */
         AnimationTilesY: NonNegIntRange<1, 32>
     }
 
     type ParticleEmitterMethod = {
         refresh: {
-            /**
-             * Refresh the particle emitter animation in the editor.
-             */
+            /** Refresh the particle emitter animation in the editor. */
             (): void
         }
 
         play: {
-            /**
-             * Start playing the particle emitter animation in the editor.
-             */
+            /** Start playing the particle emitter animation in the editor. */
             (): void
         }
 

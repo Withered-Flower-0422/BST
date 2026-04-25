@@ -6,9 +6,7 @@ declare module "game:type" {
 
     type ItemLinkData = {
         readonly Link: Path<"Items", false>
-        /**
-         * Different ItemLink types have different data structure.
-         */
+        /** Different ItemLink types have different data structure. */
         [key: string]: any
     }
 

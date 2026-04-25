@@ -8,18 +8,12 @@ declare module "editor:type" {
         TransformOffset: Transform
         AudioPath: Path<"Audios">
         Loop: bool
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         Volume: float
         SpatializeAudio: bool
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         MinDistance: float
-        /**
-         * @range `0 ~ 100`
-         */
+        /** @range `0 ~ 100` */
         MaxDistance: float
     }
 

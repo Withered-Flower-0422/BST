@@ -5,21 +5,13 @@ declare module "editor:type" {
     import { Path } from "path"
 
     type AssetReference = {
-        /**
-         * BME paths to `Meshes`.
-         */
+        /** BME paths to `Meshes`. */
         Meshes: Path<"Meshes">[]
-        /**
-         * BME paths to `Textures`.
-         */
+        /** BME paths to `Textures`. */
         Textures: Path<"Textures">[]
-        /**
-         * BME paths to `Materials`.
-         */
+        /** BME paths to `Materials`. */
         Materials: Path<"Materials">[]
-        /**
-         * BME paths to `Audios`.
-         */
+        /** BME paths to `Audios`. */
         Audios: Path<"Audios">[]
     }
 }

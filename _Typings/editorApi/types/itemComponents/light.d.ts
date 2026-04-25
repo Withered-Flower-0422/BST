@@ -33,9 +33,7 @@ declare module "editor:type" {
         Intensity: float
         Range: float
         ShadowQuality: ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         ShadowNearClip: float
     }
 
@@ -45,17 +43,11 @@ declare module "editor:type" {
         Intensity: float
         Range: float
         ShadowQuality: ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         ShadowNearClip: float
-        /**
-         * @range `0 ~ 179`
-         */
+        /** @range `0 ~ 179` */
         InnerAngle: float
-        /**
-         * @range `1 ~ 179`
-         */
+        /** @range `1 ~ 179` */
         OuterAngle: float
     }
 
@@ -66,9 +58,7 @@ declare module "editor:type" {
         Intensity: float
         Range: float
         ShadowQuality: ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         ShadowNearClip: float
     }
 
@@ -79,9 +69,7 @@ declare module "editor:type" {
         Intensity: float
         Range: float
         ShadowQuality: ShadowQuality
-        /**
-         * @range `0 ~ 10`
-         */
+        /** @range `0 ~ 10` */
         ShadowNearClip: float
     }
 
@@ -89,17 +77,13 @@ declare module "editor:type" {
         OnlyVolumetric: bool
         AutoOptimize: bool
         BlendMode: LightBlendMode
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         Quality: NonNegIntRange<1, 256>
         StepSize: float
         MaxStep: int
         Jitter: float
         Dither: float
-        /**
-         * @range `0 ~ 3`
-         */
+        /** @range `0 ~ 3` */
         NoiseStrength: float
         NoiseScale: float
         NoiseMultiplier: float
@@ -112,17 +96,11 @@ declare module "editor:type" {
         QuadraticFalloff: float
         RangeFalloff: float
         DiffusionIntensity: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         EdgeFade: float
-        /**
-         * @range `0 ~ 80`
-         */
+        /** @range `0 ~ 80` */
         FrustumAngleCircleArea: float
-        /**
-         * @range `0 ~ 80`
-         */
+        /** @range `0 ~ 80` */
         FrustumAngleRectArea: float
         TipRadius: float
         ProjectorTexture: Path<"Textures">

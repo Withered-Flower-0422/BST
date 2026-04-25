@@ -18,16 +18,12 @@ declare module "game:module" {
         }
 
         const pauseBgm: {
-            /**
-             * Pauses the background music. The next call of `playBgm()` will resume the music from the point where it was paused.
-             */
+            /** Pauses the background music. The next call of `playBgm()` will resume the music from the point where it was paused. */
             (): void
         }
 
         const stopBgm: {
-            /**
-             * Stops the background music. The next call of `playBgm()` will start the music from the beginning.
-             */
+            /** Stops the background music. The next call of `playBgm()` will start the music from the beginning. */
             (): void
         }
 
@@ -52,16 +48,12 @@ declare module "game:module" {
         }
 
         const pauseSfx: {
-            /**
-             * Pauses the sound effect. The next call of `playSfx()` will resume the sound effect from the point where it was paused.
-             */
+            /** Pauses the sound effect. The next call of `playSfx()` will resume the sound effect from the point where it was paused. */
             (): void
         }
 
         const stopSfx: {
-            /**
-             * Stops the sound effect. The next call of `playSfx()` will start the sound effect from the beginning.
-             */
+            /** Stops the sound effect. The next call of `playSfx()` will start the sound effect from the beginning. */
             (): void
         }
 

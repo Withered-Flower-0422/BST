@@ -5,13 +5,9 @@ declare module "game:type" {
     import { Path } from "path"
 
     type BackgroundMusic = {
-        /**
-         * BME paths to the background music.
-         */
+        /** BME paths to the background music. */
         readonly BGM: Path<"Audios">[]
-        /**
-         * BME paths to the sound effects.
-         */
+        /** BME paths to the sound effects. */
         readonly SFX: Path<"Audios">[]
     }
 }

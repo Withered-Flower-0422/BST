@@ -20,9 +20,7 @@ declare module "editor:type" {
         ShadowCastingMode: ShadowCastingMode
         AutoOptimize: bool
         ForceSetOpacity: bool
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         Opacity: float
         NearDissolve: bool
     }

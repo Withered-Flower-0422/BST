@@ -5,13 +5,9 @@ declare module "editor:type" {
     import { Path } from "path"
 
     type BackgroundMusic = {
-        /**
-         * BME paths to the background music.
-         */
+        /** BME paths to the background music. */
         BGM: Path<"Audios">[]
-        /**
-         * BME paths to the sound effects.
-         */
+        /** BME paths to the sound effects. */
         SFX: Path<"Audios">[]
     }
 }

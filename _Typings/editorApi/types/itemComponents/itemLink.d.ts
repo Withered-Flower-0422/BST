@@ -15,16 +15,12 @@ declare module "editor:type" {
 
     type ItemLinkMethod = {
         replace: {
-            /**
-             * Replaces the current item with the linked item.
-             */
+            /** Replaces the current item with the linked item. */
             (): void
         }
 
         saveMesh: {
-            /**
-             * Saves all meshes within the linked item to `Assets/Meshes/Default`.
-             */
+            /** Saves all meshes within the linked item to `Assets/Meshes/Default`. */
             (): void
         }
     }

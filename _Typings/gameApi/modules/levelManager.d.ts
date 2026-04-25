@@ -56,48 +56,34 @@ declare module "game:module" {
         | "DeathTransfer"
 
     namespace levelManager {
-        /**
-         * @range `0.1 ~ 2`
-         */
+        /** @range `0.1 ~ 2` */
         let timeScale: float
         let score: float
         let spawnPointPosition: Float3
         let spawnPointRotation: float
         /** @deprecated Not implemented yet. */
         let spawnBallType: BallType
-        /**
-         * Click to see {@link CameraMode | all camera modes}.
-         */
+        /** Click to see {@link CameraMode | all camera modes}. */
         let cameraMode: CameraMode
-        /**
-         * Click to see {@link CameraDirection | all camera directions}.
-         */
+        /** Click to see {@link CameraDirection | all camera directions}. */
         let cameraDirection: CameraDirection
         let cameraAngle: float
         let cameraPitch: float
         let cameraZoom: float
-        /**
-         * @readonly
-         */
+        /** @readonly */
         const mapTesting: bool
-        /**
-         * @readonly
-         */
+        /** @readonly */
         const time: int
         /**
          * Click to see {@link Skin | all skins}.
          * @readonly
          */
         const skin: Skin
-        /**
-         * @readonly
-         */
+        /** @readonly */
         const timerEnabled: bool
 
         const callLevelComplete: {
-            /**
-             * Completes the level without the completion animation.
-             */
+            /** Completes the level without the completion animation. */
             (): void
         }
 
@@ -110,16 +96,12 @@ declare module "game:module" {
         }
 
         const callSuicide: {
-            /**
-             * Suicides the player ball.
-             */
+            /** Suicides the player ball. */
             (): void
         }
 
         const callRestart: {
-            /**
-             * Restarts the level.
-             */
+            /** Restarts the level. */
             (): void
         }
 
@@ -165,9 +147,7 @@ declare module "game:module" {
         }
 
         const hideAllTips: {
-            /**
-             * Hides all tips.
-             */
+            /** Hides all tips. */
             (): void
         }
 
@@ -271,9 +251,7 @@ declare module "game:module" {
         }
 
         const startTimer: {
-            /**
-             * Starts the game's internal timer.
-             */
+            /** Starts the game's internal timer. */
             (): void
         }
 

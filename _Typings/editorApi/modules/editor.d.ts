@@ -13,23 +13,17 @@ declare module "editor:module" {
         const language: "English" | "Chinese" | "Japanese"
 
         const refreshCache: {
-            /**
-             * Refreshes the editor's cache.
-             */
+            /** Refreshes the editor's cache. */
             (): void
         }
 
         const reloadFolder: {
-            /**
-             * Reloads the editor's folder.
-             */
+            /** Reloads the editor's folder. */
             (): void
         }
 
         const startTimer: {
-            /**
-             * Starts the editor's internal timer.
-             */
+            /** Starts the editor's internal timer. */
             (): void
         }
 

@@ -5,21 +5,13 @@ declare module "game:type" {
     import { Path } from "path"
 
     type AssetReference = {
-        /**
-         * BME paths to `Meshes`.
-         */
+        /** BME paths to `Meshes`. */
         readonly Meshes: Path<"Meshes">[]
-        /**
-         * BME paths to `Textures`.
-         */
+        /** BME paths to `Textures`. */
         readonly Textures: Path<"Textures">[]
-        /**
-         * BME paths to `Materials`.
-         */
+        /** BME paths to `Materials`. */
         readonly Materials: Path<"Materials">[]
-        /**
-         * BME paths to `Audios`.
-         */
+        /** BME paths to `Audios`. */
         readonly Audios: Path<"Audios">[]
     }
 }

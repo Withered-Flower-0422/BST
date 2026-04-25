@@ -48,25 +48,19 @@ declare module "game:type" {
 
         /** @deprecated Not implemented yet. */
         play: {
-            /**
-             * Plays the way path so all the targets move along the path.
-             */
+            /** Plays the way path so all the targets move along the path. */
             (): void
         }
 
         /** @deprecated Not implemented yet. */
         pause: {
-            /**
-             * Pauses the way path so all the targets stop moving. The next call of `play()` will resume the movement from the paused point.
-             */
+            /** Pauses the way path so all the targets stop moving. The next call of `play()` will resume the movement from the paused point. */
             (): void
         }
 
         /** @deprecated Not implemented yet. */
         stop: {
-            /**
-             * Stops the way path so all the targets stop moving. The next call of `play()` will start the movement from the beginning.
-             */
+            /** Stops the way path so all the targets stop moving. The next call of `play()` will start the movement from the beginning. */
             (): void
         }
     }

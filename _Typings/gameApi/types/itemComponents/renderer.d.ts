@@ -20,9 +20,7 @@ declare module "game:type" {
         ShadowCastingMode: ShadowCastingMode
         readonly AutoOptimize: bool
         readonly ForceSetOpacity: bool
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         Opacity: float
         NearDissolve: bool
     }

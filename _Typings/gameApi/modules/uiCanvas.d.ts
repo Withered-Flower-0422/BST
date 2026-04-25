@@ -15,16 +15,12 @@ declare module "game:module" {
         }
 
         const hideGameUI: {
-            /**
-             * Hides the game UI.
-             */
+            /** Hides the game UI. */
             (): void
         }
 
         const showGameUI: {
-            /**
-             * Shows the game UI.
-             */
+            /** Shows the game UI. */
             (): void
         }
 

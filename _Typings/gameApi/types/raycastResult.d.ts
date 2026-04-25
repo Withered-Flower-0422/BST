@@ -5,22 +5,16 @@ declare module "game:type" {
     import { Float3 } from "basicData"
 
     type RaycastResult = {
-        /**
-         * The colliding item.
-         */
+        /** The colliding item. */
         item: Item
         /**
          * The proportion of the distance between the collision point and the starting point to the total distance.
          * @range `0 ~ 1`
          */
         fraction: float
-        /**
-         * The collision point in global coordinates.
-         */
+        /** The collision point in global coordinates. */
         position: Float3
-        /**
-         * The collision normal in global coordinates.
-         */
+        /** The collision normal in global coordinates. */
         normal: Float3
     }
 }

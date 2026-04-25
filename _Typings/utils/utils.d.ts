@@ -301,14 +301,10 @@ declare module "global" {
     import { IsUnique as IU, ExpectTrue as ET } from "utils"
 
     global {
-        /**
-         * Helper type to check if a list of items is unique and not contain any `any` type.
-         */
+        /** Helper type to check if a list of items is unique and not contain any `any` type. */
         type IsUnique<T extends readonly any[]> = IU<T, false>
 
-        /**
-         * Helper type to check if a type is `true`.
-         */
+        /** Helper type to check if a type is `true`. */
         type ExpectTrue<T extends true> = ET<T>
 
         /**

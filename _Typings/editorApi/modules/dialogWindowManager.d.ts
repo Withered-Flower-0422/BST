@@ -23,9 +23,7 @@ declare module "editor:module" {
                 closeButtonName: string,
                 checkButtonName: string,
                 onCloseButtonClick: {
-                    /**
-                     * The function to be called when the close button is clicked.
-                     */
+                    /** The function to be called when the close button is clicked. */
                     (): void
                 },
                 onCheckButtonClick: {
@@ -56,9 +54,7 @@ declare module "editor:module" {
                 closeButtonName: string,
                 checkButtonName: string,
                 onCloseButtonClick: {
-                    /**
-                     * The function to be called when the close button is clicked.
-                     */
+                    /** The function to be called when the close button is clicked. */
                     (): void
                 },
                 onCheckButtonClick: {
@@ -80,9 +76,7 @@ declare module "editor:module" {
              */
             <T extends keyof AssetsSuffixMap | "All">(
                 onCancel: {
-                    /**
-                     * The function to be called when the cancel button is clicked.
-                     */
+                    /** The function to be called when the cancel button is clicked. */
                     (): void
                 },
                 onPickAsset: {
@@ -116,9 +110,7 @@ declare module "editor:module" {
                 contentText: string,
                 closeButtonName: string,
                 onCloseButtonClick: {
-                    /**
-                     * The function to be called when the close button is clicked.
-                     */
+                    /** The function to be called when the close button is clicked. */
                     (): void
                 },
             ): void
@@ -140,15 +132,11 @@ declare module "editor:module" {
                 closeButtonName: string,
                 checkButtonName: string,
                 onCloseButtonClick: {
-                    /**
-                     * The function to be called when the close button is clicked.
-                     */
+                    /** The function to be called when the close button is clicked. */
                     (): void
                 },
                 onCheckButtonClick: {
-                    /**
-                     * The function to be called when the check button is clicked.
-                     */
+                    /** The function to be called when the check button is clicked. */
                     (): void
                 },
             ): void
@@ -182,9 +170,7 @@ declare module "editor:module" {
                     }
                 },
                 onCloseWindowClick: {
-                    /**
-                     * The function to be called when the close button is clicked.
-                     */
+                    /** The function to be called when the close button is clicked. */
                     (): void
                 },
             ): void

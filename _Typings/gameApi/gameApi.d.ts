@@ -4,9 +4,7 @@
 declare module "gameApi" {
     import { Player } from "game:type"
 
-    /**
-     * If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`.
-     */
+    /** If the player ball is never created, errors will occur when trying to access it's properties other than `ballType` and `guid`. */
     export const player: Player
 
     export {

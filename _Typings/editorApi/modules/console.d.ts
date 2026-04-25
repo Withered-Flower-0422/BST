@@ -20,9 +20,7 @@ declare module "editor:module" {
         }
 
         const clear: {
-            /**
-             * Clears the console.
-             */
+            /** Clears the console. */
             (): void
         }
     }

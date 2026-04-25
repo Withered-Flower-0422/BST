@@ -42,9 +42,7 @@ declare module "game:module" {
         let viewDistance: float
         let cameraOffset: Float3
         let gravity: Float3
-        /**
-         * @readonly
-         */
+        /** @readonly */
         const language:
             | "English"
             | "简体中文"

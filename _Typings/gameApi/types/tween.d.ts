@@ -4,23 +4,17 @@
 declare module "game:type" {
     type Tween = {
         readonly next: {
-            /**
-             * Plays the tween for one step.
-             */
+            /** Plays the tween for one step. */
             (): void
         }
 
         readonly play: {
-            /**
-             * Plays the tween until it is completed.
-             */
+            /** Plays the tween until it is completed. */
             (): void
         }
 
         readonly stop: {
-            /**
-             * Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning.
-             */
+            /** Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning. */
             (): void
         }
     }

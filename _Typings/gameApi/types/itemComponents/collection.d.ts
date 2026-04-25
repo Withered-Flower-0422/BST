@@ -13,9 +13,7 @@ declare module "game:type" {
 
     type CollectionMethod = {
         resetCollection: {
-            /**
-             * Resets the collection.
-             */
+            /** Resets the collection. */
             (): void
         }
     }

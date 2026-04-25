@@ -39,35 +39,25 @@ declare module "game:type" {
         Gravity: float
         TurbulenceIntensity: float
         TurbulenceFrequency: float
-        /**
-         * @range `1 ~ 32`
-         */
+        /** @range `1 ~ 32` */
         AnimationTilesX: NonNegIntRange<1, 32>
-        /**
-         * @range `1 ~ 32`
-         */
+        /** @range `1 ~ 32` */
         AnimationTilesY: NonNegIntRange<1, 32>
     }
 
     type ParticleEmitterMethod = {
         play: {
-            /**
-             * Starts playing the particle emitter.
-             */
+            /** Starts playing the particle emitter. */
             (): void
         }
 
         pause: {
-            /**
-             * Pauses the particle emitter. The next time it is played, it will continue from where it left off.
-             */
+            /** Pauses the particle emitter. The next time it is played, it will continue from where it left off. */
             (): void
         }
 
         stop: {
-            /**
-             * Stops the particle emitter. The next time it is played, it will start from the beginning.
-             */
+            /** Stops the particle emitter. The next time it is played, it will start from the beginning. */
             (): void
         }
     }

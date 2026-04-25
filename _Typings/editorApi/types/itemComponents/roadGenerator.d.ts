@@ -32,9 +32,7 @@ declare module "editor:type" {
         Height: float
         Offset: float
         Thickness: float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         Segments: NonNegIntRange<1, 256>
         Bend: Float3
         CreateCap: bool
@@ -52,9 +50,7 @@ declare module "editor:type" {
         Height: float
         Offset: float
         Thickness: float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         Segments: NonNegIntRange<1, 256>
         Bend: Float3
         CreateCap: bool
@@ -69,13 +65,9 @@ declare module "editor:type" {
         Offsets: Float2[]
         Height: float
         Offset: float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         Segments: NonNegIntRange<1, 256>
-        /**
-         * @range `1 ~ 128`
-         */
+        /** @range `1 ~ 128` */
         RotationSegments: NonNegIntRange<1, 128>
         Bend: Float3
         CreateCap: bool
@@ -92,13 +84,9 @@ declare module "editor:type" {
         EndRadius: float
         Slice: Float2
         Thickness: float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         Segments: NonNegIntRange<1, 256>
-        /**
-         * @range `1 ~ 128`
-         */
+        /** @range `1 ~ 128` */
         RotationSegments: NonNegIntRange<1, 128>
         Bend: Float3
         CreateCap: bool
@@ -131,9 +119,7 @@ declare module "editor:type" {
         VerticesArray: VerticesArray[]
         Length: float
         Height: float
-        /**
-         * @range `1 ~ 256`
-         */
+        /** @range `1 ~ 256` */
         Segments: NonNegIntRange<1, 256>
         Bend: Float3
         AccurateUVLength: bool
@@ -158,9 +144,7 @@ declare module "editor:type" {
 
     type RoadGeneratorMethod = {
         clone: {
-            /**
-             * Creates an identical road at the end of the current road and automatically sets its rotation and other properties.
-             */
+            /** Creates an identical road at the end of the current road and automatically sets its rotation and other properties. */
             (): void
         }
 
@@ -173,16 +157,12 @@ declare module "editor:type" {
         }
 
         saveMesh: {
-            /**
-             * Saves the road as mesh to `Assets/Meshes/Default`.
-             */
+            /** Saves the road as mesh to `Assets/Meshes/Default`. */
             (): void
         }
 
         createWayPoint: {
-            /**
-             * Creates `Way Point` at the corresponding positions based on the current road generator's segments.
-             */
+            /** Creates `Way Point` at the corresponding positions based on the current road generator's segments. */
             (): void
         }
     }

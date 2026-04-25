@@ -20,51 +20,31 @@ declare module "editor:type" {
         SpaceEmissionTexture: Path<"Textures">
         SpaceEmissionMultiplier: float
         AirMaximumAltitude: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AirDensityR: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AirDensityG: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AirDensityB: float
         AirTint: ColorRGBA
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AerosolDensity: float
         AerosolTint: ColorRGBA
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AerosolAnisotropy: float
         AerosolMaximumAltitude: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         OzoneDensityDimmer: float
         OzoneMinimumAltitude: float
         OzoneLayerWidth: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         ColorSaturation: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AlphaSaturation: float
-        /**
-         * @range `0 ~ 1`
-         */
+        /** @range `0 ~ 1` */
         AlphaMultiplier: float
         horizonTint: ColorRGBA
-        /**
-         * @range `-1 ~ 1`
-         */
+        /** @range `-1 ~ 1` */
         horizonZenithShift: float
         ZenithTint: ColorRGBA
     }
@@ -76,13 +56,9 @@ declare module "editor:type" {
         SkyboxTexturePathRight: Path<"Textures">
         SkyboxTexturePathFront: Path<"Textures">
         SkyboxTexturePathBack: Path<"Textures">
-        /**
-         * @range `0 ~ 360`
-         */
+        /** @range `0 ~ 360` */
         Rotation: float
-        /**
-         * @range `-3 ~ 3`
-         */
+        /** @range `-3 ~ 3` */
         GammaOffset: float
     }
 

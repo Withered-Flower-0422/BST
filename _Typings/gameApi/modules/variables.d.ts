@@ -66,9 +66,7 @@ declare module "game:module" {
         }
 
         const clear: {
-            /**
-             * Clears all variables except those starting with `C_`.
-             */
+            /** Clears all variables except those starting with `C_`. */
             (): void
         }
     }
@@ -152,9 +150,7 @@ declare module "__future__" {
         }
 
         const clear: {
-            /**
-             * Clears all variables except those starting with `C_` and `K_`.
-             */
+            /** Clears all variables except those starting with `C_` and `K_`. */
             (): void
         }
     }
