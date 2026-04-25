@@ -22,7 +22,6 @@ declare module "editorApi" {
         ColorRGBA,
     } from "basicData"
 
-    /** @deprecated Never use this! */
-    const _default: never
-    export default _default
+    /** @deprecated */
+    export const __esModule: never
 }
