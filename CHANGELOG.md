@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.2 (2026-04-28)
+
+- Added a new file `global.d.ts` and moved `IsUnique`, `ExpectTrue`, `$` into it.
+- Declared the type of `import.meta` in `global.d.ts`.
+
 ## v1.8.1 (2026-04-01)
 
 - Added `AddTypeTo`, `TurnTypeTo`, `PickStringKey` and `DeepPartial` in `utils.d.ts`.

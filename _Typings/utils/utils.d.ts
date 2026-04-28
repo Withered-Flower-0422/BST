@@ -296,21 +296,3 @@ declare module "utils" {
 
     type EmptyObject = { [key: PropertyKey]: never }
 }
-
-declare module "global" {
-    import { IsUnique as IU, ExpectTrue as ET } from "utils"
-
-    global {
-        /** Helper type to check if a list of items is unique and not contain any `any` type. */
-        type IsUnique<T extends readonly any[]> = IU<T, false>
-
-        /** Helper type to check if a type is `true`. */
-        type ExpectTrue<T extends true> = ET<T>
-
-        /**
-         * Default type for executor or road generator variables `$`.
-         * Override this type to define variable types set on the executor.
-         */
-        type $ = { [key: string]: Any; [key: symbol]: never }
-    }
-}
