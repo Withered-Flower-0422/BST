@@ -35,6 +35,8 @@ declare module "basicData" {
          * @param y The y component of the float2.
          */
         constructor(x: float, y: float)
+
+        static readonly prototype
     }
 
     class Float3 {
@@ -50,6 +52,8 @@ declare module "basicData" {
          * @param z The z component of the float3.
          */
         constructor(x: float, y: float, z: float)
+
+        static readonly prototype
     }
 
     class Float4 {
@@ -67,6 +71,8 @@ declare module "basicData" {
          * @param w The w component of the float4.
          */
         constructor(x: float, y: float, z: float, w: float)
+
+        static readonly prototype
     }
 
     class Quaternion {
@@ -99,6 +105,8 @@ declare module "basicData" {
          * @param z The z component of the bool3.
          */
         constructor(x: bool, y: bool, z: bool)
+
+        static readonly prototype
     }
 
     class Trans {
@@ -114,6 +122,8 @@ declare module "basicData" {
          * @param scl The scale component of the transform.
          */
         constructor(pos: Float3, rot: Float3, scl: Float3)
+
+        static readonly prototype
     }
 
     interface ColorRGBA {
@@ -144,7 +154,7 @@ declare module "basicData" {
             a: Assert0To1<A>,
         ): ColorRGBA
 
-        prototype: ColorRGBA
+        readonly prototype: ColorRGBA
     }
 
     const ColorRGBA: ColorRGBAConstructor

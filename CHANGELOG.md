@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - Added a new file `global.d.ts` and moved `IsUnique`, `ExpectTrue`, `$` into it.
 - Declared the type of `import.meta` in `global.d.ts`.
+- Made `prototype` of `Float2`, `Float3`, `Float4`, `Quaternion`, `Bool3`, `Trans` and `ColorRGBA` readonly.
 
 ## v1.8.1 (2026-04-01)
 
