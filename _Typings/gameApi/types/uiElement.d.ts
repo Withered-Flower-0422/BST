@@ -93,42 +93,44 @@ declare module "game:type" {
         Panel: Panel
     }
 
+    type PublicUIElement = {
+        /** @default true */
+        enabled: bool
+        /** @default null */
+        parent: UIElement | null
+        /** @default new Float2(0, 0) */
+        position: Float2
+        /** @default 0 */
+        rotation: float
+        /** @default new Float2(1, 1) */
+        scale: Float2
+        /** @default new Float2(0.5, 0.5) */
+        anchorMin: Float2
+        /** @default new Float2(0.5, 0.5) */
+        anchorMax: Float2
+        /** @default new Float2(0.5, 0.5) */
+        pivot: Float2
+        /** @default false */
+        raycastEvent: bool
+
+        /** Invoked when the pointer enters the UI element. */
+        onPointerEnter: () => void
+
+        /** Invoked when the pointer leaves the UI element. */
+        onPointerExit: () => void
+
+        /**
+         * Invoked when the pointer clicks the UI element.
+         * @param mouseButton Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
+         */
+        onPointerClick: (mouseButton: MouseButton) => void
+
+        /** @default true */
+        raycastTarget: bool
+        /** @default false */
+        mask: bool
+    }
+
     type UIElement<T extends keyof UIElementTypeMap = keyof UIElementTypeMap> =
-        {
-            /** @default true */
-            enabled: bool
-            /** @default null */
-            parent: UIElement | null
-            /** @default new Float2(0, 0) */
-            position: Float2
-            /** @default 0 */
-            rotation: float
-            /** @default new Float2(1, 1) */
-            scale: Float2
-            /** @default new Float2(0.5, 0.5) */
-            anchorMin: Float2
-            /** @default new Float2(0.5, 0.5) */
-            anchorMax: Float2
-            /** @default new Float2(0.5, 0.5) */
-            pivot: Float2
-            /** @default false */
-            raycastEvent: bool
-
-            /** Invoked when the pointer enters the UI element. */
-            onPointerEnter: () => void
-
-            /** Invoked when the pointer leaves the UI element. */
-            onPointerExit: () => void
-
-            /**
-             * Invoked when the pointer clicks the UI element.
-             * @param mouseButton Which mouse button was clicked. Click to see {@link MouseButton | all mouse buttons}.
-             */
-            onPointerClick: (mouseButton: MouseButton) => void
-
-            /** @default true */
-            raycastTarget: bool
-            /** @default false */
-            mask: bool
-        } & UIElementTypeMap[T]
+        PublicUIElement & UIElementTypeMap[T]
 }
