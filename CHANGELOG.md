@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## v1.8.3 (2026-05-19)
 
 - Rewrote `Float2`, `Float3`, `Float4`, `Quaternion`, `Bool3`, `Trans` and `ColorRGBA`. Now they can be invoked without `new` keyword. `new` keyword is still recommended though.
+- Added `ReadonlyFloat2`, `ReadonlyFloat3`, `ReadonlyFloat4`, `ReadonlyQuaternion`, `ReadonlyBool3`, `ReadonlyTrans` and `ReadonlyColorRGBA`. Now `pos`, `rot` and `scl` of `Trans` are `ReadonlyFloat3` instead of `Float3`.
 
 ## v1.8.2 (2026-04-28)
 
