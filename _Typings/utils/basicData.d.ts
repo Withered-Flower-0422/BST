@@ -1,18 +1,8 @@
 // Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
-declare module "basicData" {
+declare module "basicData" /* global */ {
     import { ExecutorVariable } from "editor:type"
-    import { Assert0To1 } from "utils"
-    import {
-        Float2Brand,
-        Float3Brand,
-        Float4Brand,
-        QuaternionBrand,
-        Bool3Brand,
-        TransBrand,
-        ColorRGBABrand,
-    } from "brand"
 
     global {
         type int = number
@@ -23,46 +13,92 @@ declare module "basicData" {
         /** All basic types that provided by BME. */
         type Any = ExecutorVariable[keyof ExecutorVariable & `${string}Var`]
     }
+}
 
-    class Float2 {
-        private [Float2Brand]: never
+declare module "basicData" /* Float2 */ {
+    import { Float2Brand } from "brand"
+
+    interface Float2 {
+        [Float2Brand]: never
 
         x: float
         y: float
+    }
+
+    interface Float2Constructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param x The x component of the float2.
+         * @param y The y component of the float2.
+         */
+        (x: float, y: float): Float2
 
         /**
          * @param x The x component of the float2.
          * @param y The y component of the float2.
          */
-        constructor(x: float, y: float)
+        new (x: float, y: float): Float2
 
-        static readonly prototype
+        readonly prototype: Float2
     }
 
-    class Float3 {
-        private [Float3Brand]: never
+    const Float2: Float2Constructor
+}
+
+declare module "basicData" /* Float3 */ {
+    import { Float3Brand } from "brand"
+
+    interface Float3 {
+        [Float3Brand]: never
 
         x: float
         y: float
         z: float
+    }
+
+    interface Float3Constructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param x The x component of the float3.
+         * @param y The y component of the float3.
+         * @param z The z component of the float3.
+         */
+        (x: float, y: float, z: float): Float3
 
         /**
          * @param x The x component of the float3.
          * @param y The y component of the float3.
          * @param z The z component of the float3.
          */
-        constructor(x: float, y: float, z: float)
+        new (x: float, y: float, z: float): Float3
 
-        static readonly prototype
+        readonly prototype: Float3
     }
 
-    class Float4 {
-        private [Float4Brand]: never
+    const Float3: Float3Constructor
+}
+
+declare module "basicData" /* Float4 */ {
+    import { Float4Brand } from "brand"
+
+    interface Float4 {
+        [Float4Brand]: never
 
         x: float
         y: float
         z: float
         w: float
+    }
+
+    interface Float4Constructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param x The x component of the float4.
+         * @param y The y component of the float4.
+         * @param z The z component of the float4.
+         * @param w The w component of the float4.
+         */
+        (x: float, y: float, z: float, w: float): Float4
 
         /**
          * @param x The x component of the float4.
@@ -70,18 +106,35 @@ declare module "basicData" {
          * @param z The z component of the float4.
          * @param w The w component of the float4.
          */
-        constructor(x: float, y: float, z: float, w: float)
+        new (x: float, y: float, z: float, w: float): Float4
 
-        static readonly prototype
+        readonly prototype: Float4
     }
 
-    class Quaternion {
-        private [QuaternionBrand]: never
+    const Float4: Float4Constructor
+}
+
+declare module "basicData" /* Quaternion */ {
+    import { QuaternionBrand } from "brand"
+
+    interface Quaternion {
+        [QuaternionBrand]: never
 
         x: float
         y: float
         z: float
         w: float
+    }
+
+    interface QuaternionConstructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param x The x component of the quaternion.
+         * @param y The y component of the quaternion.
+         * @param z The z component of the quaternion.
+         * @param w The w component of the quaternion.
+         */
+        (x: float, y: float, z: float, w: float): Quaternion
 
         /**
          * @param x The x component of the quaternion.
@@ -89,42 +142,83 @@ declare module "basicData" {
          * @param z The z component of the quaternion.
          * @param w The w component of the quaternion.
          */
-        constructor(x: float, y: float, z: float, w: float)
+        new (x: float, y: float, z: float, w: float): Quaternion
+
+        readonly prototype: Quaternion
     }
 
-    class Bool3 {
-        private [Bool3Brand]: never
+    const Quaternion: QuaternionConstructor
+}
+
+declare module "basicData" /* Bool3 */ {
+    import { Bool3Brand } from "brand"
+
+    interface Bool3 {
+        [Bool3Brand]: never
 
         x: bool
         y: bool
         z: bool
+    }
+
+    interface Bool3Constructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param x The x component of the bool3.
+         * @param y The y component of the bool3.
+         * @param z The z component of the bool3.
+         */
+        (x: bool, y: bool, z: bool): Bool3
 
         /**
          * @param x The x component of the bool3.
          * @param y The y component of the bool3.
          * @param z The z component of the bool3.
          */
-        constructor(x: bool, y: bool, z: bool)
+        new (x: bool, y: bool, z: bool): Bool3
 
-        static readonly prototype
+        readonly prototype: Bool3
     }
 
-    class Trans {
-        private [TransBrand]: never
+    const Bool3: Bool3Constructor
+}
+
+declare module "basicData" /* Trans */ {
+    import { TransBrand } from "brand"
+
+    interface Trans {
+        [TransBrand]: never
 
         pos: Float3
         rot: Float3
         scl: Float3
+    }
+
+    interface TransConstructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param pos The position component of the transform.
+         * @param rot The rotation component of the transform.
+         * @param scl The scale component of the transform.
+         */
+        (pos: Float3, rot: Float3, scl: Float3): Trans
 
         /**
          * @param pos The position component of the transform.
          * @param rot The rotation component of the transform.
          * @param scl The scale component of the transform.
          */
-        constructor(pos: Float3, rot: Float3, scl: Float3)
+        new (pos: Float3, rot: Float3, scl: Float3): Trans
 
-        static readonly prototype
+        readonly prototype: Trans
     }
+
+    const Trans: TransConstructor
+}
+
+declare module "basicData" /* ColorRGBA */ {
+    import { Assert0To1 } from "utils"
+    import { ColorRGBABrand } from "brand"
 
     interface ColorRGBA {
         [ColorRGBABrand]: never
@@ -136,6 +230,25 @@ declare module "basicData" {
     }
 
     interface ColorRGBAConstructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param r The red component of the color, between 0 and 1.
+         * @param g The green component of the color, between 0 and 1.
+         * @param b The blue component of the color, between 0 and 1.
+         * @param a The alpha component of the color, between 0 and 1.
+         */
+        <
+            R extends float = float,
+            G extends float = float,
+            B extends float = float,
+            A extends float = float,
+        >(
+            r: Assert0To1<R>,
+            g: Assert0To1<G>,
+            b: Assert0To1<B>,
+            a: Assert0To1<A>,
+        ): ColorRGBA
+
         /**
          * @param r The red component of the color, between 0 and 1.
          * @param g The green component of the color, between 0 and 1.
