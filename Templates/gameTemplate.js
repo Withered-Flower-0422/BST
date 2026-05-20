@@ -80,7 +80,7 @@ export const onTrigger = (self, triggeredItem, type) => {}
 /** @type {OnCollide<"Enter"|"Stay"|"Exit">} */
 export const onCollide = (self, collisionEvent) => {}
 
-/** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<IsUnique<typeof registerEvents>>} */
+/** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<IsUnique<typeof registerEvents>>} _ */
 export const registerEvents = /** @type {const} */ ([])
 
 /** @type {OnEvents<typeof registerEvents>} */

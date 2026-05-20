@@ -9,7 +9,7 @@
 
 import { player, levelManager, inputManager } from "gameApi"
 
-/** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<IsUnique<typeof registerEvents>>} */
+/** @satisfies {RegisterEvent[]} @typedef {ExpectTrue<IsUnique<typeof registerEvents>>} _ */
 export const registerEvents = /** @type {const} */ (["OnPhysicsUpdate"])
 
 /** @type {OnEvents<typeof registerEvents>} */
