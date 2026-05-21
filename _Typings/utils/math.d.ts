@@ -166,11 +166,11 @@ declare module "math" {
         const reflectFloat3: {
             /**
              * Calculates the reflection of a Float3 value off a surface with normal vector b.
-             * @param a The Float3 value to reflect.
-             * @param b The normal vector of the surface to reflect off.
+             * @param i The Float3 value to reflect.
+             * @param n The normal vector of the surface to reflect off.
              * @returns The reflected Float3 value.
              */
-            (a: Float3, b: Float3): Float3
+            (i: Float3, n: Float3): Float3
         }
 
         const angleFloat3: {
