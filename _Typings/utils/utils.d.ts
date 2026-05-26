@@ -90,13 +90,11 @@ declare module "utils" {
           ? never
           : T
 
-    type ValidateIntString<T extends string> = T extends `${string}e+${string}`
+    type ValidateIntString<T extends string> = T extends
+        | `${bigint}`
+        | `${string}e+${string}`
         ? true
-        : T extends `${string}e-${string}`
-          ? false
-          : T extends `${string}.${string}`
-            ? false
-            : true
+        : false
 
     type AssertInt<T extends number> = number extends T
         ? T
@@ -124,13 +122,9 @@ declare module "utils" {
           ? T
           : `${T}` extends `-${string}` | `${string}e+${string}`
             ? never
-            : `${T}` extends `${string}e-${string}`
+            : `${T}` extends `0.${string}` | `${string}e-${string}`
               ? T
-              : `${T}` extends `${infer I}.${string}`
-                ? I extends "0"
-                    ? T
-                    : never
-                : never
+              : never
 
     type Assert0To1s<T extends readonly number[]> = {
         [K in keyof T]: Assert0To1<T[K]>
