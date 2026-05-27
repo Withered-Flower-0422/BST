@@ -43,9 +43,9 @@ declare module "editor:type" {
         AlphaSaturation: float
         /** @range `0 ~ 1` */
         AlphaMultiplier: float
-        horizonTint: ColorRGBA
+        horizonTint: ColorRGBA // Here is exactly `horizonTint` instead of `HorizonTint` because of Mush's typo.
         /** @range `-1 ~ 1` */
-        horizonZenithShift: float
+        horizonZenithShift: float // Here is exactly `horizonZenithShift` instead of `HorizonZenithShift` because of Mush's typo.
         ZenithTint: ColorRGBA
     }
 

@@ -18,14 +18,9 @@ declare module "basicData" /* global */ {
 declare module "basicData" /* Float2 */ {
     import { Float2Brand } from "brand"
 
-    interface ReadonlyFloat2 {
-        readonly [Float2Brand]: never
+    interface Float2 {
+        [Float2Brand]: never
 
-        readonly x: float
-        readonly y: float
-    }
-
-    interface Float2 extends ReadonlyFloat2 {
         x: float
         y: float
     }
@@ -53,15 +48,9 @@ declare module "basicData" /* Float2 */ {
 declare module "basicData" /* Float3 */ {
     import { Float3Brand } from "brand"
 
-    interface ReadonlyFloat3 {
-        readonly [Float3Brand]: never
+    interface Float3 {
+        [Float3Brand]: never
 
-        readonly x: float
-        readonly y: float
-        readonly z: float
-    }
-
-    interface Float3 extends ReadonlyFloat3 {
         x: float
         y: float
         z: float
@@ -92,16 +81,9 @@ declare module "basicData" /* Float3 */ {
 declare module "basicData" /* Float4 */ {
     import { Float4Brand } from "brand"
 
-    interface ReadonlyFloat4 {
-        readonly [Float4Brand]: never
+    interface Float4 {
+        [Float4Brand]: never
 
-        readonly x: float
-        readonly y: float
-        readonly z: float
-        readonly w: float
-    }
-
-    interface Float4 extends ReadonlyFloat4 {
         x: float
         y: float
         z: float
@@ -135,16 +117,9 @@ declare module "basicData" /* Float4 */ {
 declare module "basicData" /* Quaternion */ {
     import { QuaternionBrand } from "brand"
 
-    interface ReadonlyQuaternion {
-        readonly [QuaternionBrand]: never
+    interface Quaternion {
+        [QuaternionBrand]: never
 
-        readonly x: float
-        readonly y: float
-        readonly z: float
-        readonly w: float
-    }
-
-    interface Quaternion extends ReadonlyQuaternion {
         x: float
         y: float
         z: float
@@ -178,15 +153,9 @@ declare module "basicData" /* Quaternion */ {
 declare module "basicData" /* Bool3 */ {
     import { Bool3Brand } from "brand"
 
-    interface ReadonlyBool3 {
-        readonly [Bool3Brand]: never
+    interface Bool3 {
+        [Bool3Brand]: never
 
-        readonly x: bool
-        readonly y: bool
-        readonly z: bool
-    }
-
-    interface Bool3 extends ReadonlyBool3 {
         x: bool
         y: bool
         z: bool
@@ -217,18 +186,12 @@ declare module "basicData" /* Bool3 */ {
 declare module "basicData" /* Trans */ {
     import { TransBrand } from "brand"
 
-    interface ReadonlyTrans {
-        readonly [TransBrand]: never
+    interface Trans {
+        [TransBrand]: never
 
-        readonly pos: ReadonlyFloat3
-        readonly rot: ReadonlyFloat3
-        readonly scl: ReadonlyFloat3
-    }
-
-    interface Trans extends ReadonlyTrans {
-        pos: ReadonlyFloat3
-        rot: ReadonlyFloat3
-        scl: ReadonlyFloat3
+        pos: Float3
+        rot: Float3
+        scl: Float3
     }
 
     interface TransConstructor {
@@ -257,16 +220,9 @@ declare module "basicData" /* ColorRGBA */ {
     import { Assert0To1 } from "utils"
     import { ColorRGBABrand } from "brand"
 
-    interface ReadonlyColorRGBA {
-        readonly [ColorRGBABrand]: never
+    interface ColorRGBA {
+        [ColorRGBABrand]: never
 
-        readonly r: float
-        readonly g: float
-        readonly b: float
-        readonly a: float
-    }
-
-    interface ColorRGBA extends ReadonlyColorRGBA {
         r: float
         g: float
         b: float

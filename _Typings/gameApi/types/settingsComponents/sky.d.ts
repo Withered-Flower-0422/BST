@@ -44,9 +44,9 @@ declare module "game:type" {
         "PhysicsSky/AlphaSaturation": float
         /** @range `0 ~ 1` */
         "PhysicsSky/AlphaMultiplier": float
-        "PhysicsSky/horizonTint": ColorRGBA
+        "PhysicsSky/horizonTint": ColorRGBA // Here is exactly `horizonTint` instead of `HorizonTint` because of Mush's typo.
         /** @range `-1 ~ 1` */
-        "PhysicsSky/horizonZenithShift": float
+        "PhysicsSky/horizonZenithShift": float // Here is exactly `horizonZenithShift` instead of `HorizonZenithShift` because of Mush's typo.
         "PhysicsSky/ZenithTint": ColorRGBA
         "HDRISky/SkyboxTexturePathUp": Path<"Textures">
         "HDRISky/SkyboxTexturePathDown": Path<"Textures">
