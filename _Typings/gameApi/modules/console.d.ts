@@ -9,7 +9,15 @@ declare module "game:module" {
              * @param data The data to log.
              * @NOTE -
              * - The message only shown in `Testmap Mode`.
-             * - Unlike `console.log()` in *browser* or *node*, this function only takes one argument, and some data types may not be printed correctly.
+             * - Unlike `console.log()` in *browser* or *node*, this function only takes one argument.
+             * - If `data` is an object, it logs `[object Object]` by default unless `toString()` is overridden.
+             * - Example:
+             * ```ts
+             * class A {}
+             * class B { toString() { return 42 } }
+             * console.log(new A()) // log: [object Object]
+             * console.log(new B()) // log: 42
+             * ```
              */
             <T>(data: T): void
         }
@@ -20,7 +28,15 @@ declare module "game:module" {
              * @param data The data to log.
              * @NOTE -
              * - The message only shown in `Testmap Mode`.
-             * - This function only takes one argument, and some data types may not be printed correctly.
+             * - This function only takes one argument.
+             * - If `data` is an object, it logs `[object Object]` by default unless `toString()` is overridden.
+             * - Example:
+             * ```ts
+             * class A {}
+             * class B { toString() { return 42 } }
+             * console.log(new A()) // log: [object Object]
+             * console.log(new B()) // log: 42
+             * ```
              */
             <T>(data: T): void
         }
@@ -30,8 +46,16 @@ declare module "game:module" {
              * Logs a message to the console.
              * @param data The data to log.
              * @NOTE -
-             * - The message always shown.
-             * - This function only takes one argument, and some data types may not be printed correctly.
+             * - The message shown in both `Testmap Mode` and `Game Mode`, which means players can see it during gameplay.
+             * - This function only takes one argument.
+             * - If `data` is an object, it logs `[object Object]` by default unless `toString()` is overridden.
+             * - Example:
+             * ```ts
+             * class A {}
+             * class B { toString() { return 42 } }
+             * console.log(new A()) // log: [object Object]
+             * console.log(new B()) // log: 42
+             * ```
              */
             <T>(data: T): void
         }
