@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.5 (2026-06-10)
+
+- Added property `white`, `black` and `empty` to `ColorRGBA` of `gameApi`.
+
 ## v1.8.4 (2026-05-27)
 
 - Deleted `ReadonlyFloat2`, `ReadonlyFloat3`, `ReadonlyFloat4`, `ReadonlyQuaternion`, `ReadonlyBool3`, `ReadonlyTrans` and `ReadonlyColorRGBA`.

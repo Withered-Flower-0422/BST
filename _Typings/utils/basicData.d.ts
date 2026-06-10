@@ -272,3 +272,64 @@ declare module "basicData" /* ColorRGBA */ {
 
     const ColorRGBA: ColorRGBAConstructor
 }
+
+declare module "basicData$Game" /* ColorRGBA */ {
+    import { Assert0To1 } from "utils"
+    import { ColorRGBABrand } from "brand"
+
+    interface ColorRGBA {
+        [ColorRGBABrand]: never
+
+        r: float
+        g: float
+        b: float
+        a: float
+    }
+
+    interface ColorRGBAConstructor {
+        /**
+         * @deprecated `new` keyword recommended.
+         * @param r The red component of the color, between 0 and 1.
+         * @param g The green component of the color, between 0 and 1.
+         * @param b The blue component of the color, between 0 and 1.
+         * @param a The alpha component of the color, between 0 and 1.
+         */
+        <
+            R extends float = float,
+            G extends float = float,
+            B extends float = float,
+            A extends float = float,
+        >(
+            r: Assert0To1<R>,
+            g: Assert0To1<G>,
+            b: Assert0To1<B>,
+            a: Assert0To1<A>,
+        ): ColorRGBA
+
+        /**
+         * @param r The red component of the color, between 0 and 1.
+         * @param g The green component of the color, between 0 and 1.
+         * @param b The blue component of the color, between 0 and 1.
+         * @param a The alpha component of the color, between 0 and 1.
+         */
+        new <
+            R extends float = float,
+            G extends float = float,
+            B extends float = float,
+            A extends float = float,
+        >(
+            r: Assert0To1<R>,
+            g: Assert0To1<G>,
+            b: Assert0To1<B>,
+            a: Assert0To1<A>,
+        ): ColorRGBA
+
+        readonly prototype: ColorRGBA
+
+        readonly white: ColorRGBA
+        readonly black: ColorRGBA
+        readonly empty: ColorRGBA
+    }
+
+    const ColorRGBA: ColorRGBAConstructor
+}
