@@ -295,6 +295,7 @@ declare module "game:module" {
             (): float
         }
 
+        /** @deprecated Bug exists currently. */
         const setCameraOffsetSmooth: {
             /**
              * Sets a value to the default camera's offset smoothness.
