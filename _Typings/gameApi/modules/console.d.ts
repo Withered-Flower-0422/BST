@@ -14,12 +14,12 @@ declare module "game:module" {
              * - Example:
              * ```ts
              * class A {}
-             * class B { toString() { return 42 } }
+             * class B { toString() { return "Instance of B" } }
              * console.log(new A()) // log: [object Object]
-             * console.log(new B()) // log: 42
+             * console.log(new B()) // log: Instance of B
              * ```
              */
-            <T>(data: T): void
+            (data: any): void
         }
 
         const error: {
@@ -33,12 +33,12 @@ declare module "game:module" {
              * - Example:
              * ```ts
              * class A {}
-             * class B { toString() { return 42 } }
+             * class B { toString() { return "Instance of B" } }
              * console.log(new A()) // log: [object Object]
-             * console.log(new B()) // log: 42
+             * console.log(new B()) // log: Instance of B
              * ```
              */
-            <T>(data: T): void
+            (data: any): void
         }
 
         const message: {
@@ -52,12 +52,12 @@ declare module "game:module" {
              * - Example:
              * ```ts
              * class A {}
-             * class B { toString() { return 42 } }
+             * class B { toString() { return "Instance of B" } }
              * console.log(new A()) // log: [object Object]
-             * console.log(new B()) // log: 42
+             * console.log(new B()) // log: Instance of B
              * ```
              */
-            <T>(data: T): void
+            (data: any): void
         }
 
         const clear: {
