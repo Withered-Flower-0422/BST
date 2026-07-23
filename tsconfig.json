@@ -4,6 +4,7 @@
         "strictNullChecks": false,
 
         "noEmit": true,
+        "allowJs": true,
         "checkJs": true,
         "isolatedModules": true,
         "paths": { "Scripts/*.js": ["./*"] },
