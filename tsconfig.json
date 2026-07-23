@@ -1,25 +1,14 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "isolatedModules": true,
-        "noImplicitReturns": true,
-        "noUncheckedIndexedAccess": true,
-        "noFallthroughCasesInSwitch": true,
-        "exactOptionalPropertyTypes": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+
         "noEmit": true,
-        "target": "es2024",
-        "module": "node20",
-        "lib": ["ES2025"],
         "checkJs": true,
-        "paths": {
-            "Scripts/*": ["./*"]
-        }
-    },
-    "include": [
-        // "Samples/**/*",
-        // "Templates/**/*",
-        // "test/js/**/*",
-        "_Typings/**/*",
-        "test/ts/**/*"
-    ]
+        "isolatedModules": true,
+        "paths": { "Scripts/*.js": ["./*"] },
+
+        "lib": ["ES2025"],
+        "target": "es2024"
+    }
 }

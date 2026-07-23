@@ -1,6 +1,2 @@
 *.code-workspace
 *.ini
-test
-
-typedoc.json
-Documents
