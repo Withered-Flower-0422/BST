@@ -63,15 +63,14 @@ declare module "editor:module" {
             (): Folder
         }
 
-        /** @deprecated Not implemented yet. */
         const getAllAssetsInFolder: {
             /**
-             * Gets all assets in a specified folder.
+             * Gets all assets' paths in a specified folder.
              * @param category The category of assets to search for.
              * @param folderName The folder to search for assets.
              * @returns An array of editor's paths to the assets in the specified folder.
              * @NOTE -
-             * Only custom assets are returned. Link-typed assets are ignored.
+             * Only custom assets are included. Link-typed assets are ignored.
              */
             <T extends keyof AssetsSuffixMap>(
                 category: T,

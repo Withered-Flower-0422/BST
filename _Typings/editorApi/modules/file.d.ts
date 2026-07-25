@@ -56,7 +56,6 @@ declare module "editor:module" {
             (path: string, base64: string): void
         }
 
-        /** @deprecated Not implemented yet. */
         const savePreview: {
             /**
              * Saves a png preview of the item at the given path to the given path.

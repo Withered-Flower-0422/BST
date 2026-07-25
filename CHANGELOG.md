@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.6 (2026-07-25)
+
+- Added `file.savePreview()` and `editor.getAllAssetsInFolder()`.
+- Removed `jsconfig.json`, modified `tsconfig.json`.
+- Added `@deprecated` to `levelManager.setCameraOffsetSmooth()` as it breaks.
+
 ## v1.8.5 (2026-06-10)
 
 - Added property `white`, `black` and `empty` to `ColorRGBA` of `gameApi`.
