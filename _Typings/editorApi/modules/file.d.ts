@@ -60,11 +60,11 @@ declare module "editor:module" {
             /**
              * Saves a png preview of the item at the given path to the given path.
              * @param itemPath The path to the item to save the preview for.
-             * @param saveToPath The path to save the preview to.
+             * @param saveToPath The path to save the preview to, ending with `.png`.
              */
             <T extends string>(
                 itemPath: AssertPath<T, "Items", true, false>,
-                saveToPath: string,
+                saveToPath: `${string}.png`,
             ): void
         }
     }
