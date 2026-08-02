@@ -148,5 +148,20 @@ declare module "editor:module" {
                 path: AssertPath<T, "Items" | "Meshes", true, false>,
             ): SceneObject<"Item">
         }
+
+        /** @deprecated Not implemented yet. */
+        const mergeItems: {
+            /**
+             * Merges multiple items into a single item. At least two items are required.
+             * Only `Renderer` and `PhysicsObject` components are merged, other components are dropped.
+             * Components parameters depends on the first item in the array.
+             * If merge failed, returns `null`.
+             * @param guids The guid strings in an array of the items to merge.
+             * @returns The merged item or `null` if merge failed.
+             */
+            <const S extends readonly [guid, guid, ...guid[]]>(
+                guids: S & AssertGuids<S>,
+            ): SceneObject<"Item"> | null
+        }
     }
 }
