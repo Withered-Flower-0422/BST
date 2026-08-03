@@ -156,6 +156,7 @@ declare module "editor:module" {
              * Only `Renderer` and `PhysicsObject` components are merged, other components are dropped.
              * Components parameters depends on the first item in the array.
              * If merge failed, returns `null`.
+             * If merge succeeded, returns the merged item, and the merged meshes will be save in `Meshes/Merged`.
              * @param guids The guid strings in an array of the items to merge.
              * @returns The merged item or `null` if merge failed.
              */
