@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.9.0 (2026-09-20)
+
+- Moved `IsUnique` and `ExpectTrue` from `global.d.ts` to `gameApi/exportFuncs.d.ts`.
+- Added new hooks in `editorTemplate.js`, and their types in `editorApi/exportFuncs.d.ts`.
+
 ## v1.8.6 (2026-07-25)
 
 - Added `file.savePreview()` and `editor.getAllAssetsInFolder()`.

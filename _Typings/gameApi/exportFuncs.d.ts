@@ -2,6 +2,7 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import { IsUnique as IU, ExpectTrue as ET } from "utils"
     import { BuiltinCollection, Collection } from "game:type"
     import { Float3 } from "basicData"
 
@@ -172,7 +173,13 @@ declare module "game:type" {
     >
 
     global {
-        /** Do not use `scene` module in `init` function. */
+        /** Helper type to check if a list of items is unique and not contain any `any` type. */
+        type IsUnique<T extends readonly any[]> = IU<T, false>
+
+        /** Helper type to check if a type is `true`. */
+        type ExpectTrue<T extends true> = ET<T>
+
+        /** Do not use `scene` module in `init` function as some items in the scene may not be initialized yet when `init` is called. */
         type Init<ExecVar extends $ = $> = {
             /**
              * Executed when the executor loads the script. It executes before all other events and only executes once.
