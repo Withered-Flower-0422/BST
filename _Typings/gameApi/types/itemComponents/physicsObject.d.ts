@@ -161,5 +161,13 @@ declare module "game:type" {
              */
             <T extends float>(mass: AssertNonNeg<T>): void
         }
+
+        setCollisionLayer: {
+            /**
+             * Sets the collision layer of the physics object.
+             * @param collisionLayer The collision layer to set.
+             */
+            (collisionLayer: keyof typeof CollisionLayer): void
+        }
     }
 }

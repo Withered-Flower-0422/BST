@@ -2,6 +2,8 @@
 // For details: https://github.com/Withered-Flower-0422/BST/blob/main/LICENSE
 
 declare module "game:type" {
+    import type { Assert0To1 } from "utils"
+
     type Tween = {
         readonly next: {
             /** Plays the tween for one step. */
@@ -16,6 +18,14 @@ declare module "game:type" {
         readonly stop: {
             /** Stops the tween. The next call of `next()` or `play()` will restart the tween from the beginning. */
             (): void
+        }
+
+        readonly evaluate: {
+            /**
+             * Equivalent to call the `onUpdate()` function set on the `createXXXTween()` with the given progress.
+             * @param t The progress.
+             */
+            <T extends float>(t: Assert0To1<T>): void
         }
     }
 }

@@ -12,7 +12,7 @@ declare module "game:module" {
     } from "utils"
     import { KeyboardKey, KeyboardKeyEnum } from "keys"
     import { AssertPath } from "path"
-    import { Float3, ColorRGBA } from "basicData"
+    import { Float3, ColorRGBA, Quaternion } from "basicData"
     import { TipGuidBrand } from "brand"
 
     type TipGuid = guid & { [TipGuidBrand]: never }
@@ -276,7 +276,7 @@ declare module "game:module" {
              * Gets the default camera rotation.
              * @returns The default camera rotation.
              */
-            (): float
+            (): Quaternion
         }
 
         const getDefaultCameraFov: {

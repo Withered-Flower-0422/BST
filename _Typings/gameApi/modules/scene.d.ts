@@ -36,6 +36,15 @@ declare module "game:module" {
             ): { [P in keyof S]: Item | null }
         }
 
+        const getItemsByTag: {
+            /**
+             * Gets all the items which have the given tag.
+             * @param tag The tag to search.
+             * @returns An array of the items with the given tag.
+             */
+            (tag: string): Item[]
+        }
+
         const getPlayer: {
             /**
              * Gets the player. If the player has not been created, it will return `null`.
