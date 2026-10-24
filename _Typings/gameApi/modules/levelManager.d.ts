@@ -62,7 +62,7 @@ declare module "game:module" {
         let spawnPointPosition: Float3
         let spawnPointRotation: float
         /** @deprecated Not implemented yet. */
-        let spawnBallType: BallType
+        let rebirthBallType: BallType
         /** Click to see {@link CameraMode | all camera modes}. */
         let cameraMode: CameraMode
         /** Click to see {@link CameraDirection | all camera directions}. */

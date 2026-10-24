@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 
 - Added `file.savePreview()` and `editor.getAllAssetsInFolder()`.
 - Removed `jsconfig.json`, modified `tsconfig.json`.
-- Added `@deprecated` to `levelManager.setCameraOffsetSmooth()` as it breaks.
+- Added `@deprecated` to `levelManager.setCameraOffsetSmooth()` as it is broken.
 
 ## v1.8.5 (2026-06-10)
 
